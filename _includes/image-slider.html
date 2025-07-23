@@ -1,0 +1,35 @@
+{% assign slider_images = site.static_files | where_exp: "file", "file.path
+contains '/images/slider/'" %} {% assign filtered_images = "" | split: "" %} {%
+for file in slider_images %} {% assign ext = file.extname | downcase %} {% if
+ext == '.jpg' or ext == '.jpeg' or ext == '.png' %} {% assign filtered_images =
+filtered_images | push: file %} {% endif %} {% endfor %} {% assign slider_images
+= filtered_images | sort: "name" | reverse %}
+
+<div class="image-slider">
+  <div class="slider-container">
+    <div class="slider-wrapper">
+      {% for image in slider_images %} {% assign image_name = image.name |
+      remove: image.extname %}
+      <img
+        src="{{ image.path | relative_url }}"
+        alt="{{ image_name | replace: '_', ' ' | replace: '-', ' ' | capitalize }}"
+        class="slider-image{% if forloop.first %} active{% endif %}"
+      />
+      {% endfor %}
+    </div>
+
+    <!-- Navigation arrows -->
+    <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
+    <button class="slider-nav next" onclick="changeSlide(1)">›</button>
+
+    <!-- Dots indicator -->
+    <div class="slider-dots">
+      {% for image in slider_images %}
+      <span
+        class="dot{% if forloop.first %} active{% endif %}"
+        onclick="currentSlide({{ forloop.index }})"
+      ></span>
+      {% endfor %}
+    </div>
+  </div>
+</div>

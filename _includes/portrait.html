@@ -36,6 +36,12 @@
       </span>
     {% endif %}
 
+    {% if member.pronouns and page.slug == member.slug %}
+      <span class="portrait-pronouns">
+        {{ member.pronouns }}
+      </span>
+    {% endif %}
+
     {% if member.description or type %}
       <span class="portrait-description">
         {{ member.description | default: type.description }}
@@ -45,6 +51,16 @@
     {% if member.affiliation %}
       <span class="portrait-affiliation">
         {{ member.affiliation }}
+      </span>
+    {% endif %}
+    
+    {% if member.left %}
+      <span class="portrait-year">
+        {% if page.slug == member.slug %}
+          Group member until: {{ member.left }}
+        {% else %}
+          until: {{ member.left }}
+        {% endif %}
       </span>
     {% endif %}
   </a>

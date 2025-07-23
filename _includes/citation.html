@@ -9,69 +9,100 @@
 {% endif %}
 
 <div class="citation-container">
-  <div class="citation">
-    {% if include.style == "rich" %}
+  <div class="citation" data-style="{{ include.style }}" id="{{ include.id | default: citation.id | url_encode }}">
+    {% if include.style == "rich" or include.style == "tiny" %}
       <a
-        {% if citation.link %}
+        {% if include.style == "tiny" %}
+          href="{{ "publications" | relative_url }}#{{ citation.id | url_encode }}"
+        {% elsif citation.link %}
           href="{{ citation.link | relative_url | uri_escape }}"
         {% endif %}
         class="citation-image"
         aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
       >
-        <img
-          src="{{ citation.image | relative_url | uri_escape }}"
-          alt="{{ citation.title | default: "citation image" | regex_strip }}"
-          loading="lazy"
-          {% include fallback.html %}
-        >
+        {% if citation.image %}
+          <img
+            src="{{ citation.image | relative_url | uri_escape }}"
+            alt="{{ citation.title | default: "citation image" | regex_strip }}"
+            loading="lazy"
+            {% include fallback.html %}
+          >
+        {% else %}
+          <div class="citation-icon-placeholder">
+            <i class="fa-solid fa-file"></i>
+          </div>
+        {% endif %}
       </a>
     {% endif %}
 
     <div class="citation-text">
-      {% assign type = site.data.types[citation.type] %}
-      {% include icon.html icon=type.icon %}
+      {% if include.style == "tiny" %}
+        <a
+          href="{{ "publications" | relative_url }}#{{ citation.id | url_encode }}"
+          class="citation-title"
+        >
+          {{ citation.title | default: "[no title info]" }}
+        </a>
 
-      <a
-        {% if citation.link %}
-          href="{{ citation.link | relative_url | xml_escape }}"
-        {% endif %}
-        class="citation-title"
-      >
-        {{ citation.title | default: "[no title info]" }}
-      </a>
+        <div class="citation-meta">
+          <span class="citation-first-author">
+            {{- citation.authors[0] | default: "[no author]" -}}
+          </span>
+          &nbsp;·&nbsp;
+          <span class="citation-publisher-short">
+            {{- citation.publisher | default: "[no publisher]" | truncate: 20 -}}
+          </span>
+          &nbsp;·&nbsp;
+          <span class="citation-year">
+            {{- citation.date | default: "[no date]" | date: "%Y" -}}
+          </span>
+        </div>
+      {% else %}
+        {% assign type = site.data.types[citation.type] %}
+        {% include icon.html icon=type.icon %}
 
-      <div
-        class="citation-authors"
-        {% if citation.authors.size > 10 %}
-          data-tooltip="{{ citation.authors | join: ", " | xml_escape }}"
-        {% endif %}
-        tabindex="0"
-      >
-        {{
-          citation.authors
-          | join: ","
-          | split: ","
-          | array_carve: 5
-          | join: ", "
-          | markdownify
-          | remove: "<p>" | remove: "</p>"
-          | default: "[no author info]"
-        }}
-      </div>
+        <a
+          {% if citation.link %}
+            href="{{ citation.link | relative_url | xml_escape }}"
+          {% endif %}
+          class="citation-title"
+        >
+          {{ citation.title | default: "[no title info]" }}
+        </a>
 
-      <div class="citation-details">
-        <span class="citation-publisher">
-          {{- citation.publisher | default: "[no publisher info]" -}}
-        </span>
-        &nbsp;·&nbsp;
-        <span class="citation-date">
-          {{- citation.date | default: "[no date info]" | date: "%d %b %Y" -}}
-        </span>
-        &nbsp;·&nbsp;
-        <span class="citation-id">
-          {{- citation.id | default: "[no id info]" -}}
-        </span>
-      </div>
+        <div
+          class="citation-authors"
+          {% if citation.authors.size > 10 %}
+            data-tooltip="{{ citation.authors | join: ", " | xml_escape }}"
+          {% endif %}
+          tabindex="0"
+        >
+          {{
+            citation.authors
+            | join: ","
+            | split: ","
+            | array_carve: 5
+            | join: ", "
+            | markdownify
+            | remove: "<p>" | remove: "</p>"
+            | default: "[no author info]"
+          }}
+        </div>
+
+        <div class="citation-details">
+          <span class="citation-publisher">
+            {{- citation.publisher | default: "[no publisher info]" -}}
+          </span>
+          &nbsp;·&nbsp;
+          <span class="citation-date">
+            {{- citation.date | default: "[no date info]" | date: "%d %b %Y" -}}
+          </span>
+          &nbsp;·&nbsp;
+          <span class="citation-id">
+            {{- citation.id | default: "[no id info]" -}}
+          </span>
+        </div>
+      {% endif %}
 
       {% if include.style == "rich" %}
         {% if citation.description %}

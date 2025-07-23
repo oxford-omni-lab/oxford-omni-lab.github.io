@@ -1,10 +1,15 @@
 /* 
   shows a popup of text on hover/focus of any element with the data-tooltip
   attribute.
+  
+  TOOLTIPS DISABLED: To re-enable, remove the return statement below.
 */
 
 {
   const onLoad = () => {
+    // DISABLE TOOLTIPS: Remove this return statement to re-enable tooltips
+    return;
+
     // make sure Tippy library available
     if (typeof tippy === "undefined") return;
 

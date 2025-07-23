@@ -1,247 +1,863 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
-- id: doi:10.1093/nar/gkad1082
-  title: "The Monarch Initiative in 2024: an analytic platform integrating phenotypes,\
-    \ genes\_and diseases across species"
+- id: doi:10.1038/s41586-023-06630-3
+  title: Normative spatiotemporal fetal brain maturation with satisfactory development
+    at 2 years
   authors:
-  - Tim E Putman
-  - Kevin Schaper
-  - Nicolas Matentzoglu
-  - "Vincent\_P Rubinetti"
-  - "Faisal\_S Alquaddoomi"
-  - Corey Cox
-  - J Harry Caufield
-  - Glass Elsarboukh
-  - Sarah Gehrke
-  - Harshad Hegde
-  - "Justin\_T Reese"
-  - Ian Braun
-  - "Richard\_M Bruskiewich"
-  - Luca Cappelletti
-  - Seth Carbon
-  - "Anita\_R Caron"
-  - "Lauren\_E Chan"
-  - "Christopher\_G Chute"
-  - "Katherina\_G Cortes"
-  - "Vin\xEDcius De\_Souza"
-  - Tommaso Fontana
-  - "Nomi\_L Harris"
-  - "Emily\_L Hartley"
-  - Eric Hurwitz
-  - "Julius\_O B Jacobsen"
-  - Madan Krishnamurthy
-  - "Bryan\_J Laraway"
-  - "James\_A McLaughlin"
-  - "Julie\_A McMurry"
-  - "Sierra\_A T Moxon"
-  - "Kathleen\_R Mullen"
-  - "Shawn\_T O\u2019Neil"
-  - "Kent\_A Shefchek"
-  - Ray Stefancsik
-  - Sabrina Toro
-  - "Nicole\_A Vasilevsky"
-  - "Ramona\_L Walls"
-  - "Patricia\_L Whetzel"
-  - David Osumi-Sutherland
-  - Damian Smedley
-  - "Peter\_N Robinson"
-  - "Christopher\_J Mungall"
-  - "Melissa\_A Haendel"
-  - "Monica\_C Munoz-Torres"
-  publisher: Nucleic Acids Research
-  date: '2023-11-24'
-  link: https://doi.org/gs6kmr
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.10.11.560955
-  title: Integration of 168,000 samples reveals global patterns of the human gut microbiome
-  authors:
-  - Richard J. Abdill
-  - Samantha P. Graham
-  - Vincent Rubinetti
-  - Frank W. Albert
-  - Casey S. Greene
-  - Sean Davis
-  - Ran Blekhman
-  publisher: Cold Spring Harbor Laboratory
-  date: '2023-10-11'
-  link: https://doi.org/gsvf5z
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/nar/gkad289
-  title: 'MyGeneset.info: an interactive and programmatic platform for community-curated
-    and user-created collections of genes'
-  authors:
-  - Ricardo Avila
-  - Vincent Rubinetti
-  - Xinghua Zhou
-  - Dongbo Hu
-  - Zhongchao Qian
-  - Marco Alvarado Cano
-  - Everaldo Rodolpho
-  - Ginger Tsueng
-  - Casey Greene
-  - Chunlei Wu
-  publisher: Nucleic Acids Research
-  date: '2023-04-18'
-  link: https://doi.org/gr5hb5
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2023.01.05.522941
-  title: Hetnet connectivity search provides rapid insights into how two biomedical
-    entities are related
-  authors:
-  - Daniel S. Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J. Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N. Nicholson
-  - Yun Hao
-  - Blair D. Sullivan
-  - Michael W. Nagle
-  - Casey S. Greene
-  publisher: Cold Spring Harbor Laboratory
-  date: '2023-01-07'
-  link: https://doi.org/grmcb9
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1093/gigascience/giad047
-  title: Hetnet connectivity search provides rapid insights into how biomedical entities
-    are related
-  authors:
-  - Daniel S Himmelstein
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Kyle Kloster
-  - Benjamin J Heil
-  - Faisal Alquaddoomi
-  - Dongbo Hu
-  - David N Nicholson
-  - Yun Hao
-  - Blair D Sullivan
-  - Michael W Nagle
-  - Casey S Greene
-  publisher: GigaScience
-  date: '2022-12-28'
-  link: https://doi.org/gsd85n
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1101/2022.02.18.461833
-  title: 'MolEvolvR: A web-app for characterizing proteins using molecular evolution
-    and phylogeny'
-  authors:
-  - Jacob D Krol
-  - Joseph T Burke
-  - Samuel Z Chen
-  - Lo M Sosinski
-  - Faisal S Alquaddoomi
-  - Evan P Brenner
-  - Ethan P Wolfe
-  - Vincent P Rubinetti
-  - Shaddai Amolitos
-  - Kellen M Reason
-  - John B Johnston
-  - Janani Ravi
-  publisher: Cold Spring Harbor Laboratory
-  date: '2022-02-22'
-  link: https://doi.org/gstx7j
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1186/s13059-020-02021-3
-  title: Compressing gene expression data using multiple latent space dimensionalities
-    learns complementary biological representations
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Genome Biology
-  date: '2020-05-11'
-  link: https://doi.org/gg2mjh
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1371/journal.pcbi.1007128
-  title: Open collaborative writing with Manubot
-  authors:
-  - Daniel S. Himmelstein
-  - Vincent Rubinetti
-  - David R. Slochower
-  - Dongbo Hu
-  - Venkat S. Malladi
-  - Casey S. Greene
-  - Anthony Gitter
-  publisher: PLOS Computational Biology
-  date: '2020-12-04'
-  link: https://doi.org/c7np
-  orcid: 0000-0002-4655-3773
-  plugin: sources.py
-  file: sources.yaml
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed
-    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
+  - Ana I. L. Namburete
+  - "Bart\u0142omiej W. Papie\u017C"
+  - Michelle Fernandes
+  - Madeleine K. Wyburd
+  - Linde S. Hesse
+  - Felipe A. Moser
+  - Leila Cheikh Ismail
+  - Robert B. Gunier
+  - Waney Squier
+  - Eric O. Ohuma
+  - Maria Carvalho
+  - Yasmin Jaffer
+  - Michael Gravett
+  - Qingqing Wu
+  - Ann Lambert
+  - Adele Winsey
+  - "Mar\xEDa C. Restrepo-M\xE9ndez"
+  - Enrico Bertino
+  - Manorama Purwar
+  - Fernando C. Barros
+  - Alan Stein
+  - J. Alison Noble
+  - "Zolt\xE1n Moln\xE1r"
+  - Mark Jenkinson
+  - Zulfiqar A. Bhutta
+  - Aris T. Papageorghiou
+  - "Jos\xE9 Villar"
+  - Stephen H. Kennedy
+  publisher: Nature
+  date: '2023-10-25'
+  link: https://doi.org/g5n234
+  image: images/publications/USAtlas.gif
+  note: Atlas
+  highlight: true
   buttons:
-  - type: manubot
-    link: https://greenelab.github.io/meta-review/
-  - type: source
-    text: Manuscript Source
-    link: https://github.com/greenelab/meta-review
   - type: website
-    link: http://manubot.org/
+    link: https://www.nature.com/articles/s41586-023-06630-3
+  - type: pdf
+    link: pdfs/atlas.pdf
   tags:
-  - open science
-  - collaboration
-  repo: greenelab/meta-review
-- id: doi:10.1101/573782
-  title: Sequential compression of gene expression across dimensionalities and methods
-    reveals no single best method or dimensionality
-  authors:
-  - Gregory P. Way
-  - Michael Zietz
-  - Vincent Rubinetti
-  - Daniel S. Himmelstein
-  - Casey S. Greene
-  publisher: Cold Spring Harbor Laboratory
-  date: '2019-03-11'
-  link: https://doi.org/gfxjxf
-  orcid: 0000-0002-4655-3773
-  plugin: orcid.py
-  file: orcid.yaml
-- id: doi:10.1016/j.csbj.2020.05.017
-  title: Constructing knowledge graphs and their biomedical applications
-  authors:
-  - David N. Nicholson
-  - Casey S. Greene
-  publisher: Computational and Structural Biotechnology Journal
-  date: '2020-01-01'
-  link: https://doi.org/gg7m48
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+  - Fetal Brain Characterization
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.7554/eLife.32822
-  title: Sci-Hub provides access to nearly all scholarly literature
+- id: doi:10.48550/arXiv.2505.14572
+  title: Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling
+    of 2D Intrapartum Ultrasound Images
   authors:
-  - Daniel S Himmelstein
-  - Ariel Rodriguez Romero
-  - Jacob G Levernier
-  - Thomas Anthony Munro
-  - Stephen Reid McLaughlin
-  - Bastian Greshake Tzovaras
-  - Casey S Greene
-  publisher: eLife
-  date: '2018-03-01'
-  link: https://doi.org/ckcj
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+  - Jayroop Ramesh
+  - Valentin Bacher
+  - Mark C. Eid
+  - Hoda Kalabizadeh
+  - Christian Rupprecht
+  - Ana IL Namburete
+  - Pak-Hei Yeung
+  - Madeleine K. Wyburd
+  - Nicola K. Dinsdale
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/g9srvq
+  image: images/publications/24-miccai-challenge.png
+  note: Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling
+    of 2D Intrapartum Ultrasound Images
+  buttons:
+  - type: website
+    link: https://arxiv.org/abs/2505.14572
+  - type: pdf
+    link: https://arxiv.org/pdf/2505.14572
+  tags:
+  - Challenge
+  - Biomarkers
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2505.05643
+  title: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
+  authors:
+  - Mark C. Eid
+  - Ana I. L. Namburete
+  - "Jo\xE3o F. Henriques"
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/g9srvr
+  note: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
+  buttons:
+  - type: website
+    link: https://arxiv.org/abs/2505.05643
+  - type: pdf
+    link: https://arxiv.org/pdf/2505.05643
+  tags:
+  - 2D to 3D Reconstruction
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ISBI60581.2025.10980676
+  title: Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal
+    Brain in 3D Ultrasound
+  authors:
+  - Joshua Omolegan
+  - Pak Hei Yeung
+  - Madeleine K. Wyburd
+  - Linde Hesse
+  - Monique Haak
+  - Ana I. L. Namburete
+  - Nicola K. Dinsdale
+  publisher: 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)
+  date: '2025-04-14'
+  link: https://doi.org/g9sr3z
+  note: Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain
+    in 3D Ultrasound
+  buttons:
+  - type: website
+    link: https://ieeexplore.ieee.org/abstract/document/10980676
+  - type: pdf
+    link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980676
+  tags:
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ISBI60581.2025.10980994
+  title: 'Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
+    2D Scans'
+  authors:
+  - Mark C. Eid
+  - Pak-Hei Yeung
+  - Madeleine K. Wyburd
+  - "Jo\xE3o F. Henriques"
+  - Ana I.L. Namburete
+  publisher: 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)
+  date: '2025-04-14'
+  link: https://doi.org/g9sr32
+  note: 'Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
+    Scans'
+  buttons:
+  - type: website
+    link: https://ieeexplore.ieee.org/abstract/document/10980994
+  - type: pdf
+    link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980994
+  tags:
+  - 2D to 3D Reconstruction
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2024.103147
+  title: Sensorless volumetric reconstruction of fetal brain freehand ultrasound scans
+    with deep implicit representation
+  authors:
+  - Pak-Hei Yeung
+  - Linde S. Hesse
+  - Moska Aliasi
+  - Monique C. Haak
+  - Weidi Xie
+  - Ana I.L. Namburete
+  publisher: Medical Image Analysis
+  date: '2024-05-01'
+  link: https://doi.org/g9sr33
+  image: images/publications/sensorless.png
+  note: Sensorless Volumetric Reconstruction of Fetal Brain Freehand Ultrasound Scans
+    with Deep Implicit Representation
+  buttons:
+  - type: website
+    link: https://pakheiyeung.github.io/ImplicitVol_wp/
+  - type: pdf
+    link: https://arxiv.org/pdf/2109.12108
+  - type: source
+    link: https://github.com/pakheiyeung/ImplicitVol
+  tags:
+  - 2D to 3D Reconstruction
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-87193-2_24
+  title: 'TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee
+    Topology Preservation in Segmentations'
+  authors:
+  - Madeleine K. Wyburd
+  - Nicola K. Dinsdale
+  - Ana I. L. Namburete
+  - Mark Jenkinson
+  publisher: Lecture Notes in Computer Science
+  date: '2021-01-01'
+  link: https://doi.org/g9srr6
+  note: 'TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee
+    Topology Preservation in Segmentations'
+  image: images/publications/teds_new.png
+  buttons:
+  - type: website
+    link: https://mwyburd.github.io/TEDS-NET_wp/
+  - type: source
+    link: https://github.com/mwyburd/TEDS-Net
+  - type: pdf
+    link: https://link.springer.com/chapter/10.1007/978-3-030-87193-2_24
+  tags:
+  - Segmentation
+  - Topology
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.neuron.2022.09.012
+  title: Challenges for machine learning in clinical translation of big data imaging
+    studies
+  authors:
+  - Nicola K. Dinsdale
+  - Emma Bluemke
+  - Vaanathi Sundaresan
+  - Mark Jenkinson
+  - Stephen M. Smith
+  - Ana I.L. Namburete
+  publisher: Neuron
+  date: '2022-12-01'
+  link: https://doi.org/g9srrx
+  note: Challenges for machine learning in clinical translation of big data imaging
+    studies
+  image: images/publications/features.png
+  buttons:
+  - type: website
+    link: https://doi.org/10.1016/j.neuron.2022.09.012
+  - type: pdf
+    link: https://www.cell.com/action/showPdf?pii=S0896-6273%2822%2900817-0
+  tags:
+  - Clinical Translation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-031-72378-0_39
+  title: "Geometric Transformation Uncertainty for\_Improving 3D Fetal Brain Pose\
+    \ Prediction from\_Freehand 2D Ultrasound Videos"
+  authors:
+  - Jayroop Ramesh
+  - Nicola Dinsdale
+  - Pak-Hei Yeung
+  - Ana I. L. Namburete
+  publisher: Lecture Notes in Computer Science
+  date: '2024-01-01'
+  link: https://doi.org/g9sr44
+  note: Geometric Transformation Uncertainty for Improving 3D Fetal Brain Pose Prediction
+    from Freehand 2D Ultrasound Videos
+  image: images/publications/US.png
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-031-72378-0_39
+  tags:
+  - 2D to 3D Reconstruction
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2404.10766
+  title: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
+    2D Scans'
+  authors:
+  - Mark C. Eid
+  - Pak-Hei Yeung
+  - Madeleine K. Wyburd
+  - "Jo\xE3o F. Henriques"
+  - Ana I. L. Namburete
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g9sr46
+  note: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
+    Scans'
+  image: images/publications/triplanar.png
+  buttons:
+  - type: website
+    link: https://arxiv.org/abs/2404.10766
+  - type: pdf
+    link: https://arxiv.org/pdf/2404.10766
+  tags:
+  - 2D to 3D Reconstruction
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.neuroimage.2022.119117
+  title: Subcortical segmentation of the fetal brain in 3D ultrasound using deep learning
+  authors:
+  - Linde S. Hesse
+  - Moska Aliasi
+  - Felipe Moser
+  - Monique C. Haak
+  - Weidi Xie
+  - Mark Jenkinson
+  - Ana I.L. Namburete
+  publisher: NeuroImage
+  date: '2022-07-01'
+  link: https://doi.org/gsw7wd
+  note: Subcortical segmentation of the fetal brain in 3D ultrasound using deep learning
+  image: images/publications/us_seg.png
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/pii/S1053811922002452
+  - type: pdf
+    link: https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811922X00074/1-s2.0-S1053811922002452/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFfLZ2RCA9ogZPgWF6uUqyN12XeQauqzP7mAZjQxZnDoAiEAzvOFUA0KKER8L2vDRyBGJyD4112VIFvBRWXAtH7%2FoEkquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDMGnpy71hig94Fc%2BdyqPBT69Cfn%2FurakiU%2FXZzwIFMY7k%2BT7m5ho8xl0zbacW0r2iB%2BjmzTjLwoiu%2FAsfHmP26RlAI81Cje7Pn2uxRJDHffntQjclrX7ajIKUd%2FwwJExodjsiZ47RBGAUmOSM9QsDswyxgqsudx9YbFG6GMSvE9KPeiArdJ2n6WQW%2Bc6NM67ih5qUqXnHrSga4M37N8lMLfk9a9o5rh0G7ePgOqV0vducm%2BJDqo0a3gOrOCRor88Rk7Q9uNQT5qQFcgzWATR3da%2FZG4O7apqKnD1IuWg0aUokzedIlPHBXc%2BY556AOM5WygR3CkFfZ1tgikir%2B6i93FLAKoTnwXaGkn%2BjXhjUMELo1Hxe5Tr3D1p0uJEsEV%2BoB4xrumf9ea1xnEm7CJb1yac5eebpORig2I%2FVHsgPA%2FIEZAj82R9B%2F6SmAkxIqiw8qo2FpUYN7PasQLb9mODfqnfCu%2BhezxLew1MNSze8J4OFFI9nlP4tjZmCeeqkFWk1glSy1R8qciUcar7jknG8yiERhT6l2qQJRhzkaX7Ir1305U5hnQgUynr5sUeuOJszt3fHzjhDpu40hEvZ%2FwboyIvIcH%2FsKFDB6RYl%2FZkaxmtBCGcUvDkYqCMYMoucgPSsMIBadeGLBkA%2F%2BzXxxUPOJi5%2FqoTMSurk%2FRC8MxKFKiggLcNSV%2BEC3hIZgjQd7oHSC6tWtJg7ultxCxRJZVzOqfxu3Bx26xXMzvRlBlnSLDbttsWzmxhRh8Js15wWkC6uQUFChPqFRqE7dvlwFiotPsgqlent91%2Bhjvqf3W5Opm1Cj8nFEo9xObDZmf7RmJGdSzOO6gDUxMH4Qr3%2FYlqO4k%2F3iL%2BZx7LCWigS3MsxNS6b4KXwNTDgjgX%2Bu3Oo7IwhqbDwwY6sQH3zjKNx3bK3KwjuIv3lFW%2BAezQ9VHaOMqMIwcNr6GyRu67b%2FDHrLCD57R%2BlL9okwxdFbEC%2Bi9SNe1wmiMxZT30epcAchesRSyRpYZNFjkoInqpnsr2kbScXBl4%2BUlhl5yNtJUPZgAzbxjiowPwP%2BCgAUqwPzrKhGO91%2BMLmPgoj2V%2BSYW%2BM5KGk4qG8sNomqQo87pFuh1d0M2zZttGwVEGt6L0piaZSD88NIG3ErCjj4s%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T092951Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYX47ZBRQ7%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=20db7e783a5b161e7ac03f8aa3e89b3f426b42b0e918bc5638e7f76144afab84&hash=f1b2cd2a8e725ffe52df6a3ab30e8d1fcc6a1ad49fc4cdeca8e09c858c150416&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811922002452&tid=spdf-2b7f79fe-832d-49a9-b0f4-7b3f725af1f7&sid=fa89243a868113483e394891ee63e025fb9egxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359545958&rr=95d74762ec19f422&cc=gb
+  tags:
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.neuroimage.2022.119341
+  title: 'BEAN: Brain Extraction and Alignment Network for 3D Fetal Neurosonography'
+  authors:
+  - Felipe Moser
+  - Ruobing Huang
+  - "Bart\u0142omiej W. Papie\u017C"
+  - Ana I.L. Namburete
+  publisher: NeuroImage
+  date: '2022-09-01'
+  link: https://doi.org/g9stjc
+  note: 'BEAN: Brain Extraction and Alignment Network for 3D Fetal Neurosonography'
+  image: images/publications/fetal_brain.png
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/pii/S1053811922004608
+  - type: pdf
+    link: https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811922X00116/1-s2.0-S1053811922004608/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFfLZ2RCA9ogZPgWF6uUqyN12XeQauqzP7mAZjQxZnDoAiEAzvOFUA0KKER8L2vDRyBGJyD4112VIFvBRWXAtH7%2FoEkquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDMGnpy71hig94Fc%2BdyqPBT69Cfn%2FurakiU%2FXZzwIFMY7k%2BT7m5ho8xl0zbacW0r2iB%2BjmzTjLwoiu%2FAsfHmP26RlAI81Cje7Pn2uxRJDHffntQjclrX7ajIKUd%2FwwJExodjsiZ47RBGAUmOSM9QsDswyxgqsudx9YbFG6GMSvE9KPeiArdJ2n6WQW%2Bc6NM67ih5qUqXnHrSga4M37N8lMLfk9a9o5rh0G7ePgOqV0vducm%2BJDqo0a3gOrOCRor88Rk7Q9uNQT5qQFcgzWATR3da%2FZG4O7apqKnD1IuWg0aUokzedIlPHBXc%2BY556AOM5WygR3CkFfZ1tgikir%2B6i93FLAKoTnwXaGkn%2BjXhjUMELo1Hxe5Tr3D1p0uJEsEV%2BoB4xrumf9ea1xnEm7CJb1yac5eebpORig2I%2FVHsgPA%2FIEZAj82R9B%2F6SmAkxIqiw8qo2FpUYN7PasQLb9mODfqnfCu%2BhezxLew1MNSze8J4OFFI9nlP4tjZmCeeqkFWk1glSy1R8qciUcar7jknG8yiERhT6l2qQJRhzkaX7Ir1305U5hnQgUynr5sUeuOJszt3fHzjhDpu40hEvZ%2FwboyIvIcH%2FsKFDB6RYl%2FZkaxmtBCGcUvDkYqCMYMoucgPSsMIBadeGLBkA%2F%2BzXxxUPOJi5%2FqoTMSurk%2FRC8MxKFKiggLcNSV%2BEC3hIZgjQd7oHSC6tWtJg7ultxCxRJZVzOqfxu3Bx26xXMzvRlBlnSLDbttsWzmxhRh8Js15wWkC6uQUFChPqFRqE7dvlwFiotPsgqlent91%2Bhjvqf3W5Opm1Cj8nFEo9xObDZmf7RmJGdSzOO6gDUxMH4Qr3%2FYlqO4k%2F3iL%2BZx7LCWigS3MsxNS6b4KXwNTDgjgX%2Bu3Oo7IwhqbDwwY6sQH3zjKNx3bK3KwjuIv3lFW%2BAezQ9VHaOMqMIwcNr6GyRu67b%2FDHrLCD57R%2BlL9okwxdFbEC%2Bi9SNe1wmiMxZT30epcAchesRSyRpYZNFjkoInqpnsr2kbScXBl4%2BUlhl5yNtJUPZgAzbxjiowPwP%2BCgAUqwPzrKhGO91%2BMLmPgoj2V%2BSYW%2BM5KGk4qG8sNomqQo87pFuh1d0M2zZttGwVEGt6L0piaZSD88NIG3ErCjj4s%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T094526Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYX47ZBRQ7%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3f7564622b5d6650e9be5d5c41bceeec472459689ab553cf60c68b3134754163&hash=9c5cac58e08e8919163097e660e1d8be9f307ef6facded478c0a0bdcc5470f8f&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811922004608&tid=spdf-06dbb04d-cfd3-4c19-bea4-e6833c6f6faa&sid=fa89243a868113483e394891ee63e025fb9egxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359550b5d&rr=95d75e33a9a19403&cc=gb
+  tags:
+  - Fetal Brain Characterization
+  - Registration
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2018.02.006
+  title: Fully-automated alignment of 3D fetal brain ultrasound to a canonical reference
+    space using multi-task learning
+  authors:
+  - Ana I.L. Namburete
+  - Weidi Xie
+  - Mohammad Yaqub
+  - Andrew Zisserman
+  - J. Alison Noble
+  publisher: Medical Image Analysis
+  date: '2018-05-01'
+  link: https://doi.org/gdmm6s
+  note: Fully-automated alignment of 3D fetal brain ultrasound to a canonical reference
+    space using multi-task learning
+  image: images/publications/US.png
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/pii/S1361841518300306
+  - type: pdf
+    link: https://pdf.sciencedirectassets.com/272154/1-s2.0-S1361841518X00024/1-s2.0-S1361841518300306/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIDhwa8agQDE7XauFpaZy5KRWRwxprFAnkXp0J%2Fml4gPuAiEAwzzS6BzfBJSt%2B%2Bf1UFvGVLOcGQ1uoNdk5%2FJD9fDuOFgquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDFoIkhF%2F2nq4P2KRWyqPBTZKtLjNnCaAPgwpaoUTaPNyN7ttIUAA1eHnOxlRD62jwOlPG1UQiaaSMdnbnZ8WJLOiPRhh5%2Fydhr6657u0m%2FGDN7YFjk7ntl4hqktzNw6WDMSR25qVKrJaBBev5E5v%2BkykoGy%2FKuC8TGSlPAHsfQ%2BKESR3Mf6ygHBP7abPCnGNRL1B0qtcFDpNM2VIf%2FGynVBPr504Fy8AEgj2dDZFv4wmeaUNxmOMJLJW0j3mf%2Ba%2BeosQmDvkkn8ZR%2BPA1V%2FCSs%2BbbaNOCeg0qVkLw3n%2Bc4u6htltVgChRpRtQUepgoC2f9jBS0UP9rrULJfOFtNwEf5K3EVlzonYKWA5%2F6dpBiLW9BkD0dsClzuAwlWY2UO3EbfcVd0AgeRVx2yMpUoXidpwNOK5p8ttWi5qBXlUaLyTG3GNajSISkNXC7WUknTJQzbt5rDlZcTldqcHJTJ4qDnH66A%2BCShissnYKoPf4btiywB7UY5BAQ49J0Ap4ts9TXoWzevG9T%2Fr0udVWlgp%2BtbRcdjEmIkk8fshUkb1JW%2B9tvqTS0O9yJQXDCX54oNMhSIpIdPBhgHZv8VRnARi%2FQubIYOff%2Fe%2BCdxRAzrakTdHAHa%2BeuPqTUUSfSQQyj6gV2pQ5in8CrZc4OzesKaiwm4Kko1ZAUsuFrARHhR00VH%2FsqYbSo8B3E3auIEdP65gm8cJfhIqtFkB1IQn5epBbmHr5%2F4JLfXoHqcMlcCDOJoO3mkn%2FcSvbKS%2BKRMPR7qXn9PnZwxmpyl4YaiJPNNY1XRONXSxR2yvuCQtb%2BjAn2GGO5OAEO0C7DgBhdnAd569ZxTGDa01FjwtbmouxsoD4FSTwnE%2F8fp1C2hbgZY49UhRj2yHdfHmHD0qDem48zQw3KfDwwY6sQEjR0exLIhMVpzv71k4v0M%2Fx1a3FIXdsmP0UF9OfdnaGnFAL495bRi9SqBrw6PdarT5izwY48x69Yb3yhZ0jPxljNOEUQb%2BbR6DiYqUq5oFnENbsaOKmXfgW0dDYAPKlJAtwLGnn9PaLqs%2F8567sbCgl3j6pifbXCeIl7P4SGnC%2FNzpL5ITXRWRnDpYFLwaVmxxefVOOhA4pcBU8OfdwImYu7EGC9vI0OE5Pyd3kOTrHVs%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T094748Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYSK5WMJA3%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=dbd1b105897ebcff1e92c197b2d92f0382e18e11757fe394781a70109cd141ca&hash=278702825a81e0f5ba75ecc616199d83d6f2b78ba60c0386a94ec65ff46edeee&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1361841518300306&tid=spdf-e66d89d1-1d5c-4bc1-b6b7-1c23c4e5572a&sid=6ddf087d7c00b3496838a47916e4157363bcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359565f0f&rr=95d761ab2f899403&cc=gb
+  tags:
+  - Fetal Brain Characterization
+  - Registration
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-87735-4_23
+  title: Assessment of Regional Cortical Development Through Fissure Based Gestational
+    Age Estimation in 3D Fetal Ultrasound
+  authors:
+  - Madeleine K. Wyburd
+  - Linde S. Hesse
+  - Moska Aliasi
+  - Mark Jenkinson
+  - Aris T. Papageorghiou
+  - Monique C. Haak
+  - Ana I. L. Namburete
+  publisher: Lecture Notes in Computer Science
+  date: '2021-01-01'
+  link: https://doi.org/g9srrz
+  note: Assessment of Regional Cortical Development Through Fissure Based Gestational
+    Age Estimation in 3D Fetal Ultrasound
+  image: images/publications/fissure.png
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-030-87735-4_23
+  - type: pdf
+    link: https://link.springer.com/content/pdf/10.1007/978-3-030-87735-4_23.pdf?pdf=inline%20link
+  tags:
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2014.12.006
+  title: Learning-based prediction of gestational age from ultrasound images of the
+    fetal brain
+  authors:
+  - Ana I.L. Namburete
+  - Richard V. Stebbing
+  - Bryn Kemp
+  - Mohammad Yaqub
+  - Aris T. Papageorghiou
+  - J. Alison Noble
+  publisher: Medical Image Analysis
+  date: '2015-04-01'
+  link: https://doi.org/f64wjn
+  note: Learning-based prediction of gestational age from ultrasound images of the
+    fetal brain
+  image: images/publications/brain_age_ana.png
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/pii/S136184151400190X?via%3Dihub
+  - type: pdf
+    link: https://pdf.sciencedirectassets.com/272154/1-s2.0-S1361841515X0003X/1-s2.0-S136184151400190X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCbvpUJsWLkwq2U%2F8GBG44Reh36NUb%2BkzX0mOgWPl2Z2QIgQQMRpxSgpx2nvl7%2FlFzlSL7iudjRUZMNPkI0Fsgmw0wqvAUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDNq0O6s2JC4%2Fgdi9iiqQBfifqWHAtQlHkFJat6%2BkYbZlRpt0KiT5vPkVhAihL40xNHUpf4zr2zLF6am8z3ab9hC4bkjJ8v38vzjNaUQysGdm795JZywruZoec1IzqjevV6mc60PvtmgoKDz%2FiB3SekjpyJ7sBUIF0fYpdn2KaulNGkfDHIZVqy6jfyxZgl6us35lZphyRl2I4LfTD31XVZILk41dJtuTMYGN4OUOXREDiHUnU0GhWXhrJn3BRMKbXHghSc0ANhWXIKUQU4MDoMTrQlS%2B5HLlRIh3QULRtL7TQRr1zLUo5q2yQAnaLD23i6b0wMqbafRLgdDnth8SWuywk1TLa4%2FGlwsMff52SgQSwTSLqu9QClIm8wQforHm3TtLvN%2BZxvYY4uNM5C17tK60Pi7HbkHSmUHMyRhp1ALbCv2B%2FOshyvy51dTPqzc0qy76oWnDL6GC9SVS%2BI992tlfyrWWfExZTm2VimmkC7ha4Ud2ettWcBV3x3Skl2AuqlWP%2B0QtNy1vjt7xX0yyAnb9ckl0qKFzRFO0BjPU8GslARxwglCzinMWFEF25Lah41MvLHawYBwh26zkhZsjjHwkUco0yo76Iwfs6F6S8CfMrYEhnD68XwSynQlfT3oMQFLGtbzHaK%2BGx0yWCWhGvVveXqoVTnuIdmMXgQMR8115hgOnn7dSB%2F%2F8xMBk%2BIHwjFpR4MYdfQ9i0agenLCkyFShe0sSnBZswZmonJVLehwVYI4FGQpDOzTrzWAIgtJSyWS6J4c3oVuWLQIrS67KDTJt1YVe%2F1dcTvHj7u%2B6jeNYPiy3HNCfThEImRGMjYjKVfP0m%2FrMPVkitFb6Bz4%2BEMEJVSHzGCLAF7oOMOyakunGBY194AdE0BgZkhrV9oGDMJGmw8MGOrEBqzt7XMAGalUW3Luf5ljEakuOP%2BE12En4HyDF1IsLG9HNSkvl5drfpY8vUH%2BTp3Ik2Vw1lqVNwO3jxZcn9ZRart9vJvWta6rpf5voSTFDfceV8eWAB3XSzuIQqwtWpiaD7iPVAx9UcGHGXH1W6fxmWZuO5iEI%2BqJ5NpZAUwP3ER7s9vWfCDADP0ixEwpxr8fRSPhMc1c7CEN%2FqPutD95mtIVwtgoS%2F9IFpzStQgT4g%2B6J&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T095213Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2YRR7COQ%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=aa32732a414f7ac28d21c1723e0c7126fe95a942e7ade313583fb69942d1aaa9&hash=f01c1c004320b508a1f5be5e0b5da4d1af0fd4d1ed0f3510a36ccf9a3833e7a5&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S136184151400190X&tid=spdf-b266b24f-f8cd-4449-9d67-9c89866c2cc8&sid=6ddf087d7c00b3496838a47916e4157363bcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=08005851035956565c&rr=95d768253d65beeb&cc=gb
+  tags:
+  - Fetal Brain Characterization
+  - Age Estimation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2306.09858
+  title: Prototype Learning for Explainable Brain Age Prediction
+  authors:
+  - Linde S. Hesse
+  - Nicola K. Dinsdale
+  - Ana I. L. Namburete
+  publisher: arXiv
+  date: '2023-01-01'
+  link: https://doi.org/g9sr47
+  note: Prototype learning for explainable brain age prediction
+  image: images/publications/US.png
+  buttons:
+  - type: website
+    link: https://openaccess.thecvf.com/content/WACV2024/html/Hesse_Prototype_Learning_for_Explainable_Brain_Age_Prediction_WACV_2024_paper.html
+  - type: pdf
+    link: https://openaccess.thecvf.com/content/WACV2024/papers/Hesse_Prototype_Learning_for_Explainable_Brain_Age_Prediction_WACV_2024_paper.pdf
+  tags:
+  - Fetal Brain Characterization
+  - Explainable AI
+  - Interpretability
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-52791-4_5
+  title: Cortical Plate Segmentation Using CNNs in 3D Fetal Ultrasound
+  authors:
+  - Madeleine K. Wyburd
+  - Mark Jenkinson
+  - Ana I. L. Namburete
+  publisher: Communications in Computer and Information Science
+  date: '2020-01-01'
+  link: https://doi.org/g9srsb
+  note: Cortical Plate Segmentation Using CNNs in 3D Fetal Ultrasound
+  image: images/publications/cortical_plate.png
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-030-52791-4_5
+  - type: pdf
+    link: https://link.springer.com/content/pdf/10.1007/978-3-030-52791-4_5.pdf?pdf=inline%20link
+  tags:
+  - Fetal Brain Characterization
+  - Segmentation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-39343-4_14
+  title: Multi-task CNN for Structural Semantic Segmentation in 3D Fetal Brain Ultrasound
+  authors:
+  - Lorenzo Venturini
+  - Aris T. Papageorghiou
+  - J. Alison Noble
+  - Ana I. L. Namburete
+  publisher: Communications in Computer and Information Science
+  date: '2020-01-01'
+  link: https://doi.org/g9srsd
+  note: Multi-task CNN for Structural Semantic Segmentation in 3D Fetal Brain Ultrasound
+  image: images/publications/us_seg.png
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-030-39343-4_14
+  - type: pdf
+    link: https://link.springer.com/content/pdf/10.1007/978-3-030-39343-4_14.pdf?pdf=inline%20link
+  tags:
+  - Fetal Brain Characterization
+  - Segmentation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1101/2024.02.05.578912
+  title: 'UniFed: A unified deep learning framework for segmentation of partially
+    labelled, distributed neuroimaging data'
+  authors:
+  - Nicola K Dinsdale
+  - Mark Jenkinson
+  - Ana IL Namburete
+  publisher: Cold Spring Harbor Laboratory
+  date: '2024-02-06'
+  link: https://doi.org/g9stjd
+  note: 'UniFed: A unified deep learning framework for segmentation of partially labelled,
+    distributed neuroimaging data'
+  image: images/publications/unifed.png
+  buttons:
+  - type: website
+    link: https://nkdinsdale.github.io/unifed_proj/
+  - type: pdf
+    link: https://www.biorxiv.org/content/10.1101/2024.02.05.578912v1.full.pdf
+  - type: source
+    link: https://github.com/nkdinsdale/UniFed
+  tags:
+  - Distributed Data and Data Privacy
+  - Federated Learning
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2303.15965
+  title: 'SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis'
+  authors:
+  - Nicola K Dinsdale
+  - Mark Jenkinson
+  - Ana IL Namburete
+  publisher: arXiv
+  date: '2023-01-01'
+  link: https://doi.org/g9stjf
+  note: 'SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis '
+  image: images/publications/bhatt.png
+  buttons:
+  - type: website
+    link: https://nkdinsdale.github.io/sfharmony_proj/
+  - type: pdf
+    link: https://arxiv.org/pdf/2303.15965
+  - type: source
+    link: https://github.com/nkdinsdale/SFHarmony
+  tags:
+  - Distributed Data and Data Privacy
+  - Federated Learning
+  - Domain Adaptation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2205.15970
+  title: 'FedHarmony: Unlearning Scanner Bias with Distributed Data'
+  authors:
+  - Nicola K Dinsdale
+  - Mark Jenkinson
+  - Ana IL Namburete
+  publisher: arXiv
+  date: '2022-01-01'
+  link: https://doi.org/g9stjg
+  note: 'FedHarmony: Unlearning Scanner Bias with Distributed Data  '
+  image: images/publications/federated.png
+  buttons:
+  - type: website
+    link: https://nkdinsdale.github.io/fedharmony_proj/
+  - type: pdf
+    link: https://arxiv.org/pdf/2205.15970
+  - type: source
+    link: https://github.com/nkdinsdale/FedHarmony
+  tags:
+  - Distributed Data and Data Privacy
+  - Federated Learning
+  - Domain Adaptation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.neuroimage.2020.117689
+  title: Deep learning-based unlearning of dataset bias for MRI harmonisation and
+    confound removal
+  authors:
+  - Nicola K. Dinsdale
+  - Mark Jenkinson
+  - Ana I.L. Namburete
+  publisher: NeuroImage
+  date: '2021-03-01'
+  link: https://doi.org/gm2bwp
+  note: 'Deep learning-based unlearning of dataset bias for MRI harmonisation and
+    confound removal  '
+  image: images/publications/seg.png
+  buttons:
+  - type: website
+    link: https://nkdinsdale.github.io/harmproj/
+  - type: pdf
+    link: https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811920X00206/1-s2.0-S1053811920311745/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIDhwa8agQDE7XauFpaZy5KRWRwxprFAnkXp0J%2Fml4gPuAiEAwzzS6BzfBJSt%2B%2Bf1UFvGVLOcGQ1uoNdk5%2FJD9fDuOFgquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDFoIkhF%2F2nq4P2KRWyqPBTZKtLjNnCaAPgwpaoUTaPNyN7ttIUAA1eHnOxlRD62jwOlPG1UQiaaSMdnbnZ8WJLOiPRhh5%2Fydhr6657u0m%2FGDN7YFjk7ntl4hqktzNw6WDMSR25qVKrJaBBev5E5v%2BkykoGy%2FKuC8TGSlPAHsfQ%2BKESR3Mf6ygHBP7abPCnGNRL1B0qtcFDpNM2VIf%2FGynVBPr504Fy8AEgj2dDZFv4wmeaUNxmOMJLJW0j3mf%2Ba%2BeosQmDvkkn8ZR%2BPA1V%2FCSs%2BbbaNOCeg0qVkLw3n%2Bc4u6htltVgChRpRtQUepgoC2f9jBS0UP9rrULJfOFtNwEf5K3EVlzonYKWA5%2F6dpBiLW9BkD0dsClzuAwlWY2UO3EbfcVd0AgeRVx2yMpUoXidpwNOK5p8ttWi5qBXlUaLyTG3GNajSISkNXC7WUknTJQzbt5rDlZcTldqcHJTJ4qDnH66A%2BCShissnYKoPf4btiywB7UY5BAQ49J0Ap4ts9TXoWzevG9T%2Fr0udVWlgp%2BtbRcdjEmIkk8fshUkb1JW%2B9tvqTS0O9yJQXDCX54oNMhSIpIdPBhgHZv8VRnARi%2FQubIYOff%2Fe%2BCdxRAzrakTdHAHa%2BeuPqTUUSfSQQyj6gV2pQ5in8CrZc4OzesKaiwm4Kko1ZAUsuFrARHhR00VH%2FsqYbSo8B3E3auIEdP65gm8cJfhIqtFkB1IQn5epBbmHr5%2F4JLfXoHqcMlcCDOJoO3mkn%2FcSvbKS%2BKRMPR7qXn9PnZwxmpyl4YaiJPNNY1XRONXSxR2yvuCQtb%2BjAn2GGO5OAEO0C7DgBhdnAd569ZxTGDa01FjwtbmouxsoD4FSTwnE%2F8fp1C2hbgZY49UhRj2yHdfHmHD0qDem48zQw3KfDwwY6sQEjR0exLIhMVpzv71k4v0M%2Fx1a3FIXdsmP0UF9OfdnaGnFAL495bRi9SqBrw6PdarT5izwY48x69Yb3yhZ0jPxljNOEUQb%2BbR6DiYqUq5oFnENbsaOKmXfgW0dDYAPKlJAtwLGnn9PaLqs%2F8567sbCgl3j6pifbXCeIl7P4SGnC%2FNzpL5ITXRWRnDpYFLwaVmxxefVOOhA4pcBU8OfdwImYu7EGC9vI0OE5Pyd3kOTrHVs%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T101225Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYSK5WMJA3%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=0c5c7b9bfbe9acbe11495d65c75152577cb74c3295779fdd45c7e2b18b8eac34&hash=0ff7390e757701c31a3d2a44653c06cd031e29a54328019b2497e0814ac24598&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811920311745&tid=spdf-f64647d8-5a95-4f2b-8992-bb779e657ef1&sid=6ddf087d7c00b3496838a47916e4157363bcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359585b0c&rr=95d785b88dd10039&cc=gb
+  - type: source
+    link: https://github.com/nkdinsdale/Unlearning_for_MRI_harmonisation
+  tags:
+  - Distributed Data and Data Privacy
+  - Domain Adaptation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2022.102583
+  title: 'STAMP: Simultaneous Training and Model Pruning for low data regimes in medical
+    image segmentation'
+  authors:
+  - Nicola K. Dinsdale
+  - Mark Jenkinson
+  - Ana I.L. Namburete
+  publisher: Medical Image Analysis
+  date: '2022-10-01'
+  link: https://doi.org/gqsn35
+  note: 'STAMP: Simultaneous Training and Model Pruning for Low Data Regimes in Medical
+    Image Segmentation'
+  image: images/publications/pruning.png
+  buttons:
+  - type: website
+    link: https://nkdinsdale.github.io/pruning_proj/
+  - type: pdf
+    link: https://www.sciencedirect.com/science/article/pii/S1361841522002213/pdfft?md5=08bc9fdad527998a32723a7b750969f2&pid=1-s2.0-S1361841522002213-main.pdf
+  - type: source
+    link: https://github.com/nkdinsdale/STAMP
+  tags:
+  - Model Compression
+  - Segmentation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/JBHI.2019.2961264
+  title: Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile
+    Deployment
+  authors:
+  - Sagar Vaze
+  - Weidi Xie
+  - Ana I. L. Namburete
+  publisher: IEEE Journal of Biomedical and Health Informatics
+  date: '2020-04-01'
+  link: https://doi.org/g9srr9
+  note: 'Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile
+    Deployment '
+  image: images/publications/sagar.png
+  buttons:
+  - type: website
+    link: https://sgvaze.github.io/pages/lightweight_unets.html
+  - type: pdf
+    link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8999615
+  - type: source
+    link: https://github.com/sgvaze/lightweight_unet
+  tags:
+  - Model Compression
+  - Segmentation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.neuroimage.2020.117401
+  title: Learning patterns of the ageing brain in MRI using deep convolutional networks
+  authors:
+  - Nicola K. Dinsdale
+  - Emma Bluemke
+  - Stephen M. Smith
+  - Zobair Arya
+  - Diego Vidaurre
+  - Mark Jenkinson
+  - Ana I.L. Namburete
+  publisher: NeuroImage
+  date: '2021-01-01'
+  link: https://doi.org/ghmnvg
+  note: Learning patterns of the ageing brain in MRI using deep convolutional networks
+  image: images/publications/age_pred.png
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/pii/S1053811920308867
+  - type: pdf
+    link: https://www.sciencedirect.com/science/article/pii/S1053811920308867/pdfft?md5=a803239cb72fca94df4f8397c7e60657&pid=1-s2.0-S1053811920308867-main.pdf
+  tags:
+  - Biomarkers
+  - MRI
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1101/2024.08.22.24312425
+  title: Is Your Style Transfer Doing Anything Useful? An Investigation Into Hippocampus
+    Segmentation and the Role of Preprocessing
+  authors:
+  - Hoda Kalabizadeh
+  - Ludovica Griffanti
+  - Pak Hei Yeung
+  - Natalie Voets
+  - Grace Gillis
+  - Clare E Mackay
+  - Ana IL Namburete
+  - Nicola K Dinsdale
+  - Konstantinos Kamnitsas
+  publisher: Cold Spring Harbor Laboratory
+  date: '2024-08-22'
+  link: https://doi.org/g9srrv
+  note: Is Your Style Transfer Doing Anything Useful? An Investigation Into Hippocampus
+    Segmentation and the Role of Preprocessing
+  image: images/publications/hippocampus.png
+  buttons:
+  - type: website
+    link: https://www.medrxiv.org/content/10.1101/2024.08.22.24312425v1
+  - type: pdf
+    link: https://www.medrxiv.org/content/10.1101/2024.08.22.24312425v1.full.pdf
+  tags:
+  - Biomarkers
+  - MRI
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/SDS57534.2023.00010
+  title: Brain Ages Derived from Different MRI Modalities are Associated with Distinct
+    Biological Phenotypes
+  authors:
+  - Andrei-Claudiu Roibu
+  - Stanislaw Adaszewski
+  - Torsten Schindler
+  - Stephen M. Smith
+  - Ana I.L. Namburete
+  - Frederik J. Lange
+  publisher: 2023 10th IEEE Swiss Conference on Data Science (SDS)
+  date: '2023-06-01'
+  link: https://doi.org/g9stjh
+  note: Brain Ages Derived from Different MRI Modalities are Associated with Distinct
+    Biological Phenotypes
+  image: images/publications/age_pred.png
+  buttons:
+  - type: website
+    link: https://ieeexplore.ieee.org/abstract/document/10196736?casa_token=wuxImYEu6dIAAAAA:-DFpgaT8n7xrMOsgxh5PNjs5UY5OGMl2TqP-os4q0jLkJZgZLBpp0wDodRGu-ygXU0Np4YAssg
+  - type: pdf
+    link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10196736
+  tags:
+  - Biomarkers
+  - MRI
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2024.103222
+  title: 'Anatomically plausible segmentations: Explicitly preserving topology through
+    prior deformations'
+  authors:
+  - Madeleine K. Wyburd
+  - Nicola K. Dinsdale
+  - Mark Jenkinson
+  - Ana I.L. Namburete
+  publisher: Medical Image Analysis
+  date: '2024-10-01'
+  link: https://doi.org/g9stk2
+  note: 'Anatomically plausible segmentations: Explicitly preserving topology through
+    prior deformations'
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/pii/S1361841524001476
+  - type: pdf
+    link: https://www.sciencedirect.com/science/article/pii/S1361841524001476/pdfft?md5=a20ffd31a92d57f97f7189988e31a78d&pid=1-s2.0-S1361841524001476-main.pdf
+  tags:
+  - Segmentation
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.3389/fbinf.2023.1163430
+  title: Bayesian networks and imaging-derived phenotypes highlight the role of fat
+    deposition in COVID-19 hospitalisation risk
+  authors:
+  - T. Waddell
+  - A. I. L. Namburete
+  - P. Duckworth
+  - N. Eichert
+  - H. Thomaides-Brears
+  - D. J. Cuthbertson
+  - J. P. Despres
+  - M. Brady
+  publisher: Frontiers in Bioinformatics
+  date: '2023-05-24'
+  link: https://doi.org/g9stk3
+  note: Bayesian networks and imaging-derived phenotypes highlight the role of fat
+    deposition in COVID-19 hospitalisation risk
+  buttons:
+  - type: website
+    link: https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2023.1163430/full
+  - type: pdf
+    link: https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2023.1163430/pdf
+  tags:
+  - Bayesian networks
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1145/3608298.3608307
+  title: 'The impact of projected increases in obesity prevalence on incident liver
+    disease in the UK: Insights from Bayesian-network modelling'
+  authors:
+  - Tom Henry Waddell
+  - Ana I.L Namburete
+  - Paul Duckworth
+  - Dan Cuthbertson
+  - Celeste Mccracken
+  - Michael Brady
+  publisher: 2023 the 7th International Conference on Medical and Health Informatics
+    (ICMHI)
+  date: '2023-05-12'
+  link: https://doi.org/g9srrw
+  note: 'The impact of projected increases in obesity prevalence on incident liver
+    disease in the UK: Insights from Bayesian-network modelling'
+  buttons:
+  - type: website
+    link: https://dl.acm.org/doi/10.1145/3608298.3608307
+  tags:
+  - Bayesian networks
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.3389/fendo.2023.1063882
+  title: 'Poor glycaemic control and ectopic fat deposition mediates the increased
+    risk of non-alcoholic steatohepatitis in high-risk populations with type 2 diabetes:
+    Insights from Bayesian-network modelling'
+  authors:
+  - T. Waddell
+  - A. Namburete
+  - P. Duckworth
+  - A. Fichera
+  - A. Telford
+  - H. Thomaides-Brears
+  - D. J. Cuthbertson
+  - M. Brady
+  publisher: Frontiers in Endocrinology
+  date: '2023-02-22'
+  link: https://doi.org/g9stk4
+  note: 'Poor glycaemic control and ectopic fat deposition mediates the increased
+    risk of non-alcoholic steatohepatitis in high-risk populations with type 2 diabetes:
+    Insights from Bayesian-network modelling'
+  buttons:
+  - type: website
+    link: https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1063882/full
+  - type: pdf
+    link: https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1063882/pdf
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-52791-4_6
+  title: Improving U-Net Segmentation with Active Contour Based Label Correction
+  authors:
+  - Linde S. Hesse
+  - Ana I. L. Namburete
+  publisher: Communications in Computer and Information Science
+  date: '2020-01-01'
+  link: https://doi.org/g9srsc
+  note: Improving U-Net Segmentation with Active Contour Based Label Correction
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-030-52791-4_6
+  - type: pdf
+    link: https://link.springer.com/content/pdf/10.1007/978-3-030-52791-4_6.pdf?pdf=inline%20link
+  tags:
+  - Segmentation
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-030-59710-8_67
+  title: Uncertainty Estimates as Data Selection Criteria to Boost Omni-Supervised
+    Learning
+  authors:
+  - Lorenzo Venturini
+  - Aris T. Papageorghiou
+  - J. Alison Noble
+  - Ana I. L. Namburete
+  publisher: Lecture Notes in Computer Science
+  date: '2020-01-01'
+  link: https://doi.org/g9srsg
+  note: Uncertainty Estimates as Data Selection Criteria to Boost Omni-Supervised
+    Learning
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-030-59710-8_67
+  - type: pdf
+    link: https://link.springer.com/content/pdf/10.1007/978-3-030-59710-8_67.pdf?pdf=inline%20link
+  tags:
+  - Distributed Data and Data Privacy
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1007/978-3-031-16437-8_48
+  title: "INSightR-Net: Interpretable Neural Network for\_Regression Using Similarity-Based\
+    \ Comparisons to\_Prototypical Examples"
+  authors:
+  - Linde S. Hesse
+  - Ana I. L. Namburete
+  publisher: Lecture Notes in Computer Science
+  date: '2022-01-01'
+  link: https://doi.org/g9st3j
+  note: 'INSightR-Net: Interpretable Neural Network for Regression Using Similarity-Based
+    Comparisons to Prototypical Examples'
+  buttons:
+  - type: website
+    link: https://link.springer.com/chapter/10.1007/978-3-031-16437-8_48
+  - type: pdf
+    link: https://link.springer.com/content/pdf/10.1007/978-3-031-16437-8_48.pdf?pdf=inline%20link
+  tags:
+  - Interpretability
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2410.06161
+  title: Automated quality assessment using appearance-based simulations and hippocampus
+    segmentation on low-field paediatric brain MR images
+  authors:
+  - Vaanathi Sundaresan
+  - Nicola K Dinsdale
+  publisher: arXiv
+  date: '2024-01-01'
+  link: https://doi.org/g9svgw
+  note: Automated quality assessment using appearance-based simulations and hippocampus
+    segmentation on low-field paediatric brain MR images
+  buttons:
+  - type: website
+    link: https://arxiv.org/abs/2410.06161
+  - type: pdf
+    link: https://arxiv.org/pdf/2410.06161
+  tags:
+  - Challenge
   plugin: sources.py
   file: sources.yaml

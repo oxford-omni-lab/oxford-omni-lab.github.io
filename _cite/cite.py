@@ -163,6 +163,13 @@ for index, source in enumerate(sources):
     # preserve fields from input source, overriding existing fields
     citation.update(source)
 
+    # automatically prepend images/publications/ to image paths that don't include a directory
+    if get_safe(citation, "image", ""):
+        image_path = citation["image"]
+        # Check if the path doesn't already contain a directory separator
+        if "/" not in image_path and "\\" not in image_path:
+            citation["image"] = f"images/publications/{image_path}"
+
     # ensure date in proper format for correct date sorting
     if get_safe(citation, "date", ""):
         citation["date"] = format_date(get_safe(citation, "date", ""))

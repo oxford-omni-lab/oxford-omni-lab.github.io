@@ -67,3 +67,39 @@ $wrap: 800px;
     height: $thumb-size;
   }
 }
+
+// Tiny style for compact news display
+.post-excerpt[data-style="tiny"] {
+  margin: 8px 0;
+  padding: 8px 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.post-excerpt-tiny {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+}
+
+.post-excerpt-date {
+  color: var(--gray);
+  font-size: 0.9em;
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.post-excerpt-title {
+  flex: 1;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: var(--semi-bold);
+
+  &:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+}

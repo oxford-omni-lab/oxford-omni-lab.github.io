@@ -9,52 +9,61 @@
 {% endif %}
 
 <div class="post-excerpt-container">
-  <div class="post-excerpt">
+  <div class="post-excerpt" data-style="{{ include.style }}">
     {% assign url = post.url | relative_url | uri_escape %}
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
 
-    {% if image %}
-      <a
-        href="{{ url }}"
-        class="post-excerpt-image"
-        aria-label="{{ title | default: "excerpt link" | regex_strip }}"
-      >
-        <img
-          src="{{ image }}"
-          alt="{{ title | default: "excerpt image" | regex_strip }}"
-          loading="lazy"
-          {% include fallback.html %}
+    {% if include.style == "tiny" %}
+      <!-- Tiny style: single line with date and title -->
+      <div class="post-excerpt-tiny">
+        <span class="post-excerpt-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <a href="{{ url }}" class="post-excerpt-title">{{ title }}</a>
+      </div>
+    {% else %}
+      <!-- Default style -->
+      {% if image %}
+        <a
+          href="{{ url }}"
+          class="post-excerpt-image"
+          aria-label="{{ title | default: "excerpt link" | regex_strip }}"
         >
-      </a>
+          <img
+            src="{{ image }}"
+            alt="{{ title | default: "excerpt image" | regex_strip }}"
+            loading="lazy"
+            {% include fallback.html %}
+          >
+        </a>
+      {% endif %}
+
+      <div class="post-excerpt-text">
+        <a href="{{ url }}">{{ title }}</a>
+
+        {%
+          include post-info.html
+          author=post.author
+          published=post.date
+          updated=post.last_modified_at
+          tags=post.tags
+        %}
+
+        {% assign excerpt = post.content
+          | default: ""
+          | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
+          | default: post.excerpt
+          | default: ""
+          | strip_html
+        %}
+        {% assign search = post.content
+          | strip_html
+          | strip_newlines
+          | regex_strip
+        %}
+        <p data-search="{{ search }}">
+          {{ excerpt }}
+        </p>
+      </div>
     {% endif %}
-
-    <div class="post-excerpt-text">
-      <a href="{{ url }}">{{ title }}</a>
-
-      {%
-        include post-info.html
-        author=post.author
-        published=post.date
-        updated=post.last_modified_at
-        tags=post.tags
-      %}
-
-      {% assign excerpt = post.content
-        | default: ""
-        | regex_scan: "<!-- excerpt start -->(.*)<!-- excerpt end -->", true
-        | default: post.excerpt
-        | default: ""
-        | strip_html
-      %}
-      {% assign search = post.content
-        | strip_html
-        | strip_newlines
-        | regex_strip
-      %}
-      <p data-search="{{ search }}">
-        {{ excerpt }}
-      </p>
-    </div>
   </div>
 </div>

@@ -3,7 +3,7 @@
 
 .background {
   position: relative;
-  background: var(--background);
+  background: var(--gray);
   color: var(--text);
   z-index: 1;
 }
@@ -16,6 +16,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  opacity: 0.25;
+  opacity: 0.2;
+  filter: blur(1px);
   z-index: -1;
 }

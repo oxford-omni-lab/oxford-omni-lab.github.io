@@ -1,23 +1,406 @@
-- id: doi:10.1371/journal.pcbi.1007128
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
+- id: doi:10.1038/s41586-023-06630-3
+  image: USAtlas.gif
+  note: Atlas
+  highlight: true
   buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
     - type: website
-      link: http://manubot.org/
+      link: https://www.nature.com/articles/s41586-023-06630-3
+    - type: pdf
+      link: pdfs/atlas.pdf
   tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+    - Fetal Brain Characterization
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+- id: doi:10.48550/arXiv.2505.14572
+  image: 24-miccai-challenge.png
+  note: Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling of 2D Intrapartum Ultrasound Images
+  buttons:
+    - type: website
+      link: https://arxiv.org/abs/2505.14572
+    - type: pdf
+      link: https://arxiv.org/pdf/2505.14572
+  tags:
+    - Challenge
+    - Biomarkers
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+- id: doi:10.48550/arXiv.2505.05643
+  note: "UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes"
+  buttons:
+    - type: website
+      link: https://arxiv.org/abs/2505.05643
+    - type: pdf
+      link: https://arxiv.org/pdf/2505.05643
+  tags:
+    - 2D to 3D Reconstruction
+
+- id: doi:10.1109/ISBI60581.2025.10980676
+  note: Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain in 3D Ultrasound
+  buttons:
+    - type: website
+      link: https://ieeexplore.ieee.org/abstract/document/10980676
+    - type: pdf
+      link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980676
+  tags:
+    - Fetal Brain Characterization
+
+- id: doi:10.1109/ISBI60581.2025.10980994
+  note: "Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D Scans"
+  buttons:
+    - type: website
+      link: https://ieeexplore.ieee.org/abstract/document/10980994
+    - type: pdf
+      link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980994
+  tags:
+    - 2D to 3D Reconstruction
+
+- id: doi:10.1016/j.media.2024.103147
+  image: sensorless.png
+  note: Sensorless Volumetric Reconstruction of Fetal Brain Freehand Ultrasound Scans with Deep Implicit Representation
+  buttons:
+    - type: website
+      link: https://pakheiyeung.github.io/ImplicitVol_wp/
+    - type: pdf
+      link: https://arxiv.org/pdf/2109.12108
+    - type: source
+      link: https://github.com/pakheiyeung/ImplicitVol
+  tags:
+    - 2D to 3D Reconstruction
+
+- id: doi:10.1007/978-3-030-87193-2_24
+  note: "TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee Topology Preservation in Segmentations"
+  image: teds_new.png
+  buttons:
+    - type: website
+      link: https://mwyburd.github.io/TEDS-NET_wp/
+    - type: source
+      link: https://github.com/mwyburd/TEDS-Net
+    - type: pdf
+      link: https://link.springer.com/chapter/10.1007/978-3-030-87193-2_24
+  tags:
+    - Segmentation
+    - Topology
+
+- id: doi:10.1016/j.neuron.2022.09.012
+  note: Challenges for machine learning in clinical translation of big data imaging studies
+  image: features.png
+  buttons:
+    - type: website
+      link: https://doi.org/10.1016/j.neuron.2022.09.012
+    - type: pdf
+      link: https://www.cell.com/action/showPdf?pii=S0896-6273%2822%2900817-0
+  tags:
+    - Clinical Translation
+
+- id: doi:10.1007/978-3-031-72378-0_39
+  note: Geometric Transformation Uncertainty for Improving 3D Fetal Brain Pose Prediction from Freehand 2D Ultrasound Videos
+  image: US.png
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-031-72378-0_39
+  tags:
+    - 2D to 3D Reconstruction
+
+- id: doi:10.48550/arXiv.2404.10766
+  note: "RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D Scans"
+  image: triplanar.png
+  buttons:
+    - type: website
+      link: https://arxiv.org/abs/2404.10766
+    - type: pdf
+      link: https://arxiv.org/pdf/2404.10766
+  tags:
+    - 2D to 3D Reconstruction
+
+- id: doi:10.1016/j.neuroimage.2022.119117
+  note: "Subcortical segmentation of the fetal brain in 3D ultrasound using deep learning"
+  image: us_seg.png
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/pii/S1053811922002452
+    - type: pdf
+      link: https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811922X00074/1-s2.0-S1053811922002452/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFfLZ2RCA9ogZPgWF6uUqyN12XeQauqzP7mAZjQxZnDoAiEAzvOFUA0KKER8L2vDRyBGJyD4112VIFvBRWXAtH7%2FoEkquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDMGnpy71hig94Fc%2BdyqPBT69Cfn%2FurakiU%2FXZzwIFMY7k%2BT7m5ho8xl0zbacW0r2iB%2BjmzTjLwoiu%2FAsfHmP26RlAI81Cje7Pn2uxRJDHffntQjclrX7ajIKUd%2FwwJExodjsiZ47RBGAUmOSM9QsDswyxgqsudx9YbFG6GMSvE9KPeiArdJ2n6WQW%2Bc6NM67ih5qUqXnHrSga4M37N8lMLfk9a9o5rh0G7ePgOqV0vducm%2BJDqo0a3gOrOCRor88Rk7Q9uNQT5qQFcgzWATR3da%2FZG4O7apqKnD1IuWg0aUokzedIlPHBXc%2BY556AOM5WygR3CkFfZ1tgikir%2B6i93FLAKoTnwXaGkn%2BjXhjUMELo1Hxe5Tr3D1p0uJEsEV%2BoB4xrumf9ea1xnEm7CJb1yac5eebpORig2I%2FVHsgPA%2FIEZAj82R9B%2F6SmAkxIqiw8qo2FpUYN7PasQLb9mODfqnfCu%2BhezxLew1MNSze8J4OFFI9nlP4tjZmCeeqkFWk1glSy1R8qciUcar7jknG8yiERhT6l2qQJRhzkaX7Ir1305U5hnQgUynr5sUeuOJszt3fHzjhDpu40hEvZ%2FwboyIvIcH%2FsKFDB6RYl%2FZkaxmtBCGcUvDkYqCMYMoucgPSsMIBadeGLBkA%2F%2BzXxxUPOJi5%2FqoTMSurk%2FRC8MxKFKiggLcNSV%2BEC3hIZgjQd7oHSC6tWtJg7ultxCxRJZVzOqfxu3Bx26xXMzvRlBlnSLDbttsWzmxhRh8Js15wWkC6uQUFChPqFRqE7dvlwFiotPsgqlent91%2Bhjvqf3W5Opm1Cj8nFEo9xObDZmf7RmJGdSzOO6gDUxMH4Qr3%2FYlqO4k%2F3iL%2BZx7LCWigS3MsxNS6b4KXwNTDgjgX%2Bu3Oo7IwhqbDwwY6sQH3zjKNx3bK3KwjuIv3lFW%2BAezQ9VHaOMqMIwcNr6GyRu67b%2FDHrLCD57R%2BlL9okwxdFbEC%2Bi9SNe1wmiMxZT30epcAchesRSyRpYZNFjkoInqpnsr2kbScXBl4%2BUlhl5yNtJUPZgAzbxjiowPwP%2BCgAUqwPzrKhGO91%2BMLmPgoj2V%2BSYW%2BM5KGk4qG8sNomqQo87pFuh1d0M2zZttGwVEGt6L0piaZSD88NIG3ErCjj4s%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T092951Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYX47ZBRQ7%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=20db7e783a5b161e7ac03f8aa3e89b3f426b42b0e918bc5638e7f76144afab84&hash=f1b2cd2a8e725ffe52df6a3ab30e8d1fcc6a1ad49fc4cdeca8e09c858c150416&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811922002452&tid=spdf-2b7f79fe-832d-49a9-b0f4-7b3f725af1f7&sid=fa89243a868113483e394891ee63e025fb9egxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359545958&rr=95d74762ec19f422&cc=gb
+  tags:
+    - Fetal Brain Characterization
+
+- id: doi:10.1016/j.neuroimage.2022.119341
+  note: "BEAN: Brain Extraction and Alignment Network for 3D Fetal Neurosonography"
+  image: fetal_brain.png
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/pii/S1053811922004608
+    - type: pdf
+      link: https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811922X00116/1-s2.0-S1053811922004608/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIFfLZ2RCA9ogZPgWF6uUqyN12XeQauqzP7mAZjQxZnDoAiEAzvOFUA0KKER8L2vDRyBGJyD4112VIFvBRWXAtH7%2FoEkquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDMGnpy71hig94Fc%2BdyqPBT69Cfn%2FurakiU%2FXZzwIFMY7k%2BT7m5ho8xl0zbacW0r2iB%2BjmzTjLwoiu%2FAsfHmP26RlAI81Cje7Pn2uxRJDHffntQjclrX7ajIKUd%2FwwJExodjsiZ47RBGAUmOSM9QsDswyxgqsudx9YbFG6GMSvE9KPeiArdJ2n6WQW%2Bc6NM67ih5qUqXnHrSga4M37N8lMLfk9a9o5rh0G7ePgOqV0vducm%2BJDqo0a3gOrOCRor88Rk7Q9uNQT5qQFcgzWATR3da%2FZG4O7apqKnD1IuWg0aUokzedIlPHBXc%2BY556AOM5WygR3CkFfZ1tgikir%2B6i93FLAKoTnwXaGkn%2BjXhjUMELo1Hxe5Tr3D1p0uJEsEV%2BoB4xrumf9ea1xnEm7CJb1yac5eebpORig2I%2FVHsgPA%2FIEZAj82R9B%2F6SmAkxIqiw8qo2FpUYN7PasQLb9mODfqnfCu%2BhezxLew1MNSze8J4OFFI9nlP4tjZmCeeqkFWk1glSy1R8qciUcar7jknG8yiERhT6l2qQJRhzkaX7Ir1305U5hnQgUynr5sUeuOJszt3fHzjhDpu40hEvZ%2FwboyIvIcH%2FsKFDB6RYl%2FZkaxmtBCGcUvDkYqCMYMoucgPSsMIBadeGLBkA%2F%2BzXxxUPOJi5%2FqoTMSurk%2FRC8MxKFKiggLcNSV%2BEC3hIZgjQd7oHSC6tWtJg7ultxCxRJZVzOqfxu3Bx26xXMzvRlBlnSLDbttsWzmxhRh8Js15wWkC6uQUFChPqFRqE7dvlwFiotPsgqlent91%2Bhjvqf3W5Opm1Cj8nFEo9xObDZmf7RmJGdSzOO6gDUxMH4Qr3%2FYlqO4k%2F3iL%2BZx7LCWigS3MsxNS6b4KXwNTDgjgX%2Bu3Oo7IwhqbDwwY6sQH3zjKNx3bK3KwjuIv3lFW%2BAezQ9VHaOMqMIwcNr6GyRu67b%2FDHrLCD57R%2BlL9okwxdFbEC%2Bi9SNe1wmiMxZT30epcAchesRSyRpYZNFjkoInqpnsr2kbScXBl4%2BUlhl5yNtJUPZgAzbxjiowPwP%2BCgAUqwPzrKhGO91%2BMLmPgoj2V%2BSYW%2BM5KGk4qG8sNomqQo87pFuh1d0M2zZttGwVEGt6L0piaZSD88NIG3ErCjj4s%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T094526Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYX47ZBRQ7%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=3f7564622b5d6650e9be5d5c41bceeec472459689ab553cf60c68b3134754163&hash=9c5cac58e08e8919163097e660e1d8be9f307ef6facded478c0a0bdcc5470f8f&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811922004608&tid=spdf-06dbb04d-cfd3-4c19-bea4-e6833c6f6faa&sid=fa89243a868113483e394891ee63e025fb9egxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359550b5d&rr=95d75e33a9a19403&cc=gb
+  tags:
+    - Fetal Brain Characterization
+    - Registration
+
+- id: doi:10.1016/j.media.2018.02.006
+  note: "Fully-automated alignment of 3D fetal brain ultrasound to a canonical reference space using multi-task learning"
+  image: US.png
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/pii/S1361841518300306
+    - type: pdf
+      link: https://pdf.sciencedirectassets.com/272154/1-s2.0-S1361841518X00024/1-s2.0-S1361841518300306/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIDhwa8agQDE7XauFpaZy5KRWRwxprFAnkXp0J%2Fml4gPuAiEAwzzS6BzfBJSt%2B%2Bf1UFvGVLOcGQ1uoNdk5%2FJD9fDuOFgquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDFoIkhF%2F2nq4P2KRWyqPBTZKtLjNnCaAPgwpaoUTaPNyN7ttIUAA1eHnOxlRD62jwOlPG1UQiaaSMdnbnZ8WJLOiPRhh5%2Fydhr6657u0m%2FGDN7YFjk7ntl4hqktzNw6WDMSR25qVKrJaBBev5E5v%2BkykoGy%2FKuC8TGSlPAHsfQ%2BKESR3Mf6ygHBP7abPCnGNRL1B0qtcFDpNM2VIf%2FGynVBPr504Fy8AEgj2dDZFv4wmeaUNxmOMJLJW0j3mf%2Ba%2BeosQmDvkkn8ZR%2BPA1V%2FCSs%2BbbaNOCeg0qVkLw3n%2Bc4u6htltVgChRpRtQUepgoC2f9jBS0UP9rrULJfOFtNwEf5K3EVlzonYKWA5%2F6dpBiLW9BkD0dsClzuAwlWY2UO3EbfcVd0AgeRVx2yMpUoXidpwNOK5p8ttWi5qBXlUaLyTG3GNajSISkNXC7WUknTJQzbt5rDlZcTldqcHJTJ4qDnH66A%2BCShissnYKoPf4btiywB7UY5BAQ49J0Ap4ts9TXoWzevG9T%2Fr0udVWlgp%2BtbRcdjEmIkk8fshUkb1JW%2B9tvqTS0O9yJQXDCX54oNMhSIpIdPBhgHZv8VRnARi%2FQubIYOff%2Fe%2BCdxRAzrakTdHAHa%2BeuPqTUUSfSQQyj6gV2pQ5in8CrZc4OzesKaiwm4Kko1ZAUsuFrARHhR00VH%2FsqYbSo8B3E3auIEdP65gm8cJfhIqtFkB1IQn5epBbmHr5%2F4JLfXoHqcMlcCDOJoO3mkn%2FcSvbKS%2BKRMPR7qXn9PnZwxmpyl4YaiJPNNY1XRONXSxR2yvuCQtb%2BjAn2GGO5OAEO0C7DgBhdnAd569ZxTGDa01FjwtbmouxsoD4FSTwnE%2F8fp1C2hbgZY49UhRj2yHdfHmHD0qDem48zQw3KfDwwY6sQEjR0exLIhMVpzv71k4v0M%2Fx1a3FIXdsmP0UF9OfdnaGnFAL495bRi9SqBrw6PdarT5izwY48x69Yb3yhZ0jPxljNOEUQb%2BbR6DiYqUq5oFnENbsaOKmXfgW0dDYAPKlJAtwLGnn9PaLqs%2F8567sbCgl3j6pifbXCeIl7P4SGnC%2FNzpL5ITXRWRnDpYFLwaVmxxefVOOhA4pcBU8OfdwImYu7EGC9vI0OE5Pyd3kOTrHVs%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T094748Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYSK5WMJA3%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=dbd1b105897ebcff1e92c197b2d92f0382e18e11757fe394781a70109cd141ca&hash=278702825a81e0f5ba75ecc616199d83d6f2b78ba60c0386a94ec65ff46edeee&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1361841518300306&tid=spdf-e66d89d1-1d5c-4bc1-b6b7-1c23c4e5572a&sid=6ddf087d7c00b3496838a47916e4157363bcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359565f0f&rr=95d761ab2f899403&cc=gb
+  tags:
+    - Fetal Brain Characterization
+    - Registration
+
+- id: doi:10.1007/978-3-030-87735-4_23
+  note: Assessment of Regional Cortical Development Through Fissure Based Gestational Age Estimation in 3D Fetal Ultrasound
+  image: fissure.png
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-030-87735-4_23
+    - type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-030-87735-4_23.pdf?pdf=inline%20link
+  tags:
+    - Fetal Brain Characterization
+
+- id: doi:10.1016/j.media.2014.12.006
+  note: "Learning-based prediction of gestational age from ultrasound images of the fetal brain"
+  image: brain_age_ana.png
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/pii/S136184151400190X?via%3Dihub
+    - type: pdf
+      link: https://pdf.sciencedirectassets.com/272154/1-s2.0-S1361841515X0003X/1-s2.0-S136184151400190X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIQCbvpUJsWLkwq2U%2F8GBG44Reh36NUb%2BkzX0mOgWPl2Z2QIgQQMRpxSgpx2nvl7%2FlFzlSL7iudjRUZMNPkI0Fsgmw0wqvAUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDNq0O6s2JC4%2Fgdi9iiqQBfifqWHAtQlHkFJat6%2BkYbZlRpt0KiT5vPkVhAihL40xNHUpf4zr2zLF6am8z3ab9hC4bkjJ8v38vzjNaUQysGdm795JZywruZoec1IzqjevV6mc60PvtmgoKDz%2FiB3SekjpyJ7sBUIF0fYpdn2KaulNGkfDHIZVqy6jfyxZgl6us35lZphyRl2I4LfTD31XVZILk41dJtuTMYGN4OUOXREDiHUnU0GhWXhrJn3BRMKbXHghSc0ANhWXIKUQU4MDoMTrQlS%2B5HLlRIh3QULRtL7TQRr1zLUo5q2yQAnaLD23i6b0wMqbafRLgdDnth8SWuywk1TLa4%2FGlwsMff52SgQSwTSLqu9QClIm8wQforHm3TtLvN%2BZxvYY4uNM5C17tK60Pi7HbkHSmUHMyRhp1ALbCv2B%2FOshyvy51dTPqzc0qy76oWnDL6GC9SVS%2BI992tlfyrWWfExZTm2VimmkC7ha4Ud2ettWcBV3x3Skl2AuqlWP%2B0QtNy1vjt7xX0yyAnb9ckl0qKFzRFO0BjPU8GslARxwglCzinMWFEF25Lah41MvLHawYBwh26zkhZsjjHwkUco0yo76Iwfs6F6S8CfMrYEhnD68XwSynQlfT3oMQFLGtbzHaK%2BGx0yWCWhGvVveXqoVTnuIdmMXgQMR8115hgOnn7dSB%2F%2F8xMBk%2BIHwjFpR4MYdfQ9i0agenLCkyFShe0sSnBZswZmonJVLehwVYI4FGQpDOzTrzWAIgtJSyWS6J4c3oVuWLQIrS67KDTJt1YVe%2F1dcTvHj7u%2B6jeNYPiy3HNCfThEImRGMjYjKVfP0m%2FrMPVkitFb6Bz4%2BEMEJVSHzGCLAF7oOMOyakunGBY194AdE0BgZkhrV9oGDMJGmw8MGOrEBqzt7XMAGalUW3Luf5ljEakuOP%2BE12En4HyDF1IsLG9HNSkvl5drfpY8vUH%2BTp3Ik2Vw1lqVNwO3jxZcn9ZRart9vJvWta6rpf5voSTFDfceV8eWAB3XSzuIQqwtWpiaD7iPVAx9UcGHGXH1W6fxmWZuO5iEI%2BqJ5NpZAUwP3ER7s9vWfCDADP0ixEwpxr8fRSPhMc1c7CEN%2FqPutD95mtIVwtgoS%2F9IFpzStQgT4g%2B6J&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T095213Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY2YRR7COQ%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=aa32732a414f7ac28d21c1723e0c7126fe95a942e7ade313583fb69942d1aaa9&hash=f01c1c004320b508a1f5be5e0b5da4d1af0fd4d1ed0f3510a36ccf9a3833e7a5&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S136184151400190X&tid=spdf-b266b24f-f8cd-4449-9d67-9c89866c2cc8&sid=6ddf087d7c00b3496838a47916e4157363bcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=08005851035956565c&rr=95d768253d65beeb&cc=gb
+  tags:
+    - Fetal Brain Characterization
+    - Age Estimation
+
+- id: doi:10.48550/arXiv.2306.09858
+  note: "Prototype learning for explainable brain age prediction"
+  image: US.png
+  buttons:
+    - type: website
+      link: https://openaccess.thecvf.com/content/WACV2024/html/Hesse_Prototype_Learning_for_Explainable_Brain_Age_Prediction_WACV_2024_paper.html
+    - type: pdf
+      link: https://openaccess.thecvf.com/content/WACV2024/papers/Hesse_Prototype_Learning_for_Explainable_Brain_Age_Prediction_WACV_2024_paper.pdf
+  tags:
+    - Fetal Brain Characterization
+    - Explainable AI
+    - Interpretability
+
+- id: doi:10.1007/978-3-030-52791-4_5
+  note: Cortical Plate Segmentation Using CNNs in 3D Fetal Ultrasound
+  image: cortical_plate.png
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-030-52791-4_5
+    - type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-030-52791-4_5.pdf?pdf=inline%20link
+  tags:
+    - Fetal Brain Characterization
+    - Segmentation
+
+- id: doi:10.1007/978-3-030-39343-4_14
+  note: "Multi-task CNN for Structural Semantic Segmentation in 3D Fetal Brain Ultrasound"
+  image: us_seg.png
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-030-39343-4_14
+    - type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-030-39343-4_14.pdf?pdf=inline%20link
+  tags:
+    - Fetal Brain Characterization
+    - Segmentation
+
+- id: doi:10.1101/2024.02.05.578912
+  note: "UniFed: A unified deep learning framework for segmentation of partially labelled, distributed neuroimaging data"
+  image: unifed.png
+  buttons:
+    - type: website
+      link: https://nkdinsdale.github.io/unifed_proj/
+    - type: pdf
+      link: https://www.biorxiv.org/content/10.1101/2024.02.05.578912v1.full.pdf
+    - type: source
+      link: https://github.com/nkdinsdale/UniFed
+  tags:
+    - Distributed Data and Data Privacy
+    - Federated Learning
+
+- id: doi:10.48550/arXiv.2303.15965
+  note: "SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis "
+  image: bhatt.png
+  buttons:
+    - type: website
+      link: https://nkdinsdale.github.io/sfharmony_proj/
+    - type: pdf
+      link: https://arxiv.org/pdf/2303.15965
+    - type: source
+      link: https://github.com/nkdinsdale/SFHarmony
+  tags:
+    - Distributed Data and Data Privacy
+    - Federated Learning
+    - Domain Adaptation
+
+- id: doi:10.48550/arXiv.2205.15970
+  note: "FedHarmony: Unlearning Scanner Bias with Distributed Data  "
+  image: federated.png
+  buttons:
+    - type: website
+      link: https://nkdinsdale.github.io/fedharmony_proj/
+    - type: pdf
+      link: https://arxiv.org/pdf/2205.15970
+    - type: source
+      link: https://github.com/nkdinsdale/FedHarmony
+  tags:
+    - Distributed Data and Data Privacy
+    - Federated Learning
+    - Domain Adaptation
+
+- id: doi:10.1016/j.neuroimage.2020.117689
+  note: "Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal  "
+  image: seg.png
+  buttons:
+    - type: website
+      link: https://nkdinsdale.github.io/harmproj/
+    - type: pdf
+      link: https://pdf.sciencedirectassets.com/272508/1-s2.0-S1053811920X00206/1-s2.0-S1053811920311745/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMr%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIDhwa8agQDE7XauFpaZy5KRWRwxprFAnkXp0J%2Fml4gPuAiEAwzzS6BzfBJSt%2B%2Bf1UFvGVLOcGQ1uoNdk5%2FJD9fDuOFgquwUI0v%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDFoIkhF%2F2nq4P2KRWyqPBTZKtLjNnCaAPgwpaoUTaPNyN7ttIUAA1eHnOxlRD62jwOlPG1UQiaaSMdnbnZ8WJLOiPRhh5%2Fydhr6657u0m%2FGDN7YFjk7ntl4hqktzNw6WDMSR25qVKrJaBBev5E5v%2BkykoGy%2FKuC8TGSlPAHsfQ%2BKESR3Mf6ygHBP7abPCnGNRL1B0qtcFDpNM2VIf%2FGynVBPr504Fy8AEgj2dDZFv4wmeaUNxmOMJLJW0j3mf%2Ba%2BeosQmDvkkn8ZR%2BPA1V%2FCSs%2BbbaNOCeg0qVkLw3n%2Bc4u6htltVgChRpRtQUepgoC2f9jBS0UP9rrULJfOFtNwEf5K3EVlzonYKWA5%2F6dpBiLW9BkD0dsClzuAwlWY2UO3EbfcVd0AgeRVx2yMpUoXidpwNOK5p8ttWi5qBXlUaLyTG3GNajSISkNXC7WUknTJQzbt5rDlZcTldqcHJTJ4qDnH66A%2BCShissnYKoPf4btiywB7UY5BAQ49J0Ap4ts9TXoWzevG9T%2Fr0udVWlgp%2BtbRcdjEmIkk8fshUkb1JW%2B9tvqTS0O9yJQXDCX54oNMhSIpIdPBhgHZv8VRnARi%2FQubIYOff%2Fe%2BCdxRAzrakTdHAHa%2BeuPqTUUSfSQQyj6gV2pQ5in8CrZc4OzesKaiwm4Kko1ZAUsuFrARHhR00VH%2FsqYbSo8B3E3auIEdP65gm8cJfhIqtFkB1IQn5epBbmHr5%2F4JLfXoHqcMlcCDOJoO3mkn%2FcSvbKS%2BKRMPR7qXn9PnZwxmpyl4YaiJPNNY1XRONXSxR2yvuCQtb%2BjAn2GGO5OAEO0C7DgBhdnAd569ZxTGDa01FjwtbmouxsoD4FSTwnE%2F8fp1C2hbgZY49UhRj2yHdfHmHD0qDem48zQw3KfDwwY6sQEjR0exLIhMVpzv71k4v0M%2Fx1a3FIXdsmP0UF9OfdnaGnFAL495bRi9SqBrw6PdarT5izwY48x69Yb3yhZ0jPxljNOEUQb%2BbR6DiYqUq5oFnENbsaOKmXfgW0dDYAPKlJAtwLGnn9PaLqs%2F8567sbCgl3j6pifbXCeIl7P4SGnC%2FNzpL5ITXRWRnDpYFLwaVmxxefVOOhA4pcBU8OfdwImYu7EGC9vI0OE5Pyd3kOTrHVs%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250711T101225Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYSK5WMJA3%2F20250711%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=0c5c7b9bfbe9acbe11495d65c75152577cb74c3295779fdd45c7e2b18b8eac34&hash=0ff7390e757701c31a3d2a44653c06cd031e29a54328019b2497e0814ac24598&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S1053811920311745&tid=spdf-f64647d8-5a95-4f2b-8992-bb779e657ef1&sid=6ddf087d7c00b3496838a47916e4157363bcgxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=080058510359585b0c&rr=95d785b88dd10039&cc=gb
+    - type: source
+      link: https://github.com/nkdinsdale/Unlearning_for_MRI_harmonisation
+  tags:
+    - Distributed Data and Data Privacy
+    - Domain Adaptation
+
+- id: doi:10.1016/j.media.2022.102583
+  note: "STAMP: Simultaneous Training and Model Pruning for Low Data Regimes in Medical Image Segmentation"
+  image: pruning.png
+  buttons:
+    - type: website
+      link: https://nkdinsdale.github.io/pruning_proj/
+    - type: pdf
+      link: https://www.sciencedirect.com/science/article/pii/S1361841522002213/pdfft?md5=08bc9fdad527998a32723a7b750969f2&pid=1-s2.0-S1361841522002213-main.pdf
+    - type: source
+      link: https://github.com/nkdinsdale/STAMP
+  tags:
+    - Model Compression
+    - Segmentation
+
+- id: doi:10.1109/JBHI.2019.2961264
+  note: "Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile Deployment "
+  image: sagar.png
+  buttons:
+    - type: website
+      link: https://sgvaze.github.io/pages/lightweight_unets.html
+    - type: pdf
+      link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8999615
+    - type: source
+      link: https://github.com/sgvaze/lightweight_unet
+  tags:
+    - Model Compression
+    - Segmentation
+
+- id: doi:10.1016/j.neuroimage.2020.117401
+  note: "Learning patterns of the ageing brain in MRI using deep convolutional networks"
+  image: age_pred.png
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/pii/S1053811920308867
+    - type: pdf
+      link: https://www.sciencedirect.com/science/article/pii/S1053811920308867/pdfft?md5=a803239cb72fca94df4f8397c7e60657&pid=1-s2.0-S1053811920308867-main.pdf
+  tags:
+    - Biomarkers
+    - MRI
+
+- id: doi:10.1101/2024.08.22.24312425
+  note: "Is Your Style Transfer Doing Anything Useful? An Investigation Into Hippocampus Segmentation and the Role of Preprocessing"
+  image: hippocampus.png
+  buttons:
+    - type: website
+      link: https://www.medrxiv.org/content/10.1101/2024.08.22.24312425v1
+    - type: pdf
+      link: https://www.medrxiv.org/content/10.1101/2024.08.22.24312425v1.full.pdf
+  tags:
+    - Biomarkers
+    - MRI
+
+- id: doi:10.1109/SDS57534.2023.00010
+  note: "Brain Ages Derived from Different MRI Modalities are Associated with Distinct Biological Phenotypes"
+  image: age_pred.png
+  buttons:
+    - type: website
+      link: https://ieeexplore.ieee.org/abstract/document/10196736?casa_token=wuxImYEu6dIAAAAA:-DFpgaT8n7xrMOsgxh5PNjs5UY5OGMl2TqP-os4q0jLkJZgZLBpp0wDodRGu-ygXU0Np4YAssg
+    - type: pdf
+      link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10196736
+  tags:
+    - Biomarkers
+    - MRI
+
+- id: doi:10.1016/j.media.2024.103222
+  note: "Anatomically plausible segmentations: Explicitly preserving topology through prior deformations"
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/pii/S1361841524001476
+    - type: pdf
+      link: https://www.sciencedirect.com/science/article/pii/S1361841524001476/pdfft?md5=a20ffd31a92d57f97f7189988e31a78d&pid=1-s2.0-S1361841524001476-main.pdf
+  tags:
+    - Segmentation
+    - Fetal Brain Characterization
+
+- id: doi:10.3389/fbinf.2023.1163430
+  note: Bayesian networks and imaging-derived phenotypes highlight the role of fat deposition in COVID-19 hospitalisation risk
+  buttons:
+    - type: website
+      link: https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2023.1163430/full
+    - type: pdf
+      link: https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2023.1163430/pdf
+  tags:
+    - Bayesian networks
+
+- id: doi:10.1145/3608298.3608307
+  note: "The impact of projected increases in obesity prevalence on incident liver disease in the UK: Insights from Bayesian-network modelling"
+  buttons:
+    - type: website
+      link: https://dl.acm.org/doi/10.1145/3608298.3608307
+  tags:
+    - Bayesian networks
+
+- id: doi:10.3389/fendo.2023.1063882
+  note: "Poor glycaemic control and ectopic fat deposition mediates the increased risk of non-alcoholic steatohepatitis in high-risk populations with type 2 diabetes: Insights from Bayesian-network modelling"
+  buttons:
+    - type: website
+      link: https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1063882/full
+    - type: pdf
+      link: https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2023.1063882/pdf
+
+- id: doi:10.1007/978-3-030-52791-4_6
+  note: Improving U-Net Segmentation with Active Contour Based Label Correction
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-030-52791-4_6
+    - type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-030-52791-4_6.pdf?pdf=inline%20link
+  tags:
+    - Segmentation
+    - Fetal Brain Characterization
+
+- id: doi:10.1007/978-3-030-59710-8_67
+  note: Uncertainty Estimates as Data Selection Criteria to Boost Omni-Supervised Learning
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-030-59710-8_67
+    - type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-030-59710-8_67.pdf?pdf=inline%20link
+  tags:
+    - Distributed Data and Data Privacy
+
+- id: doi:10.1007/978-3-031-16437-8_48
+  note: "INSightR-Net: Interpretable Neural Network for Regression Using Similarity-Based Comparisons to Prototypical Examples"
+  buttons:
+    - type: website
+      link: https://link.springer.com/chapter/10.1007/978-3-031-16437-8_48
+    - type: pdf
+      link: https://link.springer.com/content/pdf/10.1007/978-3-031-16437-8_48.pdf?pdf=inline%20link
+  tags:
+    - Interpretability
+
+- id: doi:10.48550/arXiv.2410.06161
+  note: Automated quality assessment using appearance-based simulations and hippocampus segmentation on low-field paediatric brain MR images
+  buttons:
+    - type: website
+      link: https://arxiv.org/abs/2410.06161
+    - type: pdf
+      link: https://arxiv.org/pdf/2410.06161
+  tags:
+    - Challenge

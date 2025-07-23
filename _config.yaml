@@ -1,19 +1,17 @@
 # site properties and page defaults
-title: Lab Website Template
-subtitle: by the Greene Lab
-description: An easy-to-use, flexible website template for labs, with automatic citations, GitHub tag imports, pre-built components, and more.
-header: images/background.jpg
-footer: images/background.jpg
+title:
+subtitle: "Making brain assessment accessible to all"
+description: This is a placeholder for our description
+header: images/misc/background.png
+footer: images/misc/background.png
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@your-lab.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
-  github: your-lab
-  twitter: YourLabHandle
-  youtube: YourLabChannel
+  email: ana.namburete@cs.ox.ac.uk
+  orcid: 0000-0002-9119-436X
+  google-scholar: 6QzRJ6MAAAAJ
+  github: oxford-omni-lab
 
 ### jekyll settings
 
@@ -49,7 +47,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-feed
-  - jekyll-last-modified-at
+# - jekyll-last-modified-at
 
 # code block syntax highlighting
 highlighter: rouge

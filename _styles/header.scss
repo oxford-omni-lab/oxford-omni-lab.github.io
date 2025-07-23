@@ -1,9 +1,9 @@
 ---
 ---
 
-$logo-big: 80px;
-$logo: 40px;
-$big-padding: 100px;
+$logo-big: 120px;
+$logo: 60px;
+$big-padding: 40px;
 $collapse: 700px;
 $sticky: true;
 
@@ -12,8 +12,8 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+  gap: 15px;
+  padding: 15px;
   box-shadow: var(--shadow);
 
   @if $sticky {
@@ -106,6 +106,7 @@ nav {
 
 nav > a {
   padding: 5px;
+  color: var(--text);
 }
 
 nav > a:hover {

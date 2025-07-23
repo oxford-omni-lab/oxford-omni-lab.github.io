@@ -1,0 +1,48 @@
+{% if include.lookup %}
+  {% assign citation = site.data.citations
+    | where_exp: "citation",
+      "citation.id == include.lookup or citation.title contains include.lookup"
+    | first
+  %}
+{% else %}
+  {% assign citation = include %}
+{% endif %}
+
+<div class="research-teaser">
+  <a
+    href="{{ "publications" | relative_url }}#{{ citation.id | url_encode }}"
+    class="research-teaser-image"
+    aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
+  >
+    {% if citation.image %}
+      <img
+        src="{{ citation.image | relative_url | uri_escape }}"
+        alt="{{ citation.title | default: "citation image" | regex_strip }}"
+        loading="lazy"
+        {% include fallback.html %}
+      >
+    {% else %}
+      <div class="research-teaser-icon-placeholder">
+        <i class="fa-solid fa-file"></i>
+      </div>
+    {% endif %}
+  </a>
+
+  <div class="research-teaser-content">
+    <a
+      href="{{ "publications" | relative_url }}#{{ citation.id | url_encode }}"
+      class="research-teaser-title"
+    >
+      {{ citation.title | default: "[no title info]" }}
+    </a>
+
+    <div class="research-teaser-meta">
+      <span class="research-teaser-author">
+        {{- citation.authors[0] | default: "[no author]" -}}
+      </span>
+      <span class="research-teaser-year">
+        ({{- citation.date | default: "[no date]" | date: "%Y" -}})
+      </span>
+    </div>
+  </div>
+</div>

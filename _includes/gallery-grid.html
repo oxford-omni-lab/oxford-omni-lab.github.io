@@ -1,0 +1,62 @@
+{% assign gallery_images = site.static_files | where_exp: "file", "file.path
+contains '/images/gallery/'" %} {% assign filtered_images = "" | split: "" %} {%
+for file in gallery_images %} {% assign ext = file.extname | downcase %} {% if
+ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.JPG' %} {% assign
+filtered_images = filtered_images | push: file %} {% endif %} {% endfor %} {%
+assign gallery_images = filtered_images | sort: "name" | reverse %}
+
+<div class="gallery-grid">
+  {% for image in gallery_images %} {% assign image_name = image.name | remove:
+  image.extname %}
+  <div class="gallery-item" onclick="openLightbox({{ forloop.index0 }})">
+    <img
+      src="{{ image.path | relative_url }}"
+      alt="{{ image_name | replace: '_', ' ' | replace: '-', ' ' | capitalize }}"
+      class="gallery-image"
+      loading="lazy"
+    />
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" src="" alt="" />
+    <button
+      class="lightbox-nav lightbox-prev"
+      onclick="changeLightboxImage(-1)"
+    >
+      ‹
+    </button>
+    <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">
+      ›
+    </button>
+    <div class="lightbox-title" id="lightbox-title"></div>
+    <div class="lightbox-counter">
+      <span id="lightbox-current">1</span> /
+      <span id="lightbox-total">{{ gallery_images.size }}</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Gallery data for lightbox
+  window.galleryImages = [
+    {% for image in gallery_images %}
+      {% assign image_name = image.name | remove: image.extname %}
+      {% assign name_parts = image_name | split: '_' %}
+      {% if name_parts.size > 1 %}
+        {% assign display_name = name_parts[1] | replace: '-', ' ' | capitalize %}
+      {% else %}
+        {% assign display_name = image_name | replace: '-', ' ' | capitalize %}
+      {% endif %}
+      {
+        src: "{{ image.path | relative_url }}",
+        alt: "{{ display_name }}",
+        title: "{{ display_name }}"
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+</script>

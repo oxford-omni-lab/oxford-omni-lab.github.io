@@ -1,0 +1,63 @@
+# Sources Template - Complete with all possible flags
+# Add entries to: _data/sources.yaml
+# Each entry will be processed by the citation plugin to generate full citation data
+
+- id: doi:10.1000/example # Required: DOI, PMID, or other identifier
+  image: "publication_image.png" # Optional: Featured image (in images/publications/)
+  note: "Identifier, not visible on the website" # Title is pulled from the doi link. This is only to find the publication in the list.
+  highlight: true # Optional: Feature in highlights section
+  buttons: # Optional: Custom action buttons
+    - type: website # Button type (website, pdf, source, data, etc.)
+      link: "https://journal-website.com" # Button destination URL
+      text: "Custom Text" # Optional: Custom button text
+    - type: pdf
+      link: "pdfs/paper.pdf" # Local PDF file
+    - type: source
+      link: "https://github.com/user/repo" # Source code repository
+    - type: data
+      link: "https://dataset-url.com" # Dataset location
+    - type: docs
+      link: "https://documentation-url.com" # Documentation
+    - type: app
+      link: "https://demo-app.com" # Live demo/application
+  tags: # Required: Research area tags (see examples below)
+    - "Fetal Brain Characterization"
+    - "2D to 3D Reconstruction"
+  redirect_from: # Optional: Redirect from old URLs
+    - /old-publication-url/
+# EXAMPLE TAGS (use these exact tags to match research page sections):
+
+# Main Research Areas:
+# - "Fetal Brain Characterization"              # Core fetal brain research
+# - "2D to 3D Reconstruction"                   # Volume reconstruction methods
+# - "Clinical Translation"                      # Clinical application focus
+# - "Distributed Data and Data Privacy"        # Privacy-preserving methods
+
+# Methodological Areas:
+# - "Segmentation"                              # Image segmentation techniques
+# - "Domain Adaptation"                         # Cross-domain methods
+# - "Interpretability"                          # Explainable AI methods
+# - "Model Compression"                         # Efficient model design
+# - "Biomarkers"                               # Biomarker development
+# - "Federated Learning"                       # Distributed learning
+
+# Technical Specialties:
+# - "Registration"                             # Image alignment methods
+# - "Age Estimation"                           # Gestational age prediction
+# - "Topology"                                # Topological constraints
+# - "Challenge"                               # Competition/challenge papers
+# - "Explainable AI"                          # Interpretable methods
+# - "MRI"                                     # MRI-specific work
+# - "Bayesian networks"                       # Probabilistic modeling
+
+# BUTTON TYPES AVAILABLE:
+# - website: External website/journal
+# - pdf: PDF document
+# - source: Source code repository
+# - data: Dataset or data repository
+# - docs: Documentation
+# - app: Live application/demo
+# - server: Server/API endpoint
+# - package: Software package
+# - book: Book publication
+# - preprint: Preprint server

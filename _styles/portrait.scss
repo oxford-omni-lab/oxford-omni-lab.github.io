@@ -71,9 +71,29 @@
   font-weight: var(--semi-bold);
 }
 
+.portrait-pronouns {
+  font-style: italic;
+  color: var(--gray);
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+.portrait-year {
+  font-style: italic;
+  color: var(--primary);
+  font-size: 0.9em;
+  font-weight: var(--semi-bold);
+  margin-top: 5px;
+}
+
+.portrait[data-style="small"] .portrait-year {
+  font-size: 0.8em;
+}
+
 .portrait[data-style="tiny"] {
   .portrait-description,
-  .portrait-affiliation {
+  .portrait-affiliation,
+  .portrait-year {
     display: none;
   }
 }

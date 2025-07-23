@@ -10,21 +10,41 @@ postdoc:
   icon: fa-solid fa-glasses
   description: Postdoctoral Researcher
 
-phd:
+dphil:
   icon: fa-solid fa-graduation-cap
-  description: PhD Student
+  description: DPhil Student
 
 undergrad:
   icon: fa-solid fa-user-graduate
   description: Undergraduate Student
 
+graduate:
+  icon: fa-solid fa-user-graduate
+  description: Graduate Student
+
 programmer:
   icon: fa-solid fa-code
   description: Programmer
 
+clinical-fellow:
+  icon: fa-solid fa-stethoscope
+  description: Clinical Fellow
+
+associate-member:
+  icon: fa-solid fa-handshake
+  description: Associate Member
+
+alumni:
+  icon: fa-solid fa-clock
+  description: Alumni
+
 mascot:
   icon: fa-solid fa-dog
   description: Mascot
+
+visiting-researcher:
+  icon: fa-solid fa-book-atlas
+  description: Visiting Researcher
 
 # general
 
@@ -200,6 +220,11 @@ source:
   icon: fa-solid fa-code
   text: Source
   tooltip: Source code
+
+pdf:
+  icon: fa-solid fa-file-pdf
+  text: PDF
+  tooltip: PDF
 
 server:
   icon: fa-solid fa-server

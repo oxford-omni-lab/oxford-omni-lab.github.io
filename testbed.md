@@ -49,7 +49,7 @@ Text with extra blank lines above and below
 
 Plain image:
 
-![plain image](/images/photo.jpg)
+![plain image](/images/misc/photo.jpg)
 
 # Heading 1
 
@@ -175,9 +175,9 @@ Section, `size=full` w/ figure
 {% include figure.html image="images/icon.png" caption="_Lorem_ **ipsum**. `px` width" width="400px" %}
 {% include figure.html image="images/icon.png" caption="_Lorem_ **ipsum**. `%` width" link="team" width="50%" %}
 {% include figure.html image="images/icon.png" caption="_Lorem_ **ipsum**. `px` height" link="team" height="200px" %}
-{% include figure.html image="images/fallback.svg" caption="_Lorem_ **ipsum**. `px` width, svg" link="team" width="400px" %}
-{% include figure.html image="images/fallback.svg" caption="_Lorem_ **ipsum**. `%` width, svg" link="team" width="50%" %}
-{% include figure.html image="images/fallback.svg" caption="_Lorem_ **ipsum**. `px` height, svg" link="team" height="200px" %}
+{% include figure.html image="images/misc/fallback.svg" caption="_Lorem_ **ipsum**. `px` width, svg" link="team" width="400px" %}
+{% include figure.html image="images/misc/fallback.svg" caption="_Lorem_ **ipsum**. `%` width, svg" link="team" width="50%" %}
+{% include figure.html image="images/misc/fallback.svg" caption="_Lorem_ **ipsum**. `px` height, svg" link="team" height="200px" %}
 
 {% include section.html %}
 

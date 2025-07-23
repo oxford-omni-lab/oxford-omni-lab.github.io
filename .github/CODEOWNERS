@@ -1,0 +1,36 @@
+# CODEOWNERS file for OMNI Lab Website
+
+# This file defines who needs to review different parts of the repository
+
+# Global default: All changes require review from the web admin
+
+- @vbacher
+
+# Critical files that affect site structure - require web admin review
+
+\_config.yaml @vbacher
+Gemfile\* @vbacher
+\_includes/ @vbacher
+\_layouts/ @vbacher
+\_plugins/ @vbacher
+\_scripts/ @vbacher
+\_styles/ @vbacher
+.github/ @vbacher
+
+# Data files - web admin can handle these
+
+\_data/ @vbacher
+
+# Content that lab members commonly edit - web admin reviews
+
+\_members/ @vbacher
+\_posts/ @vbacher
+images/ @vbacher
+
+# Publications and citations - web admin handles the technical aspects
+
+\_cite/ @vbacher
+
+# Documentation
+
+README.md @vbacher
