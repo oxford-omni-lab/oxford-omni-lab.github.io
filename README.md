@@ -28,8 +28,8 @@ cd omni-website
 2. Make your changes to the content, images, or configuration files. Use [TEMPLATE_member.md](TEMPLATE_member.md), [\_posts/TEMPLATE_post.md](./_posts/TEMPLATE_post.md), and [TEMPLATE_source.yaml](TEMPLATE_source.yaml) as templates for adding new members, pubations, or posts. Add you personal page to [\_members](./_members) folder, a post to [\_posts](./_posts) or add the publication to [\_data/sources.yaml](./_data/sources.yaml).
 3. To add images, add images to the gallery, the slider or to update the group picture, place them in the [images/gallery](images/gallery), [images/slider](images/slider) or [images/group](images/group) folder. Please follow the naming convention YYMMDD_name-and-title.jpg. The date will be used to sort the images, the image title will be used as subtitle. For example, an image named `240101_new-year-party.jpg` will be displayed as "New Year Party" in the gallery.
 4. For member profile pictures, use the [images/members](images/members) folder. You have to add the links manually as in the template.
-5. If you have added a new publication run `python _cite/cite.py` to update the publication list. **Do not change [./\_data/citations.yaml](./_data/citations.yaml) manually!**
-6. To update job postings from the Oxford CS department, run `python _cite/jobs.py`. This will fetch current job adverts and filter for positions mentioning "Namburete" or "OMNI Lab". **Do not change [./\_data/jobs.yaml](./_data/jobs.yaml) manually!**
+5. (Optional for debugging) If you have added a new publication run `python _cite/cite.py` to update the publication list. **Do not change [./\_data/citations.yaml](./_data/citations.yaml) manually!**
+6. (Optional for debugging) To update job postings from the Oxford CS department, run `python _cite/jobs.py`. This will fetch current job adverts and filter for positions mentioning "Namburete" or "OMNI Lab". **Do not change [./\_data/jobs.yaml](./_data/jobs.yaml) manually!**
 7. Add your new files to the git staging area using `git add .` or `git add <file>` for specific files.
 8. Create a new branch for your changes:
    ```bash
