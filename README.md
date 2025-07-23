@@ -30,11 +30,11 @@ cd omni-website
 4. For member profile pictures, use the [images/members](images/members) folder. You have to add the links manually as in the template.
 5. If you have added a new publication run `python _cite/cite.py` to update the publication list. **Do not change [./\_data/citations.yaml](./_data/citations.yaml) manually!**
 6. To update job postings from the Oxford CS department, run `python _cite/jobs.py`. This will fetch current job adverts and filter for positions mentioning "Namburete" or "OMNI Lab". **Do not change [./\_data/jobs.yaml](./_data/jobs.yaml) manually!**
-7. Add your new files to the git staging area using `git add .` or `git add <file>` for specific files. **DO NOT PUSH YOUR CHANGES TO THE MAIN BRANCH!**
+7. Add your new files to the git staging area using `git add .` or `git add <file>` for specific files.
 8. Create a new branch for your changes:
    ```bash
-   git checkout -b your-name/description-of-changes
-   # Example: git checkout -b john/add-new-member-profile
+   git checkout -b your-name/name-branch
+   # Example: git checkout -b john/john-branch
    ```
 9. Commit your changes with a descriptive message:
    ```bash
@@ -42,19 +42,25 @@ cd omni-website
    # Example: git commit -m "Add John's member profile and update team photo"
    ```
 10. Push your branch to GitHub:
+
     ```bash
-    git push --set-upstream origin your-name/description-of-changes
+    git push
     ```
-11. Create a Pull Request (PR) on GitHub:
-    - Go to the [repository on GitHub](https://github.com/oxford-omni-lab/omni-website)
-    - Click "Compare & pull request" for your branch
+
+    For the first time:
+
+    ```bash
+    git push --set-upstream origin your-name/name-branch
+    ```
+
+11. Create a Pull Request (PR) on GitHub: - Go to the [repository on GitHub](https://github.com/oxford-omni-lab/omni-website) - Click "Compare & pull request" for your branch
 
 - Make sure that the base branch is `main` and the compare branch is your new branch. **DO NOT PUSH TO THE TEMPLATE**. Ask someone if you are not sure.
 - Add a clear title and description of your changes
 - Request review from the PI or other maintainers
 
-11. Present your changes in the next group meeting and explain what you've updated
-12. Once the PI approves and merges the PR, your changes will automatically appear on the live website
+12. Present your changes in the next group meeting and explain what you've updated
+13. Once the PI approves and merges the PR, your changes will automatically appear on the live website
 
 **Important Notes:**
 
