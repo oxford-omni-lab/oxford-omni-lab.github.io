@@ -38,7 +38,7 @@ cd omni-website
    ```
 9. Commit your changes with a descriptive message:
    ```bash
-   git commit -m "Add detailed description of your changes"
+   git commit -am "Add detailed description of your changes"
    # Example: git commit -m "Add John's member profile and update team photo"
    ```
 10. Push your branch to GitHub:
