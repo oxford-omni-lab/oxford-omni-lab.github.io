@@ -4,7 +4,10 @@ title: Recruitment
 
 # {% include icon.html icon="fa-solid fa-briefcase" %}Open Positions
 
-Thank you for your interest in joining the OMNI Lab.
+Thank you for your interest in joining the OMNI Lab. Please explore our Research site for more information about our work or have a look at our handbook for more information about our labs culture.
+
+{% include button.html text="Our Research" link="research" icon="fa-solid fa-microscope" %}
+{% include button.html text="Lab Handbook" link="handbook" icon="fa-solid fa-book"%}
 
 ## Graduate students
 
@@ -19,7 +22,5 @@ We have more data and research ideas than postdoctoral researchers, so are keen 
 ## {% include icon.html icon="fa-solid fa-briefcase" %}Current Open Positions
 
 {% include job-listings.html %}
-
-**Do we want a reference to the lab handbook here?**
 
 If you are interested, please contact Dr. Namburete directly using the details on her [departmental profile page](https://www.cs.ox.ac.uk/people/ana.namburete/).

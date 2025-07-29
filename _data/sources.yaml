@@ -6,7 +6,7 @@
     - type: website
       link: https://www.nature.com/articles/s41586-023-06630-3
     - type: pdf
-      link: pdfs/atlas.pdf
+      link: pdfs/research/atlas.pdf
   tags:
     - Fetal Brain Characterization
 
@@ -279,7 +279,6 @@
 
 - id: doi:10.1109/JBHI.2019.2961264
   note: "Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile Deployment "
-  image: sagar.png
   buttons:
     - type: website
       link: https://sgvaze.github.io/pages/lightweight_unets.html

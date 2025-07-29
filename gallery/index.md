@@ -1,7 +1,7 @@
 ---
 title: Gallery
 nav:
-  order: 6
+  order: 7
   tooltip: Pictures of our Group
 ---
 

@@ -9,16 +9,12 @@ We are an interdisciplinary research group dedicated to advancing the understand
 
 Our goal is to enable high-resolution, quantitative analysis of fetal brain development from routine clinical scans. By leveraging large-scale population datasets and collaborations across clinical and computational sciences, we aim to both improve scientific understanding of early brain maturation and develop practical tools for use in diverse healthcare settings.
 
-{%
-  include button.html
-  text="do we want to keep it here?"
-  type="docs"
-  link="https://greene-lab.gitbook.io/lab-website-template-docs"
-%}
-
 {% include section.html background="images/misc/background.png" dark=true %}
 
-Maybe the video here?
+<video controls width="100%" style="max-width:600px; margin: 20px auto;" poster="images/publications/USAtlas_stillframe.png">
+  <source src="images/publications/USAtlas.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 {% include section.html %}
 
@@ -50,7 +46,7 @@ Our Lab works on improving the diagnostics of the central nervous system by anal
 {%
   include button.html
   link="research"
-  text="See our publications"
+  text="See our research"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"

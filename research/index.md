@@ -14,8 +14,10 @@ By developing computational tools, the OMNI Lab aims to address key needs in mod
 - Clinical Translation
 - Deep Learning Methodology
 
-{% include button.html text="View Publications" link="publications" icon="fa-solid fa-book" %}
-{% include button.html type="github" text="GitHub" link="https://github.com/vbacher" %}
+<div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 24px 0;">
+  {% include button.html text="View Publications" link="publications" icon="fa-solid fa-book" %}
+  {% include button.html type="github" text="GitHub" link="oxford-omni-lab" %}
+</div>
 
 {% include section.html %}
 
