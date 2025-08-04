@@ -9,7 +9,7 @@ nav:
 
 {% include section.html %}
 
-Our group was founded in XXXX by [Dr. Ana Namburete](/members/ana-namburete) with the aim of improving fetal brain assessment using machine learning and neuroimaging. We are a collaborative and open-minded group of researchers, eager to push the frontiers of biomedical imaging. For more about our lab culture, please see our lab handbook.
+Our group was founded in 2017 by [Dr. Ana Namburete](/members/ana-namburete) with the aim of improving fetal brain assessment using machine learning and neuroimaging. We are a collaborative and open-minded group of researchers, eager to push the frontiers of biomedical imaging. For more about our lab culture, please see our lab handbook.
 
 We are **always** looking for new DPhil/MSc students and Postdocs to [join the team](../recruitment) **!**
 
@@ -17,9 +17,9 @@ We are **always** looking for new DPhil/MSc students and Postdocs to [join the t
 
 {% include section.html %}
 
-{% include section.html background="images/misc/background.png" dark=true %}
-
 {% include list.html data="members" component="portrait" filter="group != 'alumni'" %}
+
+{% include section.html background="images/misc/background.png" dark=true %}
 
 {% assign group_images = site.static_files | where_exp: "item", "item.path contains 'images/group'" | where_exp: "item", "item.extname == '.jpg' or item.extname == '.JPG' or item.extname == '.jpeg' or item.extname == '.png'" | sort: "basename" | reverse %}
 {% assign latest_group_image = group_images[0].path %}

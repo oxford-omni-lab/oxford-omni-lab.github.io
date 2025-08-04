@@ -1,8 +1,8 @@
 ---
 name: Nicola Dinsdale
 image: images/members/Nicola-small.jpeg
-role: postdoc
-group: alumni
+role: associate
+group: current
 joined: 2018
 left: 2025
 aliases:

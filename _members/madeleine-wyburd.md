@@ -1,8 +1,8 @@
 ---
 name: Madeleine Wyburd
 image: images/members/Maddy-small.jpeg
-role: postdoc
-group: alumni
+role: associate
+group: current
 left: 2025
 aliases:
   - Maddy Wyburd

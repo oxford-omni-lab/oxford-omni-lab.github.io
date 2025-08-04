@@ -30,7 +30,7 @@ clinical-fellow:
   icon: fa-solid fa-stethoscope
   description: Clinical Fellow
 
-associate-member:
+associate:
   icon: fa-solid fa-handshake
   description: Associate Member
 
