@@ -22,7 +22,7 @@ For our Lab members we also have a Wiki with Information about processes, Lab re
 To access it please run the folowing command to tunnel the wiki server to your local machine:
 
 ```bash
-ssh -fNT -L 8080:localhost:8080 username@<omni server hostname>
+ssh -fNT -L 8080:localhost:8080 wiki
 ```
 
 {% include button.html
