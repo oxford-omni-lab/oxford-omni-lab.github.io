@@ -31,3 +31,21 @@ ssh -fNT -L 8080:localhost:8080 wiki
    type="docs"
    icon="fa-solid fa-book"
 %}
+
+## Trouble shoot access
+
+If you have trouble accessing the wiki, please check the following:
+
+```shell
+# Check if port is busy
+lsof -i :8080
+```
+
+If so use the PID to kill the process:
+
+```shell
+# Delete processes using port 8080
+kill -9 $(lsof -ti:8080)
+```
+
+You should then be able to access the wiki using the command above.
