@@ -19,4 +19,4 @@ links:
   google-scholar: 6QzRJ6MAAAAJ
 ---
 
-This is a very elaborate text about Ana.
+Ana Namburete is a Principal Investigator and Assistant Professor at the University of Oxford. She leads this lab and is focused on advancing the field of machine learning in neuroimaging.

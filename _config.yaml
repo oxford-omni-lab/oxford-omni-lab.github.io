@@ -13,6 +13,9 @@ links:
   google-scholar: 6QzRJ6MAAAAJ
   github: oxford-omni-lab
 
+# lab administration
+web_admin_email: valentin.bacher@cs.ox.ac.uk
+
 ### jekyll settings
 
 # front matter defaults

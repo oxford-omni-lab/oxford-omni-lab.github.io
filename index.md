@@ -9,12 +9,14 @@ We are an interdisciplinary research group dedicated to advancing the understand
 
 Our goal is to enable high-resolution, quantitative analysis of fetal brain development from routine clinical scans. By leveraging large-scale population datasets and collaborations across clinical and computational sciences, we aim to both improve scientific understanding of early brain maturation and develop practical tools for use in diverse healthcare settings.
 
-{% include section.html background="images/misc/background.png" dark=true %}
+<!-- {% include section.html background="images/misc/background.png" dark=true %} 
 
-<video controls width="100%" style="max-width:600px; margin: 20px auto;" poster="images/publications/USAtlas_stillframe.png">
-  <source src="images/publications/USAtlas.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!--# Fetal Ultrasound Atlas
+
+<!--<video controls width="100%" style="max-width:600px; margin: 20px auto;" poster="images/publications/USAtlas_stillframe.png">
+<!--  <source src="images/publications/USAtlas.mp4" type="video/mp4">
+<!--  Your browser does not support the video tag.
+<!--</video>
 
 {% include section.html %}
 
