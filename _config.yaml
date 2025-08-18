@@ -1,14 +1,14 @@
 # site properties and page defaults
 title:
-subtitle: "*Making **brain** assessment accessible to all*"
-description: This is a placeholder for our description
+subtitle: 
+description: An engaging 1-3 sentence description of your lab.
 header: images/misc/background.png
 footer: images/misc/background.png
 proofer: false
 
 # site social media and other links
 links:
-  email: ana.namburete@cs.ox.ac.uk
+  email: contact@oxford-omni-lab.com
   orcid: 0000-0002-9119-436X
   google-scholar: 6QzRJ6MAAAAJ
   github: oxford-omni-lab
