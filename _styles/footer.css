@@ -1,0 +1,25 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  line-height: var(--spacing);
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+footer a {
+  color: var(--text) !important;
+}
+
+footer a:hover {
+  color: var(--primary) !important;
+}
+
+footer .icon {
+  font-size: var(--xl);
+}
+
+/*# sourceMappingURL=footer.css.map */
