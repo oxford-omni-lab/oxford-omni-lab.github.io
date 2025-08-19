@@ -1,0 +1,22 @@
+name: on-schedule-jobs
+run-name: daily job update
+
+on:
+  schedule:
+    # daily at 8 AM UTC
+    - cron: "0 8 * * *"
+
+  # run if user manually requests it
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-jobs:
+    # only run on user instance of template, not template itself
+    if: github.repository != 'greenelab/lab-website-template'
+    uses: ./.github/workflows/update-jobs.yaml
+    with:
+      open-pr: true
