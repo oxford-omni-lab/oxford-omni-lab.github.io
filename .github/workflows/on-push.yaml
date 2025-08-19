@@ -19,6 +19,10 @@ jobs:
     if: github.run_number != 1
     uses: ./.github/workflows/update-citations.yaml
 
+  update-jobs:
+    needs: update-citations
+    uses: ./.github/workflows/update-jobs.yaml
+
   build-site:
     needs: update-citations
     uses: ./.github/workflows/build-site.yaml
