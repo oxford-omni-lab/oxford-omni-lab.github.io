@@ -9,7 +9,7 @@ nav:
 
 The Handbook is meant as a guid to the Oxford OMNI Lab, providing information about our culture, values, and how we work together. It is a living document that will be updated as we evolve.
 
-{% include button.html type="pdf" text="Lab Handbook" link="../pdfs/misc/OMNI-Lab-Handbook.pdf" %}
+{% include button.html type="pdf" text="Lab Handbook" link="../pdfs/misc/lab_handbook.pdf" %}
 
 {% include section.html %}
 
