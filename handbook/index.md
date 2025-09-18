@@ -42,7 +42,7 @@ If you have trouble accessing the wiki, please check the following:
 - Have you used VPN to connect to the University network or are you on the University network?
 - Is a process already using port 8080 on your local machine? see below [port busy](#port-busy)
 - try restarting the wiki, see below [restart wiki](#restart-wiki)
-- Last resort: is the server running? Ask the lab [web admin](mailto:{{ site.web_admin_email }}) or restart it yourself (check your local wiki).
+- If everything else fails, ask the lab [web admin](mailto:{{ site.web_admin_email }})
 
 ### port busy
 
