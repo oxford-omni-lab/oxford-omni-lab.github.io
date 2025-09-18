@@ -526,6 +526,8 @@
   <li>Have you used VPN to connect to the University network or are you on the University network?</li>
   <li>Is a process already using port 8080 on your local machine? see below <a href="#port-busy">port busy</a>
 </li>
+  <li>try restarting the wiki, see below <a href="#restart-wiki">restart wiki</a>
+</li>
   <li>Last resort: is the server running? Ask the lab <a href="mailto:valentin.bacher@cs.ox.ac.uk">web admin</a> or restart it yourself (check your local wiki).</li>
 </ul>
 
@@ -542,6 +544,21 @@ lsof <span class="nt">-i</span> :8080
 </code></pre></div></div>
 
 <p>You should then be able to access the wiki using the command above.</p>
+
+<h3 id="restart-wiki">restart wiki</h3>
+
+<p>If you have access to the wiki server you can restart the wiki using the following commands:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SSH into the wiki server</span>
+ssh wiki
+</code></pre></div></div>
+
+<p>then run the restart script:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Restart the wiki</span>
+<span class="nb">cd </span>omni-wiki
+./restart.sh
+</code></pre></div></div>
   </section>
 
 
