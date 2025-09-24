@@ -860,3 +860,30 @@
   - Challenge
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.48550/arXiv.2509.15167
+  title: Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained
+    Model
+  authors:
+  - Pak-Hei Yeung
+  - Jayroop Ramesh
+  - Pengfei Lyu
+  - Ana Namburete
+  - Jagath Rajapakse
+  publisher: arXiv
+  date: '2025-01-01'
+  link: https://doi.org/g94m4x
+  note: Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained
+    Model
+  image: images/publications/250918_incentive.jpg
+  buttons:
+  - type: website
+    link: https://pakheiyeung.github.io/M-N_wp/
+  - type: pdf
+    link: https://arxiv.org/pdf/2509.15167
+  - type: source
+    link: https://github.com/pakheiyeung/M-N
+  tags:
+  - Fetal Brain Characterization
+  - Segmentation
+  plugin: sources.py
+  file: sources.yaml
