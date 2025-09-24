@@ -7,8 +7,8 @@ title: "Oral Presentation at MLMI Workshop at MICCAI 2025"
 author: "OMNI lab" # Optional: Post author (can be team member name)
 image: "images/posts/250918_incentive.jpg" # Optional: Featured image for the post
 tags: # Optional: Categories/topics for the post
+  - paper
   - oral presentation
-  - MICCAI
 date: 2025-09-18 # Optional: Publication date (defaults to filename date)
 last_modified_at: 2025-09-18 # Optional: Last update date
 layout: post # Optional: Custom layout (defaults to post)
