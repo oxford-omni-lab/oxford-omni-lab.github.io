@@ -7,7 +7,7 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-book" %}Handbook
 
-The Handbook is meant as a guid to the Oxford OMNI Lab, providing information about our culture, values, and how we work together. It is a living document that will be updated as we evolve.
+The Handbook is meant as a guide to the Oxford OMNI Lab, providing information about our culture, values, and how we work together. It is a living document that will be updated as we evolve.
 
 {% include button.html type="pdf" text="Lab Handbook" link="../pdfs/misc/lab_handbook.pdf" %}
 
