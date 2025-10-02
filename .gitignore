@@ -13,3 +13,4 @@ yarn.lock
 node_modules
 _cite/.cache
 .ruby-version
+Gemfile.lock
