@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Resolve repo root even if this script is called from another directory
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+cd "$REPO_ROOT"
+
+# Install/update gems in the container
+bin/jekyll bundle install
+
+# Serve the site (add -s docs if your source is docs/)
+exec bin/jekyll bundle exec jekyll serve --host 0.0.0.0 --livereload
