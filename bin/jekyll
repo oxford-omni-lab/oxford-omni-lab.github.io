@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ENGINE="${ENGINE:-docker}"
+$ENGINE volume create jekyll_bundle >/dev/null 2>&1 || true
+
+exec $ENGINE run --rm -it \
+  --platform linux/arm64 \
+  -p 4000:4000 \
+  -v "$PWD":/srv/jekyll \
+  -v jekyll_bundle:/usr/local/bundle \
+  -w /srv/jekyll \
+  omni-jekyll:dev \
+  sh -lc "$*"
+
+  # in bin/jekyll, the docker run line should include:
+  -e BUNDLE_PATH=/usr/local/bundle \
+  -e GEM_HOME=/usr/local/bundle \
+  -e BUNDLE_BIN=/usr/local/bundle/bin \
+  -e PATH="/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" \

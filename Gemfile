@@ -6,6 +6,8 @@ gem "webrick", "~> 1.7"
 
 gem "html-proofer", "~> 5.0"
 
+gem "eventmachine", ">= 1.2.7", "< 1.3"
+
 # plugins
 group :jekyll_plugins do
   gem "jekyll-spaceship"

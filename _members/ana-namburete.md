@@ -1,10 +1,10 @@
 ---
-name: Ana IL Namburete
-image: images/members/Ana.JPG
+name: Ana Namburete
+image: images/members/Ana2.JPG
 role: principal-investigator
 description: Principal Investigator Associate Professor
 group: current
-joined: 2018
+joined: 2016
 aliases:
   - A. Namburete
   - Ana I.L Namburete
