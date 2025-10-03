@@ -887,3 +887,33 @@
   - Segmentation
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.1002/hbm.70349
+  title: "Cross\u2010Modality Comparison of Fetal Brain Phenotypes: Insights From\
+    \ Short\u2010Interval Second\u2010Trimester <scp>MRI</scp> and Ultrasound Imaging"
+  authors:
+  - Madeleine K. Wyburd
+  - Nicola K. Dinsdale
+  - Vanessa Kyriakopoulou
+  - Lorenzo Venturini
+  - Robert Wright
+  - Alena Uus
+  - Jacqueline Matthew
+  - Emily Skelton
+  - "Lilla Z\xF6llei"
+  - Joseph Hajnal
+  - Ana I. L. Namburete
+  publisher: Human Brain Mapping
+  date: '2025-10-01'
+  link: https://doi.org/g95rpw
+  note: 'Cross-Modality Comparison of Fetal Brain Phenotypes: Insights From Short-Interval
+    Second-Trimester MRI and Ultrasound Imaging'
+  image: images/publications/251001_US-MRI_same-day.png
+  buttons:
+  - type: website
+    link: https://onlinelibrary.wiley.com/doi/10.1002/hbm.70349
+  - type: pdf
+    link: https://onlinelibrary.wiley.com/doi/epdf/10.1002/hbm.70349
+  tags:
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml

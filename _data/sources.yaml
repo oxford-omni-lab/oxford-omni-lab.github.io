@@ -417,3 +417,14 @@
   tags:
     - Fetal Brain Characterization
     - Segmentation
+
+- id: doi:10.1002/hbm.70349
+  note: "Cross-Modality Comparison of Fetal Brain Phenotypes: Insights From Short-Interval Second-Trimester MRI and Ultrasound Imaging"
+  image: 251001_US-MRI_same-day.png
+  buttons:
+    - type: website
+      link: https://onlinelibrary.wiley.com/doi/10.1002/hbm.70349
+    - type: pdf
+      link: https://onlinelibrary.wiley.com/doi/epdf/10.1002/hbm.70349
+  tags:
+    - Fetal Brain Characterization
