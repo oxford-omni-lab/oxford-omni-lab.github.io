@@ -5,4 +5,4 @@ tags: # Optional: Categories/topics for the post
   - challenge
 ---
 
-Nicola Dinsdale and team mate Vaanathi Sundaresan win the [LISA 2024 Challenge](/publications?search="Automated quality assessment using appearance-based simulations and hippocampus segmentation on low-field paediatric brain MR images").
+Nicola Dinsdale and team mate Vaanathi Sundaresan win the {% include publication-link.html doi="10.48550/arXiv.2410.06161" text="LISA 2024 Challenge" %}.

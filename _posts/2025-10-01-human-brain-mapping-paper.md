@@ -24,4 +24,5 @@ Second‑trimester neuroimaging underpins anomaly screening. Our results show wh
 A collaboration between the **University of Oxford** (Department of Computer Science), **King’s College London**, **City, University of London**, and the **Athinoula A. Martinos Center / Harvard Medical School**, with support from the **Gates Foundation**, **Wellcome Trust/EPSRC iFIND**, the **Wellcome/EPSRC Centre for Medical Engineering**, and the **NIHR Clinical Research Facility** at Guy’s and St Thomas’.
 
 **Read the paper**: [{DOI 10.1002/hbm.70349}](https://doi.org/10.1002/hbm.70349). Open Access under **CC BY 4.0**.
-**Find it on our [publication page](/publications?search=Comparison of Fetal Brain Phenotypes)**:
+
+{% include publication-link.html doi="10.1002/hbm.70349" text="View citation on our publications page" icon="fa-solid fa-book"%}

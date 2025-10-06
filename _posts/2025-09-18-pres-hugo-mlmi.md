@@ -20,4 +20,4 @@ Pak-Hei Yeung presented his work at the MLMI Workshop during MICCAI 2024. His wo
 
 <!-- excerpt end -->
 
-Check out the publication on our [publication page](/publications?search="Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model") or directly the [project page](https://pakheiyeung.github.io/M-N_wp/).
+{% include publication-link.html doi="10.48550/arXiv.2509.15167" text="View publication →" %}
