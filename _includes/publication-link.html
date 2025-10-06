@@ -1,0 +1,19 @@
+{% comment %}
+Create a link to a specific publication on the publications page
+
+Usage:
+  {% include publication-link.html doi="10.1002/hbm.70349" text="View citation" %}
+  {% include publication-link.html doi="10.1002/hbm.70349" text="Read the paper" icon="fa-solid fa-arrow-right" %}
+
+Parameters:
+  doi (required): Just the DOI number (e.g., "10.1002/hbm.70349") - "doi:" prefix is added automatically
+  text (optional): Link text (defaults to "View publication")
+  icon (optional): Font Awesome icon class to display with the link
+  style (optional): Style for the link (e.g., "button")
+
+⚠️ WARNING: DO NOT FORMAT THIS FILE! ⚠️
+The Liquid code below MUST remain on a single line to prevent whitespace rendering in HTML.
+VS Code's auto-formatter will break this file if it reformats it.
+See .editorconfig to prevent auto-formatting.
+{% endcomment %}
+{%- if include.doi contains "doi:" -%}{%- assign target_doi = include.doi -%}{%- else -%}{%- assign target_doi = "doi:" | append: include.doi -%}{%- endif -%}{%- assign link_text = include.text | default: "View publication" -%}{%- assign citation = site.data.citations | where: "id", target_doi | first -%}{%- if citation -%}<a href="{{ '/publications' | relative_url }}#{{ citation.id | url_encode }}"{% if include.style %} class="{{ include.style }}"{% endif %}>{%- if include.icon -%}<i class="{{ include.icon }}"></i> {% endif %}{{ link_text }}</a>{%- else -%}<span style="color: var(--red);">⚠️ Citation not found: {{ target_doi }}</span>{%- endif -%}

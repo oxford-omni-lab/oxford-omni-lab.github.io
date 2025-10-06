@@ -1,0 +1,17 @@
+# EditorConfig helps maintain consistent coding styles
+# See https://editorconfig.org for more info
+
+root = true
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Disable formatting for publication-link.html
+# This file requires all Liquid code on one line to prevent whitespace issues
+[_includes/publication-link.html]
+insert_final_newline = false
+trim_trailing_whitespace = false
