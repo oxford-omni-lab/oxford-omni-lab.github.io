@@ -16,7 +16,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  opacity: 0.2;
+  opacity: 1;
   filter: blur(1px);
   z-index: -1;
+}
+
+/* Dark mode background support */
+.background[data-dark="true"]:before,
+[data-dark="true"] .background:before {
+  background-image: var(--image-dark);
 }

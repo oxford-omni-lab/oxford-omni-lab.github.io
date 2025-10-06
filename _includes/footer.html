@@ -1,10 +1,11 @@
-{% assign image = page.footer | default: site.footer %}
-{% assign dark = page.footer-dark | is_nil: site.footer-dark | is_nil: true %}
+{% assign image = page.background | default: site.background %}
+{% assign dark = page.footer-dark | default: site.footer-dark %}
 
+{% assign dark_image = page.background-dark | default: site.background-dark %}
 <footer
   class="background"
-  style="--image: url('{{ image | relative_url | uri_escape }}')"
-  {% if dark == true or dark == false %}
+  style="--image: url('{{ image | relative_url | uri_escape }}'); --image-dark: url('{{ dark_image | relative_url | uri_escape }}')"
+  {% if dark %}
     data-dark="{{ dark }}"
   {% endif %}
   data-size="wide"
@@ -24,7 +25,7 @@
   </div>
 
   <div>
-    &copy; {{ site.time | date: "%Y" }}
+    <a>&copy; {{ site.time | date: "%Y" }}</a>
     {{ site.title }}
     &nbsp; | &nbsp; <a href="{{ "/about" | relative_url }}">About this Website</a>
     &nbsp; | &nbsp; <a href="{{ "/recruitment" | relative_url }}">Recruitment</a>

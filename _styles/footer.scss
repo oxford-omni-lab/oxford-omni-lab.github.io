@@ -10,11 +10,11 @@ footer {
   padding: 10px;
   line-height: var(--spacing);
   box-shadow: var(--shadow);
-  color: var(--text);
+  color: var(--nav);
 }
 
 footer a {
-  color: var(--text) !important;
+  color: var(--nav) !important;
 }
 
 footer a:hover {

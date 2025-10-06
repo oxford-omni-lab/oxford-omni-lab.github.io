@@ -1,14 +1,14 @@
 # site properties and page defaults
 title:
-subtitle: 
-description: An engaging 1-3 sentence description of your lab.
-header: images/misc/background.png
-footer: images/misc/background.png
+subtitle:
+description:
+background: images/misc/background_light.png
+background-dark: images/misc/background_dark.png
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@oxford-omni-lab.com
+  email: ana.namburete@cs.ox.ac.uk
   orcid: 0000-0002-9119-436X
   google-scholar: 6QzRJ6MAAAAJ
   github: oxford-omni-lab

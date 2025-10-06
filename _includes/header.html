@@ -1,14 +1,15 @@
-{% assign image = page.header | default: site.header %}
-{% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
+{% assign image = page.background | default: site.background %}
+{% assign dark = page.background-dark | default: site.background-dark %}
 
 {% assign png = "images/misc/Logo-OMNI.png" | file_exists %}
 {% assign jpg = "images/logo.jpg" | file_exists %}
 {% assign logo = svg | default: png | default: jpg | default: nil %}
 
+{% assign dark_image = page.background-dark | default: site.background-dark %}
 <header
   class="background"
-  style="--image: url('{{ image | relative_url | uri_escape }}')"
-  {% if dark == true or dark == false %}
+  style="--image: url('{{ image | relative_url | uri_escape }}'); --image-dark: url('{{ dark_image | relative_url | uri_escape }}')"
+  {% if dark %}
     data-dark="{{ dark }}"
   {% endif %}
   {% if page.url == "/" %}
