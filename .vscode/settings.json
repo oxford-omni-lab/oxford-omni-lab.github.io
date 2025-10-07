@@ -1,0 +1,15 @@
+{
+  // Enable EditorConfig support
+  "editorconfig.enable": true,
+
+  // Disable format on save for specific files
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+
+  // Alternatively, you can enable format on save for most files
+  // but disable it for the _includes folder
+  "files.associations": {
+    "_includes/publication-link.html": "html"
+  }
+}

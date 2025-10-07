@@ -9,7 +9,7 @@ We are an interdisciplinary research group dedicated to advancing the understand
 
 Our goal is to enable high-resolution, quantitative analysis of fetal brain development from routine clinical scans. By leveraging large-scale population datasets and collaborations across clinical and computational sciences, we aim to both improve scientific understanding of early brain maturation and develop practical tools for use in diverse healthcare settings.
 
-<!-- {% include section.html background="images/misc/background.png" dark=true %} 
+<!-- {% include section.html background="images/misc/background_dark.png" dark=true %} 
 
 <!--# Fetal Ultrasound Atlas
 
@@ -123,15 +123,16 @@ If you are interested in joining please go to the [recruitment](recruitment) pag
 
 ## Collaborators, Partners & Funding
 
-Our work is supported by collaborations with the Nuffield Department of Women’s and Reproductive Health, the Wellcome Centre for Integrative Neuroimaging (WIN), and the Visual Geometry Group, among others.
+Our work is supported by collaborations with the Nuffield Department of Women’s and Reproductive Health, the Wellcome Centre for Integrative Neuroimaging (OxCIN), and the Visual Geometry Group, among others.
 
-We are grateful for funding from the University of Oxford [EPSRC Impact Acceleration scheme, and EPSRC Doctoral Prizes](https://www.ukri.org/councils/epsrc/), [Bill and Medlinda Gates Foundation](https://www.gatesfoundation.org/), the Academy of Medical Sciences [Springboard Awards scheme](https://acmedsci.ac.uk/), and the [Royal Academy of Engineering](https://raeng.org.uk/).
+We are grateful for funding from the University of Oxford [EPSRC Impact Acceleration scheme, and EPSRC Doctoral Prizes](https://www.ukri.org/councils/epsrc/), the [European Research Council](https://erc.europa.eu/homepage), the [Gates Foundation](https://www.gatesfoundation.org/), the Academy of Medical Sciences [Springboard Awards scheme](https://acmedsci.ac.uk/), and the [Royal Academy of Engineering](https://raeng.org.uk/).
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px; margin: 40px 0;">
-  <img src="images/partners/Logo_AMS.jpeg" alt="AMS" style="height: 60px; max-width: 150px; object-fit: contain;">
-  <img src="images/partners/Logo_BMFG.png" alt="BMFG" style="height: 60px; max-width: 150px; object-fit: contain;">
-  <img src="images/partners/Logo_EPSRC.png" alt="EPSRC" style="height: 60px; max-width: 150px; object-fit: contain;">
-  <img src="images/partners/Logo_OxfordCS.jpeg" alt="Oxford Computer Science" style="height: 60px; max-width: 150px; object-fit: contain;">
+  <img src="images/partners/Logo_ERC.jpg" alt="ERC" style="height: 100px; max-width: 250px; object-fit: contain;">
+  <img src="images/partners/Logo_AMS.jpeg" alt="AMS" style="height: 100px; max-width: 250px; object-fit: contain;">
+  <img src="images/partners/Logo_BMFG.png" alt="BMFG" style="height: 100px; max-width: 250px; object-fit: contain;">
+  <img src="images/partners/Logo_EPSRC.png" alt="EPSRC" style="height: 100px; max-width: 250px; object-fit: contain;">
+  <img src="images/partners/Logo_OxfordCS.jpeg" alt="Oxford Computer Science" style="height: 100px; max-width: 250px; object-fit: contain;">
 </div>
 
 {% include section.html %}

@@ -25,7 +25,7 @@ By developing computational tools, the OMNI Lab aims to address key needs in mod
 
 Normal development of the human brain can be characterized by precisely timed growth and folding of its surface (cortex), with deviations often associated with poor cognitive outcomes. Advances in ultrasound (US) imaging technology now make it possible to visualize the cortex and screen for brain abnormalities before birth, from as early as 14 gestational weeks (GW). Working closely with the INTERGROWTH-21st Consortium and healthcare professionals, we develop a range of computational tools for assessing fetal health from US images.
 
-{% assign fetal_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Fetal Brain Characterization'" %}
+{% assign fetal_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Fetal Brain Characterization'" | sort: "date" | reverse %}
 {% for citation in fetal_papers limit: 12%}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
@@ -36,7 +36,7 @@ Normal development of the human brain can be characterized by precisely timed gr
 
 In neuroimaging research, 3D image data is the mainstay for representing anatomical details. However, in conventional clinical practice, pre- and post-natal assessments are performed with 2D video or static US images. The sonographers need to interpret the relationships between the 2D views and 3D brain anatomy and mentally reconstruct a 3D image given just the 2D information. Our goal is to develop methods to reconstruct a 3D brain scan from 2D freehand video acquisitions. We foresee that this would have applications in perinatal clinics, and in LMICs.
 
-{% assign reconstruction_papers = site.data.citations | where_exp: "citation", "citation.tags contains '2D to 3D Reconstruction'" %}
+{% assign reconstruction_papers = site.data.citations | where_exp: "citation", "citation.tags contains '2D to 3D Reconstruction'" | sort: "date" | reverse %}
 {% for citation in reconstruction_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
@@ -47,28 +47,28 @@ In neuroimaging research, 3D image data is the mainstay for representing anatomi
 
 Deep learning has shown great promise in the research domain, but significant barriers still exist which limit the clinical translatability of deep learning models. Our research aims to tackle these barriers focusing on the challenges of: distributed data and data privacy, model compression, and the development of clinically meaningful biomarkers.
 
-{% assign privacy_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Clinical Translation'" %}
+{% assign privacy_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Clinical Translation'" | sort: "date" | reverse %}
 {% for citation in privacy_papers limit: 12%}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
 
 ### Distributed Data and Data Privacy
 
-{% assign privacy_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Distributed Data and Data Privacy'" %}
+{% assign privacy_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Distributed Data and Data Privacy'" | sort: "date" | reverse %}
 {% for citation in privacy_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
 
 ### Model Compression
 
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Model Compression'" %}
+{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Model Compression'" | sort: "date" | reverse %}
 {% for citation in biomarker_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
 
 ### Biomarker Development
 
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Biomarkers'" %}
+{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Biomarkers'" | sort: "date" | reverse %}
 {% for citation in biomarker_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
@@ -81,21 +81,21 @@ Fundamental to our research is the development of state-of-the-art DL methodolog
 
 ### Segmentation
 
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Segmentation'" %}
+{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Segmentation'" | sort: "date" | reverse %}
 {% for citation in biomarker_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
 
 ### Domain Adaptation
 
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Domain Adaptation'" %}
+{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Domain Adaptation'" | sort: "date" | reverse %}
 {% for citation in biomarker_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
 
 ### Interpretability
 
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Interpretability'" %}
+{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Interpretability'" | sort: "date" | reverse %}
 {% for citation in biomarker_papers limit:12 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}
@@ -104,6 +104,7 @@ Fundamental to our research is the development of state-of-the-art DL methodolog
 
 ## More
 
-{% for citation in site.data.citations limit:10 %}
+{% assign all_citations = site.data.citations | sort: "date" | reverse %}
+{% for citation in all_citations limit:10 %}
 {% include research-teaser.html citation=citation %}
 {% endfor %}

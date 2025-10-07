@@ -19,7 +19,7 @@ We are **always** looking for new DPhil/MSc students and Postdocs to [join the t
 
 {% include list.html data="members" component="portrait" filter="group != 'alumni'" %}
 
-{% include section.html background="images/misc/background.png" dark=true %}
+{% include section.html background="images/misc/background_dark.png" dark=true %}
 
 {% assign group_images = site.static_files | where_exp: "item", "item.path contains 'images/group'" | where_exp: "item", "item.extname == '.jpg' or item.extname == '.JPG' or item.extname == '.jpeg' or item.extname == '.png'" | sort: "basename" | reverse %}
 {% assign latest_group_image = group_images[0].path %}

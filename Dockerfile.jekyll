@@ -1,0 +1,8 @@
+FROM ruby:3.1-bookworm
+
+# Build tools & headers so native gems (eventmachine, nokogiri, etc.) can compile
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential git pkg-config libssl-dev zlib1g-dev libyaml-dev ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /srv/jekyll

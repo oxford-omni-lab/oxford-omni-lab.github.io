@@ -1,6 +1,24 @@
 ---
-# Post Template - Complete with all possible flags
-# Save as: _posts/YYYY-MM-DD-title-slug.md
+# Post Template - Complete with all possiTo add a link to a publication on the publications page, use:
+
+```liquid
+{% include publication-link.html doi="10.1002/hbm.70349" text="View citation" %}
+```
+
+Optional parameters:
+
+- `doi` (required): Just the DOI number (e.g., "10.1002/hbm.70349") - the "doi:" prefix is added automatically
+- `text` (optional): Custom link text (default: "View publication")
+- `icon` (optional): Font Awesome icon class (e.g., "fa-solid fa-arrow-right")
+- `style` (optional): CSS class for styling (e.g., "button")
+
+Examples:
+
+```liquid
+{% include publication-link.html doi="10.1002/hbm.70349" text="Read the paper" %}
+{% include publication-link.html doi="10.1002/hbm.70349" text="View citation" icon="fa-solid fa-arrow-right" %}
+{% include publication-link.html doi="10.1007/978-3-031-72378-0_39" text="MICCAI 2024" %}
+```: _posts/YYYY-MM-DD-title-slug.md
 
 title: "Your Post Title Here" # Required: Main title displayed on the post
 author: "Author Name" # Optional: Post author (can be team member name)
@@ -36,10 +54,34 @@ Write your full post content here using standard Markdown syntax.
 - Links to [external sites](https://example.com)
 - Links to [internal pages]({% link research/index.md %})
 - Images: ![Alt text]({{ site.baseurl }}/images/posts/image.jpg)
-- Publications: [Paper](/publications?search="your title")
+- Publications: `{% include publication-link.html doi="<doi>" text="View citation" %}`. For more details see below.
 - Code blocks and inline `code`
 - Lists and tables
 - Quotes and callouts
+
+### Including Publications
+
+To add a link to a publication on the publications page, use:
+
+```liquid
+{% include publication-link.html doi="10.1002/hbm.70349" text="View citation" %}
+```
+
+Optional parameters:
+
+- `doi` (required): The DOI from \_data/sources.yaml
+- `text` (optional): Custom link text (default: "View publication")
+- `icon` (optional): Font Awesome icon class (e.g., "fa-solid fa-arrow-right")
+- `style` (optional): CSS class for styling (e.g., "button")
+
+Examples:
+
+```liquid
+{% include publication-link.html doi="10.1002/hbm.70349" text="Read the paper" %}
+{% include publication-link.html doi="10.1002/hbm.70349" text="View citation" icon="fa-solid fa-arrow-right" %}
+```
+
+### Other Includes
 
 {% include button.html text="Button Text" link="https://example.com" %}
 

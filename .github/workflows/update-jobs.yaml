@@ -70,23 +70,10 @@ jobs:
       - name: Commit updated jobs to branch
         if: |
           github.event.action != 'closed' &&
-          steps.changed.outputs.files_changed == 'true' &&
-          inputs.open-pr != true
+          steps.changed.outputs.files_changed == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Update job listings"
-
-      - name: Open pull request with updated jobs
-        if: |
-          github.event.action != 'closed' &&
-          steps.changed.outputs.files_changed == 'true' &&
-          inputs.open-pr == true
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: jobs-update
-          title: Periodic job listings update
-          body: |
-            To see a live preview of this PR, close (don't merge) and reopen it.
+          commit_message: "Update job listings automatically"
 
     outputs:
       changed: ${{ steps.changed.outputs.files_changed || false }}
