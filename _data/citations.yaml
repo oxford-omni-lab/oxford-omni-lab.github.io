@@ -61,7 +61,7 @@
   - Madeleine K. Wyburd
   - Nicola K. Dinsdale
   publisher: arXiv
-  date: '2025-01-01'
+  date: '2025-05-20'
   link: https://doi.org/g9srvq
   image: images/publications/24-miccai-challenge.png
   note: Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling
@@ -83,7 +83,7 @@
   - Ana I. L. Namburete
   - "Jo\xE3o F. Henriques"
   publisher: arXiv
-  date: '2025-01-01'
+  date: '2025-05-08'
   link: https://doi.org/g9srvr
   note: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
   buttons:
@@ -252,7 +252,7 @@
   - "Jo\xE3o F. Henriques"
   - Ana I. L. Namburete
   publisher: arXiv
-  date: '2024-01-01'
+  date: '2024-04-16'
   link: https://doi.org/g9sr46
   note: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
     Scans'
@@ -396,7 +396,7 @@
   - Nicola K. Dinsdale
   - Ana I. L. Namburete
   publisher: arXiv
-  date: '2023-01-01'
+  date: '2023-11-06'
   link: https://doi.org/g9sr47
   note: Prototype learning for explainable brain age prediction
   image: images/publications/US.png
@@ -845,9 +845,9 @@
     segmentation on low-field paediatric brain MR images
   authors:
   - Vaanathi Sundaresan
-  - Nicola K Dinsdale
+  - Nicola K. Dinsdale
   publisher: arXiv
-  date: '2024-01-01'
+  date: '2024-10-08'
   link: https://doi.org/g9svgw
   note: Automated quality assessment using appearance-based simulations and hippocampus
     segmentation on low-field paediatric brain MR images
@@ -870,7 +870,7 @@
   - Ana Namburete
   - Jagath Rajapakse
   publisher: arXiv
-  date: '2025-01-01'
+  date: '2025-09-18'
   link: https://doi.org/g94m4x
   note: Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained
     Model
