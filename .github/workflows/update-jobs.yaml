@@ -67,12 +67,14 @@ jobs:
           files: |
             _data/jobs.yaml
 
-      - name: Pull latest changes
+      - name: Pull latest changes and handle conflicts
         if: |
           github.event.action != 'closed' &&
           steps.changed.outputs.files_changed == 'true'
         run: |
+          git stash push -m "Stash job updates"
           git pull --rebase origin ${{ github.ref_name }}
+          git stash pop || echo "No conflicts or stash already applied"
 
       - name: Commit updated jobs to branch
         if: |
