@@ -67,6 +67,13 @@ jobs:
           files: |
             _data/jobs.yaml
 
+      - name: Pull latest changes
+        if: |
+          github.event.action != 'closed' &&
+          steps.changed.outputs.files_changed == 'true'
+        run: |
+          git pull --rebase origin ${{ github.ref_name }}
+
       - name: Commit updated jobs to branch
         if: |
           github.event.action != 'closed' &&
