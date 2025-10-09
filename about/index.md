@@ -14,6 +14,6 @@ The website is deployed using [GitHub Pages](https://oxford-omni-lab.github.io) 
 
 ## Questions and Bug reporting
 
-If you have any questions, suggestions, or find bugs, please write an email to our web administrator [Valentin Bacher](mailto:valentin.bacher@cs.ox.ac.uk) or our PI, [Dr. Ana IL Namburete](mailto:ana.namburete@oxford.ac.uk).
+If you have any questions, suggestions, or find bugs, please write an email to our web administrator{% include email-link.html email=site.web_admin_email text="web administrator" %} or our PI, {% include email-link.html email=site.links.email text="Dr. Ana IL Namburete" %}.
 
 _Website last updated: {{ site.time | date: "%B %Y" }}_

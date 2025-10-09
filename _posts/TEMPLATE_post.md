@@ -81,6 +81,25 @@ Examples:
 {% include publication-link.html doi="10.1002/hbm.70349" text="View citation" icon="fa-solid fa-arrow-right" %}
 ```
 
+### Including Email Links (Anti-Spam Protected)
+
+To add email links that are protected from scrapers:
+
+```liquid
+{% include email-link.html email="name@cs.ox.ac.uk" %}
+{% include email-link.html email="name@cs.ox.ac.uk" text="Contact Us" %}
+{% include email-link.html email="name@cs.ox.ac.uk" text="Email" icon="fa-solid fa-envelope" style="button" %}
+```
+
+Optional parameters:
+
+- `email` (required): The email address to link to
+- `text` (optional): Link text (defaults to showing the email address)
+- `icon` (optional): Font Awesome icon class
+- `style` (optional): CSS class for styling (e.g., "button")
+
+**Note:** All email links on the site are automatically protected from spam scrapers using JavaScript obfuscation while remaining fully clickable for users.
+
 ### Other Includes
 
 {% include button.html text="Button Text" link="https://example.com" %}

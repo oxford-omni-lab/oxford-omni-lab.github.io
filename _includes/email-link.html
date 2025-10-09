@@ -1,0 +1,19 @@
+{% comment %}
+Create an obfuscated email link that's protected from scrapers but still clickable
+
+Usage:
+  {% include email-link.html email="name.surname@cs.ox.ac.uk" %}
+  {% include email-link.html email="name.surname@cs.ox.ac.uk" text="Contact Ana" %}
+  {% include email-link.html email="name.surname@cs.ox.ac.uk" icon="fa-solid fa-envelope" %}
+  {% include email-link.html email="name.surname@cs.ox.ac.uk" style="button" %}
+
+Parameters:
+  email (required): The email address to link to
+  text (optional): Link text (defaults to the email address)
+  icon (optional): Font Awesome icon class to display before the text
+  style (optional): CSS class for styling (e.g., "button")
+
+⚠️ WARNING: DO NOT FORMAT THIS FILE! ⚠️
+The Liquid code below MUST remain on a single line to prevent whitespace rendering in HTML.
+{% endcomment %}
+{%- assign email_parts = include.email | split: "@" -%}{%- assign email_user = email_parts[0] -%}{%- assign email_domain = email_parts[1] -%}{%- assign link_text = include.text | default: include.email -%}<a href="#" data-email="{{ email_user }}" data-domain="{{ email_domain }}" class="email-link{% if include.style %} {{ include.style }}{% endif %}">{%- if include.icon -%}<i class="{{ include.icon }}"></i> {% endif %}{{ link_text }}</a>

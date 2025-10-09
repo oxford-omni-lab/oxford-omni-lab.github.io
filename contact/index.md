@@ -15,10 +15,11 @@ Oxford OX1 3PH\
 United Kingdom
 
 {%
-  include button.html
-  type="email"
-  text="Mail"
-  link="ana.namburete@cs.ox.ac.uk"
+  include email-link.html
+  email=site.links.email
+  text="Email Us"
+  icon="fa-solid fa-envelope"
+  style="button"
 %}
 {%
   include button.html

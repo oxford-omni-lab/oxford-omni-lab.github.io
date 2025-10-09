@@ -2,6 +2,30 @@
 {% assign button = button | hash_default: site.data.types[include.type] %}
 
 {% if button.link or button.icon or button.text %}
+  {% if button.link contains '@' or button.link contains 'mailto:' %}
+    {% assign email_address = button.link | remove: 'mailto:' %}
+    {% assign email_parts = email_address | split: '@' %}
+    {% assign email_user = email_parts[0] %}
+    {% assign email_domain = email_parts[1] %}
+  <div class="button-wrapper">
+    <a
+      class="button email-link"
+      href="#"
+      data-email="{{ email_user }}"
+      data-domain="{{ email_domain }}"
+      data-style="{{ include.style }}"
+      {% if include.flip %}
+        data-flip
+      {% endif %}
+      aria-label="{{ button.tooltip | default: button.icon | default: "email button" | regex_strip }}"
+    >
+      {% include icon.html icon=button.icon %}
+      {% if button.text and button.text != "" %}
+        <span>{{ button.text }}</span>
+      {% endif %}
+    </a>
+  </div>
+  {% else %}
   <div class="button-wrapper">
     <a
       class="button"
@@ -18,4 +42,5 @@
       {% endif %}
     </a>
   </div>
+  {% endif %}
 {% endif %}
