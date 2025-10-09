@@ -15,7 +15,7 @@ aliases: # Optional: Alternative names for citation matching
   - "Full Middle Name"
   - "Name, F."
 links: # Optional: Social media and contact links
-  email: "email@domain.com" # Email address
+  email: "email@domain.com" # Email address (will be protected in the html files)
   home-page: "https://personal-website.com" # Personal website
   orcid: "0000-0000-0000-0000" # ORCID identifier
   google-scholar: "scholar_id" # Google Scholar profile ID
