@@ -20,7 +20,7 @@ For our Lab members we also have a Wiki with Information about processes, Lab re
 **The wiki can only be accessed by lab members with access to our cluster.**
 **When accessing from outside the University, you need VPN to access the wiki.**
 
-To access it please run the folowing command to tunnel the wiki server to your local machine:
+To access it please run the following command to tunnel the wiki server to your local machine and then **use the button below**:
 
 ```bash
 ssh -fNT -L 8080:localhost:8080 wiki
