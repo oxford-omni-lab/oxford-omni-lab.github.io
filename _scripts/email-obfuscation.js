@@ -14,21 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
       // Set the mailto link
       link.href = "mailto:" + email;
 
-      // If the link text is a placeholder, replace it with the actual email
-      if (
-        link.textContent.trim() === "Contact" ||
-        link.textContent.includes("@") === false
-      ) {
-        // Check if there's an icon
-        const icon = link.querySelector("i");
+      // Check if there's an icon
+      const icon = link.querySelector("i");
+      const textSpan = link.querySelector("span");
+
+      // If there's text content (not just icon), keep it as is
+      // If there's only an icon (no text span or empty span), keep just the icon
+      if (textSpan && textSpan.textContent.trim() === "") {
+        // Icon-only button (like in footer) - keep just the icon, don't add email
         if (icon) {
-          // Preserve the icon and add email after it
-          link.innerHTML = icon.outerHTML + " " + email;
-        } else if (link.dataset.showEmail !== "false") {
-          // Only show email if not explicitly hidden
-          link.textContent = email;
+          link.innerHTML = icon.outerHTML;
         }
+      } else if (!textSpan && icon && link.textContent.trim() === "") {
+        // Icon-only link without span wrapper - keep just the icon
+        link.innerHTML = icon.outerHTML;
       }
+      // Otherwise, keep the existing text content (button with text)
 
       // Remove data attributes to clean up DOM
       delete link.dataset.email;
