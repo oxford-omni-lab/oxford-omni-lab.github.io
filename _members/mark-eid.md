@@ -11,7 +11,6 @@ aliases:
 links:
   email: markeid@robots.ox.ac.uk
 ---
-
 I am an [AIMS CDT](https://aims.robots.ox.ac.uk) DPhil student, jointly supervised by [Prof. Ana Namburete](https://oxford-omni-lab.github.io/members/ana-namburete.html) and [Dr. João Henriques](https://www.robots.ox.ac.uk/~joao/) in the Visual Geoemtry Group (VGG).
 
 My research primarily focuses on 2D to 3D reconstruction of ultrasound images, to help improve prenatal diagnostic capabilities, especially in low resourced settings. I often take inspiration from technqiues used in classical computer vision and gaming, to help tackle the challenges of ultrasound imaging and the relative scarcity of medical data.
