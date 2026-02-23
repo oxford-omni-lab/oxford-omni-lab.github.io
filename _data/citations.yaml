@@ -121,7 +121,7 @@
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1109/ISBI60581.2025.10980994
-  title: 'Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
+  title: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
     2D Scans'
   authors:
   - Mark C. Eid
@@ -461,7 +461,7 @@
   - Nicola K Dinsdale
   - Mark Jenkinson
   - Ana IL Namburete
-  publisher: Cold Spring Harbor Laboratory
+  publisher: openRxiv
   date: '2024-02-06'
   link: https://doi.org/g9stjd
   note: 'UniFed: A unified deep learning framework for segmentation of partially labelled,
@@ -639,7 +639,7 @@
   - Ana IL Namburete
   - Nicola K Dinsdale
   - Konstantinos Kamnitsas
-  publisher: Cold Spring Harbor Laboratory
+  publisher: openRxiv
   date: '2024-08-22'
   link: https://doi.org/g9srrv
   note: Is Your Style Transfer Doing Anything Useful? An Investigation Into Hippocampus
