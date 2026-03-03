@@ -14,19 +14,21 @@ Department of Computer Science\
 Oxford OX1 3PH\
 United Kingdom
 
-{%
-  include email-link.html
-  email=site.links.email
-  text="Email Us"
-  icon="fa-solid fa-envelope"
-  style="button"
-%}
-{%
-  include button.html
-  type="address"
-  tooltip="Our location on Google Maps for easy navigation"
-  link="https://goo.gl/maps/hJHW2pXSe1xK5XFM7"
-%}
+<div class="button-group">
+  {%
+    include email-link.html
+    email=site.links.email
+    text="Email Us"
+    icon="fa-solid fa-envelope"
+    style="button"
+  %}
+  {%
+    include button.html
+    type="address"
+    tooltip="Our location on Google Maps for easy navigation"
+    link="https://goo.gl/maps/hJHW2pXSe1xK5XFM7"
+  %}
+</div>
 
 {% include section.html %}
 
