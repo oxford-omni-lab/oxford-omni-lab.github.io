@@ -10,6 +10,7 @@ aliases:
   - Mark C Eid
 links:
   email: markeid@robots.ox.ac.uk
+  google-scholar:aqzMk-gAAAAJ
 ---
 I am an [AIMS CDT](https://aims.robots.ox.ac.uk) DPhil student, jointly supervised by [Prof. Ana Namburete](https://oxford-omni-lab.github.io/members/ana-namburete.html) and [Dr. João Henriques](https://www.robots.ox.ac.uk/~joao/) in the Visual Geoemtry Group (VGG).
 
