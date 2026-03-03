@@ -6,6 +6,13 @@ button {
   display: contents;
 }
 
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
