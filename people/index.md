@@ -1,17 +1,17 @@
 ---
-title: Team
+title: People
 nav:
   order: 1
-  tooltip: About our team
+  tooltip: About our People
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %}Team
+# {% include icon.html icon="fa-solid fa-users" %}People
 
 {% include section.html %}
 
 Our group was founded in 2017 by [Dr. Ana Namburete](/members/ana-namburete) with the aim of improving fetal brain assessment using machine learning and neuroimaging. We are a collaborative and open-minded group of researchers, eager to push the frontiers of biomedical imaging. For more about our lab culture, please see our lab handbook.
 
-We are **always** looking for new DPhil/MSc students and Postdocs to [join the team](../recruitment) **!**
+We are **always** looking for new DPhil/MSc students and Postdocs to [join our group](../recruitment) **!**
 
 {% include button.html text="Lab Handbook" link="handbook" icon="fa-solid fa-book"%}
 

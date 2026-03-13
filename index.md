@@ -70,8 +70,8 @@ We are a collaborative and open-minded group of people, eager to push the fronti
 
 {%
   include button.html
-  link="team"
-  text="Meet our team"
+  link="people"
+  text="Meet our Lab members"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -85,8 +85,8 @@ We are a collaborative and open-minded group of people, eager to push the fronti
 {%
   include feature.html
   image=latest_group_image
-  link="team"
-  title="Our Team"
+  link="people"
+  title="Our Lab Members"
   flip=true
   text=text
 %}
