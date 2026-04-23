@@ -13,6 +13,9 @@
   --dark-gray: #404040;
   --overlay: #00000020;
   --nav: #002147;
+  --post-hero-image-opacity: 0.5;
+  --post-hero-overlay: rgba(255, 255, 255, 0.5);
+  --post-hero-text-shadow: rgba(0, 0, 0, 0.22);
 }
 [data-dark="true"] {
   --primary: #bf005f;
@@ -25,6 +28,9 @@
   --dark-gray: #b0b0b0;
   --overlay: #ffffff10;
   --nav: #002147;
+  --post-hero-image-opacity: 0.5;
+  --post-hero-overlay: rgba(0, 0, 0, 0.45);
+  --post-hero-text-shadow: rgba(0, 0, 0, 0.45);
 }
 
 :root {
