@@ -428,3 +428,36 @@
       link: https://onlinelibrary.wiley.com/doi/epdf/10.1002/hbm.70349
   tags:
     - Fetal Brain Characterization
+
+- id: doi:10.1038/s41467-026-69657-w
+  note: "Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age"
+  image: 2604-normative_groth.png
+  highlight: true
+  buttons:
+    - type: website
+      link: https://www.nature.com/articles/s41467-026-69657-w
+    - type: pdf
+      link: https://www.nature.com/articles/s41467-026-69657-w.pdf
+  tags:
+    - Fetal Brain Characterization
+
+- id: doi:10.1016/S3050-5038(25)00163-3
+  note: "Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal–fetal pathophysiology"
+  buttons:
+    - type: website
+      link: https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(25)00163-3/fulltext
+    - type: pdf
+      link: https://www.thelancet.com/action/showPdf?pii=S3050-5038%2825%2900163-3
+  tags:
+    - Fetal Brain Characterization
+
+- id: doi:10.1016/j.media.2026.104043
+  note: "Beyond benchmarks of IUGC: Rethinking requirements of deep learning method for intrapartum ultrasound biometry from fetal ultrasound videos"
+  image: 260601-IUGC-Challenge.png
+  buttons:
+    - type: website
+      link: https://www.sciencedirect.com/science/article/abs/pii/S136184152600112X
+    - type: pdf
+      link: https://www.sciencedirect.com/science/article/pii/S136184152600112X/pdfft?md5=582ccf40f5d3108cd9ed511228321e57&pid=1-s2.0-S136184152600112X-main.pdf
+  tags:
+    - Challenge
