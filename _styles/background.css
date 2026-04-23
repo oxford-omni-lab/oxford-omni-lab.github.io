@@ -21,7 +21,7 @@
 /* Dark mode background support */
 .background[data-dark=true]:before,
 [data-dark=true] .background:before {
-  background-image: var(--image-dark);
+  background-image: var(--image-dark, var(--image));
 }
 
 /*# sourceMappingURL=background.css.map */

@@ -29,4 +29,22 @@
   white-space: nowrap;
 }
 
+/* Applies only to the hero section used on individual post pages. */
+main > section.background:has(.post-info):before {
+  opacity: var(--post-hero-image-opacity);
+  z-index: -2;
+}
+
+main > section.background:has(.post-info):after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, var(--post-hero-overlay) 0%, transparent 100%);
+  z-index: -1;
+}
+
+main > section.background:has(.post-info) :is(h1, .post-info, .tags) {
+  text-shadow: 0 1px 8px var(--post-hero-text-shadow);
+}
+
 /*# sourceMappingURL=post-info.css.map */
