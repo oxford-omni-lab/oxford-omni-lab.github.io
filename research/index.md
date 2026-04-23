@@ -104,7 +104,24 @@ Fundamental to our research is the development of state-of-the-art DL methodolog
 
 ## More
 
+{% assign excluded_tags = "Fetal Brain Characterization|2D to 3D Reconstruction|Clinical Translation|Distributed Data and Data Privacy|Model Compression|Biomarkers|Segmentation|Domain Adaptation|Interpretability" | split: "|" %}
 {% assign all_citations = site.data.citations | sort: "date" | reverse %}
-{% for citation in all_citations limit:10 %}
+{% assign remaining_count = 0 %}
+{% for citation in all_citations %}
+{% assign has_excluded_tag = false %}
+{% if citation.tags %}
+{% for tag in citation.tags %}
+{% if excluded_tags contains tag %}
+{% assign has_excluded_tag = true %}
+{% break %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% unless has_excluded_tag %}
 {% include research-teaser.html citation=citation %}
+{% assign remaining_count = remaining_count | plus: 1 %}
+{% endunless %}
+{% if remaining_count >= 10 %}
+{% break %}
+{% endif %}
 {% endfor %}
