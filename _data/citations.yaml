@@ -73,7 +73,6 @@
     link: https://arxiv.org/pdf/2505.14572
   tags:
   - Challenge
-  - Biomarkers
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.48550/arXiv.2505.05643
@@ -86,6 +85,7 @@
   date: '2025-01-01'
   link: https://doi.org/g9srvr
   note: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
+  image: images/publications/2505-ultragauss-pre.png
   buttons:
   - type: website
     link: https://arxiv.org/abs/2505.05643
@@ -93,6 +93,7 @@
     link: https://arxiv.org/pdf/2505.05643
   tags:
   - 2D to 3D Reconstruction
+  - Preprint
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1109/ISBI60581.2025.10980676
@@ -111,6 +112,7 @@
   link: https://doi.org/g9sr3z
   note: Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain
     in 3D Ultrasound
+  image: images/publications/2504-testtime-adaptation.png
   buttons:
   - type: website
     link: https://ieeexplore.ieee.org/abstract/document/10980676
@@ -132,8 +134,9 @@
   publisher: 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)
   date: '2025-04-14'
   link: https://doi.org/g9sr32
-  note: 'Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
+  note: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
     Scans'
+  image: images/publications/triplanar.png
   buttons:
   - type: website
     link: https://ieeexplore.ieee.org/abstract/document/10980994
@@ -238,30 +241,6 @@
   buttons:
   - type: website
     link: https://link.springer.com/chapter/10.1007/978-3-031-72378-0_39
-  tags:
-  - 2D to 3D Reconstruction
-  plugin: sources.py
-  file: sources.yaml
-- id: doi:10.48550/arXiv.2404.10766
-  title: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
-    2D Scans'
-  authors:
-  - Mark C. Eid
-  - Pak-Hei Yeung
-  - Madeleine K. Wyburd
-  - "Jo\xE3o F. Henriques"
-  - Ana I. L. Namburete
-  publisher: arXiv
-  date: '2024-01-01'
-  link: https://doi.org/g9sr46
-  note: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
-    Scans'
-  image: images/publications/triplanar.png
-  buttons:
-  - type: website
-    link: https://arxiv.org/abs/2404.10766
-  - type: pdf
-    link: https://arxiv.org/pdf/2404.10766
   tags:
   - 2D to 3D Reconstruction
   plugin: sources.py
@@ -494,7 +473,7 @@
   - type: website
     link: https://nkdinsdale.github.io/sfharmony_proj/
   - type: pdf
-    link: https://arxiv.org/pdf/2303.15965
+    link: https://openaccess.thecvf.com/content/ICCV2023/papers/Dinsdale_SFHarmony_Source_Free_Domain_Adaptation_for_Distributed_Neuroimaging_Analysis_ICCV_2023_paper.pdf
   - type: source
     link: https://github.com/nkdinsdale/SFHarmony
   tags:
@@ -860,18 +839,18 @@
   - Challenge
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.48550/arXiv.2509.15167
-  title: Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained
-    Model
+- id: doi:10.1007/978-3-032-09513-8_6
+  title: "Semi-supervised 3D Medical Segmentation from\_2D Natural Images Pretrained\
+    \ Model"
   authors:
   - Pak-Hei Yeung
   - Jayroop Ramesh
   - Pengfei Lyu
   - Ana Namburete
   - Jagath Rajapakse
-  publisher: arXiv
-  date: '2025-01-01'
-  link: https://doi.org/g94m4x
+  publisher: Lecture Notes in Computer Science
+  date: '2026-01-01'
+  link: https://doi.org/hbx8bg
   note: Semi-Supervised 3D Medical Segmentation from 2D Natural Images Pretrained
     Model
   image: images/publications/250918_incentive.jpg
@@ -879,7 +858,7 @@
   - type: website
     link: https://pakheiyeung.github.io/M-N_wp/
   - type: pdf
-    link: https://arxiv.org/pdf/2509.15167
+    link: https://link.springer.com/content/pdf/10.1007/978-3-032-09513-8_6.pdf?pdf=inline%20link
   - type: source
     link: https://github.com/pakheiyeung/M-N
   tags:
