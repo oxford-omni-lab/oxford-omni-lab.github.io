@@ -917,3 +917,187 @@
   - Fetal Brain Characterization
   plugin: sources.py
   file: sources.yaml
+- id: doi:10.1038/s41467-026-69657-w
+  title: Normative growth trajectories of fetal brain regions validated by satisfactory
+    maturation of neurodevelopmental domains at 2 years of age
+  authors:
+  - Madeleine K. Wyburd
+  - Stephen H. Kennedy
+  - Michelle Fernandes
+  - Nicola K. Dinsdale
+  - Linde S. Hesse
+  - Robert B. Gunier
+  - Leila Cheikh Ismail
+  - Eric O. Ohuma
+  - Michael G. Gravett
+  - Manorama Purwar
+  - Wu Qingqing
+  - Adele Winsey
+  - Enrico Bertino
+  - Yasmin Jaffer
+  - Maria Carvalho
+  - Fernando C. Barros
+  - Alan Stein
+  - Alison J. Noble
+  - "Zolt\xE1n Moln\xE1r"
+  - Mark Jenkinson
+  - Thomas E. Nichols
+  - Stephen Smith
+  - Zulfiqar A. Bhutta
+  - Aris T. Papageorghiou
+  - Jose Villar
+  - Ana I. L. Namburete
+  publisher: Nature Communications
+  date: '2026-02-23'
+  link: https://doi.org/hbx74q
+  note: Normative growth trajectories of fetal brain regions validated by satisfactory
+    maturation of neurodevelopmental domains at 2 years of age
+  image: images/publications/2604-normative_groth.png
+  highlight: true
+  buttons:
+  - type: website
+    link: https://www.nature.com/articles/s41467-026-69657-w
+  - type: pdf
+    link: https://www.nature.com/articles/s41467-026-69657-w.pdf
+  tags:
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/S3050-5038(25)00163-3
+  title: "Impaired fetal brain growth and neurodevelopmental deficits at 2 years:\
+    \ deep phenotyping of maternal\u2013fetal pathophysiology"
+  authors:
+  - "Jos\xE9 Villar"
+  - Maria Carvalho
+  - Robert Gunier
+  - Rose McGready
+  - Yolotzin Valdespino
+  - Kim A Lagerborg
+  - Fernando C Barros
+  - Agustin Conde-Agudelo
+  - Shane A Norris
+  - Michelle Fernandes
+  - Antonio Uttaro
+  - Taylor W Carter
+  - Rafael E Valentin
+  - Ge Zhang
+  - Shama Munim
+  - Stephen Rauch
+  - Madeleine K Wyburd
+  - James A Berkley
+  - Manu Vatish
+  - Verena I Carrara
+  - Rachel Craik
+  - Hellen C Barsosio
+  - Leila Cheikh Ismail
+  - Chrystelle O O Tshivuila-Matala
+  - Roseline Ochieng
+  - Eric O Ohuma
+  - Alan Stein
+  - Ann Lambert
+  - Ana Namburete
+  - Adele Winsey
+  - Louis J Muglia
+  - Brenda Eskenazi
+  - Neil J Sebire
+  - Dayle L Sampson
+  - Zulfiqar A Bhutta
+  - Lee D Roberts
+  - Aris T Papageorghiou
+  - Stephen H Kennedy
+  publisher: The Lancet Obstetrics, Gynaecology, &amp; Women's Health
+  date: '2026-04-01'
+  link: https://doi.org/hbx74r
+  note: "Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep\
+    \ phenotyping of maternal\u2013fetal pathophysiology"
+  buttons:
+  - type: website
+    link: https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(25)00163-3/fulltext
+  - type: pdf
+    link: https://www.thelancet.com/action/showPdf?pii=S3050-5038%2825%2900163-3
+  tags:
+  - Fetal Brain Characterization
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1016/j.media.2026.104043
+  title: 'Beyond benchmarks of IUGC: Rethinking requirements of deep learning method
+    for intrapartum ultrasound biometry from fetal ultrasound videos'
+  authors:
+  - Jieyun Bai
+  - Zihao Zhou
+  - Yitong Tang
+  - Jie Gan
+  - Zhuonan Liang
+  - Jianan Fan
+  - Lisa B. Mcguire
+  - Jillian L. Clarke
+  - Weidong Cai
+  - Jacaueline Spurway
+  - Yubo Tan
+  - Shiye Wang
+  - Wenda Shen
+  - Wangwang Yu
+  - Yihao Li
+  - Philippe Zhang
+  - Weili Jiang
+  - Yongjie Li
+  - Salem Muhsin Ali Binqahal Al Nasi
+  - Arsen Abzhanov
+  - Numan Saeed
+  - Mohammad Yaqub
+  - Zunhui Xia
+  - Hongxing Li
+  - Libin Lan
+  - Jayroop Ramesh
+  - Valentin Bacher
+  - Mark Eid
+  - Hoda Kalabizadeh
+  - Christian Rupprecht
+  - Ana I.L. Namburete
+  - Pak-Hei Yeung
+  - Madeleine K. Wyburd
+  - Nicola K. Dinsdale
+  - Assanali Serikbey
+  - Jiankai Li
+  - Sung-Liang Chen
+  - Zicheng Hu
+  - Nana Liu
+  - Yian Deng
+  - Wei Hu
+  - Cong Tan
+  - Wenfeng Zhang
+  - Mai Tuyet Nhi
+  - Gregor Koehler
+  - Rapheal Stock
+  - Klaus Maier-Hein
+  - Marawan Elbatel
+  - Xiaomeng Li
+  - Saad Slimani
+  - Victor M. Campello
+  - Benard Ohene-Botwe
+  - Isaac Khobo
+  - Yuxin Huang
+  - Zhenyan Han
+  - Hongying Hou
+  - Di Qiu
+  - Zheng Zheng
+  - Gongning Luo
+  - Dong Ni
+  - Yaosheng Lu
+  - Karim Lekadir
+  - Shuo Li
+  publisher: Medical Image Analysis
+  date: '2026-06-01'
+  link: https://doi.org/hbx77p
+  note: 'Beyond benchmarks of IUGC: Rethinking requirements of deep learning method
+    for intrapartum ultrasound biometry from fetal ultrasound videos'
+  image: images/publications/260601-IUGC-Challenge.png
+  buttons:
+  - type: website
+    link: https://www.sciencedirect.com/science/article/abs/pii/S136184152600112X
+  - type: pdf
+    link: https://www.sciencedirect.com/science/article/pii/S136184152600112X/pdfft?md5=582ccf40f5d3108cd9ed511228321e57&pid=1-s2.0-S136184152600112X-main.pdf
+  tags:
+  - Challenge
+  plugin: sources.py
+  file: sources.yaml
