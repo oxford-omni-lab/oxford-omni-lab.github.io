@@ -44,17 +44,6 @@
   tags:
     - Fetal Brain Characterization
 
-- id: doi:10.1109/ISBI60581.2025.10980994
-  note: "Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D Scans"
-  image: 2504-rapidVol.png
-  buttons:
-    - type: website
-      link: https://ieeexplore.ieee.org/abstract/document/10980994
-    - type: pdf
-      link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980994
-  tags:
-    - 2D to 3D Reconstruction
-
 - id: doi:10.1016/j.media.2024.103147
   image: sensorless.png
   note: Sensorless Volumetric Reconstruction of Fetal Brain Freehand Ultrasound Scans with Deep Implicit Representation
