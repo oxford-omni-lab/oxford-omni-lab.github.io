@@ -1,0 +1,35 @@
+{% assign project = include.project %}
+
+<div class="project-teaser">
+  <a
+    href="{{ project.url | relative_url | uri_escape }}"
+    class="project-teaser-image"
+    aria-label="{{ project.title | default: 'project link' | regex_strip }}"
+  >
+    {% if project.image %}
+      <img
+        src="{{ project.image | relative_url | uri_escape }}"
+        alt="{{ project.title | default: 'project image' | regex_strip }}"
+        loading="lazy"
+        {% include fallback.html %}
+      >
+    {% else %}
+      <div class="project-teaser-icon-placeholder">
+        <i class="fa-solid fa-diagram-project"></i>
+      </div>
+    {% endif %}
+  </a>
+
+  <div class="project-teaser-content">
+    <a
+      href="{{ project.url | relative_url | uri_escape }}"
+      class="project-teaser-title"
+    >
+      {{ project.title | default: "[no title info]" }}
+    </a>
+
+    <p class="project-teaser-excerpt">
+      {{ project.excerpt | default: "[no description available]" }}
+    </p>
+  </div>
+</div>
