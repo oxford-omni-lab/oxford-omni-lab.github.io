@@ -987,8 +987,9 @@
   publisher: The Lancet Obstetrics, Gynaecology, &amp; Women's Health
   date: '2026-04-01'
   link: https://doi.org/hbx74r
-  note: "Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep\
-    \ phenotyping of maternal\u2013fetal pathophysiology"
+  note: 'Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep
+    phenotyping of maternal fetal pathophysiology'
+  image: images/publications/TBVzscore.png
   buttons:
   - type: website
     link: https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(25)00163-3/fulltext
@@ -996,6 +997,7 @@
     link: https://www.thelancet.com/action/showPdf?pii=S3050-5038%2825%2900163-3
   tags:
   - Fetal Brain Characterization
+  - Clinical Translation
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1016/j.media.2026.104043
@@ -1078,5 +1080,60 @@
     link: https://www.sciencedirect.com/science/article/pii/S136184152600112X/pdfft?md5=582ccf40f5d3108cd9ed511228321e57&pid=1-s2.0-S136184152600112X-main.pdf
   tags:
   - Challenge
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1002/pd.70103
+  title: "Clinical Grading of Artificial Intelligence\u2010Based 3D Fetal Brain Segmentations:\
+    \ A Cross\u2010Vendor Evaluation of Deep Learning in Fetal Neuroimaging"
+  authors:
+  - Moska Aliasi
+  - Linde S. Hesse
+  - Madeleine K. Wyburd
+  - Maartje C. Snoep
+  - Renee M. Smit
+  - Ana I. L. Namburete
+  - Monique C. Haak
+  publisher: Prenatal Diagnosis
+  date: '2026-02-27'
+  link: https://doi.org/hbzk42
+  image: images/publications/grade_CB.png
+  note: 'Clinical Grading of Artificial Intelligence-Based 3D Fetal Brain Segmentations:
+    A Cross-Vendor Evaluation of Deep Learning in Fetal Neuroimaging'
+  buttons:
+  - type: website
+    link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/pd.70103
+  - type: pdf
+    link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/pd.70103
+  tags:
+  - Fetal Brain Characterization
+  - Clinical Translation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1002/uog.70168
+  title: "Deep learning assessment of fetal brain maturation on 3D ultrasound volumes\
+    \ in early\u2010onset fetal growth restriction"
+  authors:
+  - L. Meijerink
+  - M. Wyburd
+  - A. I. L. Namburete
+  - T. Alderliesten
+  - F. Groenendaal
+  - M. Benders
+  - F. Terstappen
+  - M. N. Bekker
+  publisher: Ultrasound in Obstetrics &amp; Gynecology
+  date: '2026-01-23'
+  link: https://doi.org/hbzk43
+  image: images/publications/YOUTH.png
+  note: Deep learning assessment of fetal brain maturation on 3D ultrasound volumes
+    in early-onset fetal growth restriction
+  buttons:
+  - type: website
+    link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/uog.70168
+  - type: pdf
+    link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/uog.70168
+  tags:
+  - Fetal Brain Characterization
+  - Clinical Translation
   plugin: sources.py
   file: sources.yaml
