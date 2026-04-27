@@ -434,7 +434,8 @@
     - Fetal Brain Characterization
 
 - id: doi:10.1016/S3050-5038(25)00163-3
-  note: "Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal–fetal pathophysiology"
+  note: "Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal fetal pathophysiology"
+  image: TBVzscore.png
   buttons:
     - type: website
       link: https://www.thelancet.com/journals/lanogw/article/PIIS3050-5038(25)00163-3/fulltext
@@ -442,6 +443,7 @@
       link: https://www.thelancet.com/action/showPdf?pii=S3050-5038%2825%2900163-3
   tags:
     - Fetal Brain Characterization
+    - Clinical Translation
 
 - id: doi:10.1016/j.media.2026.104043
   note: "Beyond benchmarks of IUGC: Rethinking requirements of deep learning method for intrapartum ultrasound biometry from fetal ultrasound videos"
@@ -453,3 +455,27 @@
       link: https://www.sciencedirect.com/science/article/pii/S136184152600112X/pdfft?md5=582ccf40f5d3108cd9ed511228321e57&pid=1-s2.0-S136184152600112X-main.pdf
   tags:
     - Challenge
+
+- id: doi:10.1002/pd.70103
+  image: grade_CB.png
+  note: "Clinical Grading of Artificial Intelligence-Based 3D Fetal Brain Segmentations: A Cross-Vendor Evaluation of Deep Learning in Fetal Neuroimaging"
+  buttons:
+    - type: website
+      link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/pd.70103
+    - type: pdf
+      link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/pd.70103
+  tags:
+    - Fetal Brain Characterization
+    - Clinical Translation
+
+- id: doi:10.1002/uog.70168
+  image: YOUTH.png
+  note: Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early-onset fetal growth restriction
+  buttons:
+    - type: website
+      link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/uog.70168
+    - type: pdf
+      link: https://obgyn.onlinelibrary.wiley.com/doi/full/10.1002/uog.70168
+  tags:
+    - Fetal Brain Characterization
+    - Clinical Translation
