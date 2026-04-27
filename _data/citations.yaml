@@ -122,30 +122,6 @@
   - Fetal Brain Characterization
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.1109/ISBI60581.2025.10980994
-  title: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
-    2D Scans'
-  authors:
-  - Mark C. Eid
-  - Pak-Hei Yeung
-  - Madeleine K. Wyburd
-  - "Jo\xE3o F. Henriques"
-  - Ana I.L. Namburete
-  publisher: 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)
-  date: '2025-04-14'
-  link: https://doi.org/g9sr32
-  note: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
-    Scans'
-  image: images/publications/triplanar.png
-  buttons:
-  - type: website
-    link: https://ieeexplore.ieee.org/abstract/document/10980994
-  - type: pdf
-    link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980994
-  tags:
-  - 2D to 3D Reconstruction
-  plugin: sources.py
-  file: sources.yaml
 - id: doi:10.1016/j.media.2024.103147
   title: Sensorless volumetric reconstruction of fetal brain freehand ultrasound scans
     with deep implicit representation
@@ -241,6 +217,30 @@
   buttons:
   - type: website
     link: https://link.springer.com/chapter/10.1007/978-3-031-72378-0_39
+  tags:
+  - 2D to 3D Reconstruction
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.1109/ISBI60581.2025.10980994
+  title: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless
+    2D Scans'
+  authors:
+  - Mark C. Eid
+  - Pak-Hei Yeung
+  - Madeleine K. Wyburd
+  - "Jo\xE3o F. Henriques"
+  - Ana I.L. Namburete
+  publisher: 2025 IEEE 22nd International Symposium on Biomedical Imaging (ISBI)
+  date: '2025-04-14'
+  link: https://doi.org/g9sr32
+  note: 'RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D
+    Scans'
+  image: images/publications/triplanar.png
+  buttons:
+  - type: website
+    link: https://ieeexplore.ieee.org/abstract/document/10980994
+  - type: pdf
+    link: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980994
   tags:
   - 2D to 3D Reconstruction
   plugin: sources.py
