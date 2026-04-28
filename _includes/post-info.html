@@ -32,7 +32,7 @@
     </span>
   {% endif %}
 
-  {% if updated and updated != "" and updated != published %}
+  {% if include.show_updated and updated and updated != "" and updated != published %}
     <span data-tooltip="Last updated on">
       {% include icon.html icon="fa-solid fa-clock-rotate-left" %}
       <span>{{ updated }}</span>

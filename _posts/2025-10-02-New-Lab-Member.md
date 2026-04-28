@@ -3,7 +3,7 @@ title: "We have a new Postdoc: Siân Wilson" # Required: Main title displayed on
 author: "Omni Lab" # Optional: Post author (can be team member name)
 image: "images/posts/261002-SianWilson.jpg" # Optional: Featured image for the post
 date: 2025-10-02
-last_modified_at: 2026-04-27
+last_modified_at: 2025-10-02
 excerpt: "Siân Wilson joined our group from Developmental Science Centre at Boston Children’s Hospital and Harvard Medical School"
 published: true
 layout: post

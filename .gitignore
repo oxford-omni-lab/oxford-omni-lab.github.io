@@ -15,3 +15,4 @@ _cite/.cache
 .ruby-version
 Gemfile.lock
 .vscode/
+**.rb

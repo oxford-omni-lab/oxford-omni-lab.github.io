@@ -27,7 +27,7 @@ tags: # Optional: Categories/topics for the post
   - tag1
   - tag2
 date: 2025-07-15 # Optional: Publication date (defaults to filename date)
-last_modified_at: 2025-07-15 # Optional: Last update date
+last_modified_at: 2025-07-15 # Optional: Last update date; shown only when explicitly set and different from date
 excerpt: "Brief summary of the post content" # Optional: Custom excerpt (defaults to first paragraph)
 description: "SEO meta description" # Optional: For search engine optimization
 published: false # Optional: Set to false to keep as draft
