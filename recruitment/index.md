@@ -23,4 +23,4 @@ We have more data and research ideas than postdoctoral researchers, so are keen 
 
 {% include job-listings.html %}
 
-If you are interested, please contact Dr. Namburete directly using the details on her [departmental profile page](https://www.cs.ox.ac.uk/people/ana.namburete/).
+If you are interested, please contact Ana Namburete directly using the details on her [departmental profile page](https://www.cs.ox.ac.uk/people/ana.namburete/).
