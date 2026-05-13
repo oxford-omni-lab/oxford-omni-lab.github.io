@@ -15,23 +15,46 @@ job_data.last_updated %}
   <div class="job-posting">
     <div class="job-header">
       <h4>
+        {% if job.link and job.link != '' %}
         <a href="{{ job.link }}" target="_blank" rel="noopener noreferrer">
           {{ job.title }}
         </a>
+        {% else %}
+        {{ job.title }}
+        {% endif %}
       </h4>
       <div class="job-meta">
+        {% if job.published and job.published != '' %}
         <span class="job-date">
           {% include icon.html icon="fa-solid fa-calendar" %} Posted: {{
           job.published | date: "%B %d, %Y" }}
         </span>
-        {% if job.expires and job.expires != '' %}
-        <span class="job-expires">
-          {% include icon.html icon="fa-solid fa-clock" %} Expires: {{
-          job.expires | date: "%B %d, %Y" }}
+        {% endif %}
+        {% if job.deadline and job.deadline != '' %}
+        <span class="job-deadline">
+          {% include icon.html icon="fa-solid fa-hourglass-end" %} Deadline: {{
+          job.deadline | date: "%B %d, %Y" }}
+        </span>
+        {% endif %}
+        {% if job.type and job.type != '' %}
+        <span class="job-type">
+          {% include icon.html icon="fa-solid fa-tag" %} Type: {{ job.type }}
+        </span>
+        {% endif %}
+        {% if job.contract and job.contract != '' %}
+        <span class="job-contract">
+          {% include icon.html icon="fa-solid fa-file-signature" %} Contract: {{
+          job.contract }}
         </span>
         {% endif %}
       </div>
     </div>
+
+    {% if job.description and job.description != '' %}
+    <div class="job-description">
+      <p>{{ job.description }}</p>
+    </div>
+    {% endif %}
 
     {% if job.content_excerpt and job.content_excerpt != '' %}
     <div class="job-excerpt">
@@ -86,6 +109,12 @@ job_data.last_updated %}
     font-size: 0.9rem;
     color: #6c757d;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .job-description {
+    margin: 1rem 0;
+    color: #495057;
   }
 
   .job-excerpt {

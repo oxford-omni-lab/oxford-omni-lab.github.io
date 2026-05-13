@@ -9,7 +9,7 @@ import requests
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
 import yaml
-from datetime import datetime
+from datetime import datetime, date
 import re
 import os
 import sys
@@ -17,6 +17,9 @@ from pathlib import Path
 
 # RSS feed URL
 RSS_URL = "https://www.cs.ox.ac.uk/feeds/News-Vacancies-Research.xml"
+
+# Manual jobs input file
+MANUAL_JOBS_FILE = Path(__file__).parent.parent / '_data' / 'jobs_manual.yaml'
 
 # Keywords to filter for (case-insensitive)
 FILTER_KEYWORDS = ["namburete", "omni lab", "oxford machine learning neuroimaging"]
@@ -68,6 +71,15 @@ def parse_date(date_str):
     except ValueError:
         return None
 
+def parse_iso_date(date_str):
+    """Parse an ISO-like date string (YYYY-MM-DD)."""
+    if not date_str:
+        return None
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d")
+    except ValueError:
+        return None
+
 def parse_expiry_date(dcterms_valid):
     """Parse expiry date from dcterms:valid field."""
     if not dcterms_valid:
@@ -86,6 +98,71 @@ def contains_filter_keywords(text):
     """Check if text contains any of the filter keywords."""
     text_lower = text.lower()
     return any(keyword.lower() in text_lower for keyword in FILTER_KEYWORDS)
+
+def normalize_date_string(value):
+    """Normalize a date value to YYYY-MM-DD string."""
+    if isinstance(value, datetime):
+        return value.strftime('%Y-%m-%d')
+    if isinstance(value, date):
+        return value.strftime('%Y-%m-%d')
+    if isinstance(value, str):
+        value = value.strip()
+        if not value:
+            return ''
+        parsed = parse_iso_date(value)
+        return parsed.strftime('%Y-%m-%d') if parsed else value
+    return ''
+
+def normalize_job_entry(job, source):
+    """Normalize a job entry from manual or auto sources."""
+    published = normalize_date_string(job.get('published', ''))
+    expires = normalize_date_string(job.get('expires', ''))
+    deadline = normalize_date_string(job.get('deadline', ''))
+
+    active = job.get('active', None)
+    if active is None:
+        expiry_date = parse_iso_date(expires)
+        if expiry_date:
+            active = expiry_date > datetime.now()
+        else:
+            if source == 'manual':
+                print("Warning: manual job is missing expires date; it will not auto-expire.")
+            active = True
+
+    normalized = {
+        'title': (job.get('title', '') or '').strip(),
+        'link': (job.get('link', '') or '').strip(),
+        'job_id': (job.get('job_id', '') or '').strip(),
+        'published': published,
+        'deadline': deadline,
+        'expires': expires,
+        'active': bool(active),
+        'description': (job.get('description', '') or '').strip(),
+        'type': (job.get('type', '') or '').strip(),
+        'contract': (job.get('contract', '') or '').strip(),
+        'source': source
+    }
+
+    return normalized
+
+def load_manual_jobs():
+    """Load manual job postings from YAML file."""
+    if not MANUAL_JOBS_FILE.exists():
+        return []
+
+    try:
+        with open(MANUAL_JOBS_FILE, 'r', encoding='utf-8') as f:
+            data = yaml.safe_load(f) or {}
+    except Exception as e:
+        print(f"Error loading manual jobs file: {e}")
+        return []
+
+    if isinstance(data, list):
+        jobs = data
+    else:
+        jobs = data.get('jobs', []) if isinstance(data, dict) else []
+
+    return [normalize_job_entry(job, 'manual') for job in jobs]
 
 def process_job_postings():
     """Main function to process job postings."""
@@ -141,11 +218,19 @@ def process_job_postings():
                 #'content_excerpt': full_content[:300] + '...' if len(full_content) > 300 else full_content
             }
             
-            jobs.append(job_data)
+            jobs.append(normalize_job_entry(job_data, 'auto'))
     
     return jobs
 
-def write_jobs_yaml(jobs):
+def sort_jobs(jobs):
+    """Sort jobs by published date (newest first)."""
+    def sort_key(job):
+        parsed = parse_iso_date(job.get('published', ''))
+        return parsed or datetime.min
+
+    return sorted(jobs, key=sort_key, reverse=True)
+
+def write_jobs_yaml(manual_jobs, auto_jobs):
     """Write jobs data to YAML file."""
     output_dir = Path(__file__).parent.parent / '_data'
     output_file = output_dir / 'jobs.yaml'
@@ -154,13 +239,17 @@ def write_jobs_yaml(jobs):
     output_dir.mkdir(exist_ok=True)
     
     # Sort jobs by publication date (newest first)
-    jobs.sort(key=lambda x: x['published'], reverse=True)
+    manual_jobs = sort_jobs(manual_jobs)
+    auto_jobs = sort_jobs(auto_jobs)
+    merged_jobs = sort_jobs(manual_jobs + auto_jobs)
     
     # Add metadata
     output_data = {
         'last_updated': datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC'),
-        'total_jobs_found': len(jobs),
-        'jobs': jobs
+        'total_jobs_found': len(merged_jobs),
+        'manual_jobs': manual_jobs,
+        'auto_jobs': auto_jobs,
+        'jobs': merged_jobs
     }
     
     # Write to YAML file
@@ -170,25 +259,27 @@ def write_jobs_yaml(jobs):
         f.write(f"# Last updated: {output_data['last_updated']}\n\n")
         yaml.dump(output_data, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
     
-    print(f"✓ Written {len(jobs)} job postings to {output_file}")
+    print(f"✓ Written {len(merged_jobs)} job postings to {output_file}")
 
 def main():
     """Main execution function."""
     print("=== Oxford CS Job Postings Fetcher ===")
     
     # Process job postings
-    jobs = process_job_postings()
+    manual_jobs = load_manual_jobs()
+    auto_jobs = process_job_postings()
+    jobs = manual_jobs + auto_jobs
     
     if not jobs:
         print("No relevant job postings found")
         # Create empty jobs file
-        write_jobs_yaml([])
+        write_jobs_yaml(manual_jobs, [])
         return
     
     print(f"\nFound {len(jobs)} relevant job posting(s)")
     
     # Write to YAML file
-    write_jobs_yaml(jobs)
+    write_jobs_yaml(manual_jobs, auto_jobs)
     
     print("\n=== Job fetching complete ===")
 
