@@ -1,0 +1,16 @@
+# Manual job postings.
+# These are merged into _data/jobs.yaml by _cite/jobs.py.
+# Keep dates as YYYY-MM-DD.
+# Set expires to ensure the job is hidden after that date.
+# If active is omitted, it is computed from expires.
+
+jobs:
+  - title: College Lecturer (Career Development) in Computer Science
+    description: "Pembroke College invites applications for a two-year, part-time Career Development Lectureship in Computer Science, offering small-group teaching opportunities in areas including algorithms, functional programming, and linear algebra. The post is designed to support early-career academics through mentoring and professional development alongside active research."
+    link: https://www.pmb.ox.ac.uk/vacancy/college-lecturer-career-development-computer-science
+    published: 2026-05-10
+    deadline: 2026-06-02
+    expires: 2026-06-09
+    type: Part-time Lecturer
+    contract: Fixed-term 2 years
+    # active: true
