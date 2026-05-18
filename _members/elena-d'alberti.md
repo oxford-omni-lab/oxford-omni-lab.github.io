@@ -1,6 +1,6 @@
 ---
 name: Elena D'Alberti
-image:
+image: images/members/placeholder.png
 role: clinical-fellow
 description: Clinical Research Fellow
 pronouns: she/her

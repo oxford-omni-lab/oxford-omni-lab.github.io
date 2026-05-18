@@ -3,7 +3,7 @@
 # Save as: _members/firstname-lastname.md
 
 name: "Full Name" # Required: Member's full name as displayed
-image: "images/members/photo.jpg" # Optional: Profile photo path
+image: "images/members/placeholder.png" # Optional: Profile photo path
 role: principal-investigator # Required: Role type (must match types.yaml)
 description: "Job Title or Role Description" # Optional: Additional role description
 pronouns: "they/them" # Optional: Personal pronouns (displayed only on personal page)
