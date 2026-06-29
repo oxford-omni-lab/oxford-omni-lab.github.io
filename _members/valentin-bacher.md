@@ -1,6 +1,6 @@
 ---
 name: Valentin Bacher
-image: images/members/Valentin.png
+image: images/members/valle.jpg
 role: dphil
 pronouns: he/him
 group: current
