@@ -1,22 +1,37 @@
 ---
 ---
 
-# Welcome to the Oxford Machine Learning in NeuroImaging Lab
+{% include section.html background="images/misc/background_dark.png" dark=true size="full" %}
 
-### Department of Computer Science, University of Oxford
+<div class="index-hero" data-index-hero>
+  <div class="index-hero-copy">
+    <h1 class="index-hero-heading index-hero-line" data-type-speed="55">
+      <span
+        class="index-hero-type"
+        data-text="WELCOME TO THE OXFORD MACHINE LEARNING IN NEUROIMAGING LAB"
+      ></span><span class="index-hero-cursor" aria-hidden="true"></span>
+    </h1>
+    <p class="index-hero-subtitle index-hero-line" data-type-speed="45">
+      <span
+        class="index-hero-type"
+        data-text="We develop machine learning methods that transform routine fetal ultrasound."
+      ></span><span class="index-hero-cursor" aria-hidden="true"></span>
+    </p>
+    <noscript>
+      <h1>Making the developing brain measurable.</h1>
+      <p>WELCOME TO THE OXFORD MACHINE LEARNING IN NEUROIMAGING LAB</p>
+    </noscript>
+  </div>
+  <div class="index-hero-media">
+    <img src="{{ '/images/misc/atlas.gif' | relative_url }}" alt="">
+  </div>
+</div>
 
-We are an interdisciplinary research group dedicated to advancing the understanding of early brain development through the integration of machine learning and neuroimaging. Our work focuses on developing data-efficient, scalable methods to extract clinically relevant information from ultrasound: the most widely used, and often only available, imaging modality in pregnancy care worldwide.
+{% include section.html %}
+
+<p class="index-intro"><span class="index-intro-initial">W</span>e are an interdisciplinary research group dedicated to advancing the understanding of early brain development through the integration of machine learning and neuroimaging. Our work focuses on developing data-efficient, scalable methods to extract clinically relevant information from ultrasound: the most widely used, and often only available, imaging modality in pregnancy care worldwide.</p>
 
 Our goal is to enable high-resolution, quantitative analysis of fetal brain development from routine clinical scans. By leveraging large-scale population datasets and collaborations across clinical and computational sciences, we aim to both improve scientific understanding of early brain maturation and develop practical tools for use in diverse healthcare settings.
-
-<!-- {% include section.html background="images/misc/background_dark.png" dark=true %} 
-
-<!--# Fetal Ultrasound Atlas
-
-<!--<video controls width="100%" style="max-width:600px; margin: 20px auto;" poster="images/publications/USAtlas_stillframe.png">
-<!--  <source src="images/publications/USAtlas.mp4" type="video/mp4">
-<!--  Your browser does not support the video tag.
-<!--</video>
 
 {% include section.html %}
 
