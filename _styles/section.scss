@@ -31,9 +31,9 @@ main > section:last-of-type {
 }
 
 main > section:nth-of-type(odd) {
-  background: var(--background);
+  background: var(--background-color, var(--background));
 }
 
 main > section:nth-of-type(even) {
-  background: var(--background-alt);
+  background: var(--background-color, var(--background-alt));
 }

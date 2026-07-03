@@ -1,7 +1,7 @@
 ---
 ---
 
-{% include section.html background="images/misc/background_dark.png" dark=true size="full" %}
+{% include section.html color="rgb(0, 33, 71)" dark=true size="full" %}
 
 <div class="index-hero" data-index-hero>
   <div class="index-hero-copy">
