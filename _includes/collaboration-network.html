@@ -1,0 +1,36 @@
+{% assign network = site.data.collaboration_network %}
+
+<div
+  class="collaboration-network"
+  data-collaboration-network
+  aria-labelledby="collaboration-network-title"
+>
+  <div class="collaboration-network-header">
+    <h2 id="collaboration-network-title">Our Collaboration Network</h2>
+    <p>
+      Our work connects clinical imaging, computer vision and translational
+      medical AI through a network of research partners and supporters.
+    </p>
+  </div>
+
+  <div class="collaboration-network-figure">
+    <div
+      class="collaboration-network-canvas"
+      data-network-canvas
+      role="img"
+      aria-label="Interactive radial collaboration network linking OMNI to research areas and collaborators"
+    ></div>
+
+    <div class="collaboration-network-card" data-network-card hidden>
+      <a class="collaboration-network-card-title" data-network-card-title target="_blank" rel="noopener"></a>
+      <p data-network-card-description></p>
+      <a class="collaboration-network-card-link" data-network-card-link target="_blank" rel="noopener">
+        Click to learn more &rarr;
+      </a>
+    </div>
+  </div>
+
+  <script type="application/json" data-network-json>{{ network | jsonify }}</script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>

@@ -1,0 +1,87 @@
+center:
+  name: OMNI
+  logo: /images/misc/Logo-OMNI-small.png
+  logo_alt: OMNI Lab logo
+
+fields:
+  - id: fetal
+    title: Fetal Brain Imaging
+
+  - id: clinical
+    title: Clinical Translation
+
+  - id: vision
+    title: Computer Vision
+
+collaborators:
+  - name: Oxford Computer Science
+    field: vision
+    logo: /images/partners/Logo_OxfordCS.jpeg
+    logo_alt: Oxford Computer Science logo
+    description: >
+      Computer science collaboration across machine learning, medical image
+      analysis and deployable AI systems.
+    url: https://www.cs.ox.ac.uk/
+
+  - name: Visual Geometry Group
+    field: vision
+    logo: /images/partners/Logo_OxfordCS.jpeg
+    logo_alt: Oxford Computer Science logo
+    description: >
+      Computer vision research links supporting robust visual representation
+      learning and imaging methodology.
+    url: https://www.robots.ox.ac.uk/~vgg/
+
+  - name: OxCIN
+    field: fetal
+    logo: /images/partners/Logo-OMNI.png
+    logo_alt: OMNI Lab logo
+    description: >
+      Quantitative neuroimaging collaboration focused on brain imaging,
+      measurement and translational imaging science.
+    url: https://www.win.ox.ac.uk/
+
+  - name: Nuffield Department of Women's and Reproductive Health
+    field: clinical
+    logo: /images/partners/Logo-OMNI.png
+    logo_alt: OMNI Lab logo
+    description: >
+      Clinical collaboration connecting fetal imaging methodology with
+      pregnancy care and women’s health research.
+    url: https://www.wrh.ox.ac.uk/
+
+  - name: European Research Council
+    field: fetal
+    logo: /images/partners/Logo_ERC.jpg
+    logo_alt: European Research Council logo
+    description: >
+      Frontier research support for ambitious work on fetal brain imaging,
+      quantitative modelling and discovery.
+    url: https://erc.europa.eu/homepage
+
+  - name: Academy of Medical Sciences
+    field: clinical
+    logo: /images/partners/Logo_AMS.jpeg
+    logo_alt: Academy of Medical Sciences logo
+    description: >
+      Translational medical science support for early-career research and
+      clinically grounded innovation.
+    url: https://acmedsci.ac.uk/
+
+  - name: Gates Foundation
+    field: clinical
+    logo: /images/partners/Logo_BMFG.png
+    logo_alt: Gates Foundation logo
+    description: >
+      Global health support for accessible imaging technologies and practical
+      tools for diverse healthcare settings.
+    url: https://www.gatesfoundation.org/
+
+  - name: Leiden University Medical Center
+    field: fetal
+    logo: /images/partners/Logo_Leiden.jpg
+    logo_alt: Leiden University Medical Center logo
+    description: >
+      International clinical and imaging collaboration around fetal development
+      and quantitative analysis.
+    url: https://www.lumc.nl/en/

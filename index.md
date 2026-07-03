@@ -121,6 +121,10 @@ If you are interested in joining please go to the [recruitment](recruitment) pag
 
 {% include section.html %}
 
+{% include collaboration-network.html %}
+
+{% include section.html %}
+
 ## Collaborators, Partners & Funding
 
 Our work is supported by collaborations with the Nuffield Department of Women’s and Reproductive Health, the Wellcome Centre for Integrative Neuroimaging (OxCIN), and the Visual Geometry Group, among others.

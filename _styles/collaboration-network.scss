@@ -1,0 +1,251 @@
+---
+---
+
+.collaboration-network {
+  --network-blue: rgb(0, 33, 71);
+  --network-blue-soft: #17456f;
+  --network-cyan: #bf005f;
+  --network-line: rgba(0, 33, 71, 0.24);
+  --network-line-active: rgba(0, 33, 71, 0.76);
+  --network-muted: 0.24;
+  --network-shadow: 0 16px 36px rgba(0, 33, 71, 0.16);
+  /* Bubble radii are defined here and read by _scripts/collaboration-network.js. */
+  --network-center-bubble-size: 65;
+  --network-center-bubble-size-mobile: 52;
+  --network-field-bubble-size: 58;
+  --network-field-bubble-size-mobile: 45;
+  --network-collaborator-bubble-size: 35;
+  --network-collaborator-bubble-size-mobile: 30;
+  --network-hover-bubble-scale: 1.5;
+  --network-logo-size-scale: 1.35;
+  --network-hover-logo-size-scale: 1.8;
+
+  position: relative;
+  margin: 8px 0 12px;
+}
+
+.collaboration-network-header {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.collaboration-network-header h2 {
+  margin-bottom: 12px;
+}
+
+.collaboration-network-header p {
+  margin: 0;
+  color: var(--text);
+}
+
+.collaboration-network-figure {
+  position: relative;
+  min-height: 680px;
+  overflow: visible;
+}
+
+.collaboration-network-canvas {
+  width: 100%;
+  min-height: 680px;
+}
+
+.collaboration-network-svg {
+  display: block;
+  width: 100%;
+  min-height: 680px;
+  overflow: visible;
+}
+
+.collaboration-network-link {
+  fill: none;
+  stroke: var(--network-line);
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  transition:
+    opacity 220ms ease,
+    stroke 220ms ease,
+    stroke-width 220ms ease;
+}
+
+.collaboration-network-link.is-active {
+  stroke: var(--network-line-active);
+  stroke-width: 3;
+}
+
+.collaboration-network-node {
+  cursor: default;
+  outline: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: opacity 220ms ease;
+}
+
+.collaboration-network-node.is-collaborator {
+  cursor: pointer;
+}
+
+.collaboration-network-node:focus-visible .node-ring {
+  stroke: var(--network-cyan);
+  stroke-width: 4;
+}
+
+.node-shell,
+.node-logo,
+.node-label,
+.node-subtle-label {
+  transition:
+    opacity 220ms ease,
+    fill 220ms ease,
+    stroke 220ms ease,
+    stroke-width 220ms ease,
+    filter 220ms ease,
+    transform 220ms ease;
+}
+
+.node-shell {
+  fill: #ffffff;
+  stroke: rgba(0, 33, 71, 0.16);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 8px 18px rgba(0, 33, 71, 0.12));
+}
+
+.collaboration-network-node.is-center .node-shell {
+  fill: #ffffff;
+  stroke: var(--network-blue);
+  stroke-width: 4;
+}
+
+.collaboration-network-node.is-field .node-shell {
+  fill: #f7fbfd;
+  stroke: rgba(0, 33, 71, 0.24);
+}
+
+.collaboration-network-node.is-collaborator .node-shell {
+  fill: #ffffff;
+}
+
+.collaboration-network-node.is-active .node-shell,
+.collaboration-network-node.is-selected .node-shell {
+  fill: #ffffff;
+  stroke: var(--network-cyan);
+  stroke-width: 2.5;
+  filter: drop-shadow(0 14px 28px rgba(0, 33, 71, 0.2));
+}
+
+.collaboration-network-node.is-center.is-active .node-shell,
+.collaboration-network-node.is-center.is-selected .node-shell {
+  fill: #ffffff;
+  stroke: var(--network-blue-soft);
+  stroke-width: 5;
+}
+
+.collaboration-network-node.is-dimmed,
+.collaboration-network-link.is-dimmed {
+  opacity: var(--network-muted);
+}
+
+.node-label {
+  fill: var(--network-blue);
+  font-family: var(--heading);
+  font-size: 14px;
+  font-weight: var(--semi-bold);
+  letter-spacing: 0;
+  text-anchor: middle;
+}
+
+.collaboration-network-node.is-center .node-label {
+  fill: var(--network-blue);
+  font-size: 18px;
+}
+
+.node-subtle-label {
+  fill: rgba(0, 33, 71, 0.66);
+  font-family: var(--body);
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.collaboration-network-card {
+  position: absolute;
+  z-index: 3;
+  width: min(280px, calc(100vw - 56px));
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 33, 71, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--network-shadow);
+  color: var(--text);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 10px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.collaboration-network-card.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.collaboration-network-card-title {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--network-blue);
+  font-family: var(--heading);
+  font-size: 1rem;
+  font-weight: var(--semi-bold);
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.collaboration-network-card-title:hover,
+.collaboration-network-card-link:hover {
+  text-decoration: underline;
+}
+
+.collaboration-network-card p {
+  margin: 0 0 12px;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.collaboration-network-card-link {
+  color: var(--network-blue);
+  font-size: 0.88rem;
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+}
+
+.collaboration-network.is-ready .collaboration-network-node,
+.collaboration-network.is-ready .collaboration-network-link {
+  opacity: 1;
+}
+
+.collaboration-network:not(.has-played) .collaboration-network-node,
+.collaboration-network:not(.has-played) .collaboration-network-link {
+  opacity: 0;
+}
+
+@media (max-width: 760px) {
+  .collaboration-network-figure,
+  .collaboration-network-canvas,
+  .collaboration-network-svg {
+    min-height: 920px;
+  }
+
+  .collaboration-network-header {
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collaboration-network *,
+  .collaboration-network-card {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
