@@ -11,11 +11,12 @@ aliases:
   - V. J. Bacher
   - Valentin Bacher
 links:
+  website: https://vbacher.github.io
   email: valentin.bacher@cs.ox.ac.uk
-  orcid: 0000-0002-9119-436X
-  google-scholar: SA3AFWUAAAAJ
   linkedin: vbacher
   github: vbacher
+  google-scholar: SA3AFWUAAAAJ
+  orcid: 0000-0002-9119-436X
 ---
 
 ### About Me
