@@ -46,6 +46,10 @@ visiting-researcher:
   icon: fa-solid fa-book-atlas
   description: Visiting Researcher
 
+visiting-student:
+  icon: fa-solid fa-book-atlas
+  description: Visiting Student
+
 # general
 
 link:

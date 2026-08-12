@@ -34,25 +34,29 @@ redirect_from: # Optional: Redirect from old URLs
 
 # Available role types (must match types.yaml):
 
-# - principal-investigator: Lab PI/Director
+# - principal-investigator: Principal Investigator
 
 # - postdoc: Postdoctoral Researcher
 
-# - dphil: DPhil/PhD Student
-
-# - graduate: Masters/Graduate Student
+# - dphil: DPhil Student
 
 # - undergrad: Undergraduate Student
 
-# - programmer: Software Developer
+# - graduate: Graduate Student
+
+# - programmer: Programmer
 
 # - clinical-fellow: Clinical Fellow
 
-# - associate-member: Visiting/Associate Member
+# - associate: Associate Member
 
-# - alumni: Former member
+# - alumni: Alumni
 
 # - mascot: Lab mascot
+
+# - visiting-researcher: Visiting Researcher
+
+# - visiting-student: Visiting Student
 
 Write the member's biography here using Markdown. This can include:
 
