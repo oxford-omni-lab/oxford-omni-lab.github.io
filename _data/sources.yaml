@@ -21,17 +21,16 @@
   tags:
     - Challenge
 
-- id: doi:10.48550/arXiv.2505.05643
+- id: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
   note: "UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes"
   image: 2505-ultragauss-pre.png
   buttons:
     - type: website
-      link: https://arxiv.org/abs/2505.05643
+      link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
     - type: pdf
-      link: https://arxiv.org/pdf/2505.05643
+      link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Paper-Conference.pdf
   tags:
     - 2D to 3D Reconstruction
-    - Preprint
 
 - id: doi:10.1109/ISBI60581.2025.10980676
   note: Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain in 3D Ultrasound
@@ -479,3 +478,18 @@
   tags:
     - Fetal Brain Characterization
     - Clinical Translation
+
+- id: doi:10.48550/arXiv.2609.29373
+  image: 2609-rflash.gif
+  date: 2026-09-25
+  note: Shadow Reduction in Ultrasound Imaging using Differentiable Simulation and Radiance Field Decomposition
+  buttons:
+    - type: preprint
+      link: https://arxiv.org/abs/2609.29373
+    - type: website
+      link: https://vbacher.github.io/RFlash-ultrasound/
+    - type: code
+      link: https://github.com/vbacher/RFlash
+  tags:
+    - 2D to 3D Reconstruction
+    - Preprint

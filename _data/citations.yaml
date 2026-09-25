@@ -75,25 +75,24 @@
   - Challenge
   plugin: sources.py
   file: sources.yaml
-- id: doi:10.48550/arXiv.2505.05643
+- id: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
   title: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
   authors:
-  - Mark C. Eid
-  - Ana I. L. Namburete
-  - "Jo\xE3o F. Henriques"
-  publisher: arXiv
-  date: '2025-01-01'
-  link: https://doi.org/g9srvr
+  - Mark Eid
+  - Ana Namburete
+  - Joao F. Henriques
+  publisher: International Conference on Learning Representations
+  date: '2026-04-20'
+  link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
   note: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
   image: images/publications/2505-ultragauss-pre.png
   buttons:
   - type: website
-    link: https://arxiv.org/abs/2505.05643
+    link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
   - type: pdf
-    link: https://arxiv.org/pdf/2505.05643
+    link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Paper-Conference.pdf
   tags:
   - 2D to 3D Reconstruction
-  - Preprint
   plugin: sources.py
   file: sources.yaml
 - id: doi:10.1109/ISBI60581.2025.10980676
@@ -1135,5 +1134,34 @@
   tags:
   - Fetal Brain Characterization
   - Clinical Translation
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.48550/arXiv.2609.29373
+  title: Shadow Reduction in Ultrasound Imaging Using Differentiable Simulation and
+    Radiance Field Decomposition
+  authors:
+  - Valentin Bacher
+  - Pak Hei Yeung
+  - Bernhard Kainz
+  - Madeleine K. Wyburd
+  - Nicola K. Dinsdale
+  - Michael Gray
+  - Ana I. L. Namburete
+  publisher: arXiv
+  date: '2026-09-25'
+  link: https://doi.org/hckmfs
+  image: images/publications/2609-rflash.gif
+  note: Shadow Reduction in Ultrasound Imaging using Differentiable Simulation and
+    Radiance Field Decomposition
+  buttons:
+  - type: preprint
+    link: https://arxiv.org/abs/2609.29373
+  - type: website
+    link: https://vbacher.github.io/RFlash-ultrasound/
+  - type: code
+    link: https://github.com/vbacher/RFlash
+  tags:
+  - 2D to 3D Reconstruction
+  - Preprint
   plugin: sources.py
   file: sources.yaml
