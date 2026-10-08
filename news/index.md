@@ -38,7 +38,6 @@ nav:
       <h3>Ana features in the 2023 Christmas Lectures</h3>
       <p class="omni-meta">The Royal Institution · December 2023</p>
     </div>
-    <div class="omni-coming-soon">More videos coming soon</div>
   </div>
 </div>
 
