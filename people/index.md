@@ -10,7 +10,7 @@ nav:
 <div class="omni-intro">
   <span class="omni-kicker">People</span>
   <h1>The team</h1>
-  <p>Engineers, computer scientists and clinicians working together on fetal brain imaging.</p>
+  <p>We are engineers, computer scientists and clinicians working together on fetal brain imaging.</p>
 </div>
 
 {% include section.html %}
