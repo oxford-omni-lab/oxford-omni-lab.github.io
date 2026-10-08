@@ -37,12 +37,28 @@ nav:
   <h2 style="margin: 56px 0 28px">Current members</h2>
 </div>
 
-{% assign current_members = site.members | where_exp: "m", "m.group != 'alumni'" %}
+{% comment %}
+  Associate members (role: associate) are listed in their own section below.
+{% endcomment %}
+{% assign current_members = site.members | where_exp: "m", "m.group != 'alumni'" | where_exp: "m", "m.role != 'associate'" %}
 <div class="omni-members">
   {% for member in current_members %}
     {% include omni-member-card.html member=member %}
   {% endfor %}
 </div>
+
+{% assign associate_members = site.members | where_exp: "m", "m.group != 'alumni'" | where: "role", "associate" %}
+{% if associate_members.size > 0 %}
+<div class="omni-left">
+  <h2 style="margin: 64px 0 28px">Associate members</h2>
+</div>
+
+<div class="omni-members">
+  {% for member in associate_members %}
+    {% include omni-member-card.html member=member %}
+  {% endfor %}
+</div>
+{% endif %}
 
 <div class="omni-left">
   <h2 style="margin: 64px 0 28px">Alumni</h2>

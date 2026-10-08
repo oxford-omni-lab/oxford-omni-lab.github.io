@@ -30,6 +30,7 @@ title: "Structure: brain atlases and segmentation"
     <span class="omni-label">People on this theme</span>
     {% include omni-person.html lookup="ana-namburete" %}
     {% include omni-person.html lookup="madeleine-wyburd" %}
+    {% include omni-person.html lookup="emily-nurden" %}
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Collaborators</span>
