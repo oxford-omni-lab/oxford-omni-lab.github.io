@@ -20,7 +20,7 @@ undergrad:
 
 graduate:
   icon: fa-solid fa-user-graduate
-  description: Graduate Student
+  description: MSc Student
 
 programmer:
   icon: fa-solid fa-code
@@ -71,6 +71,11 @@ home-page:
   icon: fa-solid fa-house-user
   text: Home Page
   tooltip: Home page
+
+pembroke:
+  icon: fa-solid fa-building-columns
+  text: Pembroke College profile
+  tooltip: Pembroke College profile
 
 email:
   icon: fa-solid fa-envelope

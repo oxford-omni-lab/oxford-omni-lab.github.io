@@ -1,8 +1,5 @@
 ---
 title: Handbook
-nav:
-  order: 6
-  tooltip: Lab handbook and link to wiki
 ---
 
 # {% include icon.html icon="fa-solid fa-book" %}Handbook

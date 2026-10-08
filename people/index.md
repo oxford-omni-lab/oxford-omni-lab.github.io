@@ -1,30 +1,30 @@
 ---
 title: People
 nav:
-  order: 1
+  order: 2
   tooltip: About our People
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %}People
+{% include section.html dark=true %}
+
+<div class="omni-intro">
+  <span class="omni-kicker">People</span>
+  <h1>The team</h1>
+  <p>Engineers, computer scientists and clinicians working together on fetal brain imaging. For more about how we work, see our <a href="{{ "handbook" | relative_url }}">lab handbook</a>.</p>
+</div>
 
 {% include section.html %}
-
-Our group was founded in 2017 by [Dr. Ana Namburete](/members/ana-namburete) with the aim of improving fetal brain assessment using machine learning and neuroimaging. We are a collaborative and open-minded group of researchers, eager to push the frontiers of biomedical imaging. For more about our lab culture, please see our lab handbook.
-
-We are **always** looking for new DPhil/MSc students and Postdocs to [join our group](../recruitment) **!**
-
-{% include button.html text="Lab Handbook" link="handbook" icon="fa-solid fa-book"%}
-
-{% include section.html %}
-
-{% include list.html data="members" component="portrait" filter="group != 'alumni'" %}
-
-{% include section.html background="images/misc/background_dark.png" dark=true %}
 
 {% assign group_images = site.static_files | where_exp: "item", "item.path contains 'images/group'" | where_exp: "item", "item.extname == '.jpg' or item.extname == '.JPG' or item.extname == '.jpeg' or item.extname == '.png'" | sort: "basename" | reverse %}
 {% assign latest_group_image = group_images[0].path %}
 
 {% include figure.html image=latest_group_image width="100%" %}
+
+{% include section.html %}
+
+## Current members
+
+{% include list.html data="members" component="portrait" filter="group != 'alumni'" %}
 
 {% include section.html %}
 

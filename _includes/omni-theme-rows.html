@@ -1,0 +1,16 @@
+{% comment %}
+  Alternating video/text rows for the Research page. Data: _data/themes.yaml
+{% endcomment %}
+{% for theme in site.data.themes %}
+  <div class="omni-theme-row{% cycle '', ' omni-flip' %}">
+    <div class="omni-media">
+      {% include omni-video.html src=theme.video poster=theme.video_poster label=theme.alt %}
+    </div>
+    <div class="omni-theme-row-text">
+      <h3>{{ theme.title }}</h3>
+      <p>{{ theme.description }}</p>
+      <p class="omni-muted">Methods: {{ theme.methods }}</p>
+      <p><a href="{{ theme.link | relative_url | uri_escape }}">Explore this theme →</a></p>
+    </div>
+  </div>
+{% endfor %}

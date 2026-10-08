@@ -1,42 +1,38 @@
-{% assign image = page.background | default: site.background %}
-{% assign dark = page.background-dark | default: site.background-dark %}
+{% comment %}
+  OMNI Lab header (dark band).
+  - The menu is still built automatically from every page that has `nav:` in
+    its front matter, sorted by nav.order, exactly as before.
+  - The logo now uses a light version for the dark background
+    (images/misc/Logo-OMNI-white.png), falling back to the original logo.
+  - The University of Oxford logo links to ox.ac.uk.
+{% endcomment %}
 
+{% assign white = "images/misc/Logo-OMNI-white.png" | file_exists %}
 {% assign png = "images/misc/Logo-OMNI.png" | file_exists %}
-{% assign jpg = "images/logo.jpg" | file_exists %}
-{% assign logo = svg | default: png | default: jpg | default: nil %}
+{% assign logo = white | default: png | default: nil %}
+{% assign oxford = "images/misc/oxford-logo.png" | file_exists %}
 
-{% assign dark_image = page.background-dark | default: site.background-dark %}
-<header
-  class="background"
-  style="--image: url('{{ image | relative_url | uri_escape }}'); --image-dark: url('{{ dark_image | relative_url | uri_escape }}')"
-  {% if dark %}
-    data-dark="{{ dark }}"
-  {% endif %}
-  {% if page.url == "/" %}
-    data-big
-  {% endif %}
->
-  <a href="{{ "/" | relative_url }}" class="home">
-    {% if logo %}
-      <span class="logo">
-        {% if svg %}
-          {{ svg | file_read }}
-        {% else %}
-          <img src="{{ logo | relative_url | uri_escape }}" alt="logo">
-        {% endif %}
-      </span>
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
+    {% if oxford %}
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="{{ oxford | relative_url | uri_escape }}" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     {% endif %}
-    {% if site.logo-text != false %}
-      <span class="title-text">
-        {% if site.title and site.show-title != false %}
+    <a href="{{ "/" | relative_url }}" class="home" aria-label="OMNI Lab home">
+      {% if logo %}
+        <span class="logo">
+          <img src="{{ logo | relative_url | uri_escape }}" alt="OMNI: Oxford Machine Learning in NeuroImaging Lab">
+        </span>
+      {% endif %}
+      {% if site.logo-text != false and site.title %}
+        <span class="title-text">
           <span class="title">{{ site.title }}</span>
-        {% endif %}
-        {% if site.subtitle and site.show-subtitle != false %}
-          <span class="subtitle">{{ site.subtitle | markdownify }}</span>
-        {% endif %}
-      </span>
-    {% endif %}
-  </a>
+        </span>
+      {% endif %}
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -45,13 +41,14 @@
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
     %}
-    {% for page in pages %}
-      {% if page.nav %}
+    {% for item in pages %}
+      {% if item.nav %}
         <a
-          href="{{ page.dir | relative_url | uri_escape }}"
-          data-tooltip="{{ page.nav.tooltip | xml_escape }}"
+          href="{{ item.dir | relative_url | uri_escape }}"
+          data-tooltip="{{ item.nav.tooltip | xml_escape }}"
+          {% if page.url contains item.dir and item.dir != "/" %}aria-current="page"{% endif %}
         >
-          {{ page.title }}
+          {{ item.title }}
         </a>
       {% endif %}
     {% endfor %}

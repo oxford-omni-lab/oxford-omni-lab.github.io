@@ -1,8 +1,5 @@
 ---
 title: Gallery
-nav:
-  order: 7
-  tooltip: Pictures of our Group
 ---
 
 # {% include icon.html icon="fa-solid fa-photo-film" %}Gallery

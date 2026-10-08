@@ -1,0 +1,25 @@
+{% comment %}
+  Lists papers whose tags match a research theme (newest first), using the
+  site's existing research-teaser cards, which link to the Publications page.
+  Usage: {% include omni-theme-papers.html theme="computational-ultrasound" limit=12 %}
+{% endcomment %}
+{% assign theme = site.data.themes | where: "id", include.theme | first %}
+{% assign limit = include.limit | default: 12 %}
+{% assign shown = 0 %}
+{% assign all = site.data.citations | sort: "date" | reverse %}
+<div class="omni-papers">
+{% for citation in all %}
+  {% assign match = false %}
+  {% for tag in theme.tags %}
+    {% if citation.tags contains tag %}{% assign match = true %}{% endif %}
+  {% endfor %}
+  {% if match %}
+    {% include research-teaser.html citation=citation title=citation.title id=citation.id image=citation.image authors=citation.authors date=citation.date %}
+    {% assign shown = shown | plus: 1 %}
+    {% if shown >= limit %}{% break %}{% endif %}
+  {% endif %}
+{% endfor %}
+</div>
+{% if shown == 0 %}
+<p class="omni-muted">Papers tagged for this theme will appear here automatically.</p>
+{% endif %}

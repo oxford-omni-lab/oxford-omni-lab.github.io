@@ -1,0 +1,16 @@
+{% comment %}
+  Research theme cards for the home page (still images; the overview video is
+  the only moving element on the home page). Data: _data/themes.yaml
+{% endcomment %}
+<div class="omni-theme-cards">
+  {% for theme in site.data.themes %}
+    <a class="omni-theme-card" href="{{ theme.link | relative_url | uri_escape }}">
+      <img src="{{ theme.still | relative_url | uri_escape }}" alt="{{ theme.alt | xml_escape }}" loading="lazy">
+      <span class="omni-theme-card-text">
+        <span class="omni-theme-card-title">{{ theme.title }}</span>
+        <span class="omni-theme-card-desc">{{ theme.description }}</span>
+        <span class="omni-theme-card-methods">{{ theme.methods }}</span>
+      </span>
+    </a>
+  {% endfor %}
+</div>
