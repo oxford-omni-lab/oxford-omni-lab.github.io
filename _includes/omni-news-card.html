@@ -1,19 +1,14 @@
 {% comment %}
-  News card for the home page (month, tag, title, "Read more").
-  The tag shown is the post's first tag; labels can be adjusted below.
+  News card for the home page (month, category, title, "Read more").
+  The category comes from the post's tags (see _data/news_categories.yaml).
   Usage: {% include omni-news-card.html post=post %}
 {% endcomment %}
 {% assign post = include.post %}
-{% assign tag = post.tags | first %}
-{% case tag %}
-  {% when "paper" %}{% assign label = "Papers" %}
-  {% when "oral-presentation" %}{% assign label = "Talk" %}
-  {% else %}{% assign label = tag | replace: "-", " " | capitalize %}
-{% endcase %}
+{% include omni-news-category.html post=post %}
 <a class="omni-news-card" href="{{ post.url | relative_url | uri_escape }}">
   <span class="omni-news-meta">
     <span>{{ post.date | date: "%b %Y" }}</span>
-    {% if tag %}<span class="omni-pill">{{ label }}</span>{% endif %}
+    <span class="omni-pill">{{ omni_label }}</span>
   </span>
   <span class="omni-news-title">{{ post.title }}</span>
   <span class="omni-news-more">Read more →</span>

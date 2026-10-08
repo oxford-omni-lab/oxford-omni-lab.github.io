@@ -5,6 +5,7 @@
 #
 # - short_title: optional shorter title for the Research page rows and the
 #           "Other themes" lists (the full title is used elsewhere)
+# - filter_label: label of the filter button on the Publications page
 # - link:   the theme's own page (a folder in /research/)
 # - tags:   publication tags (from _data/sources.yaml / citations) whose papers
 #           are listed automatically on the theme page
@@ -12,6 +13,7 @@
 # - video:  looping clip shown on the Research page and the theme page
 
 - id: computational-ultrasound
+  filter_label: "Computational ultrasound"
   title: "Computational ultrasound: geometry and physics"
   short: Computational ultrasound
   link: research/computational-ultrasound
@@ -25,6 +27,7 @@
     - 2D to 3D Reconstruction
 
 - id: brain-structure
+  filter_label: "Atlases & segmentation"
   title: "Structure: brain atlases and segmentation"
   short_title: "Structure: atlases and segmentation"
   short: Brain atlases and segmentation
@@ -39,6 +42,7 @@
     - Segmentation
 
 - id: robust
+  filter_label: "Harmonisation & deployment"
   title: "Robust everywhere: harmonisation and deployment"
   short: Robust everywhere
   link: research/robust
@@ -56,6 +60,7 @@
     - Interpretability
 
 - id: scan-to-outcome
+  filter_label: "Scan to outcome"
   title: "From scan to outcome: brain growth and neurodevelopment"
   short: From scan to outcome
   link: research/scan-to-outcome

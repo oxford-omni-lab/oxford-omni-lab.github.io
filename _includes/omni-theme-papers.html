@@ -2,19 +2,12 @@
   "Key papers" for a research theme: papers whose tags match the theme's
   `tags:` in _data/themes.yaml, newest first. The first `limit` are shown;
   "All papers in this theme" reveals the rest on the same page.
-  Authors are shown as "Surname Initials"; lab members (current and alumni)
-  are in bold. Venue abbreviations come from _data/venues.yaml.
+  Authors come from omni-authors.html; venue abbreviations from
+  _data/venues.yaml.
   Usage: {% include omni-theme-papers.html theme="computational-ultrasound" limit=5 %}
 {% endcomment %}
 {% assign theme = site.data.themes | where: "id", include.theme | first %}
 {% assign limit = include.limit | default: 5 %}
-
-{% assign member_keys = "" | split: "" %}
-{% for m in site.members %}
-  {% assign w = m.name | split: " " %}
-  {% assign key = w.first | append: " " | append: w.last | downcase %}
-  {% assign member_keys = member_keys | push: key %}
-{% endfor %}
 
 {% assign matches = "" | split: "" %}
 {% assign all = site.data.citations | sort: "date" | reverse %}
@@ -43,17 +36,8 @@
     <li{% if forloop.index > limit %} class="omni-paper-extra"{% endif %}>
       <a class="omni-paper-title" href="{{ "publications" | relative_url }}#{{ c.id | url_encode }}">{{ c.title }}</a>
       <span class="omni-paper-meta">
-        {%- for a in c.authors limit: 8 -%}
-          {%- assign parts = a | split: " " -%}
-          {%- assign initials = "" -%}
-          {%- for p in parts -%}
-            {%- unless forloop.last -%}{%- assign ch = p | slice: 0 | upcase -%}{%- assign initials = initials | append: ch -%}{%- endunless -%}
-          {%- endfor -%}
-          {%- assign key = parts.first | append: " " | append: parts.last | downcase -%}
-          {%- if member_keys contains key -%}<b>{{ parts.last }} {{ initials }}</b>{%- else -%}{{ parts.last }} {{ initials }}{%- endif -%}
-          {%- unless forloop.last -%}, {% endunless -%}
-        {%- endfor -%}
-        {%- if c.authors.size > 8 %}, et al.{% endif %}
+        {%- include omni-authors.html authors=c.authors max=8 -%}
+        
         {%- assign venue = site.data.venues[c.publisher] | default: c.publisher %}
         · <em>{{ venue }}</em> ·
         {% if c.publisher == "arXiv" %}{{ c.date | date: "%b %Y" }}{% else %}{{ c.date | date: "%Y" }}{% endif %}

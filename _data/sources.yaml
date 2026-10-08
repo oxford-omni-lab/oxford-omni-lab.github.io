@@ -2,6 +2,7 @@
   image: USAtlas.gif
   note: Atlas
   highlight: true
+  description: A normative atlas of how the fetal brain matures week by week, built from 3D ultrasound in the international INTERGROWTH-21st study.
   buttons:
     - type: website
       link: https://www.nature.com/articles/s41586-023-06630-3
@@ -29,6 +30,8 @@
       link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
     - type: pdf
       link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Paper-Conference.pdf
+    - type: demo
+      link: https://www.robots.ox.ac.uk/~vgg/research/UltraGauss/
   tags:
     - 2D to 3D Reconstruction
 
@@ -486,7 +489,7 @@
   buttons:
     - type: preprint
       link: https://arxiv.org/abs/2609.29373
-    - type: website
+    - type: demo
       link: https://vbacher.github.io/RFlash-ultrasound/
     - type: code
       link: https://github.com/vbacher/RFlash

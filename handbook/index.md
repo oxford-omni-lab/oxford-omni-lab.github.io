@@ -2,74 +2,69 @@
 title: Handbook
 ---
 
-# {% include icon.html icon="fa-solid fa-book" %}Handbook
+{% include section.html dark=true %}
 
-The Handbook is meant as a guide to the Oxford OMNI Lab, providing information about our culture, values, and how we work together. It is a living document that will be updated as we evolve.
-
-{% include button.html type="pdf" text="Lab Handbook" link="../pdfs/misc/lab_handbook.pdf" %}
-
-{% include section.html %}
-
-## Wiki
-
-For our Lab members we also have a Wiki with Information about processes, Lab resources, contact people and more institutional knowledge.
-
-**The wiki can only be accessed by lab members with access to our cluster.**
-**When accessing from outside the University, you need VPN to access the wiki.**
-
-To access it please run the following command to tunnel the wiki server to your local machine and then **use the button below**:
-
-```bash
-ssh -fNT -L 8080:localhost:8080 wiki
-```
-
-{% include button.html
-   text="Go to Wiki"
-   link="http://127.0.0.1:8080/"
-   type="docs"
-   icon="fa-solid fa-book"
-%}
+<div class="omni-intro">
+  <span class="omni-kicker">Lab life</span>
+  <h1>Handbook</h1>
+  <p>A guide to the OMNI Lab: our culture, our values, and how we work together. It is a living document that we update as we grow.</p>
+  <div class="omni-actions">
+    {% include button.html link="pdfs/misc/lab_handbook.pdf" text="Download the handbook (PDF)" %}
+  </div>
+</div>
 
 {% include section.html %}
 
-## Trouble shoot access
+<div class="omni-left">
+  <h2 style="margin: 0 0 28px">What’s inside</h2>
+</div>
 
-If you have trouble accessing the wiki, please check the following:
+<div class="omni-inside">
+  <div class="omni-aside-card">
+    <h3>Science and mission</h3>
+    <p>What we work on, and the values behind it: openness, collaboration and practical impact.</p>
+  </div>
+  <div class="omni-aside-card">
+    <h3>Roles and expectations</h3>
+    <p>How we run the lab, and what students, early-career researchers and the PI can expect.</p>
+  </div>
+  <div class="omni-aside-card">
+    <h3>Culture</h3>
+    <p>Work and wellbeing, workplace conduct, equality, diversity and inclusion, and good citizenship.</p>
+  </div>
+  <div class="omni-aside-card">
+    <h3>Development</h3>
+    <p>Careers, open and responsible research, use of AI, collaborations, travel and public engagement.</p>
+  </div>
+</div>
 
-- Have you used VPN to connect to the University network or are you on the University network?
-- Is a process already using port 8080 on your local machine? see below [port busy](#port-busy)
-- try restarting the wiki, see below [restart wiki](#restart-wiki)
-- If everything else fails, ask the lab [web admin](mailto:{{ site.web_admin_email }})
+<div class="omni-soft-card omni-wiki">
+  <span class="omni-label">For lab members</span>
+  <h3>Lab wiki</h3>
+  <p>Processes, resources and know-how. Connect to the University network or VPN, then open a tunnel to the wiki server:</p>
+  <pre class="omni-code"><code>ssh -fNT -L 8080:localhost:8080 wiki</code></pre>
+  <p>Then open the wiki in your browser:</p>
+  <div class="omni-actions">
+    {% include button.html link="http://127.0.0.1:8080/" text="Open the wiki (127.0.0.1:8080)" style="bare" %}
+  </div>
 
-### port busy
-
-```shell
-# Check if port is busy
-lsof -i :8080
-```
-
-If so use the PID to kill the process:
-
-```shell
-# Delete processes using port 8080
-kill -9 $(lsof -ti:8080)
-```
-
-You should then be able to access the wiki using the command above.
-
-### restart wiki
-
-If you have access to the wiki server you can restart the wiki using the following commands:
-
-```shell
-# SSH into the wiki server
-ssh wiki
-```
-
-then run the restart script:
-
-```shell
-# Restart the wiki
+  <details class="omni-troubleshoot">
+    <summary>Trouble accessing the wiki?</summary>
+    <ul>
+      <li>Are you on the University network, or connected through the VPN?</li>
+      <li>Is another process already using port 8080 on your computer? See “Port busy” below.</li>
+      <li>Try restarting the wiki. See “Restart the wiki” below.</li>
+      <li>If nothing works, ask the lab’s {% include email-link.html email=site.web_admin_email text="web administrator" %}.</li>
+    </ul>
+    <h4>Port busy</h4>
+    <p>Check whether port 8080 is in use:</p>
+    <pre class="omni-code"><code>lsof -i :8080</code></pre>
+    <p>If it is, stop the process using it, then run the tunnel command again:</p>
+    <pre class="omni-code"><code>kill -9 $(lsof -ti:8080)</code></pre>
+    <h4>Restart the wiki</h4>
+    <p>If you have access to the wiki server, log in and run the restart script:</p>
+    <pre class="omni-code"><code>ssh wiki
 cd omni-wiki
-./restart.sh
-```
+./restart.sh</code></pre>
+  </details>
+</div>

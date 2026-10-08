@@ -209,6 +209,11 @@ journal:
   text: Journal
   tooltip: Journal
 
+demo:
+  icon: fa-solid fa-play
+  text: Demo
+  tooltip: Interactive demo
+
 preprint:
   icon: fa-regular fa-eye
   text: Preprint
