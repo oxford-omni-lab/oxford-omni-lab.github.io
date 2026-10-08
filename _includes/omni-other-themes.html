@@ -6,7 +6,7 @@
   <span class="omni-label">Other themes</span>
   {% for theme in site.data.themes %}
     {% unless theme.id == include.current %}
-      <a href="{{ theme.link | relative_url | uri_escape }}">{{ theme.title }}</a>
+      <a href="{{ theme.link | relative_url | uri_escape }}">{{ theme.short_title | default: theme.title }}</a>
     {% endunless %}
   {% endfor %}
 </div>

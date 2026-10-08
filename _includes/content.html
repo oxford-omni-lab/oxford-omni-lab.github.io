@@ -18,6 +18,10 @@
     | regex_scan: "<background>(.*?)</background>"
     | default: nil
   %}
+  {% assign tone = section
+    | regex_scan: "<tone>(.*?)</tone>"
+    | default: ""
+  %}
   {% assign size = section
     | regex_scan: "<size>(.*?)</size>"
     | default: "page"
@@ -26,6 +30,9 @@
   <section
     class="background"
     data-size="{{ size }}"
+    {% if tone != "" %}
+      data-tone="{{ tone }}"
+    {% endif %}
     {% if dark == "true" or dark == "false" %}
       data-dark="{{ dark }}"
     {% endif %}

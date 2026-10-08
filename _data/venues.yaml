@@ -1,0 +1,4 @@
+# Short names for venues in the "Key papers" lists on the research theme pages.
+# Left: the publisher name exactly as it appears in _data/citations.yaml.
+# Right: the short name to show. Venues not listed are shown in full.
+International Conference on Learning Representations: ICLR

@@ -33,7 +33,7 @@ nav:
   <p>Please read <a href="{{ "recruitment" | relative_url }}">how to join the lab</a> before getting in touch.</p>
 </div>
 
-<div class="button-group">
+<div class="omni-actions">
   {%
     include button.html
     link="https://www.cs.ox.ac.uk/people/ana.namburete/"

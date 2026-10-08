@@ -1,71 +1,78 @@
 {% comment %}
   OMNI Lab footer (dark band).
   - Funder logos come from _data/funders.yaml.
-  - Social/profile buttons still come from `links:` in _config.yaml, as before
-    (the email link is skipped, so the site does not invite direct email).
-  - Keeps the "About this Website" and "Recruitment" links and the dark-mode
-    toggle (the dark-mode script needs the .dark-toggle element to exist).
+  - "Elsewhere" links come from `links:` in _config.yaml (the email link is
+    skipped, so the site does not invite direct email). Their web addresses
+    are built from _data/types.yaml, exactly as the old icon buttons were.
+  - Keeps the "About this website" link and the dark-mode switch (the
+    dark-mode script needs the .dark-toggle element to exist).
 {% endcomment %}
 
 <footer class="omni-footer" data-dark="true">
-  {% if site.data.funders %}
-    <div class="omni-funders">
-      <span class="omni-label">Funders and supporters</span>
-      <div class="omni-funders-logos">
-        {% for funder in site.data.funders %}
-          <a href="{{ funder.link | uri_escape }}" aria-label="{{ funder.name | xml_escape }}">
-            <img
-              src="{{ funder.image | relative_url | uri_escape }}"
-              alt="{{ funder.name | xml_escape }}"
-              style="height: {{ funder.height | default: 48 }}px"
-              loading="lazy"
-            >
-          </a>
-        {% endfor %}
+  <div class="omni-wrap">
+    {% if site.data.funders %}
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          {% for funder in site.data.funders %}
+            <a href="{{ funder.link | uri_escape }}" aria-label="{{ funder.name | xml_escape }}">
+              <img
+                src="{{ funder.image | relative_url | uri_escape }}"
+                alt="{{ funder.name | xml_escape }}"
+                style="height: {{ funder.height | default: 48 }}px"
+                loading="lazy"
+              >
+            </a>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
 
-  <div class="omni-footer-cols">
-    <div>
-      <span class="omni-footer-title">OMNI Lab</span>
-      <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
-      <a href="{{ "/contact" | relative_url }}">Contact us</a>
-    </div>
-    <div>
-      <span class="omni-footer-heading">Lab</span>
-      <a href="{{ "/demos" | relative_url }}">Demos and tools</a>
-      <a href="{{ "/handbook" | relative_url }}">Handbook</a>
-      <a href="{{ "/gallery" | relative_url }}">Gallery</a>
-      <a href="{{ "/recruitment" | relative_url }}">Join us</a>
-    </div>
-    <div>
-      <span class="omni-footer-heading">Elsewhere</span>
-      <div class="omni-footer-links">
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="{{ "contact" | relative_url }}">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="{{ "demos" | relative_url }}">Demos and tools</a>
+        <a href="{{ "handbook" | relative_url }}">Handbook</a>
+        <a href="{{ "gallery" | relative_url }}">Gallery</a>
+        <a href="{{ "recruitment" | relative_url }}">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        {% assign order = "google-scholar,github,orcid" | split: "," %}
+        {% for key in order %}
+          {% assign value = site.links[key] %}
+          {% if value %}
+            {% assign type = site.data.types[key] %}
+            <a href="{{ type.link | replace: "$VALUE", value | uri_escape }}">{{ type.text }}</a>
+          {% endif %}
+        {% endfor %}
         {% for link in site.links %}
           {% assign key = link[0] %}
-          {% assign value = link[1] %}
-          {% unless key == "email" %}
-            {% include button.html type=key link=value style="bare" %}
+          {% unless key == "email" or order contains key %}
+            {% assign type = site.data.types[key] %}
+            <a href="{{ type.link | default: "$VALUE" | replace: "$VALUE", link[1] | uri_escape }}">{{ type.text | default: key }}</a>
           {% endunless %}
         {% endfor %}
       </div>
     </div>
-  </div>
 
-  <div class="omni-footer-bottom">
-    <span>&copy; {{ site.time | date: "%Y" }} OMNI Lab, University of Oxford</span>
-    <span>
-      <a href="{{ "/about" | relative_url }}">About this Website</a>
-      &nbsp; | &nbsp;
-      <a href="{{ "/recruitment" | relative_url }}">Recruitment</a>
-    </span>
-    <input
-      type="checkbox"
-      class="dark-toggle"
-      data-tooltip="Dark mode"
-      aria-label="toggle dark mode"
-      oninput="onDarkToggleChange(event)"
-    >
+    <div class="omni-footer-bottom">
+      <span>&copy; {{ site.time | date: "%Y" }} OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="{{ "about" | relative_url }}">About this website</a>
+        <input
+          type="checkbox"
+          class="dark-toggle"
+          data-tooltip="Dark mode"
+          aria-label="toggle dark mode"
+          oninput="onDarkToggleChange(event)"
+        >
+      </span>
+    </div>
   </div>
 </footer>

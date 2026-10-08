@@ -43,7 +43,7 @@ We have more data and research ideas than postdocs. We offer a collaborative, su
 
 How we work together, and what we get up to.
 
-<div class="button-group">
+<div class="omni-actions">
   {% include button.html text="Lab handbook" link="handbook" icon="fa-solid fa-book" %}
   {% include button.html text="Gallery" link="gallery" icon="fa-solid fa-photo-film" %}
 </div>

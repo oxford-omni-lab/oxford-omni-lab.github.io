@@ -2,7 +2,7 @@
 name: Emily Nurden
 image: "images/members/emily-nurden.jpeg" # Optional: Profile photo path
 role: dphil
-description: Rotation student from the HDS CDT
+description: Rotation Student, HDS CDT
 pronouns: she/her
 group: current
 joined: 2026

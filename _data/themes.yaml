@@ -3,6 +3,8 @@
 # Research page, and the "Other themes" lists on each theme page.
 # To add, remove, rename or reorder a theme, edit this list.
 #
+# - short_title: optional shorter title for the Research page rows and the
+#           "Other themes" lists (the full title is used elsewhere)
 # - link:   the theme's own page (a folder in /research/)
 # - tags:   publication tags (from _data/sources.yaml / citations) whose papers
 #           are listed automatically on the theme page
@@ -24,6 +26,7 @@
 
 - id: brain-structure
   title: "Structure: brain atlases and segmentation"
+  short_title: "Structure: atlases and segmentation"
   short: Brain atlases and segmentation
   link: research/brain-structure
   description: Building spatiotemporal atlases of the developing brain, and using them for registration, segmentation and shape modelling.
