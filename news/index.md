@@ -15,6 +15,13 @@ nav:
 
 {% include section.html dark=true %}
 
+{% comment %}
+  Video thumbnails: save a screenshot (16:9, about 1280 x 720) as
+  images/video/watch-women-in-ai.jpg and
+  images/video/watch-ri-christmas-lectures.jpg.
+  They appear automatically; until then a dark tile is shown.
+{% endcomment %}
+
 <div class="omni-left">
   <h2 style="margin: 0 0 28px">Watch</h2>
 </div>
@@ -22,6 +29,8 @@ nav:
 <div class="omni-watch">
   <div class="omni-watch-main">
     <a class="omni-video-thumb" href="https://www.mpls.ox.ac.uk/women-in-ai/ana.html" target="_blank" rel="noopener" aria-label="Watch: Ana Namburete in conversation">
+      {% assign thumb = "images/video/watch-women-in-ai.jpg" | file_exists %}
+      {% if thumb %}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{% endif %}
       <span class="omni-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
     </a>
     <span class="omni-kicker">Women in AI at Oxford</span>
@@ -32,6 +41,8 @@ nav:
   <div class="omni-watch-side">
     <div>
       <a class="omni-video-thumb" href="https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures" target="_blank" rel="noopener" aria-label="Watch: the 2023 Royal Institution Christmas Lectures">
+      {% assign thumb = "images/video/watch-ri-christmas-lectures.jpg" | file_exists %}
+      {% if thumb %}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{% endif %}
         <span class="omni-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
       </a>
       <span class="omni-kicker">Royal Institution Christmas Lectures</span>
