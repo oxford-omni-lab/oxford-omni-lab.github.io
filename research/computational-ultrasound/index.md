@@ -42,6 +42,7 @@ title: "Computational ultrasound: geometry and physics"
     {% include omni-person.html lookup="ana-namburete" %}
     {% include omni-person.html lookup="mark-eid" %}
     {% include omni-person.html lookup="valentin-bacher" %}
+    {% include omni-person.html lookup="jayroop-ramesh" %}
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Collaborators</span>

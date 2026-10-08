@@ -30,6 +30,7 @@ title: "Robust everywhere: harmonisation and deployment"
     <span class="omni-label">People on this theme</span>
     {% include omni-person.html lookup="ana-namburete" %}
     {% include omni-person.html lookup="nicola-dinsdale" %}
+    {% include omni-person.html lookup="hoda-kalabizadeh" %}
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Collaborators</span>

@@ -30,6 +30,9 @@ title: "From scan to outcome: brain growth and neurodevelopment"
     <span class="omni-label">People on this theme</span>
     {% include omni-person.html lookup="ana-namburete" %}
     {% include omni-person.html lookup="elena-d'alberti" %}
+    {% include omni-person.html lookup="sian-wilson" %}
+    {% include omni-person.html lookup="emily-nurden" %}
+    {% include omni-person.html lookup="darya-dorash" %}
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Collaborators</span>
