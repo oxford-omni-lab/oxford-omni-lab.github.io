@@ -38,7 +38,8 @@
   image: images/publications/USAtlas.gif
   note: Atlas
   highlight: true
-  description: A normative atlas of how the fetal brain matures week by week, built from 3D ultrasound in the international INTERGROWTH-21st study.
+  description: A normative atlas of how the fetal brain matures week by week, built
+    from 3D ultrasound in the international INTERGROWTH-21st study.
   buttons:
   - type: website
     link: https://www.nature.com/articles/s41586-023-06630-3
