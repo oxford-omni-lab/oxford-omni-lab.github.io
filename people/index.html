@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People" aria-current="page">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab">
+          Join us
         </a>
       
     
@@ -461,448 +466,23 @@
   
   
   
-  <section class="background" data-size="page">
-    <h1 id="people">
-<i class="icon fa-solid fa-users"></i>People</h1>
-  </section>
-
   
-  
-  
-  
-  <section class="background" data-size="page">
+  <section class="background" data-size="1" data-dark="true">
     <!--
   <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<p>Our group was founded in 2017 by <a href="/members/ana-namburete">Dr. Ana Namburete</a> with the aim of improving fetal brain assessment using machine learning and neuroimaging. We are a collaborative and open-minded group of researchers, eager to push the frontiers of biomedical imaging. For more about our lab culture, please see our lab handbook.</p>
-
-<p>We are <strong>always</strong> looking for new DPhil/MSc students and Postdocs to <a href="../recruitment">join our group</a> <strong>!</strong></p>
-
-<div class="button-wrapper">
-    <a class="button" href="/handbook" data-style="" aria-label="fa-solid fa-book">
-      <i class="icon fa-solid fa-book"></i>
-      
-        <span>Lab Handbook</span>
-      
-    </a>
-  </div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<div class="portrait-wrapper">
-  <a href="/members/ana-namburete.html" class="portrait" data-style="" aria-label="Ana Namburete">
-    
-      <i class="icon fa-solid fa-microscope"></i>
-    
-
-    <img src="/images/members/Ana2.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Ana Namburete
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Principal Investigator Associate Professor
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/darya-dorash.html" class="portrait" data-style="" aria-label="Darya Dorash">
-    
-      <i class="icon fa-solid fa-book-atlas"></i>
-    
-
-    <img src="/images/members/darya-dorash.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Darya Dorash
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Visiting Student
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/elena-d'alberti.html" class="portrait" data-style="" aria-label="Elena D Alberti">
-    
-      <i class="icon fa-solid fa-stethoscope"></i>
-    
-
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Elena D'Alberti
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Clinical Research Fellow
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/emily-nurden.html" class="portrait" data-style="" aria-label="Emily Nurden">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/images/members/emily-nurden.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Emily Nurden
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Rotation student from the HDS CDT
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/grayerson-palermo.html" class="portrait" data-style="" aria-label="Grayson Palermo">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
-    
-
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Grayson Palermo
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Undergraduate Student
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/hoda-kalabizadeh.html" class="portrait" data-style="" aria-label="Hoda Kalabizadeh">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/images/members/Hoda-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Hoda Kalabizadeh
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/jayroop-ramesh.html" class="portrait" data-style="" aria-label="Jayroop Ramesh">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/images/members/Jayroop-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Jayroop Ramesh
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/madeleine-wyburd.html" class="portrait" data-style="" aria-label="Madeleine Wyburd">
-    
-      <i class="icon fa-solid fa-handshake"></i>
-    
-
-    <img src="/images/members/Maddy-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Madeleine Wyburd
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Associate Member
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/mark-eid.html" class="portrait" data-style="" aria-label="Mark Eid">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/images/members/mark-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Mark Eid
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/nicola-dinsdale.html" class="portrait" data-style="" aria-label="Nicola Dinsdale">
-    
-      <i class="icon fa-solid fa-handshake"></i>
-    
-
-    <img src="/images/members/Nicola-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Nicola Dinsdale
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Associate Member
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/pak-hei-hugo-yeung.html" class="portrait" data-style="" aria-label="Pak Hei Hugo Yeung">
-    
-      <i class="icon fa-solid fa-handshake"></i>
-    
-
-    <img src="/images/members/Hugo-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Pak Hei (Hugo) Yeung
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Associate Member
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/sian-wilson.html" class="portrait" data-style="" aria-label="Siân Wilson">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    <img src="/images/members/SianWilson.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Siân Wilson
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Postdoctoral Researcher
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-
-<div class="portrait-wrapper">
-  <a href="/members/valentin-bacher.html" class="portrait" data-style="" aria-label="Valentin Bacher">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
-    
-
-    <img src="/images/members/valle.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Valentin Bacher
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
-    
-
-    
-    
-    
-  </a>
-</div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="2" data-dark="true" style="--image: url('/images/misc/background_dark.png'); --image-dark: url('/images/misc/background_dark.png')">
-    <!--
-  <background>images/misc/background_dark.png</background>
   <dark>true</dark>
-  <size>2</size>
+  <size>1</size>
+  <tone></tone>
 -->
 
-<figure class="figure">
-  <a class="figure-image" aria-label="figure link">
-    <img src="/images/group/260624_Group.JPG" style="
-        width: 100%;
-        max-height: unset;
-      " alt="figure image" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-  </a>
-  
-</figure>
+<div class="omni-intro">
+  <span class="omni-kicker">People</span>
+  <h1>The team</h1>
+  <p>We are engineers, computer scientists and clinicians working together on fetal brain imaging.</p>
+</div>
   </section>
 
+  
   
   
   
@@ -912,498 +492,519 @@ this.onerror = null;">
   <background></background>
   <dark></dark>
   <size></size>
+  <tone></tone>
 -->
 
-<h2 id="alumni">Alumni</h2>
+<figure class="omni-group-photo">
+  <img src="/images/group/260624_Group.JPG" alt="Group photo of the OMNI Lab">
+  <figcaption>The lab, June 2026</figcaption>
+</figure>
 
-<div class="portrait-wrapper">
-  <a href="/members/qiushi-alan-jin.html" class="portrait" data-style="small" aria-label="Qiushi Alan Jin">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
-    
-
-    <img src="/images/members/alan-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Qiushi (Alan) Jin
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Undergraduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2025
-        
-      </span>
-    
-  </a>
+<div class="omni-left">
+  <h2 style="margin: 56px 0 28px">Current members</h2>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/members/tom-waddell.html" class="portrait" data-style="small" aria-label="Tom Waddell">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
+<div class="omni-members">
+  
     
 
-    <img src="/images/members/Tom-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
+<a class="omni-member" href="/members/ana-namburete.html">
+  <span class="omni-member-photo">
     
-      <span class="portrait-name">
-        Tom Waddell
-      </span>
+      <img src="/images/members/Ana2.jpg" alt="Portrait of Ana Namburete" loading="lazy">
     
+  </span>
+  <span class="omni-member-name">Ana Namburete</span>
+  <span class="omni-member-role">Principal Investigator · Associate Professor</span>
+</a>
 
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
+  
     
 
+
+<a class="omni-member" href="/members/darya-dorash.html">
+  <span class="omni-member-photo">
     
+      <img src="/images/members/darya-dorash.png" alt="Portrait of Darya Dorash" loading="lazy">
     
+  </span>
+  <span class="omni-member-name">Darya Dorash</span>
+  <span class="omni-member-role">Visiting Student</span>
+</a>
+
+  
     
-      <span class="portrait-year">
-        
-          until: 2024
-        
-      </span>
+
+
+<a class="omni-member" href="/members/elena-d'alberti.html">
+  <span class="omni-member-photo">
     
-  </a>
+      ED
+    
+  </span>
+  <span class="omni-member-name">Elena D'Alberti</span>
+  <span class="omni-member-role">Clinical Research Fellow</span>
+</a>
+
+  
+    
+
+
+<a class="omni-member" href="/members/emily-nurden.html">
+  <span class="omni-member-photo">
+    
+      <img src="/images/members/emily-nurden.jpeg" alt="Portrait of Emily Nurden" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Emily Nurden</span>
+  <span class="omni-member-role">Rotation Student, HDS CDT</span>
+</a>
+
+  
+    
+
+
+<a class="omni-member" href="/members/hoda-kalabizadeh.html">
+  <span class="omni-member-photo">
+    
+      <img src="/images/members/Hoda-small.jpeg" alt="Portrait of Hoda Kalabizadeh" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Hoda Kalabizadeh</span>
+  <span class="omni-member-role">DPhil Student</span>
+</a>
+
+  
+    
+
+
+<a class="omni-member" href="/members/jayroop-ramesh.html">
+  <span class="omni-member-photo">
+    
+      <img src="/images/members/Jayroop-small.jpeg" alt="Portrait of Jayroop Ramesh" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Jayroop Ramesh</span>
+  <span class="omni-member-role">DPhil Student</span>
+</a>
+
+  
+    
+
+
+<a class="omni-member" href="/members/mark-eid.html">
+  <span class="omni-member-photo">
+    
+      <img src="/images/members/mark-small.jpeg" alt="Portrait of Mark Eid" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Mark Eid</span>
+  <span class="omni-member-role">DPhil Student</span>
+</a>
+
+  
+    
+
+
+<a class="omni-member" href="/members/sian-wilson.html">
+  <span class="omni-member-photo">
+    
+      <img src="/images/members/SianWilson.jpg" alt="Portrait of Siân Wilson" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Siân Wilson</span>
+  <span class="omni-member-role">Postdoctoral Researcher</span>
+</a>
+
+  
+    
+
+
+<a class="omni-member" href="/members/valentin-bacher.html">
+  <span class="omni-member-photo">
+    
+      <img src="/images/members/valle.jpg" alt="Portrait of Valentin Bacher" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Valentin Bacher</span>
+  <span class="omni-member-role">DPhil Student</span>
+</a>
+
+  
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/members/linde-hesse.html" class="portrait" data-style="small" aria-label="Linde Hesse">
-    
-      <i class="icon fa-solid fa-glasses"></i>
-    
-
-    <img src="/images/members/Linde-small.jpeg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Linde Hesse
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Postdoctoral Researcher
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2024
-        
-      </span>
-    
-  </a>
+<div class="omni-left">
+  <h2 style="margin: 64px 0 28px">Associate members</h2>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/members/andrei-claudiu-roibu.html" class="portrait" data-style="small" aria-label="Andrei Claudiu-Roibu">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
+<div class="omni-members">
+  
     
 
-    <img src="/images/members/Andrei.JPG" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
+<a class="omni-member" href="/members/madeleine-wyburd.html">
+  <span class="omni-member-photo">
     
-      <span class="portrait-name">
-        Andrei Claudiu-Roibu
-      </span>
+      <img src="/images/members/Maddy-small.jpeg" alt="Portrait of Madeleine Wyburd" loading="lazy">
     
+  </span>
+  <span class="omni-member-name">Madeleine Wyburd</span>
+  <span class="omni-member-role">Associate Member</span>
+</a>
 
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
+  
     
 
+
+<a class="omni-member" href="/members/nicola-dinsdale.html">
+  <span class="omni-member-photo">
     
+      <img src="/images/members/Nicola-small.jpeg" alt="Portrait of Nicola Dinsdale" loading="lazy">
     
+  </span>
+  <span class="omni-member-name">Nicola Dinsdale</span>
+  <span class="omni-member-role">Associate Member</span>
+</a>
+
+  
     
-      <span class="portrait-year">
-        
-          until: 2024
-        
-      </span>
+
+
+<a class="omni-member" href="/members/pak-hei-hugo-yeung.html">
+  <span class="omni-member-photo">
     
-  </a>
+      <img src="/images/members/Hugo-small.jpeg" alt="Portrait of Pak Hei (Hugo) Yeung" loading="lazy">
+    
+  </span>
+  <span class="omni-member-name">Pak Hei (Hugo) Yeung</span>
+  <span class="omni-member-role">Associate Member</span>
+</a>
+
+  
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/members/joshua-omolegan.html" class="portrait" data-style="small" aria-label="Joshua Omolegan">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
-    
-
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-
-    
-      <span class="portrait-name">
-        Joshua Omolegan
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2023
-        
-      </span>
-    
-  </a>
+<div class="omni-left">
+  <h2 style="margin: 64px 0 28px">Alumni</h2>
 </div>
 
-<div class="portrait-wrapper">
-  <a href="/members/felipe-moser.html" class="portrait" data-style="small" aria-label="Felipe Moser">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
+<div class="omni-alumni">
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Felipe Moser
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2023
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/grayerson-palermo.html">
+    <span class="omni-avatar">
+      
+        GP
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Grayson Palermo</span>
+      <span class="omni-person-role">Undergraduate Student</span>
+      
+        <span class="omni-person-role">until 2026</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/cezar-trisca-vicol.html" class="portrait" data-style="small" aria-label="Cezar Trisca Vicol">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Cezar Trisca Vicol
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2023
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/qiushi-alan-jin.html">
+    <span class="omni-avatar">
+      
+        <img src="/images/members/alan-small.jpeg" alt="" loading="lazy">
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Qiushi (Alan) Jin</span>
+      <span class="omni-person-role">Undergraduate Student</span>
+      
+        <span class="omni-person-role">until 2025</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/charlotte-li.html" class="portrait" data-style="small" aria-label="Charlotte Li">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Charlotte Li
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2022
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/tom-waddell.html">
+    <span class="omni-avatar">
+      
+        <img src="/images/members/Tom-small.jpeg" alt="" loading="lazy">
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Tom Waddell</span>
+      <span class="omni-person-role">DPhil Student</span>
+      
+        <span class="omni-person-role">until 2024</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/lorenzo-venturini.html" class="portrait" data-style="small" aria-label="Lorenzo Venturini">
-    
-      <i class="icon fa-solid fa-graduation-cap"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Lorenzo Venturini
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        DPhil Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2021
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/linde-hesse.html">
+    <span class="omni-avatar">
+      
+        <img src="/images/members/Linde-small.jpeg" alt="" loading="lazy">
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Linde Hesse</span>
+      <span class="omni-person-role">Postdoctoral Researcher</span>
+      
+        <span class="omni-person-role">until 2024</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/raquel-van-kampen.html" class="portrait" data-style="small" aria-label="Raquel van Kampen">
-    
-      <i class="icon fa-solid fa-book-atlas"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Raquel van Kampen
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Visiting Researcher
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2018
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/andrei-claudiu-roibu.html">
+    <span class="omni-avatar">
+      
+        <img src="/images/members/Andrei.JPG" alt="" loading="lazy">
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Andrei Claudiu-Roibu</span>
+      <span class="omni-person-role">DPhil Student</span>
+      
+        <span class="omni-person-role">until 2024</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/megha-hegde.html" class="portrait" data-style="small" aria-label="Megha Hegde">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Megha Hegde
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2018
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/joshua-omolegan.html">
+    <span class="omni-avatar">
+      
+        JO
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Joshua Omolegan</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2023</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/james-rhodes.html" class="portrait" data-style="small" aria-label="James Rhodes">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        James Rhodes
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2018
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/felipe-moser.html">
+    <span class="omni-avatar">
+      
+        FM
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Felipe Moser</span>
+      <span class="omni-person-role">DPhil Student</span>
+      
+        <span class="omni-person-role">until 2023</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/sagar-vaze.html" class="portrait" data-style="small" aria-label="Sagar Vaze">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Sagar Vaze
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2017
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/cezar-trisca-vicol.html">
+    <span class="omni-avatar">
+      
+        CV
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Cezar Trisca Vicol</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2023</span>
+      
+    </span>
   </a>
-</div>
 
-<div class="portrait-wrapper">
-  <a href="/members/james-gnodde.html" class="portrait" data-style="small" aria-label="James Gnodde">
-    
-      <i class="icon fa-solid fa-user-graduate"></i>
+
+  
     
 
-    <img src="/images/members/placeholder.png" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        James Gnodde
-      </span>
-    
-
-    
-
-    
-      <span class="portrait-description">
-        Graduate Student
-      </span>
-    
-
-    
-    
-    
-      <span class="portrait-year">
-        
-          until: 2017
-        
-      </span>
-    
+  
+  <a class="omni-person" href="/members/charlotte-li.html">
+    <span class="omni-avatar">
+      
+        CL
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Charlotte Li</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2022</span>
+      
+    </span>
   </a>
+
+
+  
+    
+
+
+  
+  <a class="omni-person" href="/members/lorenzo-venturini.html">
+    <span class="omni-avatar">
+      
+        LV
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Lorenzo Venturini</span>
+      <span class="omni-person-role">DPhil Student</span>
+      
+        <span class="omni-person-role">until 2021</span>
+      
+    </span>
+  </a>
+
+
+  
+    
+
+
+  
+  <a class="omni-person" href="/members/raquel-van-kampen.html">
+    <span class="omni-avatar">
+      
+        RK
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Raquel van Kampen</span>
+      <span class="omni-person-role">Visiting Researcher</span>
+      
+        <span class="omni-person-role">until 2018</span>
+      
+    </span>
+  </a>
+
+
+  
+    
+
+
+  
+  <a class="omni-person" href="/members/megha-hegde.html">
+    <span class="omni-avatar">
+      
+        MH
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Megha Hegde</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2018</span>
+      
+    </span>
+  </a>
+
+
+  
+    
+
+
+  
+  <a class="omni-person" href="/members/james-rhodes.html">
+    <span class="omni-avatar">
+      
+        JR
+      
+    </span>
+    <span>
+      <span class="omni-person-name">James Rhodes</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2018</span>
+      
+    </span>
+  </a>
+
+
+  
+    
+
+
+  
+  <a class="omni-person" href="/members/sagar-vaze.html">
+    <span class="omni-avatar">
+      
+        SV
+      
+    </span>
+    <span>
+      <span class="omni-person-name">Sagar Vaze</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2017</span>
+      
+    </span>
+  </a>
+
+
+  
+    
+
+
+  
+  <a class="omni-person" href="/members/james-gnodde.html">
+    <span class="omni-avatar">
+      
+        JG
+      
+    </span>
+    <span>
+      <span class="omni-person-name">James Gnodde</span>
+      <span class="omni-person-role">MSc Student</span>
+      
+        <span class="omni-person-role">until 2017</span>
+      
+    </span>
+  </a>
+
+
+  
 </div>
   </section>
 
@@ -1411,99 +1012,104 @@ this.onerror = null;">
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

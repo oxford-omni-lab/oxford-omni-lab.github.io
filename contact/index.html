@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location" aria-current="page">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab">
+          Join us
         </a>
       
     
@@ -461,39 +466,23 @@
   
   
   
-  <section class="background" data-size="page">
-    <h1 id="contact">
-<i class="icon fa-regular fa-envelope"></i>Contact</h1>
-
-<p>The OMNI Lab is housed just a few steps away from the Wolfson Buidlding of the Department of Computer Science (Oxford):</p>
-
-<p>15 Parks Road<br>
-Department of Computer Science<br>
-Oxford OX1 3PH<br>
-United Kingdom</p>
-
-<div class="button-group">
-  <a href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" class="email-link button"><i class="fa-solid fa-envelope"></i> Email Us</a>
-
   
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
 
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://goo.gl/maps/hJHW2pXSe1xK5XFM7" data-style="" aria-label="Our location on Google Maps for easy navigation">
-      <i class="icon fa-solid fa-map-location-dot"></i>
-      
-        <span>Address</span>
-      
-    </a>
-  </div>
-  
-
-
+<div class="omni-intro">
+  <span class="omni-kicker">Contact</span>
+  <h1>Get in touch</h1>
+  <p>We’re in the Department of Computer Science, in central Oxford.</p>
 </div>
   </section>
 
+  
   
   
   
@@ -503,108 +492,146 @@ United Kingdom</p>
   <background></background>
   <dark></dark>
   <size></size>
+  <tone></tone>
 -->
 
-<p><img src="https://oxford-omni-lab.github.io/images/misc/location_map.png" style="width: 85%"></p>
+<div class="omni-contact">
+  <div class="omni-contact-cards">
+    <div class="omni-aside-card">
+      <span class="omni-label">Address</span>
+      <address class="omni-address">
+        OMNI Lab<br>
+        Department of Computer Science<br>
+        University of Oxford<br>
+        15 Parks Road<br>
+        Oxford OX1 3PH, United Kingdom
+      </address>
+    </div>
+    <div class="omni-aside-card">
+      <span class="omni-label">Enquiries</span>
+      <p>For collaborations and media enquiries, please use the contact details on Ana’s departmental profile.</p>
+      <a class="omni-link" href="https://www.cs.ox.ac.uk/people/ana.namburete/">Departmental profile ↗</a>
+    </div>
+    <div class="omni-aside-card">
+      <span class="omni-label">Prospective students and postdocs</span>
+      <p>Please read how to join before getting in touch.</p>
+      <a class="omni-link" href="/recruitment">How to join the lab →</a>
+    </div>
+  </div>
+
+  <div class="omni-contact-map">
+    <a class="omni-map" href="https://goo.gl/maps/hJHW2pXSe1xK5XFM7" aria-label="Open our location in Google Maps">
+      <img src="/images/misc/location_map.png" alt="Map showing the OMNI Lab and the Wolfson Building of the Department of Computer Science on Parks Road" loading="lazy">
+    </a>
+    <h3>Getting here</h3>
+    <p>We’re at 15 Parks Road in central Oxford, a few steps from the Wolfson Building of the Department of Computer Science.</p>
+    <a class="omni-link" href="https://goo.gl/maps/hJHW2pXSe1xK5XFM7">Open in Maps ↗</a>
+  </div>
+</div>
   </section>
 
 
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

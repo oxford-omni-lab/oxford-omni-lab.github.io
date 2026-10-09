@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on" aria-current="page">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab">
+          Join us
         </a>
       
     
@@ -461,1252 +466,113 @@
   
   
   
+  
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
+
+<div class="omni-intro">
+  <span class="omni-kicker">Research</span>
+  <h1>Problems we work on</h1>
+  <p>Ultrasound is the most widely used imaging in pregnancy care, and often the only one available. We develop methods that turn routine scans into quantitative measures of the developing brain.</p>
+</div>
+  </section>
+
+  
+  
+  
+  
+  
   <section class="background" data-size="page">
-    <h1 id="research">
-<i class="icon fa-solid fa-microscope"></i>Research</h1>
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+  <tone></tone>
+-->
 
-<p>By developing computational tools, the OMNI Lab aims to address key needs in modern medicine: (i) automated analysis relieves the requirement for highly-skilled radiologists; (ii) discovery of novel markers for diagnostic screening; (iii) software for portable devices, thus broadening access to high-quality care in the developing world; and (iv) investing in sophisticated software while leveraging existing imaging hardware provides a large cost benefit to an already constrained healthcare system. To achieve these goals, our research focuses on the following topics:</p>
+<div class="omni-rows">
 
-<ul>
-  <li>Characterizing the Fetal Brain</li>
-  <li>2D-3D US Reconstruction</li>
-  <li>Clinical Translation</li>
-  <li>Deep Learning Methodology</li>
-</ul>
-
-<div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 24px 0;">
-  
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="/publications" data-style="" aria-label="fa-solid fa-book">
-      <i class="icon fa-solid fa-book"></i>
+  <div class="omni-row">
+    <div class="omni-media">
       
-        <span>View Publications</span>
+<video class="omni-video" data-autoplay="" data-src="/images/video/card1_reconstruction.mp4" poster="/images/video/card1_reconstruction_poster.jpg" aria-label="Freehand 2D ultrasound frames placed in 3D" muted="" loop="" playsinline="" preload="none" width="960" height="540"></video>
+
+    </div>
+    <div>
+      <h3>Computational ultrasound: geometry and physics</h3>
+      <p>Geometric and physics-informed methods for ultrasound, from recovering 3D brain anatomy from freehand 2D scans to reducing artefacts such as acoustic shadows.</p>
+      <p class="omni-meta">Methods: Multi-view geometry · physics-based rendering · inverse problems</p>
+      <p><a class="omni-more" href="/research/computational-ultrasound">Explore this theme →</a></p>
+    </div>
+  </div>
+
+  <div class="omni-row omni-flip">
+    <div class="omni-media">
       
-    </a>
+<video class="omni-video" data-autoplay="" data-src="/images/video/card2_structure.mp4" poster="/images/video/card2_structure_poster.jpg" aria-label="3D rendering of the fetal brain atlas with labelled structures" muted="" loop="" playsinline="" preload="none" width="960" height="540"></video>
+
+    </div>
+    <div>
+      <h3>Structure: atlases and segmentation</h3>
+      <p>Building spatiotemporal atlases of the developing brain, and using them for registration, segmentation and shape modelling.</p>
+      <p class="omni-meta">Methods: Segmentation · registration · statistical modelling</p>
+      <p><a class="omni-more" href="/research/brain-structure">Explore this theme →</a></p>
+    </div>
   </div>
-  
 
-
-  
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
+  <div class="omni-row">
+    <div class="omni-media">
       
-        <span>GitHub</span>
+<video class="omni-video" data-autoplay="" data-src="/images/video/card3_robust.mp4" poster="/images/video/card3_robust_poster.jpg" aria-label="World map of ultrasound scanner sites" muted="" loop="" playsinline="" preload="none" width="960" height="540"></video>
+
+    </div>
+    <div>
+      <h3>Robust everywhere: harmonisation and deployment</h3>
+      <p>Building models that generalise across scanners, sites and clinical settings.</p>
+      <p class="omni-meta">Methods: Domain shift · robustness · efficient and federated ML</p>
+      <p><a class="omni-more" href="/research/robust">Explore this theme →</a></p>
+    </div>
+  </div>
+
+  <div class="omni-row omni-flip">
+    <div class="omni-media">
       
-    </a>
-  </div>
-  
+<video class="omni-video" data-autoplay="" data-src="/images/video/card4_outcomes.mp4" poster="/images/video/card4_outcomes_poster.jpg" aria-label="Following development from fetal scan to newborn to 2 years" muted="" loop="" playsinline="" preload="none" width="960" height="540"></video>
 
-
-</div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="characterising-the-fetal-brain">Characterising the Fetal Brain</h2>
-
-<p>Normal development of the human brain can be characterized by precisely timed growth and folding of its surface (cortex), with deviations often associated with poor cognitive outcomes. Advances in ultrasound (US) imaging technology now make it possible to visualize the cortex and screen for brain abnormalities before birth, from as early as 14 gestational weeks (GW). Working closely with the INTERGROWTH-21st Consortium and healthcare professionals, we develop a range of computational tools for assessing fetal health from US images.</p>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2FS3050-5038%2825%2900163-3" class="research-teaser-image" aria-label="Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal fetal pathophysiology">
-    
-      <img src="/images/publications/TBVzscore.png" alt="Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal fetal pathophysiology" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2FS3050-5038%2825%2900163-3" class="research-teaser-title">
-      Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal–fetal pathophysiology
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">José Villar</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
+    </div>
+    <div>
+      <h3>From scan to outcome: brain growth and neurodevelopment</h3>
+      <p>Modelling brain growth across gestation and linking prenatal imaging to neurodevelopment after birth.</p>
+      <p class="omni-meta">Methods: Longitudinal modelling · biostatistics · clinical collaboration</p>
+      <p><a class="omni-more" href="/research/scan-to-outcome">Explore this theme →</a></p>
     </div>
   </div>
+
 </div>
 
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1002%2Fpd.70103" class="research-teaser-image" aria-label="Clinical Grading of Artificial Intelligence Based 3D Fetal Brain Segmentations: A Cross Vendor Evaluation of Deep Learning in Fetal Neuroimaging">
-    
-      <img src="/images/publications/grade_CB.png" alt="Clinical Grading of Artificial Intelligence Based 3D Fetal Brain Segmentations: A Cross Vendor Evaluation of Deep Learning in Fetal Neuroimaging" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
+<div class="omni-left">
+  <h2 style="margin: 48px 0 24px">Software and data</h2>
+</div>
 
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1002%2Fpd.70103" class="research-teaser-title">
-      Clinical Grading of Artificial Intelligence‐Based 3D Fetal Brain Segmentations: A Cross‐Vendor Evaluation of Deep Learning in Fetal Neuroimaging
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Moska Aliasi</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
+<div class="omni-card-grid">
+  <div class="omni-soft-card">
+    <span class="omni-label">Open-source software</span>
+    <h4>OMNI Ultrasound Toolkit</h4>
+    <p>Open-source tools that automate fetal brain segmentation and volumetric analysis from 3D ultrasound.</p>
+    <div class="omni-links">
+      <a href="https://github.com/oxford-omni-lab">GitHub →</a>
+      <a href="/demos">All demos and tools →</a>
     </div>
   </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1038%2Fs41467-026-69657-w" class="research-teaser-image" aria-label="Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age">
-    
-      <img src="/images/publications/2604-normative_groth.png" alt="Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1038%2Fs41467-026-69657-w" class="research-teaser-title">
-      Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Madeleine K. Wyburd</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1002%2Fuog.70168" class="research-teaser-image" aria-label="Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early onset fetal growth restriction">
-    
-      <img src="/images/publications/YOUTH.png" alt="Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early onset fetal growth restriction" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1002%2Fuog.70168" class="research-teaser-title">
-      Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early‐onset fetal growth restriction
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">L. Meijerink</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-032-09513-8_6" class="research-teaser-image" aria-label="Semi-supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model">
-    
-      <img src="/images/publications/250918_incentive.jpg" alt="Semi-supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-032-09513-8_6" class="research-teaser-title">
-      Semi-supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Pak-Hei Yeung</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1002%2Fhbm.70349" class="research-teaser-image" aria-label="Cross Modality Comparison of Fetal Brain Phenotypes: Insights From Short Interval Second Trimester scp MRI scp and Ultrasound Imaging">
-    
-      <img src="/images/publications/251001_US-MRI_same-day.png" alt="Cross Modality Comparison of Fetal Brain Phenotypes: Insights From Short Interval Second Trimester scp MRI scp and Ultrasound Imaging" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1002%2Fhbm.70349" class="research-teaser-title">
-      Cross‐Modality Comparison of Fetal Brain Phenotypes: Insights From Short‐Interval Second‐Trimester <scp>MRI</scp> and Ultrasound Imaging
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Madeleine K. Wyburd</span>
-      <span class="research-teaser-year">
-        (2025)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1109%2FISBI60581.2025.10980676" class="research-teaser-image" aria-label="Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain in 3D Ultrasound">
-    
-      <img src="/images/publications/2504-testtime-adaptation.png" alt="Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain in 3D Ultrasound" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1109%2FISBI60581.2025.10980676" class="research-teaser-title">
-      Exploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain in 3D Ultrasound
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Joshua Omolegan</span>
-      <span class="research-teaser-year">
-        (2025)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.media.2024.103222" class="research-teaser-image" aria-label="Anatomically plausible segmentations: Explicitly preserving topology through prior deformations">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.media.2024.103222" class="research-teaser-title">
-      Anatomically plausible segmentations: Explicitly preserving topology through prior deformations
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Madeleine K. Wyburd</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1038%2Fs41586-023-06630-3" class="research-teaser-image" aria-label="Normative spatiotemporal fetal brain maturation with satisfactory development at 2 years">
-    
-      <img src="/images/publications/USAtlas.gif" alt="Normative spatiotemporal fetal brain maturation with satisfactory development at 2 years" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1038%2Fs41586-023-06630-3" class="research-teaser-title">
-      Normative spatiotemporal fetal brain maturation with satisfactory development at 2 years
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Ana I. L. Namburete</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2306.09858" class="research-teaser-image" aria-label="Prototype Learning for Explainable Brain Age Prediction">
-    
-      <img src="/images/publications/US.png" alt="Prototype Learning for Explainable Brain Age Prediction" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2306.09858" class="research-teaser-title">
-      Prototype Learning for Explainable Brain Age Prediction
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Linde S. Hesse</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2022.119341" class="research-teaser-image" aria-label="BEAN: Brain Extraction and Alignment Network for 3D Fetal Neurosonography">
-    
-      <img src="/images/publications/fetal_brain.png" alt="BEAN: Brain Extraction and Alignment Network for 3D Fetal Neurosonography" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2022.119341" class="research-teaser-title">
-      BEAN: Brain Extraction and Alignment Network for 3D Fetal Neurosonography
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Felipe Moser</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2022.119117" class="research-teaser-image" aria-label="Subcortical segmentation of the fetal brain in 3D ultrasound using deep learning">
-    
-      <img src="/images/publications/us_seg.png" alt="Subcortical segmentation of the fetal brain in 3D ultrasound using deep learning" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2022.119117" class="research-teaser-title">
-      Subcortical segmentation of the fetal brain in 3D ultrasound using deep learning
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Linde S. Hesse</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="2d-to-3d-reconstruction">2D to 3D Reconstruction</h2>
-
-<p>In neuroimaging research, 3D image data is the mainstay for representing anatomical details. However, in conventional clinical practice, pre- and post-natal assessments are performed with 2D video or static US images. The sonographers need to interpret the relationships between the 2D views and 3D brain anatomy and mentally reconstruct a 3D image given just the 2D information. Our goal is to develop methods to reconstruct a 3D brain scan from 2D freehand video acquisitions. We foresee that this would have applications in perinatal clinics, and in LMICs.</p>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2609.29373" class="research-teaser-image" aria-label="Shadow Reduction in Ultrasound Imaging Using Differentiable Simulation and Radiance Field Decomposition">
-    
-      <img src="/images/publications/2609-rflash.gif" alt="Shadow Reduction in Ultrasound Imaging Using Differentiable Simulation and Radiance Field Decomposition" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2609.29373" class="research-teaser-title">
-      Shadow Reduction in Ultrasound Imaging Using Differentiable Simulation and Radiance Field Decomposition
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Valentin Bacher</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#https%3A%2F%2Fproceedings.iclr.cc%2Fpaper_files%2Fpaper%2F2026%2Fhash%2F9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html" class="research-teaser-image" aria-label="UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes">
-    
-      <img src="/images/publications/2505-ultragauss-pre.png" alt="UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#https%3A%2F%2Fproceedings.iclr.cc%2Fpaper_files%2Fpaper%2F2026%2Fhash%2F9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html" class="research-teaser-title">
-      UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Mark Eid</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1109%2FISBI60581.2025.10980994" class="research-teaser-image" aria-label="RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D Scans">
-    
-      <img src="/images/publications/triplanar.png" alt="RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D Scans" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1109%2FISBI60581.2025.10980994" class="research-teaser-title">
-      RapidVol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D Scans
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Mark C. Eid</span>
-      <span class="research-teaser-year">
-        (2025)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.media.2024.103147" class="research-teaser-image" aria-label="Sensorless volumetric reconstruction of fetal brain freehand ultrasound scans with deep implicit representation">
-    
-      <img src="/images/publications/sensorless.png" alt="Sensorless volumetric reconstruction of fetal brain freehand ultrasound scans with deep implicit representation" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.media.2024.103147" class="research-teaser-title">
-      Sensorless volumetric reconstruction of fetal brain freehand ultrasound scans with deep implicit representation
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Pak-Hei Yeung</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-031-72378-0_39" class="research-teaser-image" aria-label="Geometric Transformation Uncertainty for Improving 3D Fetal Brain Pose Prediction from Freehand 2D Ultrasound Videos">
-    
-      <img src="/images/publications/US.png" alt="Geometric Transformation Uncertainty for Improving 3D Fetal Brain Pose Prediction from Freehand 2D Ultrasound Videos" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-031-72378-0_39" class="research-teaser-title">
-      Geometric Transformation Uncertainty for Improving 3D Fetal Brain Pose Prediction from Freehand 2D Ultrasound Videos
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Jayroop Ramesh</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="clinical-translation">Clinical Translation</h2>
-
-<p>Deep learning has shown great promise in the research domain, but significant barriers still exist which limit the clinical translatability of deep learning models. Our research aims to tackle these barriers focusing on the challenges of: distributed data and data privacy, model compression, and the development of clinically meaningful biomarkers.</p>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2FS3050-5038%2825%2900163-3" class="research-teaser-image" aria-label="Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal fetal pathophysiology">
-    
-      <img src="/images/publications/TBVzscore.png" alt="Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal fetal pathophysiology" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2FS3050-5038%2825%2900163-3" class="research-teaser-title">
-      Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal–fetal pathophysiology
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">José Villar</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1002%2Fpd.70103" class="research-teaser-image" aria-label="Clinical Grading of Artificial Intelligence Based 3D Fetal Brain Segmentations: A Cross Vendor Evaluation of Deep Learning in Fetal Neuroimaging">
-    
-      <img src="/images/publications/grade_CB.png" alt="Clinical Grading of Artificial Intelligence Based 3D Fetal Brain Segmentations: A Cross Vendor Evaluation of Deep Learning in Fetal Neuroimaging" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1002%2Fpd.70103" class="research-teaser-title">
-      Clinical Grading of Artificial Intelligence‐Based 3D Fetal Brain Segmentations: A Cross‐Vendor Evaluation of Deep Learning in Fetal Neuroimaging
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Moska Aliasi</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1002%2Fuog.70168" class="research-teaser-image" aria-label="Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early onset fetal growth restriction">
-    
-      <img src="/images/publications/YOUTH.png" alt="Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early onset fetal growth restriction" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1002%2Fuog.70168" class="research-teaser-title">
-      Deep learning assessment of fetal brain maturation on 3D ultrasound volumes in early‐onset fetal growth restriction
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">L. Meijerink</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.neuron.2022.09.012" class="research-teaser-image" aria-label="Challenges for machine learning in clinical translation of big data imaging studies">
-    
-      <img src="/images/publications/features.png" alt="Challenges for machine learning in clinical translation of big data imaging studies" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.neuron.2022.09.012" class="research-teaser-title">
-      Challenges for machine learning in clinical translation of big data imaging studies
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K. Dinsdale</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-
-<h3 id="distributed-data-and-data-privacy">Distributed Data and Data Privacy</h3>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1101%2F2024.02.05.578912" class="research-teaser-image" aria-label="UniFed: A unified deep learning framework for segmentation of partially labelled, distributed neuroimaging data">
-    
-      <img src="/images/publications/unifed.png" alt="UniFed: A unified deep learning framework for segmentation of partially labelled, distributed neuroimaging data" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1101%2F2024.02.05.578912" class="research-teaser-title">
-      UniFed: A unified deep learning framework for segmentation of partially labelled, distributed neuroimaging data
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K Dinsdale</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2303.15965" class="research-teaser-image" aria-label="SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis">
-    
-      <img src="/images/publications/bhatt.png" alt="SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2303.15965" class="research-teaser-title">
-      SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K Dinsdale</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2205.15970" class="research-teaser-image" aria-label="FedHarmony: Unlearning Scanner Bias with Distributed Data">
-    
-      <img src="/images/publications/federated.png" alt="FedHarmony: Unlearning Scanner Bias with Distributed Data" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2205.15970" class="research-teaser-title">
-      FedHarmony: Unlearning Scanner Bias with Distributed Data
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K Dinsdale</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2020.117689" class="research-teaser-image" aria-label="Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal">
-    
-      <img src="/images/publications/seg.png" alt="Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2020.117689" class="research-teaser-title">
-      Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K. Dinsdale</span>
-      <span class="research-teaser-year">
-        (2021)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-030-59710-8_67" class="research-teaser-image" aria-label="Uncertainty Estimates as Data Selection Criteria to Boost Omni-Supervised Learning">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-030-59710-8_67" class="research-teaser-title">
-      Uncertainty Estimates as Data Selection Criteria to Boost Omni-Supervised Learning
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Lorenzo Venturini</span>
-      <span class="research-teaser-year">
-        (2020)
-      </span>
-    </div>
-  </div>
-</div>
-
-<h3 id="model-compression">Model Compression</h3>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.media.2022.102583" class="research-teaser-image" aria-label="STAMP: Simultaneous Training and Model Pruning for low data regimes in medical image segmentation">
-    
-      <img src="/images/publications/pruning.png" alt="STAMP: Simultaneous Training and Model Pruning for low data regimes in medical image segmentation" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.media.2022.102583" class="research-teaser-title">
-      STAMP: Simultaneous Training and Model Pruning for low data regimes in medical image segmentation
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K. Dinsdale</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1109%2FJBHI.2019.2961264" class="research-teaser-image" aria-label="Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile Deployment">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1109%2FJBHI.2019.2961264" class="research-teaser-title">
-      Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile Deployment
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Sagar Vaze</span>
-      <span class="research-teaser-year">
-        (2020)
-      </span>
-    </div>
-  </div>
-</div>
-
-<h3 id="biomarker-development">Biomarker Development</h3>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1101%2F2024.08.22.24312425" class="research-teaser-image" aria-label="Is Your Style Transfer Doing Anything Useful An Investigation Into Hippocampus Segmentation and the Role of Preprocessing">
-    
-      <img src="/images/publications/hippocampus.png" alt="Is Your Style Transfer Doing Anything Useful An Investigation Into Hippocampus Segmentation and the Role of Preprocessing" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1101%2F2024.08.22.24312425" class="research-teaser-title">
-      Is Your Style Transfer Doing Anything Useful? An Investigation Into Hippocampus Segmentation and the Role of Preprocessing
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Hoda Kalabizadeh</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1109%2FSDS57534.2023.00010" class="research-teaser-image" aria-label="Brain Ages Derived from Different MRI Modalities are Associated with Distinct Biological Phenotypes">
-    
-      <img src="/images/publications/age_pred.png" alt="Brain Ages Derived from Different MRI Modalities are Associated with Distinct Biological Phenotypes" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1109%2FSDS57534.2023.00010" class="research-teaser-title">
-      Brain Ages Derived from Different MRI Modalities are Associated with Distinct Biological Phenotypes
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Andrei-Claudiu Roibu</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2020.117401" class="research-teaser-image" aria-label="Learning patterns of the ageing brain in MRI using deep convolutional networks">
-    
-      <img src="/images/publications/age_pred.png" alt="Learning patterns of the ageing brain in MRI using deep convolutional networks" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2020.117401" class="research-teaser-title">
-      Learning patterns of the ageing brain in MRI using deep convolutional networks
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K. Dinsdale</span>
-      <span class="research-teaser-year">
-        (2021)
-      </span>
-    </div>
-  </div>
-</div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="deep-learning-methodology">Deep Learning Methodology</h2>
-
-<p>Fundamental to our research is the development of state-of-the-art DL methodology. Key topics include segmentation, interpretability and domain adaptation.</p>
-
-<h3 id="segmentation">Segmentation</h3>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-032-09513-8_6" class="research-teaser-image" aria-label="Semi-supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model">
-    
-      <img src="/images/publications/250918_incentive.jpg" alt="Semi-supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-032-09513-8_6" class="research-teaser-title">
-      Semi-supervised 3D Medical Segmentation from 2D Natural Images Pretrained Model
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Pak-Hei Yeung</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.media.2024.103222" class="research-teaser-image" aria-label="Anatomically plausible segmentations: Explicitly preserving topology through prior deformations">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.media.2024.103222" class="research-teaser-title">
-      Anatomically plausible segmentations: Explicitly preserving topology through prior deformations
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Madeleine K. Wyburd</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.media.2022.102583" class="research-teaser-image" aria-label="STAMP: Simultaneous Training and Model Pruning for low data regimes in medical image segmentation">
-    
-      <img src="/images/publications/pruning.png" alt="STAMP: Simultaneous Training and Model Pruning for low data regimes in medical image segmentation" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.media.2022.102583" class="research-teaser-title">
-      STAMP: Simultaneous Training and Model Pruning for low data regimes in medical image segmentation
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K. Dinsdale</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-030-87193-2_24" class="research-teaser-image" aria-label="TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee Topology Preservation in Segmentations">
-    
-      <img src="/images/publications/teds_new.png" alt="TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee Topology Preservation in Segmentations" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-030-87193-2_24" class="research-teaser-title">
-      TEDS-Net: Enforcing Diffeomorphisms in Spatial Transformers to Guarantee Topology Preservation in Segmentations
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Madeleine K. Wyburd</span>
-      <span class="research-teaser-year">
-        (2021)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1109%2FJBHI.2019.2961264" class="research-teaser-image" aria-label="Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile Deployment">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1109%2FJBHI.2019.2961264" class="research-teaser-title">
-      Low-Memory CNNs Enabling Real-Time Ultrasound Segmentation Towards Mobile Deployment
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Sagar Vaze</span>
-      <span class="research-teaser-year">
-        (2020)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-030-52791-4_6" class="research-teaser-image" aria-label="Improving U-Net Segmentation with Active Contour Based Label Correction">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-030-52791-4_6" class="research-teaser-title">
-      Improving U-Net Segmentation with Active Contour Based Label Correction
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Linde S. Hesse</span>
-      <span class="research-teaser-year">
-        (2020)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-030-39343-4_14" class="research-teaser-image" aria-label="Multi-task CNN for Structural Semantic Segmentation in 3D Fetal Brain Ultrasound">
-    
-      <img src="/images/publications/us_seg.png" alt="Multi-task CNN for Structural Semantic Segmentation in 3D Fetal Brain Ultrasound" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-030-39343-4_14" class="research-teaser-title">
-      Multi-task CNN for Structural Semantic Segmentation in 3D Fetal Brain Ultrasound
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Lorenzo Venturini</span>
-      <span class="research-teaser-year">
-        (2020)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-030-52791-4_5" class="research-teaser-image" aria-label="Cortical Plate Segmentation Using CNNs in 3D Fetal Ultrasound">
-    
-      <img src="/images/publications/cortical_plate.png" alt="Cortical Plate Segmentation Using CNNs in 3D Fetal Ultrasound" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-030-52791-4_5" class="research-teaser-title">
-      Cortical Plate Segmentation Using CNNs in 3D Fetal Ultrasound
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Madeleine K. Wyburd</span>
-      <span class="research-teaser-year">
-        (2020)
-      </span>
-    </div>
-  </div>
-</div>
-
-<h3 id="domain-adaptation">Domain Adaptation</h3>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2303.15965" class="research-teaser-image" aria-label="SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis">
-    
-      <img src="/images/publications/bhatt.png" alt="SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2303.15965" class="research-teaser-title">
-      SFHarmony: Source Free Domain Adaptation for Distributed Neuroimaging Analysis
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K Dinsdale</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2205.15970" class="research-teaser-image" aria-label="FedHarmony: Unlearning Scanner Bias with Distributed Data">
-    
-      <img src="/images/publications/federated.png" alt="FedHarmony: Unlearning Scanner Bias with Distributed Data" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2205.15970" class="research-teaser-title">
-      FedHarmony: Unlearning Scanner Bias with Distributed Data
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K Dinsdale</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2020.117689" class="research-teaser-image" aria-label="Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal">
-    
-      <img src="/images/publications/seg.png" alt="Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.neuroimage.2020.117689" class="research-teaser-title">
-      Deep learning-based unlearning of dataset bias for MRI harmonisation and confound removal
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Nicola K. Dinsdale</span>
-      <span class="research-teaser-year">
-        (2021)
-      </span>
-    </div>
-  </div>
-</div>
-
-<h3 id="interpretability">Interpretability</h3>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2306.09858" class="research-teaser-image" aria-label="Prototype Learning for Explainable Brain Age Prediction">
-    
-      <img src="/images/publications/US.png" alt="Prototype Learning for Explainable Brain Age Prediction" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2306.09858" class="research-teaser-title">
-      Prototype Learning for Explainable Brain Age Prediction
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Linde S. Hesse</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1007%2F978-3-031-16437-8_48" class="research-teaser-image" aria-label="INSightR-Net: Interpretable Neural Network for Regression Using Similarity-Based Comparisons to Prototypical Examples">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1007%2F978-3-031-16437-8_48" class="research-teaser-title">
-      INSightR-Net: Interpretable Neural Network for Regression Using Similarity-Based Comparisons to Prototypical Examples
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Linde S. Hesse</span>
-      <span class="research-teaser-year">
-        (2022)
-      </span>
-    </div>
-  </div>
-</div>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="more">More</h2>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1016%2Fj.media.2026.104043" class="research-teaser-image" aria-label="Beyond benchmarks of IUGC: Rethinking requirements of deep learning method for intrapartum ultrasound biometry from fetal ultrasound videos">
-    
-      <img src="/images/publications/260601-IUGC-Challenge.png" alt="Beyond benchmarks of IUGC: Rethinking requirements of deep learning method for intrapartum ultrasound biometry from fetal ultrasound videos" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1016%2Fj.media.2026.104043" class="research-teaser-title">
-      Beyond benchmarks of IUGC: Rethinking requirements of deep learning method for intrapartum ultrasound biometry from fetal ultrasound videos
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Jieyun Bai</span>
-      <span class="research-teaser-year">
-        (2026)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2505.14572" class="research-teaser-image" aria-label="Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling of 2D Intrapartum Ultrasound Images">
-    
-      <img src="/images/publications/24-miccai-challenge.png" alt="Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling of 2D Intrapartum Ultrasound Images" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2505.14572" class="research-teaser-title">
-      Automated Fetal Biometry Assessment with Deep Ensembles using Sparse-Sampling of 2D Intrapartum Ultrasound Images
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Jayroop Ramesh</span>
-      <span class="research-teaser-year">
-        (2025)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.48550%2FarXiv.2410.06161" class="research-teaser-image" aria-label="Automated quality assessment using appearance-based simulations and hippocampus segmentation on low-field paediatric brain MR images">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.48550%2FarXiv.2410.06161" class="research-teaser-title">
-      Automated quality assessment using appearance-based simulations and hippocampus segmentation on low-field paediatric brain MR images
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Vaanathi Sundaresan</span>
-      <span class="research-teaser-year">
-        (2024)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.3389%2Ffbinf.2023.1163430" class="research-teaser-image" aria-label="Bayesian networks and imaging-derived phenotypes highlight the role of fat deposition in COVID-19 hospitalisation risk">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.3389%2Ffbinf.2023.1163430" class="research-teaser-title">
-      Bayesian networks and imaging-derived phenotypes highlight the role of fat deposition in COVID-19 hospitalisation risk
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">T. Waddell</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.1145%2F3608298.3608307" class="research-teaser-image" aria-label="The impact of projected increases in obesity prevalence on incident liver disease in the UK: Insights from Bayesian-network modelling">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.1145%2F3608298.3608307" class="research-teaser-title">
-      The impact of projected increases in obesity prevalence on incident liver disease in the UK: Insights from Bayesian-network modelling
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">Tom Henry Waddell</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
-  </div>
-</div>
-
-<div class="research-teaser">
-  <a href="/publications#doi%3A10.3389%2Ffendo.2023.1063882" class="research-teaser-image" aria-label="Poor glycaemic control and ectopic fat deposition mediates the increased risk of non-alcoholic steatohepatitis in high-risk populations with type 2 diabetes: Insights from Bayesian-network modelling">
-    
-      <div class="research-teaser-icon-placeholder">
-        <i class="fa-solid fa-file"></i>
-      </div>
-    
-  </a>
-
-  <div class="research-teaser-content">
-    <a href="/publications#doi%3A10.3389%2Ffendo.2023.1063882" class="research-teaser-title">
-      Poor glycaemic control and ectopic fat deposition mediates the increased risk of non-alcoholic steatohepatitis in high-risk populations with type 2 diabetes: Insights from Bayesian-network modelling
-    </a>
-
-    <div class="research-teaser-meta">
-      <span class="research-teaser-author">T. Waddell</span>
-      <span class="research-teaser-year">
-        (2023)
-      </span>
-    </div>
+  <div class="omni-soft-card">
+    <span class="omni-label">Data and partners</span>
+    <h4>Built on international cohorts</h4>
+    <p>Our work draws on the <a href="https://intergrowth21.com/">INTERGROWTH-21st and INTERBIO-21st</a> consortia and our clinical partners.</p>
   </div>
 </div>
   </section>
@@ -1715,99 +581,104 @@ this.onerror = null;">
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

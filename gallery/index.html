@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab">
+          Join us
         </a>
       
     
@@ -461,13 +466,28 @@
   
   
   
-  <section class="background" data-size="page">
-    <h1 id="gallery">
-<i class="icon fa-solid fa-photo-film"></i>Gallery</h1>
+  
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
 
-<p>The OMNI Lab over the years</p>
+<div class="omni-intro">
+  <span class="omni-kicker">Lab life</span>
+  <h1>Gallery</h1>
+  <p>The OMNI Lab over the years.</p>
+</div>
+
+<figure class="omni-group-photo omni-gallery-hero">
+  <img src="/images/group/260624_Group.JPG" alt="Group photo of the OMNI Lab">
+  <figcaption>The lab, June 2026</figcaption>
+</figure>
   </section>
 
+  
   
   
   
@@ -477,595 +497,732 @@
   <background></background>
   <dark></dark>
   <size></size>
+  <tone></tone>
 -->
 
-<div class="image-slider">
-  <div class="slider-container">
-    <div class="slider-wrapper">
-       
-      <img src="/images/slider/260624_Group1.JPG" alt="260624 group1" class="slider-image active">
-       
-      <img src="/images/slider/260624_Group.JPG" alt="260624 group" class="slider-image">
-       
-      <img src="/images/slider/230101_Group.JPG" alt="230101 group" class="slider-image">
-       
-      <img src="/images/slider/221201_Christmas.jpg" alt="221201 christmas" class="slider-image">
-       
-      <img src="/images/slider/220101_Group.jpg" alt="220101 group" class="slider-image">
-       
-      <img src="/images/slider/210101_Group.jpg" alt="210101 group" class="slider-image">
-      
-    </div>
-
-    <!-- Navigation arrows -->
-    <button class="slider-nav prev" onclick="changeSlide(-1)">‹</button>
-    <button class="slider-nav next" onclick="changeSlide(1)">›</button>
-
-    <!-- Dots indicator -->
-    <div class="slider-dots">
-      
-      <span class="dot active" onclick="currentSlide(1)"></span>
-      
-      <span class="dot" onclick="currentSlide(2)"></span>
-      
-      <span class="dot" onclick="currentSlide(3)"></span>
-      
-      <span class="dot" onclick="currentSlide(4)"></span>
-      
-      <span class="dot" onclick="currentSlide(5)"></span>
-      
-      <span class="dot" onclick="currentSlide(6)"></span>
-      
-    </div>
-  </div>
-</div>
-  </section>
-
+<h2 class="omni-year">2026</h2>
+<div class="omni-gallery">
   
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
-
-<h2 id="photo-collection">Photo Collection</h2>
-
-<p>Click on any image to view it in full screen and navigate through the collection.</p>
-
-<div class="gallery-grid">
-   
-  <div class="gallery-item" onclick="openLightbox(0)">
-    <img src="/images/gallery/251209_Christmas-Lunch-2025.jpeg" alt="251209 christmas lunch 2025" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(1)">
-    <img src="/images/gallery/251205_Oxford-WiE-Talk.jpeg" alt="251205 oxford wie talk" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(2)">
-    <img src="/images/gallery/251204_Christmas-Formal.jpeg" alt="251204 christmas formal" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(3)">
-    <img src="/images/gallery/250708_UNIQ-outreach-Jay.jpeg" alt="250708 uniq outreach jay" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(4)">
-    <img src="/images/gallery/250501_Scanning_raw_data_Valle.jpg" alt="250501 scanning raw data valle" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(5)">
-    <img src="/images/gallery/250501_Scanning_raw_data_Mark.jpg" alt="250501 scanning raw data mark" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(6)">
-    <img src="/images/gallery/241212_Christmas-3.JPG" alt="241212 christmas 3" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(7)">
-    <img src="/images/gallery/241212_Christmas-2.JPG" alt="241212 christmas 2" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(8)">
-    <img src="/images/gallery/241212_Christmas-1.JPG" alt="241212 christmas 1" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(9)">
-    <img src="/images/gallery/241010_LISA-Challenge.JPG" alt="241010 lisa challenge" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(10)">
-    <img src="/images/gallery/240915_MICCAI25-%20Hoda.jpg" alt="240915 miccai25  hoda" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(11)">
-    <img src="/images/gallery/240915_MICCAI24_group.JPG" alt="240915 miccai24 group" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(12)">
-    <img src="/images/gallery/240915_MICCAI24-group.JPG" alt="240915 miccai24 group" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(13)">
-    <img src="/images/gallery/240915_MICCAI24-Jay.JPG" alt="240915 miccai24 jay" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(14)">
-    <img src="/images/gallery/240915_MICCAI24-Jay-2.JPG" alt="240915 miccai24 jay 2" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(15)">
-    <img src="/images/gallery/230911_FITNG-conference.jpg" alt="230911 fitng conference" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(16)">
-    <img src="/images/gallery/230901_Imaging-Festival-Oxford.jpg" alt="230901 imaging festival oxford" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(17)">
-    <img src="/images/gallery/230601_Punting.jpg" alt="230601 punting" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(18)">
-    <img src="/images/gallery/230101_Target-Oxbridge.jpg" alt="230101 target oxbridge" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(19)">
-    <img src="/images/gallery/220929_Oxford-Biomedical-Imaging-Symposium.jpg" alt="220929 oxford biomedical imaging symposium" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(20)">
-    <img src="/images/gallery/220922_Singapore-dinner.jpg" alt="220922 singapore dinner" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(21)">
-    <img src="/images/gallery/220922_Singapor-Dumplings.jpg" alt="220922 singapor dumplings" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(22)">
-    <img src="/images/gallery/220922_MICCAI22-ND.jpg" alt="220922 miccai22 nd" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(23)">
-    <img src="/images/gallery/220922_MICCAI22-LH.jpg" alt="220922 miccai22 lh" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(24)">
-    <img src="/images/gallery/220922_MICCAI22-HY.jpg" alt="220922 miccai22 hy" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(25)">
-    <img src="/images/gallery/220310_STEM4Britain.jpg" alt="220310 stem4britain" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(26)">
-    <img src="/images/gallery/220310_STEM4Britain-ft-Bernie.jpg" alt="220310 stem4britain ft bernie" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(27)">
-    <img src="/images/gallery/220101_Anna-and-Hugo.jpg" alt="220101 anna and hugo" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(28)">
-    <img src="/images/gallery/190101_Omnicluster.jpg" alt="190101 omnicluster" class="gallery-image" loading="lazy">
-  </div>
-   
-  <div class="gallery-item" onclick="openLightbox(29)">
-    <img src="/images/gallery/180101_Ana-Scanning-Brains.jpg" alt="180101 ana scanning brains" class="gallery-image" loading="lazy">
-  </div>
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(0)" aria-label="View Group photo full screen">
+        <img src="/images/slider/260624_Group1.JPG" alt="Group photo" loading="lazy">
+      </button>
+      <figcaption>Group photo</figcaption>
+    </figure>
+    
   
 </div>
 
-<!-- Lightbox overlay -->
+<h2 class="omni-year">2025</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(1)" aria-label="View Christmas Lunch 2025 full screen">
+        <img src="/images/gallery/251209_Christmas-Lunch-2025.jpeg" alt="Christmas Lunch 2025" loading="lazy">
+      </button>
+      <figcaption>Christmas Lunch 2025</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(2)" aria-label="View Oxford WiE Talk full screen">
+        <img src="/images/gallery/251205_Oxford-WiE-Talk.jpeg" alt="Oxford WiE Talk" loading="lazy">
+      </button>
+      <figcaption>Oxford WiE Talk</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(3)" aria-label="View Christmas Formal full screen">
+        <img src="/images/gallery/251204_Christmas-Formal.jpeg" alt="Christmas Formal" loading="lazy">
+      </button>
+      <figcaption>Christmas Formal</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(4)" aria-label="View UNIQ outreach Jay full screen">
+        <img src="/images/gallery/250708_UNIQ-outreach-Jay.jpeg" alt="UNIQ outreach Jay" loading="lazy">
+      </button>
+      <figcaption>UNIQ outreach Jay</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(5)" aria-label="View Scanning raw data Valle full screen">
+        <img src="/images/gallery/250501_Scanning_raw_data_Valle.jpg" alt="Scanning raw data Valle" loading="lazy">
+      </button>
+      <figcaption>Scanning raw data Valle</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(6)" aria-label="View Scanning raw data Mark full screen">
+        <img src="/images/gallery/250501_Scanning_raw_data_Mark.jpg" alt="Scanning raw data Mark" loading="lazy">
+      </button>
+      <figcaption>Scanning raw data Mark</figcaption>
+    </figure>
+    
+  
+</div>
+
+<h2 class="omni-year">2024</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(7)" aria-label="View Christmas 3 full screen">
+        <img src="/images/gallery/241212_Christmas-3.JPG" alt="Christmas 3" loading="lazy">
+      </button>
+      <figcaption>Christmas 3</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(8)" aria-label="View Christmas 2 full screen">
+        <img src="/images/gallery/241212_Christmas-2.JPG" alt="Christmas 2" loading="lazy">
+      </button>
+      <figcaption>Christmas 2</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(9)" aria-label="View Christmas 1 full screen">
+        <img src="/images/gallery/241212_Christmas-1.JPG" alt="Christmas 1" loading="lazy">
+      </button>
+      <figcaption>Christmas 1</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(10)" aria-label="View LISA Challenge full screen">
+        <img src="/images/gallery/241010_LISA-Challenge.JPG" alt="LISA Challenge" loading="lazy">
+      </button>
+      <figcaption>LISA Challenge</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(11)" aria-label="View MICCAI25  Hoda full screen">
+        <img src="/images/gallery/240915_MICCAI25-%20Hoda.jpg" alt="MICCAI25  Hoda" loading="lazy">
+      </button>
+      <figcaption>MICCAI25  Hoda</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(12)" aria-label="View MICCAI24 group full screen">
+        <img src="/images/gallery/240915_MICCAI24_group.JPG" alt="MICCAI24 group" loading="lazy">
+      </button>
+      <figcaption>MICCAI24 group</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(13)" aria-label="View MICCAI24 group full screen">
+        <img src="/images/gallery/240915_MICCAI24-group.JPG" alt="MICCAI24 group" loading="lazy">
+      </button>
+      <figcaption>MICCAI24 group</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(14)" aria-label="View MICCAI24 Jay full screen">
+        <img src="/images/gallery/240915_MICCAI24-Jay.JPG" alt="MICCAI24 Jay" loading="lazy">
+      </button>
+      <figcaption>MICCAI24 Jay</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(15)" aria-label="View MICCAI24 Jay 2 full screen">
+        <img src="/images/gallery/240915_MICCAI24-Jay-2.JPG" alt="MICCAI24 Jay 2" loading="lazy">
+      </button>
+      <figcaption>MICCAI24 Jay 2</figcaption>
+    </figure>
+    
+  
+</div>
+
+<h2 class="omni-year">2023</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(16)" aria-label="View FITNG conference full screen">
+        <img src="/images/gallery/230911_FITNG-conference.jpg" alt="FITNG conference" loading="lazy">
+      </button>
+      <figcaption>FITNG conference</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(17)" aria-label="View Imaging Festival Oxford full screen">
+        <img src="/images/gallery/230901_Imaging-Festival-Oxford.jpg" alt="Imaging Festival Oxford" loading="lazy">
+      </button>
+      <figcaption>Imaging Festival Oxford</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(18)" aria-label="View Punting full screen">
+        <img src="/images/gallery/230601_Punting.jpg" alt="Punting" loading="lazy">
+      </button>
+      <figcaption>Punting</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(19)" aria-label="View Target Oxbridge full screen">
+        <img src="/images/gallery/230101_Target-Oxbridge.jpg" alt="Target Oxbridge" loading="lazy">
+      </button>
+      <figcaption>Target Oxbridge</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(20)" aria-label="View Group photo full screen">
+        <img src="/images/slider/230101_Group.JPG" alt="Group photo" loading="lazy">
+      </button>
+      <figcaption>Group photo</figcaption>
+    </figure>
+    
+  
+</div>
+
+<h2 class="omni-year">2022</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(21)" aria-label="View Christmas full screen">
+        <img src="/images/slider/221201_Christmas.jpg" alt="Christmas" loading="lazy">
+      </button>
+      <figcaption>Christmas</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(22)" aria-label="View Oxford Biomedical Imaging Symposium full screen">
+        <img src="/images/gallery/220929_Oxford-Biomedical-Imaging-Symposium.jpg" alt="Oxford Biomedical Imaging Symposium" loading="lazy">
+      </button>
+      <figcaption>Oxford Biomedical Imaging Symposium</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(23)" aria-label="View Singapore dinner full screen">
+        <img src="/images/gallery/220922_Singapore-dinner.jpg" alt="Singapore dinner" loading="lazy">
+      </button>
+      <figcaption>Singapore dinner</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(24)" aria-label="View Singapor Dumplings full screen">
+        <img src="/images/gallery/220922_Singapor-Dumplings.jpg" alt="Singapor Dumplings" loading="lazy">
+      </button>
+      <figcaption>Singapor Dumplings</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(25)" aria-label="View MICCAI22 ND full screen">
+        <img src="/images/gallery/220922_MICCAI22-ND.jpg" alt="MICCAI22 ND" loading="lazy">
+      </button>
+      <figcaption>MICCAI22 ND</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(26)" aria-label="View MICCAI22 LH full screen">
+        <img src="/images/gallery/220922_MICCAI22-LH.jpg" alt="MICCAI22 LH" loading="lazy">
+      </button>
+      <figcaption>MICCAI22 LH</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(27)" aria-label="View MICCAI22 HY full screen">
+        <img src="/images/gallery/220922_MICCAI22-HY.jpg" alt="MICCAI22 HY" loading="lazy">
+      </button>
+      <figcaption>MICCAI22 HY</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(28)" aria-label="View STEM4Britain full screen">
+        <img src="/images/gallery/220310_STEM4Britain.jpg" alt="STEM4Britain" loading="lazy">
+      </button>
+      <figcaption>STEM4Britain</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(29)" aria-label="View STEM4Britain ft Bernie full screen">
+        <img src="/images/gallery/220310_STEM4Britain-ft-Bernie.jpg" alt="STEM4Britain ft Bernie" loading="lazy">
+      </button>
+      <figcaption>STEM4Britain ft Bernie</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(30)" aria-label="View Group photo full screen">
+        <img src="/images/slider/220101_Group.jpg" alt="Group photo" loading="lazy">
+      </button>
+      <figcaption>Group photo</figcaption>
+    </figure>
+    
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(31)" aria-label="View Anna and Hugo full screen">
+        <img src="/images/gallery/220101_Anna-and-Hugo.jpg" alt="Anna and Hugo" loading="lazy">
+      </button>
+      <figcaption>Anna and Hugo</figcaption>
+    </figure>
+    
+  
+</div>
+
+<h2 class="omni-year">2021</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(32)" aria-label="View Group photo full screen">
+        <img src="/images/slider/210101_Group.jpg" alt="Group photo" loading="lazy">
+      </button>
+      <figcaption>Group photo</figcaption>
+    </figure>
+    
+  
+</div>
+
+<h2 class="omni-year">2019</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(33)" aria-label="View Omnicluster full screen">
+        <img src="/images/gallery/190101_Omnicluster.jpg" alt="Omnicluster" loading="lazy">
+      </button>
+      <figcaption>Omnicluster</figcaption>
+    </figure>
+    
+  
+</div>
+
+<h2 class="omni-year">2018</h2>
+<div class="omni-gallery">
+  
+    
+    
+    
+    <figure class="omni-gallery-item">
+      <button type="button" onclick="openLightbox(34)" aria-label="View Ana Scanning Brains full screen">
+        <img src="/images/gallery/180101_Ana-Scanning-Brains.jpg" alt="Ana Scanning Brains" loading="lazy">
+      </button>
+      <figcaption>Ana Scanning Brains</figcaption>
+    </figure>
+    
+  
+</div>
+
+<!-- full-screen viewer (same as before; see _scripts/gallery-grid.js) -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <div class="lightbox-content" onclick="event.stopPropagation()">
     <span class="lightbox-close" onclick="closeLightbox()">×</span>
     <img id="lightbox-image" src="" alt="">
-    <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">
-      ‹
-    </button>
-    <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">
-      ›
-    </button>
+    <button class="lightbox-nav lightbox-prev" onclick="changeLightboxImage(-1)">‹</button>
+    <button class="lightbox-nav lightbox-next" onclick="changeLightboxImage(1)">›</button>
     <div class="lightbox-title" id="lightbox-title"></div>
     <div class="lightbox-counter">
-      <span id="lightbox-current">1</span> /
-      <span id="lightbox-total">30</span>
+      <span id="lightbox-current">1</span> / <span id="lightbox-total">35</span>
     </div>
   </div>
 </div>
 
 <script>
-  // Gallery data for lightbox
   window.galleryImages = [
     
       
       
       
-      {
-        src: "/images/gallery/251209_Christmas-Lunch-2025.jpeg",
-        alt: "Christmas lunch 2025",
-        title: "Christmas lunch 2025"
-      },
+      { src: "/images/slider/260624_Group1.JPG", alt: "Group photo", title: "Group photo" },
     
       
       
       
-      {
-        src: "/images/gallery/251205_Oxford-WiE-Talk.jpeg",
-        alt: "Oxford wie talk",
-        title: "Oxford wie talk"
-      },
+      { src: "/images/gallery/251209_Christmas-Lunch-2025.jpeg", alt: "Christmas Lunch 2025", title: "Christmas Lunch 2025" },
     
       
       
       
-      {
-        src: "/images/gallery/251204_Christmas-Formal.jpeg",
-        alt: "Christmas formal",
-        title: "Christmas formal"
-      },
+      { src: "/images/gallery/251205_Oxford-WiE-Talk.jpeg", alt: "Oxford WiE Talk", title: "Oxford WiE Talk" },
     
       
       
       
-      {
-        src: "/images/gallery/250708_UNIQ-outreach-Jay.jpeg",
-        alt: "Uniq outreach jay",
-        title: "Uniq outreach jay"
-      },
+      { src: "/images/gallery/251204_Christmas-Formal.jpeg", alt: "Christmas Formal", title: "Christmas Formal" },
     
       
       
       
-      {
-        src: "/images/gallery/250501_Scanning_raw_data_Valle.jpg",
-        alt: "Scanning",
-        title: "Scanning"
-      },
+      { src: "/images/gallery/250708_UNIQ-outreach-Jay.jpeg", alt: "UNIQ outreach Jay", title: "UNIQ outreach Jay" },
     
       
       
       
-      {
-        src: "/images/gallery/250501_Scanning_raw_data_Mark.jpg",
-        alt: "Scanning",
-        title: "Scanning"
-      },
+      { src: "/images/gallery/250501_Scanning_raw_data_Valle.jpg", alt: "Scanning raw data Valle", title: "Scanning raw data Valle" },
     
       
       
       
-      {
-        src: "/images/gallery/241212_Christmas-3.JPG",
-        alt: "Christmas 3",
-        title: "Christmas 3"
-      },
+      { src: "/images/gallery/250501_Scanning_raw_data_Mark.jpg", alt: "Scanning raw data Mark", title: "Scanning raw data Mark" },
     
       
       
       
-      {
-        src: "/images/gallery/241212_Christmas-2.JPG",
-        alt: "Christmas 2",
-        title: "Christmas 2"
-      },
+      { src: "/images/gallery/241212_Christmas-3.JPG", alt: "Christmas 3", title: "Christmas 3" },
     
       
       
       
-      {
-        src: "/images/gallery/241212_Christmas-1.JPG",
-        alt: "Christmas 1",
-        title: "Christmas 1"
-      },
+      { src: "/images/gallery/241212_Christmas-2.JPG", alt: "Christmas 2", title: "Christmas 2" },
     
       
       
       
-      {
-        src: "/images/gallery/241010_LISA-Challenge.JPG",
-        alt: "Lisa challenge",
-        title: "Lisa challenge"
-      },
+      { src: "/images/gallery/241212_Christmas-1.JPG", alt: "Christmas 1", title: "Christmas 1" },
     
       
       
       
-      {
-        src: "/images/gallery/240915_MICCAI25-%20Hoda.jpg",
-        alt: "Miccai25  hoda",
-        title: "Miccai25  hoda"
-      },
+      { src: "/images/gallery/241010_LISA-Challenge.JPG", alt: "LISA Challenge", title: "LISA Challenge" },
     
       
       
       
-      {
-        src: "/images/gallery/240915_MICCAI24_group.JPG",
-        alt: "Miccai24",
-        title: "Miccai24"
-      },
+      { src: "/images/gallery/240915_MICCAI25-%20Hoda.jpg", alt: "MICCAI25  Hoda", title: "MICCAI25  Hoda" },
     
       
       
       
-      {
-        src: "/images/gallery/240915_MICCAI24-group.JPG",
-        alt: "Miccai24 group",
-        title: "Miccai24 group"
-      },
+      { src: "/images/gallery/240915_MICCAI24_group.JPG", alt: "MICCAI24 group", title: "MICCAI24 group" },
     
       
       
       
-      {
-        src: "/images/gallery/240915_MICCAI24-Jay.JPG",
-        alt: "Miccai24 jay",
-        title: "Miccai24 jay"
-      },
+      { src: "/images/gallery/240915_MICCAI24-group.JPG", alt: "MICCAI24 group", title: "MICCAI24 group" },
     
       
       
       
-      {
-        src: "/images/gallery/240915_MICCAI24-Jay-2.JPG",
-        alt: "Miccai24 jay 2",
-        title: "Miccai24 jay 2"
-      },
+      { src: "/images/gallery/240915_MICCAI24-Jay.JPG", alt: "MICCAI24 Jay", title: "MICCAI24 Jay" },
     
       
       
       
-      {
-        src: "/images/gallery/230911_FITNG-conference.jpg",
-        alt: "Fitng conference",
-        title: "Fitng conference"
-      },
+      { src: "/images/gallery/240915_MICCAI24-Jay-2.JPG", alt: "MICCAI24 Jay 2", title: "MICCAI24 Jay 2" },
     
       
       
       
-      {
-        src: "/images/gallery/230901_Imaging-Festival-Oxford.jpg",
-        alt: "Imaging festival oxford",
-        title: "Imaging festival oxford"
-      },
+      { src: "/images/gallery/230911_FITNG-conference.jpg", alt: "FITNG conference", title: "FITNG conference" },
     
       
       
       
-      {
-        src: "/images/gallery/230601_Punting.jpg",
-        alt: "Punting",
-        title: "Punting"
-      },
+      { src: "/images/gallery/230901_Imaging-Festival-Oxford.jpg", alt: "Imaging Festival Oxford", title: "Imaging Festival Oxford" },
     
       
       
       
-      {
-        src: "/images/gallery/230101_Target-Oxbridge.jpg",
-        alt: "Target oxbridge",
-        title: "Target oxbridge"
-      },
+      { src: "/images/gallery/230601_Punting.jpg", alt: "Punting", title: "Punting" },
     
       
       
       
-      {
-        src: "/images/gallery/220929_Oxford-Biomedical-Imaging-Symposium.jpg",
-        alt: "Oxford biomedical imaging symposium",
-        title: "Oxford biomedical imaging symposium"
-      },
+      { src: "/images/gallery/230101_Target-Oxbridge.jpg", alt: "Target Oxbridge", title: "Target Oxbridge" },
     
       
       
       
-      {
-        src: "/images/gallery/220922_Singapore-dinner.jpg",
-        alt: "Singapore dinner",
-        title: "Singapore dinner"
-      },
+      { src: "/images/slider/230101_Group.JPG", alt: "Group photo", title: "Group photo" },
     
       
       
       
-      {
-        src: "/images/gallery/220922_Singapor-Dumplings.jpg",
-        alt: "Singapor dumplings",
-        title: "Singapor dumplings"
-      },
+      { src: "/images/slider/221201_Christmas.jpg", alt: "Christmas", title: "Christmas" },
     
       
       
       
-      {
-        src: "/images/gallery/220922_MICCAI22-ND.jpg",
-        alt: "Miccai22 nd",
-        title: "Miccai22 nd"
-      },
+      { src: "/images/gallery/220929_Oxford-Biomedical-Imaging-Symposium.jpg", alt: "Oxford Biomedical Imaging Symposium", title: "Oxford Biomedical Imaging Symposium" },
     
       
       
       
-      {
-        src: "/images/gallery/220922_MICCAI22-LH.jpg",
-        alt: "Miccai22 lh",
-        title: "Miccai22 lh"
-      },
+      { src: "/images/gallery/220922_Singapore-dinner.jpg", alt: "Singapore dinner", title: "Singapore dinner" },
     
       
       
       
-      {
-        src: "/images/gallery/220922_MICCAI22-HY.jpg",
-        alt: "Miccai22 hy",
-        title: "Miccai22 hy"
-      },
+      { src: "/images/gallery/220922_Singapor-Dumplings.jpg", alt: "Singapor Dumplings", title: "Singapor Dumplings" },
     
       
       
       
-      {
-        src: "/images/gallery/220310_STEM4Britain.jpg",
-        alt: "Stem4britain",
-        title: "Stem4britain"
-      },
+      { src: "/images/gallery/220922_MICCAI22-ND.jpg", alt: "MICCAI22 ND", title: "MICCAI22 ND" },
     
       
       
       
-      {
-        src: "/images/gallery/220310_STEM4Britain-ft-Bernie.jpg",
-        alt: "Stem4britain ft bernie",
-        title: "Stem4britain ft bernie"
-      },
+      { src: "/images/gallery/220922_MICCAI22-LH.jpg", alt: "MICCAI22 LH", title: "MICCAI22 LH" },
     
       
       
       
-      {
-        src: "/images/gallery/220101_Anna-and-Hugo.jpg",
-        alt: "Anna and hugo",
-        title: "Anna and hugo"
-      },
+      { src: "/images/gallery/220922_MICCAI22-HY.jpg", alt: "MICCAI22 HY", title: "MICCAI22 HY" },
     
       
       
       
-      {
-        src: "/images/gallery/190101_Omnicluster.jpg",
-        alt: "Omnicluster",
-        title: "Omnicluster"
-      },
+      { src: "/images/gallery/220310_STEM4Britain.jpg", alt: "STEM4Britain", title: "STEM4Britain" },
     
       
       
       
-      {
-        src: "/images/gallery/180101_Ana-Scanning-Brains.jpg",
-        alt: "Ana scanning brains",
-        title: "Ana scanning brains"
-      }
+      { src: "/images/gallery/220310_STEM4Britain-ft-Bernie.jpg", alt: "STEM4Britain ft Bernie", title: "STEM4Britain ft Bernie" },
+    
+      
+      
+      
+      { src: "/images/slider/220101_Group.jpg", alt: "Group photo", title: "Group photo" },
+    
+      
+      
+      
+      { src: "/images/gallery/220101_Anna-and-Hugo.jpg", alt: "Anna and Hugo", title: "Anna and Hugo" },
+    
+      
+      
+      
+      { src: "/images/slider/210101_Group.jpg", alt: "Group photo", title: "Group photo" },
+    
+      
+      
+      
+      { src: "/images/gallery/190101_Omnicluster.jpg", alt: "Omnicluster", title: "Omnicluster" },
+    
+      
+      
+      
+      { src: "/images/gallery/180101_Ana-Scanning-Brains.jpg", alt: "Ana Scanning Brains", title: "Ana Scanning Brains" }
     
   ];
 </script>
-  </section>
-
-  
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
   </section>
 
 
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

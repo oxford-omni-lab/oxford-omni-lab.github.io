@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life" aria-current="page">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab">
+          Join us
         </a>
       
     
@@ -461,11 +466,67 @@
   
   
   
-  <section class="background" data-size="page">
-    <h1 id="news">
-<i class="icon fa-solid fa-newspaper"></i>News</h1>
+  
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
+
+<div class="omni-intro">
+  <span class="omni-kicker">News</span>
+  <h1>What we’ve been up to</h1>
+  <p>Videos, papers, talks, awards and lab life, newest first.</p>
+</div>
   </section>
 
+  
+  
+  
+  
+  
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
+
+<div class="omni-left">
+  <h2 style="margin: 0 0 28px">Watch</h2>
+</div>
+
+<div class="omni-watch">
+  <div class="omni-watch-main">
+    <a class="omni-video-thumb" href="https://www.mpls.ox.ac.uk/women-in-ai/ana.html" target="_blank" rel="noopener" aria-label="Watch: Ana Namburete in conversation">
+      
+      <img src="/images/video/watch-women-in-ai.jpg" alt="" loading="lazy">
+      <span class="omni-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+    </a>
+    <span class="omni-kicker">Women in AI at Oxford</span>
+    <h3>Ana Namburete in conversation</h3>
+    <p class="omni-meta">Oxford MPLS · Women in AI profile series</p>
+    <p class="omni-quote">“The babies who are most at risk are the ones least likely to benefit from the AI being developed to help them.”</p>
+  </div>
+  <div class="omni-watch-side">
+    <div>
+      <a class="omni-video-thumb" href="https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures" target="_blank" rel="noopener" aria-label="Watch: the 2023 Royal Institution Christmas Lectures">
+      
+      <img src="/images/video/watch-ri-christmas-lectures.jpg" alt="" loading="lazy">
+        <span class="omni-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+      </a>
+      <span class="omni-kicker">Royal Institution Christmas Lectures</span>
+      <h3>Ana features in the 2023 Christmas Lectures</h3>
+      <p class="omni-meta">The Royal Institution · December 2023</p>
+    </div>
+  </div>
+</div>
+  </section>
+
+  
   
   
   
@@ -475,1954 +536,1115 @@
   <background></background>
   <dark></dark>
   <size></size>
+  <tone></tone>
 -->
 
-<div class="search-box">
-  <input type="text" class="search-input" oninput="onSearchInput(this)" placeholder="Search items on this page">
-  <button disabled data-tooltip="Clear search" aria-label="clear search" onclick="onSearchClear()">
-    <i class="icon fa-solid fa-magnifying-glass"></i>
-  </button>
+<div class="omni-filters" data-filter-group="">
+  <a href="/news/" data-query="">All</a>
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+      <a href="/news/?search=%22tag%3A+paper%22%22tag%3A+preprint%22" data-query='"tag: paper""tag: preprint"'>Papers</a>
+    
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+      <a href="/news/?search=%22tag%3A+award%22%22tag%3A+challenge%22" data-query='"tag: award""tag: challenge"'>Awards</a>
+    
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+      <a href="/news/?search=%22tag%3A+talk%22%22tag%3A+oral-presentation%22" data-query='"tag: talk""tag: oral-presentation"'>Talks</a>
+    
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+      <a href="/news/?search=%22tag%3A+outreach%22" data-query='"tag: outreach"'>Outreach</a>
+    
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+      <a href="/news/?search=%22tag%3A+people%22%22tag%3A+graduation%22%22tag%3A+new-member%22" data-query='"tag: people""tag: graduation""tag: new-member"'>People</a>
+    
+  
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+      
+      <a href="/news/?search=%22tag%3A+event%22" data-query='"tag: event"'>Events</a>
+    
+  
 </div>
-
-<div class="tags">
-    
-      <a href='/news/?search="tag:%20award"' class="tag" data-tooltip='Show items with the tag "award"'>
-        award
-      </a>
-    
-      <a href='/news/?search="tag:%20graduation"' class="tag" data-tooltip='Show items with the tag "graduation"'>
-        graduation
-      </a>
-    
-      <a href='/news/?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-      <a href='/news/?search="tag:%20outreach"' class="tag" data-tooltip='Show items with the tag "outreach"'>
-        outreach
-      </a>
-    
-      <a href='/news/?search="tag:%20event"' class="tag" data-tooltip='Show items with the tag "event"'>
-        event
-      </a>
-    
-      <a href='/news/?search="tag:%20talk"' class="tag" data-tooltip='Show items with the tag "talk"'>
-        talk
-      </a>
-    
-      <a href='/news/?search="tag:%20oral-presentation"' class="tag" data-tooltip='Show items with the tag "oral-presentation"'>
-        oral-presentation
-      </a>
-    
-      <a href='/news/?search="tag:%20challenge"' class="tag" data-tooltip='Show items with the tag "challenge"'>
-        challenge
-      </a>
-    
-  </div>
 
 <div class="search-info"></div>
 
-<h3 id="2026">2026</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
+<h2 class="omni-year">2026</h2>
+<ol class="omni-news-list">
     
-    
-    
-
-    
-      <!-- Default style -->
       
-        <a href="/2026/04/23/two-new-papers-natcom-lancet.html" class="post-excerpt-image" aria-label="Two new papers published on fetal brain mapping and neurodevelopmental outcomes.">
-          <img src="/images/posts/2604-normative_groth.png" alt="Two new papers published on fetal brain mapping and neurodevelopmental outcomes." loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Sep 25</span>
+        <a class="omni-news-thumb" href="/2026/09/25/rflash-shadow-reduction-preprint.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/publications/2609-rflash.gif" alt="" loading="lazy">
         </a>
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2026/04/23/two-new-papers-natcom-lancet.html">Two new papers published on fetal brain mapping and neurodevelopmental outcomes.</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        <span class="omni-news-text">
+          <span class="omni-pill">Preprint</span>
+          <a class="omni-news-title" href="/2026/09/25/rflash-shadow-reduction-preprint.html">Shadow reduction in ultrasound using differentiable simulation and radiance field decomposition</a>
         </span>
+        <span class="tag" hidden="">preprint</span>
+      </li>
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>April 23, 2026</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Together with our collaborators we have published two new papers in Nature Communications and The Lancet Obstetrics, Gynaecology, and Women s Health on fetal brain mapping and neurodevelopmental outcomes at 2 years of age.Read the paper Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age.: DOI 10.1038 s41467-026-69657-w . View citation on our publications pageRead the paper Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal fetal pathophysiology.: DOI 10.1016 S3050-5038 25 00163-3 . View citation on our publications page">
-          Together with our collaborators we have published two new papers in Nature Communications and The Lancet Obstetrics, Gynaecology, and Women’s Health on fetal brain mapping and neurodevelopmental outcomes at 2 years of age.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<h3 id="2025">2025</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-        <a href="/2025/12/05/Oxford-WiE-talk-sian.html" class="post-excerpt-image" aria-label="Oxbridge Women in Engineering talk by Siân">
-          <img src="/images/posts/251205-OxfordWiE-talk.jpeg" alt="Oxbridge Women in Engineering talk by Siân" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Apr 23</span>
+        <a class="omni-news-thumb" href="/2026/04/23/two-new-papers-natcom-lancet.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/posts/2604-normative_groth.png" alt="" loading="lazy">
         </a>
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2025/12/05/Oxford-WiE-talk-sian.html">Oxbridge Women in Engineering talk by Siân</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2026/04/23/two-new-papers-natcom-lancet.html">Two new papers on fetal brain mapping and neurodevelopmental outcomes</a>
         </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
+</ol>
+
+<h2 class="omni-year">2025</h2>
+<ol class="omni-news-list">
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>December 05, 2025</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20talk"' class="tag" data-tooltip='Show items with the tag "talk"'>
-        talk
-      </a>
-    
-      <a href='/blog?search="tag:%20outreach"' class="tag" data-tooltip='Show items with the tag "outreach"'>
-        outreach
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Siân gave a talk on her work at the OxBridge Women in Engineering event in December 2025.Siân was invited to speak about her research at the OxBridge Women in Engineering event.Read the full article about this event here.">
-          
-
-Siân gave a talk on her work at the OxBridge Women in Engineering event in December 2025.
-
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-        <a href="/2025/10/02/New-Lab-Member.html" class="post-excerpt-image" aria-label="We have a new Postdoc: Siân Wilson">
-          <img src="/images/posts/261002-SianWilson.jpg" alt="We have a new Postdoc: Siân Wilson" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Dec 5</span>
+        <a class="omni-news-thumb" href="/2025/12/05/Oxford-WiE-talk-sian.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/posts/251205-OxfordWiE-talk.jpeg" alt="" loading="lazy">
         </a>
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2025/10/02/New-Lab-Member.html">We have a new Postdoc: Siân Wilson</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        <span class="omni-news-text">
+          <span class="omni-pill">Outreach</span>
+          <a class="omni-news-title" href="/2025/12/05/Oxford-WiE-talk-sian.html">Siân speaks at the Oxbridge Women in Engineering event</a>
         </span>
+        <span class="tag" hidden="">outreach</span><span class="tag" hidden="">talk</span>
+      </li>
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>October 02, 2025</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-
-
-
-
-        
-        
-        <p data-search="Siân Wilson joined our group from Developmental Science Centre at Boston Children s Hospital and Harvard Medical School.Siân Wilson joined our group as a Postdoc from Developmental Science Centre at Boston Children s Hospital and Harvard Medical School. She will be working on prenatal brain development and early life outcomes. She is collaborating closely with the Department of Women s Health to explore how maternal factors influence fetal brain growth.Check out her profile here.">
-          
-
-Siân Wilson joined our group from Developmental Science Centre at Boston Children’s Hospital and Harvard Medical School.
-
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-        <a href="/2025/10/01/human-brain-mapping-paper.html" class="post-excerpt-image" aria-label="New paper published in Human Brain Mapping">
-          <img src="/images/posts/251001_US-MRI_same-day.png" alt="New paper published in Human Brain Mapping" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Oct 2</span>
+        <a class="omni-news-thumb" href="/2025/10/02/New-Lab-Member.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/posts/261002-SianWilson.jpg" alt="" loading="lazy">
         </a>
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2025/10/01/human-brain-mapping-paper.html">New paper published in Human Brain Mapping</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        <span class="omni-news-text">
+          <span class="omni-pill">People</span>
+          <a class="omni-news-title" href="/2025/10/02/New-Lab-Member.html">Welcome to our new postdoc, Siân Wilson</a>
         </span>
+        <span class="tag" hidden="">people</span>
+      </li>
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>October 01, 2025</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Our team s paper, Cross Modality Comparison of Fetal Brain Phenotypes: Insights From Short Interval Second Trimester MRI and Ultrasound Imaging, has been accepted by Human Brain Mapping.What we didWe compared volumes of eight fetal brain structures from 90 pregnancies with paired MRI and 3D ultrasound acquired mostly on the same day mean gap 1.2 days; max 4 days . Volumes were computed using automated deep learning pipelines.Key findings Strong agreement across modalities for the cerebellum, cavum septum pellucidum, thalamus, and white deep grey matter good excellent ICCs and high correlations . Systematic bias for intracranial volume and the cortical plate: on average, ultrasound yielded larger values than MRI for these structures. Limited comparability for the ventricular system and brainstem, reflecting modality specific appearance and field of view differences.Why it mattersSecond trimester neuroimaging underpins anomaly screening. Our results show where MRI and ultrasound measurements can be pooled confidently, and where modality aware adjustments are needed for robust clinical and research use.Team amp; supportA collaboration between the University of Oxford Department of Computer Science , King s College London, City, University of London, and the Athinoula A. Martinos Center Harvard Medical School, with support from the Gates Foundation, Wellcome Trust EPSRC iFIND, the Wellcome EPSRC Centre for Medical Engineering, and the NIHR Clinical Research Facility at Guy s and St Thomas .Read the paper: DOI 10.1002 hbm.70349 . Open Access under CC BY 4.0. View citation on our publications page">
-          Our team’s paper, “Cross‑Modality Comparison of Fetal Brain Phenotypes: Insights From Short‑Interval Second‑Trimester MRI and Ultrasound Imaging,” has been accepted by Human Brain Mapping.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-        <a href="/2025/09/18/pres-hugo-mlmi.html" class="post-excerpt-image" aria-label="Oral Presentation at MLMI Workshop at MICCAI 2025">
-          <img src="/images/posts/250918_incentive.jpg" alt="Oral Presentation at MLMI Workshop at MICCAI 2025" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Oct 1</span>
+        <a class="omni-news-thumb" href="/2025/10/01/human-brain-mapping-paper.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/posts/251001_US-MRI_same-day.png" alt="" loading="lazy">
         </a>
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2025/09/18/pres-hugo-mlmi.html">Oral Presentation at MLMI Workshop at MICCAI 2025</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2025/10/01/human-brain-mapping-paper.html">New paper in Human Brain Mapping</a>
         </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>September 18, 2025</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-      <a href='/blog?search="tag:%20oral-presentation"' class="tag" data-tooltip='Show items with the tag "oral-presentation"'>
-        oral-presentation
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Pak-Hei Yeung presented his work at the MLMI Workshop during MICCAI 2024. His work uses pretrained networks on natural images to improve medical image segmentation. Citation not found: doi:10.48550 arXiv.2509.15167">
-          
-
-Pak-Hei Yeung presented his work at the MLMI Workshop during MICCAI 2024. His work uses pretrained networks on natural images to improve medical image segmentation.
-
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-        <a href="/2025/07/08/unique-2025-outreach.html" class="post-excerpt-image" aria-label="Outreach talk for UNIQUE">
-          <img src="/images/posts/250708_Unique_Jay.jpeg" alt="Outreach talk for UNIQUE" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Sep 18</span>
+        <a class="omni-news-thumb" href="/2025/09/18/pres-hugo-mlmi.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/posts/250918_incentive.jpg" alt="" loading="lazy">
         </a>
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2025/07/08/unique-2025-outreach.html">Outreach talk for UNIQUE</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        <span class="omni-news-text">
+          <span class="omni-pill">Talks</span>
+          <a class="omni-news-title" href="/2025/09/18/pres-hugo-mlmi.html">Oral presentation at the MLMI workshop, MICCAI 2025</a>
         </span>
+        <span class="tag" hidden="">oral-presentation</span><span class="tag" hidden="">paper</span>
+      </li>
+    
       
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jul 8</span>
+        <a class="omni-news-thumb" href="/2025/07/08/unique-2025-outreach.html" tabindex="-1" aria-hidden="true">
+          <img src="/images/posts/250708_Unique_Jay.jpeg" alt="" loading="lazy">
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Outreach</span>
+          <a class="omni-news-title" href="/2025/07/08/unique-2025-outreach.html">Outreach talk for UNIQ</a>
+        </span>
+        <span class="tag" hidden="">outreach</span>
+      </li>
     
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>July 08, 2025</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20outreach"' class="tag" data-tooltip='Show items with the tag "outreach"'>
-        outreach
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="">
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jan 2</span>
+        <a class="omni-news-thumb" href="/2025/01/02/isbi-2025-papers.html" tabindex="-1" aria-hidden="true">
           
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2025/01/02/isbi-2025-papers.html">We celebrate the new year with two papers accepted to ISBI 2025!</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2025/01/02/isbi-2025-papers.html">Two papers accepted to ISBI 2025</a>
         </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
+</ol>
+
+<h2 class="omni-year">2024</h2>
+<ol class="omni-news-list">
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>January 02, 2025</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Rapidvol: Rapid Reconstruction of 3D Ultrasound Volumes from Sensorless 2D ScansExploring Test Time Adaptation for Subcortical Segmentation of the Fetal Brain in 3D Ultrasound">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Dec 11</span>
+        <a class="omni-news-thumb" href="/2024/12/11/lab-christmas-dinner.html" tabindex="-1" aria-hidden="true">
           
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<h3 id="2024">2024</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/12/11/lab-christmas-dinner.html">Lab Christmas Dinner!</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Events</span>
+          <a class="omni-news-title" href="/2024/12/11/lab-christmas-dinner.html">Lab Christmas dinner</a>
         </span>
+        <span class="tag" hidden="">event</span>
+      </li>
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>December 11, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20event"' class="tag" data-tooltip='Show items with the tag "event"'>
-        event
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Oct 10</span>
+        <a class="omni-news-thumb" href="/2024/10/10/lisa-challenge-win.html" tabindex="-1" aria-hidden="true">
           
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/10/10/lisa-challenge-win.html">LISA 2024 Challenge Win</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Awards</span>
+          <a class="omni-news-title" href="/2024/10/10/lisa-challenge-win.html">LISA 2024 challenge win</a>
         </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>October 10, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20challenge"' class="tag" data-tooltip='Show items with the tag "challenge"'>
-        challenge
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Nicola Dinsdale and team mate Vaanathi Sundaresan win the LISA 2024 Challenge.">
-          Nicola Dinsdale and team mate Vaanathi Sundaresan win the LISA 2024 Challenge.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/10/06/jayroop-miccai-oral.html">Jayroop MICCAI 2024 Oral Presentation</a>
-
-        <div class="post-info">
-  
-    
+        <span class="tag" hidden="">challenge</span>
+      </li>
     
       
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>October 06, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-      <a href='/blog?search="tag:%20oral-presentation"' class="tag" data-tooltip='Show items with the tag "oral-presentation"'>
-        oral-presentation
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Jayroop Ramesh has an Oral presentation at MICCAI 2024">
-          Jayroop Ramesh has an Oral presentation at MICCAI 2024!
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/09/01/maddy-wyburd-presentations-award.html">Maddy ISUOG and FITNG Presentations &amp; Award</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>September 01, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20award"' class="tag" data-tooltip='Show items with the tag "award"'>
-        award
-      </a>
-    
-      <a href='/blog?search="tag:%20oral-presentation"' class="tag" data-tooltip='Show items with the tag "oral-presentation"'>
-        oral-presentation
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Maddy Wyburd has Oral presentations at ISUOG and FITNG and has been awarded the Young Investigator Award at the FITNG conference">
-          Maddy Wyburd has Oral presentations at ISUOG and FITNG and has been awarded the Young Investigator Award at the FITNG conference!
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/07/15/style-transfer-mlcn.html">Style Transfer Paper Accepted to MLCN 2024</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>July 15, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Our paper on style transfer has been accepted to MLCN 2024.">
-          Our paper on style transfer has been accepted to MLCN 2024.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/06/27/joshua-gibbs-prize.html">Joshua Omolegan wins the Gibbs prize</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>June 27, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20award"' class="tag" data-tooltip='Show items with the tag "award"'>
-        award
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Joshua Omolegan wins the Gibbs prize for best Part C research project in Computer Science">
-          Joshua Omolegan wins the Gibbs prize for best Part C research project in Computer Science!
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/06/23/ohbm-2024.html">Lab Members at OHBM 2024</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>June 23, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-
-
-
-
-        
-        
-        <p data-search="Members of the lab are at OHBM 2024.">
-          Members of the lab are at OHBM 2024.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/06/15/topology-media.html">Topology Paper Published in MEDIA</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>June 15, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Our paper on topology preserving segmentation has been published in MEDIA.">
-          Our paper on topology preserving segmentation has been published in MEDIA.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/05/13/uncertainty-miccai.html">Uncertainty Paper Accepted to MICCAI 2024</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>May 13, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Our paper on uncertainty quantification for pose prediction has been early accepted top 11 to MICCAI 2024.">
-          Our paper on uncertainty quantification for pose prediction has been early accepted (top 11%) to MICCAI 2024.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/05/04/oxwocs-conference.html">Maddy Hosts OxWoCS Conference</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>May 04, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20outreach"' class="tag" data-tooltip='Show items with the tag "outreach"'>
-        outreach
-      </a>
-    
-      <a href='/blog?search="tag:%20event"' class="tag" data-tooltip='Show items with the tag "event"'>
-        event
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Maddy Wyburd hosts the 10th annual Oxbridge Women in Computer Science Conference.">
-          Maddy Wyburd hosts the 10th annual Oxbridge Women in Computer Science Conference.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2024/03/19/hoda-ai-uk-scholarship.html">Hoda Wins AI UK 2024 Scholarship</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>March 19, 2024</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20award"' class="tag" data-tooltip='Show items with the tag "award"'>
-        award
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Hoda Kalabizadeh wins the OxWoCS-Sponsored AI UK 2024 Scholarship to attend The Alan Turing Institutes AI UK 2024.">
-          Hoda Kalabizadeh wins the OxWoCS-Sponsored AI UK 2024 Scholarship to attend The Alan Turing Institutes AI UK 2024.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<h3 id="2023">2023</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2023/12/28/ana-ri-christmas-lectures.html">Ana in Royal Institution Christmas Lectures</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>December 28, 2023</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20outreach"' class="tag" data-tooltip='Show items with the tag "outreach"'>
-        outreach
-      </a>
-    
-      <a href='/blog?search="tag:%20event"' class="tag" data-tooltip='Show items with the tag "event"'>
-        event
-      </a>
-    
-      <a href='/blog?search="tag:%20talk"' class="tag" data-tooltip='Show items with the tag "talk"'>
-        talk
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Ana Namburete features in the Royal Institution Christmas Lectures">
-          Ana Namburete features in the Royal Institution Christmas Lectures!
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2023/12/05/linde-phd-defense.html">Linde Hesse defends her PhD. Congratulations!</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>December 05, 2023</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20graduation"' class="tag" data-tooltip='Show items with the tag "graduation"'>
-        graduation
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Oct 6</span>
+        <a class="omni-news-thumb" href="/2024/10/06/jayroop-miccai-oral.html" tabindex="-1" aria-hidden="true">
           
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2023/10/27/nature-atlas.html">Digital Fetal Brain Atlas Published in Nature</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Talks</span>
+          <a class="omni-news-title" href="/2024/10/06/jayroop-miccai-oral.html">Jayroop gives an oral presentation at MICCAI 2024</a>
         </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>October 27, 2023</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Our work on the worlds first digital atlas of fetal brain development has been published in Nature">
-          Our work on the worlds first digital atlas of fetal brain development has been published in Nature!
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2023/09/11/maddy-fitng-award.html">Maddy Wins FITNG Young Investigator Award</a>
-
-        <div class="post-info">
-  
-    
+        <span class="tag" hidden="">oral-presentation</span><span class="tag" hidden="">paper</span>
+      </li>
     
       
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>September 11, 2023</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20award"' class="tag" data-tooltip='Show items with the tag "award"'>
-        award
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Maddy Wyburd wins the Young Investigator Award at the FITNG conference">
-          Maddy Wyburd wins the Young Investigator Award at the FITNG conference!
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2023/07/13/sfharmony-iccv.html">SFHarmony Paper Accepted at ICCV 2023</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>July 13, 2023</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20paper"' class="tag" data-tooltip='Show items with the tag "paper"'>
-        paper
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="Our paper on Source Free Domain Adaptation has been accepted at ICCV 2023.">
-          Our paper on Source Free Domain Adaptation has been accepted at ICCV 2023.
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2023/03/17/maddy-phd-defense.html">Maddy Wyburd defends her PhD. Congratulations!</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
-        </span>
-      
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>March 17, 2023</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20graduation"' class="tag" data-tooltip='Show items with the tag "graduation"'>
-        graduation
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Sep 1</span>
+        <a class="omni-news-thumb" href="/2024/09/01/maddy-wyburd-presentations-award.html" tabindex="-1" aria-hidden="true">
           
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<h3 id="2022">2022</h3>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2022/12/08/hugo-phd-defense.html">Hugo Yeung defends his PhD. Congratulations!</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Awards</span>
+          <a class="omni-news-title" href="/2024/09/01/maddy-wyburd-presentations-award.html">Maddy Wyburd: presentations and award</a>
         </span>
+        <span class="tag" hidden="">award</span><span class="tag" hidden="">oral-presentation</span>
+      </li>
+    
       
-    
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>December 08, 2022</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20graduation"' class="tag" data-tooltip='Show items with the tag "graduation"'>
-        graduation
-      </a>
-    
-  </div>
-
-
-
-
-
-        
-        
-        <p data-search="">
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jul 15</span>
+        <a class="omni-news-thumb" href="/2024/07/15/style-transfer-mlcn.html" tabindex="-1" aria-hidden="true">
           
-
-        </p>
-      </div>
-    
-  </div>
-</div>
-
-<div class="post-excerpt-container">
-  <div class="post-excerpt" data-style="small">
-    
-    
-    
-
-    
-      <!-- Default style -->
-      
-
-      <div class="post-excerpt-text">
-        <a href="/2022/12/01/gates-foundation-grant.html">Gates Foundation Grant Awarded</a>
-
-        <div class="post-info">
-  
-    
-    
-      
-      
-        <span data-tooltip="Author">
-          <i class="icon fa-solid fa-feather-pointed"></i>
-          <span>omni lab</span>
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2024/07/15/style-transfer-mlcn.html">Style Transfer Paper Accepted to MLCN 2024</a>
         </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
       
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jun 27</span>
+        <a class="omni-news-thumb" href="/2024/06/27/joshua-gibbs-prize.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Awards</span>
+          <a class="omni-news-title" href="/2024/06/27/joshua-gibbs-prize.html">Joshua Omolegan wins the Gibbs prize</a>
+        </span>
+        <span class="tag" hidden="">award</span>
+      </li>
     
-  
-
-  
-  
-
-  
-    <span data-tooltip="Originally published on">
-      <i class="icon fa-regular fa-calendar"></i>
-      <span>December 01, 2022</span>
-    </span>
-  
-
-  
-</div>
-
-
-  
-
-
-  <div class="tags">
-    
-      <a href='/blog?search="tag:%20award"' class="tag" data-tooltip='Show items with the tag "award"'>
-        award
-      </a>
-    
-  </div>
-
-
-
-
-
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jun 23</span>
+        <a class="omni-news-thumb" href="/2024/06/23/ohbm-2024.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">People</span>
+          <a class="omni-news-title" href="/2024/06/23/ohbm-2024.html">Lab Members at OHBM 2024</a>
+        </span>
         
-        
-        <p data-search="We are thrilled to announce that the lab was awarded a Bill and Melinda Gates Project Grant">
-          We are thrilled to announce that the lab was awarded a Bill and Melinda Gates Project Grant!
-
-        </p>
-      </div>
+      </li>
     
-  </div>
-</div>
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jun 15</span>
+        <a class="omni-news-thumb" href="/2024/06/15/topology-media.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2024/06/15/topology-media.html">Topology Paper Published in MEDIA</a>
+        </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">May 13</span>
+        <a class="omni-news-thumb" href="/2024/05/13/uncertainty-miccai.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2024/05/13/uncertainty-miccai.html">Uncertainty Paper Accepted to MICCAI 2024</a>
+        </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">May 4</span>
+        <a class="omni-news-thumb" href="/2024/05/04/oxwocs-conference.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Outreach</span>
+          <a class="omni-news-title" href="/2024/05/04/oxwocs-conference.html">Maddy Hosts OxWoCS Conference</a>
+        </span>
+        <span class="tag" hidden="">outreach</span><span class="tag" hidden="">event</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Mar 19</span>
+        <a class="omni-news-thumb" href="/2024/03/19/hoda-ai-uk-scholarship.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Awards</span>
+          <a class="omni-news-title" href="/2024/03/19/hoda-ai-uk-scholarship.html">Hoda Wins AI UK 2024 Scholarship</a>
+        </span>
+        <span class="tag" hidden="">award</span>
+      </li>
+    
+</ol>
+
+<details class="omni-earlier">
+<summary>Show earlier news (2022–2023) ↓</summary>
+
+<h2 class="omni-year">2023</h2>
+<ol class="omni-news-list">
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Dec 28</span>
+        <a class="omni-news-thumb" href="/2023/12/28/ana-ri-christmas-lectures.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Outreach</span>
+          <a class="omni-news-title" href="/2023/12/28/ana-ri-christmas-lectures.html">Ana in Royal Institution Christmas Lectures</a>
+        </span>
+        <span class="tag" hidden="">outreach</span><span class="tag" hidden="">event</span><span class="tag" hidden="">talk</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Dec 5</span>
+        <a class="omni-news-thumb" href="/2023/12/05/linde-phd-defense.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">People</span>
+          <a class="omni-news-title" href="/2023/12/05/linde-phd-defense.html">Linde Hesse defends her PhD. Congratulations!</a>
+        </span>
+        <span class="tag" hidden="">graduation</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Oct 27</span>
+        <a class="omni-news-thumb" href="/2023/10/27/nature-atlas.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2023/10/27/nature-atlas.html">Digital Fetal Brain Atlas Published in Nature</a>
+        </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Sep 11</span>
+        <a class="omni-news-thumb" href="/2023/09/11/maddy-fitng-award.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Awards</span>
+          <a class="omni-news-title" href="/2023/09/11/maddy-fitng-award.html">Maddy Wins FITNG Young Investigator Award</a>
+        </span>
+        <span class="tag" hidden="">award</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Jul 13</span>
+        <a class="omni-news-thumb" href="/2023/07/13/sfharmony-iccv.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Papers</span>
+          <a class="omni-news-title" href="/2023/07/13/sfharmony-iccv.html">SFHarmony Paper Accepted at ICCV 2023</a>
+        </span>
+        <span class="tag" hidden="">paper</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Mar 17</span>
+        <a class="omni-news-thumb" href="/2023/03/17/maddy-phd-defense.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">People</span>
+          <a class="omni-news-title" href="/2023/03/17/maddy-phd-defense.html">Maddy Wyburd defends her PhD. Congratulations!</a>
+        </span>
+        <span class="tag" hidden="">graduation</span>
+      </li>
+    
+</ol>
+
+
+
+<h2 class="omni-year">2022</h2>
+<ol class="omni-news-list">
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Dec 8</span>
+        <a class="omni-news-thumb" href="/2022/12/08/hugo-phd-defense.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">People</span>
+          <a class="omni-news-title" href="/2022/12/08/hugo-phd-defense.html">Hugo Yeung defends his PhD. Congratulations!</a>
+        </span>
+        <span class="tag" hidden="">graduation</span>
+      </li>
+    
+      
+      <li class="omni-filterable">
+        <span class="omni-news-date">Dec 1</span>
+        <a class="omni-news-thumb" href="/2022/12/01/gates-foundation-grant.html" tabindex="-1" aria-hidden="true">
+          
+        </a>
+        <span class="omni-news-text">
+          <span class="omni-pill">Awards</span>
+          <a class="omni-news-title" href="/2022/12/01/gates-foundation-grant.html">Gates Foundation Grant Awarded</a>
+        </span>
+        <span class="tag" hidden="">award</span>
+      </li>
+    
+</ol>
+
+</details>
   </section>
 
 
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

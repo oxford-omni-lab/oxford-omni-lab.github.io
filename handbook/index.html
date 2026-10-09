@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab">
+          Join us
         </a>
       
     
@@ -461,22 +466,41 @@
   
   
   
-  <section class="background" data-size="page">
-    <h1 id="handbook">
-<i class="icon fa-solid fa-book"></i>Handbook</h1>
+  
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
 
-<p>The Handbook is meant as a guide to the Oxford OMNI Lab, providing information about our culture, values, and how we work together. It is a living document that will be updated as we evolve.</p>
+<div class="omni-intro">
+  <span class="omni-kicker">Lab life</span>
+  <h1>Handbook</h1>
+  <p>A guide to the OMNI Lab: our culture, our values, and how we work together. It is a living document that we update as we grow.</p>
+  <div class="omni-actions">
+    
 
-<div class="button-wrapper">
-    <a class="button" href="/pdfs/misc/lab_handbook.pdf" data-style="" aria-label="PDF">
-      <i class="icon fa-solid fa-file-pdf"></i>
+
+
+  
+  <div class="button-wrapper">
+    <a class="button" href="/pdfs/misc/lab_handbook.pdf" data-style="" aria-label="button">
       
-        <span>Lab Handbook</span>
+      
+        <span>Download the handbook (PDF)</span>
       
     </a>
   </div>
+  
+
+
+  </div>
+</div>
   </section>
 
+  
   
   
   
@@ -486,182 +510,182 @@
   <background></background>
   <dark></dark>
   <size></size>
+  <tone></tone>
 -->
 
-<h2 id="wiki">Wiki</h2>
+<div class="omni-left">
+  <h2 style="margin: 0 0 28px">What’s inside</h2>
+</div>
 
-<p>For our Lab members we also have a Wiki with Information about processes, Lab resources, contact people and more institutional knowledge.</p>
+<div class="omni-inside">
+  <div class="omni-aside-card">
+    <h3>Science and mission</h3>
+    <p>What we work on, and the values behind it: openness, collaboration and practical impact.</p>
+  </div>
+  <div class="omni-aside-card">
+    <h3>Roles and expectations</h3>
+    <p>How we run the lab, and what students, early-career researchers and the PI can expect.</p>
+  </div>
+  <div class="omni-aside-card">
+    <h3>Culture</h3>
+    <p>Work and wellbeing, workplace conduct, equality, diversity and inclusion, and good citizenship.</p>
+  </div>
+  <div class="omni-aside-card">
+    <h3>Development</h3>
+    <p>Careers, open and responsible research, use of AI, collaborations, travel and public engagement.</p>
+  </div>
+</div>
 
-<p><strong>The wiki can only be accessed by lab members with access to our cluster.</strong>
-<strong>When accessing from outside the University, you need VPN to access the wiki.</strong></p>
+<div class="omni-soft-card omni-wiki">
+  <span class="omni-label">For lab members</span>
+  <h3>Lab wiki</h3>
+  <p>Processes, resources and know-how. Connect to the University network or VPN, then open a tunnel to the wiki server:</p>
+  <pre class="omni-code"><code>ssh -fNT -L 8080:localhost:8080 wiki</code></pre>
+  <p>Then open the wiki in your browser:</p>
+  <div class="omni-actions">
+    
 
-<p>To access it please run the following command to tunnel the wiki server to your local machine and then <strong>use the button below</strong>:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh <span class="nt">-fNT</span> <span class="nt">-L</span> 8080:localhost:8080 wiki
-</code></pre></div></div>
 
-<div class="button-wrapper">
-    <a class="button" href="http://127.0.0.1:8080/" data-style="" aria-label="Documentation">
-      <i class="icon fa-solid fa-book"></i>
+  
+  <div class="button-wrapper">
+    <a class="button" href="http://127.0.0.1:8080/" data-style="bare" aria-label="button">
       
-        <span>Go to Wiki</span>
+      
+        <span>Open the wiki (127.0.0.1:8080)</span>
       
     </a>
   </div>
-  </section>
-
   
-  
-  
-  
-  <section class="background" data-size="page">
-    <!--
-  <background></background>
-  <dark></dark>
-  <size></size>
--->
 
-<h2 id="trouble-shoot-access">Trouble shoot access</h2>
 
-<p>If you have trouble accessing the wiki, please check the following:</p>
+  </div>
 
-<ul>
-  <li>Have you used VPN to connect to the University network or are you on the University network?</li>
-  <li>Is a process already using port 8080 on your local machine? see below <a href="#port-busy">port busy</a>
-</li>
-  <li>try restarting the wiki, see below <a href="#restart-wiki">restart wiki</a>
-</li>
-  <li>If everything else fails, ask the lab <a href="mailto:valentin.bacher@cs.ox.ac.uk">web admin</a>
-</li>
-</ul>
-
-<h3 id="port-busy">port busy</h3>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Check if port is busy</span>
-lsof <span class="nt">-i</span> :8080
-</code></pre></div></div>
-
-<p>If so use the PID to kill the process:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Delete processes using port 8080</span>
-<span class="nb">kill</span> <span class="nt">-9</span> <span class="si">$(</span>lsof <span class="nt">-ti</span>:8080<span class="si">)</span>
-</code></pre></div></div>
-
-<p>You should then be able to access the wiki using the command above.</p>
-
-<h3 id="restart-wiki">restart wiki</h3>
-
-<p>If you have access to the wiki server you can restart the wiki using the following commands:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># SSH into the wiki server</span>
-ssh wiki
-</code></pre></div></div>
-
-<p>then run the restart script:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Restart the wiki</span>
-<span class="nb">cd </span>omni-wiki
-./restart.sh
-</code></pre></div></div>
+  <details class="omni-troubleshoot">
+    <summary>Trouble accessing the wiki?</summary>
+    <ul>
+      <li>Are you on the University network, or connected through the VPN?</li>
+      <li>Is another process already using port 8080 on your computer? See “Port busy” below.</li>
+      <li>Try restarting the wiki. See “Restart the wiki” below.</li>
+      <li>If nothing works, ask the lab’s <a href="#" data-email="valentin.bacher" data-domain="cs.ox.ac.uk" class="email-link">web administrator</a>
+.</li>
+    </ul>
+    <h4>Port busy</h4>
+    <p>Check whether port 8080 is in use:</p>
+    <pre class="omni-code"><code>lsof -i :8080</code></pre>
+    <p>If it is, stop the process using it, then run the tunnel command again:</p>
+    <pre class="omni-code"><code>kill -9 $(lsof -ti:8080)</code></pre>
+    <h4>Restart the wiki</h4>
+    <p>If you have access to the wiki server, log in and run the restart script:</p>
+    <pre class="omni-code"><code>ssh wiki
+cd omni-wiki
+./restart.sh</code></pre>
+  </details>
+</div>
   </section>
 
 
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>

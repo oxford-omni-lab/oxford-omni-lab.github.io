@@ -17,21 +17,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Recruitment</title>
+<title>Join us</title>
 
 <link rel="icon" href="/images/misc/omni-favicon.ico">
 
-<meta name="title" content="Recruitment">
+<meta name="title" content="Join us">
 <meta name="description" content="">
 
-<meta property="og:title" content="Recruitment">
+<meta property="og:title" content="Join us">
 <meta property="og:site_title" content="">
 <meta property="og:description" content="">
 <meta property="og:url" content="https://oxford-omni-lab.github.io">
 <meta property="og:image" content="">
 <meta property="og:locale" content="en_US">
 
-<meta property="twitter:title" content="Recruitment">
+<meta property="twitter:title" content="Join us">
 <meta property="twitter:description" content="">
 <meta property="twitter:url" content="https://oxford-omni-lab.github.io">
 <meta property="twitter:card" content="summary_large_image">
@@ -47,9 +47,9 @@
     
       "@type": "WebSite",
     
-    "name": "Recruitment",
+    "name": "Join us",
     "description": "",
-    "headline": "Recruitment",
+    "headline": "Join us",
     "publisher": {
       "@type": "Organization",
       "logo": { "@type": "ImageObject", "url": "/images/misc/omni-favicon.ico" }
@@ -64,7 +64,7 @@
 <!-- automatically get url from fonts used in theme file -->
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?display=swap&&family=Barlow:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,500;0,600;1,200;1,400;1,500;1,600" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?display=swap&&family=Nunito+Sans:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Raleway:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700" rel="stylesheet">
 
 <!-- Font Awesome icons (load asynchronously due to size) -->
 
@@ -206,6 +206,10 @@
 
   
     <link href="/_styles/main.css" rel="stylesheet">
+  
+
+  
+    <link href="/_styles/omni.css" rel="stylesheet">
   
 
   
@@ -357,6 +361,12 @@
 
   <script src="/_scripts/jobs-client.js"></script>
 
+  <script src="/_scripts/omni-cite.js"></script>
+
+  <script src="/_scripts/omni-filters.js"></script>
+
+  <script src="/_scripts/omni-video.js"></script>
+
   <script src="/_scripts/search.js"></script>
 
   <script src="/_scripts/site-search.js"></script>
@@ -375,24 +385,19 @@
 
 
 
-
-
-<header class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-dark="images/misc/background_dark.png">
-  <a href="/" class="home">
+<header class="omni-header" data-dark="true">
+  <div class="omni-brand">
     
-      <span class="logo">
-        
-          <img src="/images/misc/Logo-OMNI.png" alt="logo">
-        
-      </span>
+      <a href="https://www.ox.ac.uk" class="omni-oxford" aria-label="University of Oxford">
+        <img src="/images/misc/oxford-logo.png" alt="University of Oxford">
+      </a>
+      <span class="omni-brand-divider" aria-hidden="true"></span>
     
-    
-      <span class="title-text">
-        
-        
-      </span>
-    
-  </a>
+    <a href="/" class="omni-home" aria-label="OMNI Lab home">
+      <img class="omni-wordmark" src="/images/misc/Logo-OMNI-wordmark-white.png" alt="OMNI">
+      <span class="omni-lab-name">Oxford Machine<br>Learning in<br>NeuroImaging Lab</span>
+    </a>
+  </div>
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
@@ -400,14 +405,14 @@
     
     
       
-        <a href="/people/" data-tooltip="About our People">
-          People
+        <a href="/research/" data-tooltip="Problems we work on">
+          Research
         </a>
       
     
       
-        <a href="/research/" data-tooltip="Key areas of Research">
-          Research
+        <a href="/people/" data-tooltip="About our People">
+          People
         </a>
       
     
@@ -418,26 +423,26 @@
       
     
       
-        <a href="/news/" data-tooltip="Pictures of our Group">
+        <a href="/demos/" data-tooltip="Interactive demos, atlases and open-source software">
+          Demos
+        </a>
+      
+    
+      
+        <a href="/news/" data-tooltip="Videos, papers, talks, awards and lab life">
           News
         </a>
       
     
       
-        <a href="/contact/" data-tooltip="Email, address, and location">
+        <a href="/contact/" data-tooltip="Address and location">
           Contact
         </a>
       
     
       
-        <a href="/handbook/" data-tooltip="Lab handbook and link to wiki">
-          Handbook
-        </a>
-      
-    
-      
-        <a href="/gallery/" data-tooltip="Pictures of our Group">
-          Gallery
+        <a href="/recruitment/" data-tooltip="Joining the lab" aria-current="page">
+          Join us
         </a>
       
     
@@ -461,156 +466,249 @@
   
   
   
+  
+  <section class="background" data-size="1" data-dark="true">
+    <!--
+  <background></background>
+  <dark>true</dark>
+  <size>1</size>
+  <tone></tone>
+-->
+
+<div class="omni-intro">
+  <span class="omni-kicker">Join us</span>
+  <h1>Joining the lab</h1>
+  <p>We are a computational lab working on algorithm design for large-scale fetal brain image analysis. We welcome enquiries from prospective DPhil students and postdocs.</p>
+</div>
+  </section>
+
+  
+  
+  
+  
+  
   <section class="background" data-size="page">
-    <h1 id="open-positions">
-<i class="icon fa-solid fa-briefcase"></i>Open Positions</h1>
+    <!--
+  <background></background>
+  <dark></dark>
+  <size></size>
+  <tone></tone>
+-->
 
-<p>Thank you for your interest in joining the OMNI Lab. Please explore our Research site for more information about our work or have a look at our handbook for more information about our labs culture.</p>
-
-<div class="button-wrapper">
-    <a class="button" href="/research" data-style="" aria-label="fa-solid fa-microscope">
-      <i class="icon fa-solid fa-microscope"></i>
-      
-        <span>Our Research</span>
-      
-    </a>
-  </div>
-
-<div class="button-wrapper">
-    <a class="button" href="/handbook" data-style="" aria-label="fa-solid fa-book">
-      <i class="icon fa-solid fa-book"></i>
-      
-        <span>Lab Handbook</span>
-      
-    </a>
-  </div>
-
-<h2 id="graduate-students">Graduate students</h2>
-
-<p>Dr. Namburete is a member of the EPSRC Centres for Doctoral Training in <a href="https://www.bdi.ox.ac.uk/study/cdt">Health Data Science (HDS)</a> and in <a href="https://www.ox.ac.uk/admissions/graduate/courses/autonomous-intelligent-machines-and-systems">Autonomous Intelligent Machines and Systems (AIMS)</a>. If you are interested in a rotation in the OMNI Lab, please contact Dr. Namburete directly using the details on her <a href="https://www.cs.ox.ac.uk/people/ana.namburete/">departmental profile page</a>. We are primarily a computational lab working on algorithmic design for large-scale brain image analysis, so a background in deep learning, programming and/or brain image analysis helps students make the most of their rotation.</p>
-
-<p>If you are interested, please contact Dr. Namburete directly using the details on her <a href="https://www.cs.ox.ac.uk/people/ana.namburete/">departmental profile page</a>.</p>
-
-<h2 id="postdoctoral-researchers">Postdoctoral researchers</h2>
-
-<p>We have more data and research ideas than postdoctoral researchers, so are keen to recruit exceptional researchers. The lab offers a collaborative and supportive environment and has a strong track record in helping students develop and begin their own independent research careers. The lab has expertise in machine learning, brain image analysis, and development of algorithmic pipelines, allowing novel analytic methods to be performed at scale.</p>
-
-<h2 id="current-open-positions">
-<i class="icon fa-solid fa-briefcase"></i>Current Open Positions</h2>
-
-<p class="job-last-updated">
-  <small>
-    <i class="icon fa-solid fa-sync-alt"></i> Last updated: 2026-10-08 15:01:15 UTC
-  </small>
-</p>
-
-<div class="no-jobs-message">
-  <p>
-    <em>No current job openings found. Please check back later or contact Dr.
-      Namburete directly for potential opportunities.</em>
-  </p>
+<div class="omni-soft-card">
+  <span class="omni-label">Open positions</span>
+  
+    <h3>No advertised openings right now</h3>
+    <p>Funded positions are listed here when they open. You are still welcome to get in touch about future opportunities.</p>
+  
 </div>
 
-<p>If you are interested, please contact Ana Namburete directly using the details on her <a href="https://www.cs.ox.ac.uk/people/ana.namburete/">departmental profile page</a>.</p>
+<div class="omni-left">
+  <h2 style="margin: 56px 0 24px">Routes into the lab</h2>
+</div>
+
+<div class="omni-card-grid">
+  <div class="omni-aside-card">
+    <span class="omni-label">DPhil students</span>
+    <h3>Doctoral study</h3>
+    <p>Ana supervises through two EPSRC Centres for Doctoral Training: Healthcare Data Science (HDS) and Autonomous Intelligent Machines and Systems (AIMS). We look for backgrounds in deep learning, programming or brain image analysis.</p>
+    <div class="omni-links">
+      <a href="https://www.bdi.ox.ac.uk/study/cdt">HDS CDT ↗</a>
+      <a href="https://www.ox.ac.uk/admissions/graduate/courses/autonomous-intelligent-machines-and-systems">AIMS CDT ↗</a>
+    </div>
+  </div>
+  <div class="omni-aside-card">
+    <span class="omni-label">Postdoctoral researchers</span>
+    <h3>Postdoctoral research</h3>
+    <p>We have more data and research ideas than postdocs. We offer a collaborative, supportive environment and mentorship towards an independent research career in machine learning and brain image analysis.</p>
+  </div>
+</div>
+
+<div class="omni-left">
+  <h2 style="margin: 56px 0 24px">How to apply</h2>
+</div>
+
+<div class="omni-apply">
+  <div>
+    <span class="omni-step">Step 1</span>
+    <h3>Find your theme</h3>
+    <p>Read our <a href="/research">research themes</a> and pick the problem that fits your skills.</p>
+  </div>
+  <div>
+    <span class="omni-step">Step 2</span>
+    <h3>Check the route</h3>
+    <p>For a DPhil, check the CDT application deadlines. For a postdoc, think about fellowships too.</p>
+  </div>
+  <div>
+    <span class="omni-step">Step 3</span>
+    <h3>Get in touch</h3>
+    <p>Contact Ana via her departmental profile, with your CV, the theme you’re interested in, and a few lines on why.</p>
+  </div>
+</div>
+
+<div class="omni-actions">
+  
+
+
+
+  
+  <div class="button-wrapper">
+    <a class="button" href="https://www.cs.ox.ac.uk/people/ana.namburete/" data-style="" aria-label="button">
+      
+      
+        <span>Ana’s departmental profile ↗</span>
+      
+    </a>
+  </div>
+  
+
+
+</div>
+
+<div class="omni-callout omni-callout-pink">
+  <div>
+    <h3>Life in the lab</h3>
+    <p>How we work together, and what we get up to.</p>
+  </div>
+  <div class="omni-actions">
+    
+
+
+
+  
+  <div class="button-wrapper">
+    <a class="button" href="/handbook" data-style="bare" aria-label="button">
+      
+      
+        <span>Lab handbook</span>
+      
+    </a>
+  </div>
+  
+
+
+    
+
+
+
+  
+  <div class="button-wrapper">
+    <a class="button" href="/gallery" data-style="bare" aria-label="button">
+      
+      
+        <span>Gallery</span>
+      
+    </a>
+  </div>
+  
+
+
+  </div>
+</div>
   </section>
 
 
     </main>
     
 
+<footer class="omni-footer" data-dark="true">
+  <div class="omni-wrap">
+    
+      <div class="omni-funders">
+        <span class="omni-label">Funders and supporters</span>
+        <div class="omni-funders-logos">
+          
+            <a href="https://erc.europa.eu/" aria-label="European Union / European Research Council">
+              <img src="/images/funders/eu_erc.png" alt="European Union / European Research Council" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://www.gatesfoundation.org/" aria-label="Gates Foundation">
+              <img src="/images/funders/gates.png" alt="Gates Foundation" style="height: 44px" loading="lazy">
+            </a>
+          
+            <a href="https://www.oxfordmartin.ox.ac.uk/" aria-label="Oxford Martin School">
+              <img src="/images/funders/oxford_martin.png" alt="Oxford Martin School" style="height: 60px" loading="lazy">
+            </a>
+          
+            <a href="https://raeng.org.uk/" aria-label="Royal Academy of Engineering">
+              <img src="/images/funders/raeng.png" alt="Royal Academy of Engineering" style="height: 46px" loading="lazy">
+            </a>
+          
+            <a href="https://acmedsci.ac.uk/" aria-label="Academy of Medical Sciences">
+              <img src="/images/funders/ams.png" alt="Academy of Medical Sciences" style="height: 42px" loading="lazy">
+            </a>
+          
+            <a href="https://www.ouh.nhs.uk/" aria-label="Oxford University Hospitals NHS Foundation Trust">
+              <img src="/images/funders/ouh_nhs.png" alt="Oxford University Hospitals NHS Foundation Trust" style="height: 40px" loading="lazy">
+            </a>
+          
+            <a href="https://openai.com/" aria-label="OpenAI">
+              <img src="/images/funders/openai.png" alt="OpenAI" style="height: 34px" loading="lazy">
+            </a>
+          
+        </div>
+      </div>
+    
 
-
-<footer class="background" style="--image: url('/images/misc/background_light.png'); --image-dark: url('/images/misc/background_dark.png')" data-size="wide">
-  <!--
-    <div>
-      Extra details like contact info or address
+    <div class="omni-footer-cols">
+      <div>
+        <span class="omni-footer-title">OMNI Lab</span>
+        <span>Department of Computer Science<br>15 Parks Road, Oxford OX1 3PH</span>
+        <a class="omni-footer-accent" href="/contact">Contact us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Lab</span>
+        <a href="/demos">Demos and tools</a>
+        <a href="/handbook">Handbook</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/recruitment">Join us</a>
+      </div>
+      <div>
+        <span class="omni-footer-heading">Elsewhere</span>
+        
+        
+          
+          
+            
+            <a href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ">Google Scholar</a>
+          
+        
+          
+          
+            
+            <a href="https://github.com/oxford-omni-lab">GitHub</a>
+          
+        
+          
+          
+            
+            <a href="https://orcid.org/0000-0002-9119-436X">ORCID</a>
+          
+        
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      </div>
     </div>
-  -->
 
-  <div>
-    
-      
-      
-      
-
-
-
-  
-    
-    
-    
-    
-  <div class="button-wrapper">
-    <a class="button email-link" href="#" data-email="ana.namburete" data-domain="cs.ox.ac.uk" data-style="bare" aria-label="Email">
-      <i class="icon fa-solid fa-envelope"></i>
-      
-    </a>
+    <div class="omni-footer-bottom">
+      <span>© 2026 OMNI Lab, University of Oxford</span>
+      <span class="omni-footer-small">
+        <a href="/about">About this website</a>
+        <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
+      </span>
+    </div>
   </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://scholar.google.com/citations?user=6QzRJ6MAAAAJ" data-style="bare" aria-label="Google Scholar">
-      <i class="icon fa-brands fa-google"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-      
-      
-      
-
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://github.com/oxford-omni-lab" data-style="bare" aria-label="GitHub">
-      <i class="icon fa-brands fa-github"></i>
-      
-    </a>
-  </div>
-  
-
-
-    
-  </div>
-
-  <div>
-    <a>© 2026</a>
-    
-      |   <a href="/about">About this Website</a>
-      |   <a href="/recruitment">Recruitment</a>
-  </div>
-
-  <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
   </body>
