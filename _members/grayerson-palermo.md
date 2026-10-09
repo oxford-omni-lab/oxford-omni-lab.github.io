@@ -3,7 +3,8 @@ name: Grayson Palermo
 image: images/members/placeholder.png
 role: undergrad
 pronouns: he/him
-group: current
+group: alumni
+left: 2026
 joined: 2026
 aliases:
   - G. Palermo

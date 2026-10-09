@@ -1,0 +1,48 @@
+{% comment %}
+  "Key papers" for a research theme: papers whose tags match the theme's
+  `tags:` in _data/themes.yaml, newest first. The first `limit` are shown;
+  "All papers in this theme" reveals the rest on the same page.
+  Authors come from omni-authors.html; venue abbreviations from
+  _data/venues.yaml.
+  Usage: {% include omni-theme-papers.html theme="computational-ultrasound" limit=5 %}
+{% endcomment %}
+{% assign theme = site.data.themes | where: "id", include.theme | first %}
+{% assign limit = include.limit | default: 5 %}
+
+{% assign matches = "" | split: "" %}
+{% assign all = site.data.citations | sort: "date" | reverse %}
+{% for citation in all %}
+  {% assign match = false %}
+  {% for tag in theme.tags %}
+    {% if citation.tags contains tag %}{% assign match = true %}{% endif %}
+  {% endfor %}
+  {% if match %}{% assign matches = matches | push: citation %}{% endif %}
+{% endfor %}
+
+<div class="omni-papers-head">
+  <h2>Key papers</h2>
+  {% if matches.size > limit %}
+    <a href="#theme-papers">All papers in this theme ({{ matches.size }}) →</a>
+  {% else %}
+    <a href="{{ "publications" | relative_url }}">All publications →</a>
+  {% endif %}
+</div>
+
+{% if matches.size == 0 %}
+  <p class="omni-muted">Papers tagged for this theme will appear here automatically.</p>
+{% else %}
+<ol class="omni-paper-list" id="theme-papers">
+  {% for c in matches %}
+    <li{% if forloop.index > limit %} class="omni-paper-extra"{% endif %}>
+      <a class="omni-paper-title" href="{{ "publications" | relative_url }}#{{ c.id | url_encode }}">{{ c.title }}</a>
+      <span class="omni-paper-meta">
+        {%- include omni-authors.html authors=c.authors max=8 -%}
+        
+        {%- assign venue = site.data.venues[c.publisher] | default: c.publisher %}
+        · <em>{{ venue }}</em> ·
+        {% if c.publisher == "arXiv" %}{{ c.date | date: "%b %Y" }}{% else %}{{ c.date | date: "%Y" }}{% endif %}
+      </span>
+    </li>
+  {% endfor %}
+</ol>
+{% endif %}

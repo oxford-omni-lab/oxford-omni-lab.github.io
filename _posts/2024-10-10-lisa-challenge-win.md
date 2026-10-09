@@ -1,5 +1,5 @@
 ---
-title: LISA 2024 Challenge Win
+title: LISA 2024 challenge win
 author: OMNI Lab
 tags: # Optional: Categories/topics for the post
   - challenge

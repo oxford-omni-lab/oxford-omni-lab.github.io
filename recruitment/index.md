@@ -1,26 +1,91 @@
 ---
-title: Recruitment
+title: Join us
+nav:
+  order: 7
+  tooltip: Joining the lab
 ---
 
-# {% include icon.html icon="fa-solid fa-briefcase" %}Open Positions
+{% include section.html dark=true %}
 
-Thank you for your interest in joining the OMNI Lab. Please explore our Research site for more information about our work or have a look at our handbook for more information about our labs culture.
+<div class="omni-intro">
+  <span class="omni-kicker">Join us</span>
+  <h1>Joining the lab</h1>
+  <p>We are a computational lab working on algorithm design for large-scale fetal brain image analysis. We welcome enquiries from prospective DPhil students and postdocs.</p>
+</div>
 
-{% include button.html text="Our Research" link="research" icon="fa-solid fa-microscope" %}
-{% include button.html text="Lab Handbook" link="handbook" icon="fa-solid fa-book"%}
+{% include section.html %}
 
-## Graduate students
+{% comment %}
+  Open positions come from _data/jobs.yaml (updated automatically; add your
+  own in _data/jobs_manual.yaml). Only active positions are shown.
+{% endcomment %}
+{% assign active_jobs = site.data.jobs.jobs | where: "active", true %}
 
-Dr. Namburete is a member of the EPSRC Centres for Doctoral Training in [Health Data Science (HDS)](https://www.bdi.ox.ac.uk/study/cdt) and in [Autonomous Intelligent Machines and Systems (AIMS)](https://www.ox.ac.uk/admissions/graduate/courses/autonomous-intelligent-machines-and-systems). If you are interested in a rotation in the OMNI Lab, please contact Dr. Namburete directly using the details on her [departmental profile page](https://www.cs.ox.ac.uk/people/ana.namburete/). We are primarily a computational lab working on algorithmic design for large-scale brain image analysis, so a background in deep learning, programming and/or brain image analysis helps students make the most of their rotation.
+<div class="omni-soft-card">
+  <span class="omni-label">Open positions</span>
+  {% if active_jobs.size > 0 %}
+    <h3>Current openings</h3>
+    {% include job-listings.html %}
+  {% else %}
+    <h3>No advertised openings right now</h3>
+    <p>Funded positions are listed here when they open. You are still welcome to get in touch about future opportunities.</p>
+  {% endif %}
+</div>
 
-If you are interested, please contact Dr. Namburete directly using the details on her [departmental profile page](https://www.cs.ox.ac.uk/people/ana.namburete/).
+<div class="omni-left">
+  <h2 style="margin: 56px 0 24px">Routes into the lab</h2>
+</div>
 
-## Postdoctoral researchers
+<div class="omni-card-grid">
+  <div class="omni-aside-card">
+    <span class="omni-label">DPhil students</span>
+    <h3>Doctoral study</h3>
+    <p>Ana supervises through two EPSRC Centres for Doctoral Training: Healthcare Data Science (HDS) and Autonomous Intelligent Machines and Systems (AIMS). We look for backgrounds in deep learning, programming or brain image analysis.</p>
+    <div class="omni-links">
+      <a href="https://www.bdi.ox.ac.uk/study/cdt">HDS CDT ↗</a>
+      <a href="https://www.ox.ac.uk/admissions/graduate/courses/autonomous-intelligent-machines-and-systems">AIMS CDT ↗</a>
+    </div>
+  </div>
+  <div class="omni-aside-card">
+    <span class="omni-label">Postdoctoral researchers</span>
+    <h3>Postdoctoral research</h3>
+    <p>We have more data and research ideas than postdocs. We offer a collaborative, supportive environment and mentorship towards an independent research career in machine learning and brain image analysis.</p>
+  </div>
+</div>
 
-We have more data and research ideas than postdoctoral researchers, so are keen to recruit exceptional researchers. The lab offers a collaborative and supportive environment and has a strong track record in helping students develop and begin their own independent research careers. The lab has expertise in machine learning, brain image analysis, and development of algorithmic pipelines, allowing novel analytic methods to be performed at scale.
+<div class="omni-left">
+  <h2 style="margin: 56px 0 24px">How to apply</h2>
+</div>
 
-## {% include icon.html icon="fa-solid fa-briefcase" %}Current Open Positions
+<div class="omni-apply">
+  <div>
+    <span class="omni-step">Step 1</span>
+    <h3>Find your theme</h3>
+    <p>Read our <a href="{{ "research" | relative_url }}">research themes</a> and pick the problem that fits your skills.</p>
+  </div>
+  <div>
+    <span class="omni-step">Step 2</span>
+    <h3>Check the route</h3>
+    <p>For a DPhil, check the CDT application deadlines. For a postdoc, think about fellowships too.</p>
+  </div>
+  <div>
+    <span class="omni-step">Step 3</span>
+    <h3>Get in touch</h3>
+    <p>Contact Ana via her departmental profile, with your CV, the theme you’re interested in, and a few lines on why.</p>
+  </div>
+</div>
 
-{% include job-listings.html %}
+<div class="omni-actions">
+  {% include button.html link="https://www.cs.ox.ac.uk/people/ana.namburete/" text="Ana’s departmental profile ↗" %}
+</div>
 
-If you are interested, please contact Ana Namburete directly using the details on her [departmental profile page](https://www.cs.ox.ac.uk/people/ana.namburete/).
+<div class="omni-callout omni-callout-pink">
+  <div>
+    <h3>Life in the lab</h3>
+    <p>How we work together, and what we get up to.</p>
+  </div>
+  <div class="omni-actions">
+    {% include button.html link="handbook" text="Lab handbook" style="bare" %}
+    {% include button.html link="gallery" text="Gallery" style="bare" %}
+  </div>
+</div>

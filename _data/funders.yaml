@@ -1,0 +1,39 @@
+# Funders and supporters shown in the footer of every page.
+# height: display height in pixels (logos have different shapes, so each is
+# sized by eye to look balanced). Replace the images with the funders'
+# official high-resolution files when you have them (same file names).
+
+- name: European Union / European Research Council
+  image: images/funders/eu_erc.png
+  link: https://erc.europa.eu/
+  height: 60
+
+- name: Gates Foundation
+  image: images/funders/gates.png
+  link: https://www.gatesfoundation.org/
+  height: 44
+
+- name: Oxford Martin School
+  image: images/funders/oxford_martin.png
+  link: https://www.oxfordmartin.ox.ac.uk/
+  height: 60
+
+- name: Royal Academy of Engineering
+  image: images/funders/raeng.png
+  link: https://raeng.org.uk/
+  height: 46
+
+- name: Academy of Medical Sciences
+  image: images/funders/ams.png
+  link: https://acmedsci.ac.uk/
+  height: 42
+
+- name: Oxford University Hospitals NHS Foundation Trust
+  image: images/funders/ouh_nhs.png
+  link: https://www.ouh.nhs.uk/
+  height: 40
+
+- name: OpenAI
+  image: images/funders/openai.png
+  link: https://openai.com/
+  height: 34

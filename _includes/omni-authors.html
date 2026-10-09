@@ -1,0 +1,23 @@
+{%- comment -%}
+  Author list as "Surname Initials", lab members (current and alumni) in bold.
+  Usage: {% include omni-authors.html authors=citation.authors max=8 %}
+  After `max` authors, "et al." is added.
+{%- endcomment -%}
+{%- assign omni_max = include.max | default: 8 -%}
+{%- assign omni_keys = "" | split: "" -%}
+{%- for m in site.members -%}
+  {%- assign w = m.name | split: " " -%}
+  {%- assign k = w.first | append: " " | append: w.last | downcase -%}
+  {%- assign omni_keys = omni_keys | push: k -%}
+{%- endfor -%}
+{%- for a in include.authors limit: omni_max -%}
+  {%- assign parts = a | split: " " -%}
+  {%- assign initials = "" -%}
+  {%- for p in parts -%}
+    {%- unless forloop.last -%}{%- assign ch = p | slice: 0 | upcase -%}{%- assign initials = initials | append: ch -%}{%- endunless -%}
+  {%- endfor -%}
+  {%- assign key = parts.first | append: " " | append: parts.last | downcase -%}
+  {%- if omni_keys contains key -%}<b>{{ parts.last }} {{ initials }}</b>{%- else -%}{{ parts.last }} {{ initials }}{%- endif -%}
+  {%- unless forloop.last -%}, {% endunless -%}
+{%- endfor -%}
+{%- if include.authors.size > omni_max %}, et al.{% endif -%}

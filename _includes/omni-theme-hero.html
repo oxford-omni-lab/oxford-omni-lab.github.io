@@ -1,0 +1,18 @@
+{% comment %}
+  Opening band of a research theme page: title and summary on the left,
+  the theme's video on the right. Title, video and breadcrumb label come
+  from _data/themes.yaml.
+  Usage: {% include omni-theme-hero.html theme="robust" text="One-paragraph summary." %}
+{% endcomment %}
+{% assign theme = site.data.themes | where: "id", include.theme | first %}
+<div class="omni-theme-hero">
+  <div class="omni-intro">
+    <span class="omni-kicker">Research theme</span>
+    <h1>{{ theme.title }}</h1>
+    <p>{{ include.text }}</p>
+    <div class="omni-crumbs"><a href="{{ "research" | relative_url }}">Research</a> / {{ theme.short }}</div>
+  </div>
+  <div class="omni-media">
+    {% include omni-video.html src=theme.video poster=theme.video_poster label=theme.alt %}
+  </div>
+</div>

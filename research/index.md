@@ -1,127 +1,39 @@
 ---
 title: Research
 nav:
-  order: 2
-  tooltip: Key areas of Research
+  order: 1
+  tooltip: Problems we work on
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Research
+{% include section.html dark=true %}
 
-By developing computational tools, the OMNI Lab aims to address key needs in modern medicine: (i) automated analysis relieves the requirement for highly-skilled radiologists; (ii) discovery of novel markers for diagnostic screening; (iii) software for portable devices, thus broadening access to high-quality care in the developing world; and (iv) investing in sophisticated software while leveraging existing imaging hardware provides a large cost benefit to an already constrained healthcare system. To achieve these goals, our research focuses on the following topics:
-
-- Characterizing the Fetal Brain
-- 2D-3D US Reconstruction
-- Clinical Translation
-- Deep Learning Methodology
-
-<div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 24px 0;">
-  {% include button.html text="View Publications" link="publications" icon="fa-solid fa-book" %}
-  {% include button.html type="github" text="GitHub" link="oxford-omni-lab" %}
+<div class="omni-intro">
+  <span class="omni-kicker">Research</span>
+  <h1>Problems we work on</h1>
+  <p>Ultrasound is the most widely used imaging in pregnancy care, and often the only one available. We develop methods that turn routine scans into quantitative measures of the developing brain.</p>
 </div>
 
 {% include section.html %}
 
-## Characterising the Fetal Brain
+{% include omni-theme-rows.html %}
 
-Normal development of the human brain can be characterized by precisely timed growth and folding of its surface (cortex), with deviations often associated with poor cognitive outcomes. Advances in ultrasound (US) imaging technology now make it possible to visualize the cortex and screen for brain abnormalities before birth, from as early as 14 gestational weeks (GW). Working closely with the INTERGROWTH-21st Consortium and healthcare professionals, we develop a range of computational tools for assessing fetal health from US images.
+<div class="omni-left">
+  <h2 style="margin: 48px 0 24px">Software and data</h2>
+</div>
 
-{% assign fetal_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Fetal Brain Characterization'" | sort: "date" | reverse %}
-{% for citation in fetal_papers limit: 12%}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-{% include section.html %}
-
-## 2D to 3D Reconstruction
-
-In neuroimaging research, 3D image data is the mainstay for representing anatomical details. However, in conventional clinical practice, pre- and post-natal assessments are performed with 2D video or static US images. The sonographers need to interpret the relationships between the 2D views and 3D brain anatomy and mentally reconstruct a 3D image given just the 2D information. Our goal is to develop methods to reconstruct a 3D brain scan from 2D freehand video acquisitions. We foresee that this would have applications in perinatal clinics, and in LMICs.
-
-{% assign reconstruction_papers = site.data.citations | where_exp: "citation", "citation.tags contains '2D to 3D Reconstruction'" | sort: "date" | reverse %}
-{% for citation in reconstruction_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-{% include section.html %}
-
-## Clinical Translation
-
-Deep learning has shown great promise in the research domain, but significant barriers still exist which limit the clinical translatability of deep learning models. Our research aims to tackle these barriers focusing on the challenges of: distributed data and data privacy, model compression, and the development of clinically meaningful biomarkers.
-
-{% assign privacy_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Clinical Translation'" | sort: "date" | reverse %}
-{% for citation in privacy_papers limit: 12%}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-### Distributed Data and Data Privacy
-
-{% assign privacy_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Distributed Data and Data Privacy'" | sort: "date" | reverse %}
-{% for citation in privacy_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-### Model Compression
-
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Model Compression'" | sort: "date" | reverse %}
-{% for citation in biomarker_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-### Biomarker Development
-
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Biomarkers'" | sort: "date" | reverse %}
-{% for citation in biomarker_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-{% include section.html %}
-
-## Deep Learning Methodology
-
-Fundamental to our research is the development of state-of-the-art DL methodology. Key topics include segmentation, interpretability and domain adaptation.
-
-### Segmentation
-
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Segmentation'" | sort: "date" | reverse %}
-{% for citation in biomarker_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-### Domain Adaptation
-
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Domain Adaptation'" | sort: "date" | reverse %}
-{% for citation in biomarker_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-### Interpretability
-
-{% assign biomarker_papers = site.data.citations | where_exp: "citation", "citation.tags contains 'Interpretability'" | sort: "date" | reverse %}
-{% for citation in biomarker_papers limit:12 %}
-{% include research-teaser.html citation=citation %}
-{% endfor %}
-
-{% include section.html %}
-
-## More
-
-{% assign excluded_tags = "Fetal Brain Characterization|2D to 3D Reconstruction|Clinical Translation|Distributed Data and Data Privacy|Model Compression|Biomarkers|Segmentation|Domain Adaptation|Interpretability" | split: "|" %}
-{% assign all_citations = site.data.citations | sort: "date" | reverse %}
-{% assign remaining_count = 0 %}
-{% for citation in all_citations %}
-{% assign has_excluded_tag = false %}
-{% if citation.tags %}
-{% for tag in citation.tags %}
-{% if excluded_tags contains tag %}
-{% assign has_excluded_tag = true %}
-{% break %}
-{% endif %}
-{% endfor %}
-{% endif %}
-{% unless has_excluded_tag %}
-{% include research-teaser.html citation=citation %}
-{% assign remaining_count = remaining_count | plus: 1 %}
-{% endunless %}
-{% if remaining_count >= 10 %}
-{% break %}
-{% endif %}
-{% endfor %}
+<div class="omni-card-grid">
+  <div class="omni-soft-card">
+    <span class="omni-label">Open-source software</span>
+    <h4>OMNI Ultrasound Toolkit</h4>
+    <p>Open-source tools that automate fetal brain segmentation and volumetric analysis from 3D ultrasound.</p>
+    <div class="omni-links">
+      <a href="https://github.com/oxford-omni-lab">GitHub →</a>
+      <a href="{{ "demos" | relative_url }}">All demos and tools →</a>
+    </div>
+  </div>
+  <div class="omni-soft-card">
+    <span class="omni-label">Data and partners</span>
+    <h4>Built on international cohorts</h4>
+    <p>Our work draws on the <a href="https://intergrowth21.com/">INTERGROWTH-21st and INTERBIO-21st</a> consortia and our clinical partners.</p>
+  </div>
+</div>
