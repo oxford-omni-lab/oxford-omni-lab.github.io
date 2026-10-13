@@ -1,0 +1,27 @@
+{% comment %}
+  A small person row (round photo, name, role), linking to the member page.
+  Usage: {% include omni-person.html lookup="mark-eid" %}
+  Optional: role="..." to override the role text, until=true to show the year they left.
+{% endcomment %}
+{% assign member = site.members | where_exp: "m", "m.slug == include.lookup" | first | default: include.member %}
+{% if member %}
+  {% assign type = site.data.types[member.role] %}
+  <a class="omni-person" href="{{ member.url | relative_url | uri_escape }}">
+    <span class="omni-avatar">
+      {% if member.image and member.image contains "placeholder" %}
+        {% include omni-initials.html name=member.name %}
+      {% elsif member.image %}
+        <img src="{{ member.image | relative_url | uri_escape }}" alt="" loading="lazy">
+      {% else %}
+        {% include omni-initials.html name=member.name %}
+      {% endif %}
+    </span>
+    <span>
+      <span class="omni-person-name">{{ member.name }}</span>
+      <span class="omni-person-role">{{ include.role | default: type.description | default: member.description }}</span>
+      {% if include.until and member.left %}
+        <span class="omni-person-role">until {{ member.left }}</span>
+      {% endif %}
+    </span>
+  </a>
+{% endif %}

@@ -1,5 +1,5 @@
 ---
-title: New paper published in Human Brain Mapping
+title: New paper in Human Brain Mapping
 author: OMNI Lab
 image: images/posts/251001_US-MRI_same-day.png
 tags:

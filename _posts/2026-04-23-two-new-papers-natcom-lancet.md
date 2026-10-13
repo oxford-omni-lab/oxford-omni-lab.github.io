@@ -1,5 +1,5 @@
 ---
-title: Two new papers published on fetal brain mapping and neurodevelopmental outcomes.
+title: Two new papers on fetal brain mapping and neurodevelopmental outcomes
 author: OMNI Lab
 image: images/posts/2604-normative_groth.png
 tags:

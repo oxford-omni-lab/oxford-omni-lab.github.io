@@ -1,0 +1,75 @@
+# Research themes.
+# This one file drives the theme cards on the home page, the rows on the
+# Research page, and the "Other themes" lists on each theme page.
+# To add, remove, rename or reorder a theme, edit this list.
+#
+# - short_title: optional shorter title for the Research page rows and the
+#           "Other themes" lists (the full title is used elsewhere)
+# - filter_label: label of the filter button on the Publications page
+# - link:   the theme's own page (a folder in /research/)
+# - tags:   publication tags (from _data/sources.yaml / citations) whose papers
+#           are listed automatically on the theme page
+# - still:  image shown on the home page card
+# - video:  looping clip shown on the Research page and the theme page
+
+- id: computational-ultrasound
+  filter_label: "Computational ultrasound"
+  title: "Computational ultrasound: geometry and physics"
+  short: Computational ultrasound
+  link: research/computational-ultrasound
+  description: Geometric and physics-informed methods for ultrasound, from recovering 3D brain anatomy from freehand 2D scans to reducing artefacts such as acoustic shadows.
+  methods: Multi-view geometry · physics-based rendering · inverse problems
+  still: images/video/card1_reconstruction_poster.jpg
+  video: images/video/card1_reconstruction.mp4
+  video_poster: images/video/card1_reconstruction_poster.jpg
+  alt: Freehand 2D ultrasound frames placed in 3D
+  tags:
+    - 2D to 3D Reconstruction
+
+- id: brain-structure
+  filter_label: "Atlases & segmentation"
+  title: "Structure: brain atlases and segmentation"
+  short_title: "Structure: atlases and segmentation"
+  short: Brain atlases and segmentation
+  link: research/brain-structure
+  description: Building spatiotemporal atlases of the developing brain, and using them for registration, segmentation and shape modelling.
+  methods: Segmentation · registration · statistical modelling
+  still: images/research/structure_3d_brain.jpg
+  video: images/video/card2_structure.mp4
+  video_poster: images/video/card2_structure_poster.jpg
+  alt: 3D rendering of the fetal brain atlas with labelled structures
+  tags:
+    - Segmentation
+
+- id: robust
+  filter_label: "Harmonisation & deployment"
+  title: "Robust everywhere: harmonisation and deployment"
+  short: Robust everywhere
+  link: research/robust
+  description: Building models that generalise across scanners, sites and clinical settings.
+  methods: Domain shift · robustness · efficient and federated ML
+  still: images/video/card3_robust_poster.jpg
+  video: images/video/card3_robust.mp4
+  video_poster: images/video/card3_robust_poster.jpg
+  alt: World map of ultrasound scanner sites
+  tags:
+    - Clinical Translation
+    - Distributed Data and Data Privacy
+    - Model Compression
+    - Domain Adaptation
+    - Interpretability
+
+- id: scan-to-outcome
+  filter_label: "Scan to outcome"
+  title: "From scan to outcome: brain growth and neurodevelopment"
+  short: From scan to outcome
+  link: research/scan-to-outcome
+  description: Modelling brain growth across gestation and linking prenatal imaging to neurodevelopment after birth.
+  methods: Longitudinal modelling · biostatistics · clinical collaboration
+  still: images/video/card4_outcomes_poster.jpg
+  video: images/video/card4_outcomes.mp4
+  video_poster: images/video/card4_outcomes_poster.jpg
+  alt: Following development from fetal scan to newborn to 2 years
+  tags:
+    - Fetal Brain Characterization
+    - Biomarkers

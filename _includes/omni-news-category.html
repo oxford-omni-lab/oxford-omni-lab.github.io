@@ -1,0 +1,24 @@
+{%- comment -%}
+  Works out a post's news category from its tags (see _data/news_categories.yaml).
+  Sets: omni_cat (category label, e.g. "Papers"), omni_label (text for the pill;
+  "Preprint" for preprints) and omni_tags (the post's tags, dash-separated).
+  Usage: {% include omni-news-category.html post=post %}
+{%- endcomment -%}
+{%- assign omni_cat = nil -%}
+{%- assign omni_label = nil -%}
+{%- assign omni_tags = "" | split: "" -%}
+{%- for t in include.post.tags -%}
+  {%- assign nt = t | downcase | strip | replace: " ", "-" -%}
+  {%- assign omni_tags = omni_tags | push: nt -%}
+  {%- unless omni_cat -%}
+    {%- for c in site.data.news_categories -%}
+      {%- if c.tags contains nt -%}
+        {%- assign omni_cat = c.label -%}
+        {%- if nt == "preprint" -%}{%- assign omni_label = "Preprint" -%}{%- endif -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- assign omni_cat = omni_cat | default: "People" -%}
+{%- assign omni_label = omni_label | default: omni_cat -%}

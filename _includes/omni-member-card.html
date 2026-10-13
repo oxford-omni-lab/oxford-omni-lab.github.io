@@ -1,0 +1,20 @@
+{% comment %}
+  Member card for the People page (tall photo, name, role).
+  Members whose photo is the placeholder image show their initials instead.
+  Usage: {% include omni-member-card.html member=member %}
+{% endcomment %}
+{% assign member = include.member %}
+{% assign type = site.data.types[member.role] %}
+<a class="omni-member" href="{{ member.url | relative_url | uri_escape }}">
+  <span class="omni-member-photo">
+    {% if member.image and member.image contains "placeholder" %}
+      {% include omni-initials.html name=member.name %}
+    {% elsif member.image %}
+      <img src="{{ member.image | relative_url | uri_escape }}" alt="Portrait of {{ member.name | xml_escape }}" loading="lazy">
+    {% else %}
+      {% include omni-initials.html name=member.name %}
+    {% endif %}
+  </span>
+  <span class="omni-member-name">{{ member.name }}</span>
+  <span class="omni-member-role">{{ member.description | default: type.description }}</span>
+</a>

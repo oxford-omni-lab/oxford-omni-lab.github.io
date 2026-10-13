@@ -1,0 +1,19 @@
+# News categories: the filter buttons on the News page and the label shown on
+# each news item. A post belongs to the category of its first tag listed here.
+# Posts without a matching tag are shown under "People".
+# Tags are written as in the posts' front matter (spaces become dashes).
+
+- label: Videos
+  tags: [video]
+- label: Papers
+  tags: [paper, preprint]
+- label: Awards
+  tags: [award, challenge]
+- label: Talks
+  tags: [talk, oral-presentation]
+- label: Outreach
+  tags: [outreach]
+- label: People
+  tags: [people, graduation, new-member]
+- label: Events
+  tags: [event]

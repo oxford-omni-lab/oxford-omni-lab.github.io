@@ -1,0 +1,15 @@
+{% comment %}
+  News card for the home page (month, category, title, "Read more").
+  The category comes from the post's tags (see _data/news_categories.yaml).
+  Usage: {% include omni-news-card.html post=post %}
+{% endcomment %}
+{% assign post = include.post %}
+{% include omni-news-category.html post=post %}
+<a class="omni-news-card" href="{{ post.url | relative_url | uri_escape }}">
+  <span class="omni-news-meta">
+    <span>{{ post.date | date: "%b %Y" }}</span>
+    <span class="omni-pill">{{ omni_label }}</span>
+  </span>
+  <span class="omni-news-title">{{ post.title }}</span>
+  <span class="omni-news-more">Read more →</span>
+</a>

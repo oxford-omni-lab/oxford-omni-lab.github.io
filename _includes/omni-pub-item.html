@@ -1,0 +1,50 @@
+{% comment %}
+  One publication on the Publications page.
+  - The id keeps the old anchor (publications#<id>) so existing links still work.
+  - data-search holds full author names, so searches such as
+    publications/?search="Ana Namburete" (used on member pages) still match.
+  - Hidden .tag elements carry the theme ids and "has-code" for the filters.
+  Usage: {% include omni-pub-item.html citation=citation %}
+{% endcomment %}
+{% assign c = include.citation %}
+{% assign last_year = site.time | date: "%Y" | plus: 0 | minus: 1 %}
+{% assign c_year = c.date | date: "%Y" | plus: 0 %}
+{% assign venue = site.data.venues[c.publisher] | default: c.publisher %}
+{% assign has_code = false %}
+{% for b in c.buttons %}{% if b.type == "code" or b.type == "source" %}{% assign has_code = true %}{% endif %}{% endfor %}
+{% if c.repo %}{% assign has_code = true %}{% endif %}
+<li class="omni-pub omni-filterable" id="{{ c.id | url_encode }}" data-search="{{ c.authors | join: ', ' | xml_escape }} {{ c.publisher | xml_escape }}">
+  <a class="omni-pub-thumb" {% if c.link %}href="{{ c.link | relative_url | uri_escape }}"{% endif %} tabindex="-1" aria-hidden="true">
+    {% if c.image %}<img src="{{ c.image | relative_url | uri_escape }}" alt="" loading="lazy">{% endif %}
+  </a>
+  <div class="omni-pub-body">
+    <a class="omni-pub-title" {% if c.link %}href="{{ c.link | relative_url | uri_escape }}"{% endif %}>{{ c.title }}</a>
+    <div class="omni-pub-meta">
+      {%- include omni-authors.html authors=c.authors max=8 -%}
+      {%- if venue %} · <em>{{ venue }}</em>{% endif %} ·
+      {% if c_year >= last_year %}{{ c.date | date: "%b %Y" }}{% else %}{{ c.date | date: "%Y" }}{% endif %}
+    </div>
+    <div class="omni-pub-chips">
+      {% for b in c.buttons %}
+        {% case b.type %}
+          {% when "pdf" %}{% assign label = "PDF" %}
+          {% when "code" or "source" %}{% assign label = "Code" %}
+          {% when "demo" %}{% assign label = "Demo" %}
+          {% when "preprint" %}{% assign label = "Preprint" %}
+          {% when "website" %}{% assign label = "Website" %}
+          {% else %}{% assign label = site.data.types[b.type].text | default: b.text | default: "Link" %}
+        {% endcase %}
+        <a class="omni-chip" href="{{ b.link | relative_url | uri_escape }}">{{ label }}</a>
+      {% endfor %}
+      {% capture cite %}{{ c.authors | join: ", " }}. {{ c.title }}. {{ c.publisher }}, {{ c.date | date: "%Y" }}.{% if c.link %} {{ c.link }}{% endif %}{% endcapture %}
+      <button type="button" class="omni-chip" data-cite="{{ cite | strip | xml_escape }}">Cite</button>
+      {% for theme in site.data.themes %}
+        {% assign in_theme = false %}
+        {% for tag in theme.tags %}{% if c.tags contains tag %}{% assign in_theme = true %}{% endif %}{% endfor %}
+        {% if in_theme %}<a class="omni-pill" href="{{ theme.link | relative_url | uri_escape }}">{{ theme.short | default: theme.title }}</a><span class="tag" hidden>{{ theme.id }}</span>{% endif %}
+      {% endfor %}
+      {% if c.tags contains "Preprint" or c.publisher == "arXiv" %}<span class="omni-pill omni-pill-alt">Preprint</span>{% endif %}
+      {% if has_code %}<span class="tag" hidden>has-code</span>{% endif %}
+    </div>
+  </div>
+</li>

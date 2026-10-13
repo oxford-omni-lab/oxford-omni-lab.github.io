@@ -1,5 +1,5 @@
 ---
-title: Maddy ISUOG and FITNG Presentations & Award
+title: "Maddy Wyburd: presentations and award"
 author: OMNI Lab
 tags: # Optional: Categories/topics for the post
   - award

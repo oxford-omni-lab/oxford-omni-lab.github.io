@@ -1,0 +1,17 @@
+{% comment %}
+  Looping (or hero) video that only downloads when it scrolls near the screen.
+  Usage:
+    {% include omni-video.html src="images/video/clip.mp4" poster="images/video/clip_poster.jpg" label="What the video shows" %}
+  Optional: controls=true (shows play/volume controls; use for the overview video)
+  The script _scripts/omni-video.js starts/pauses the videos.
+{% endcomment %}
+<video
+  class="omni-video"
+  data-autoplay
+  data-src="{{ include.src | relative_url | uri_escape }}"
+  {% if include.poster %}poster="{{ include.poster | relative_url | uri_escape }}"{% endif %}
+  aria-label="{{ include.label | default: "video" | xml_escape }}"
+  {% if include.controls %}controls{% endif %}
+  muted loop playsinline preload="none"
+  width="960" height="540"
+></video>

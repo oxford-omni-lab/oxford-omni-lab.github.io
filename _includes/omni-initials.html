@@ -1,0 +1,10 @@
+{%- comment -%}
+  Initials for a member without a photo, e.g. "Pak Hei (Hugo) Yeung" -> "HY".
+  Usage: {% include omni-initials.html name=member.name %}
+{%- endcomment -%}
+{%- assign omni_words = include.name | split: " " -%}
+{%- assign omni_first = omni_words.first -%}
+{%- if include.name contains "(" -%}
+  {%- assign omni_first = include.name | split: "(" | last | split: ")" | first -%}
+{%- endif -%}
+{{- omni_first | slice: 0 | upcase -}}{{- omni_words.last | slice: 0 | upcase -}}

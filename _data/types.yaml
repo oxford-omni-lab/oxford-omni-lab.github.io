@@ -20,7 +20,7 @@ undergrad:
 
 graduate:
   icon: fa-solid fa-user-graduate
-  description: Graduate Student
+  description: MSc Student
 
 programmer:
   icon: fa-solid fa-code
@@ -72,6 +72,11 @@ home-page:
   text: Home Page
   tooltip: Home page
 
+pembroke:
+  icon: fa-solid fa-building-columns
+  text: Pembroke College profile
+  tooltip: Pembroke College profile
+
 email:
   icon: fa-solid fa-envelope
   text: Email
@@ -107,6 +112,12 @@ google-scholar:
   text: Google Scholar
   tooltip: Google Scholar
   link: https://scholar.google.com/citations?user=$VALUE
+
+scopus:
+  icon: fa-solid fa-book-open
+  text: Scopus
+  tooltip: Scopus author profile
+  link: https://www.scopus.com/authid/detail.uri?authorId=$VALUE
 
 github:
   icon: fa-brands fa-github
@@ -197,6 +208,11 @@ journal:
   icon: fa-regular fa-newspaper
   text: Journal
   tooltip: Journal
+
+demo:
+  icon: fa-solid fa-play
+  text: Demo
+  tooltip: Interactive demo
 
 preprint:
   icon: fa-regular fa-eye
