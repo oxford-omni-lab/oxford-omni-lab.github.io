@@ -1158,7 +1158,7 @@
     link: https://arxiv.org/abs/2609.29373
   - type: website
     link: https://vbacher.github.io/RFlash-ultrasound/
-  - type: code
+  - type: source
     link: https://github.com/vbacher/RFlash
   tags:
   - 2D to 3D Reconstruction
