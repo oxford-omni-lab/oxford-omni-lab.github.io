@@ -18,6 +18,11 @@
   width: 100px;
 }
 
+.portrait[data-style=member] .portrait-image {
+  aspect-ratio: 4/5;
+  border-radius: 14px;
+}
+
 .portrait[data-style=tiny] {
   flex-direction: row;
   gap: 15px;
