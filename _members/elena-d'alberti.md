@@ -4,8 +4,8 @@ image: images/members/placeholder.png
 role: clinical-fellow
 description: Clinical Research Fellow
 pronouns: she/her
-group: current
-joined: 2026
+group: alumni
+left: 2026
 aliases:
   - E. D'Alberti
   - Elena D'Alberti

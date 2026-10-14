@@ -18,7 +18,7 @@
     data-style="{{ include.style }}"
     aria-label="{{ member.name | default: "member link" | regex_strip }}"
   >
-    {% if type %}
+    {% if type and include.style != "member" %}
       {% include icon.html icon=type.icon %}
     {% endif %}
 
