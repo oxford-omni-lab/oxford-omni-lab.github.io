@@ -94,6 +94,37 @@ def parse_expiry_date(dcterms_valid):
             return None
     return None
 
+def fill_missing_deadline(deadline, expires):
+    """Use the expiry date as the deadline when no deadline was extracted."""
+    return deadline or expires
+
+def extract_deadline(text):
+    """Extract a stated application deadline from a departmental job posting."""
+    match = re.search(
+        r'\b(?:closing date|application deadline|deadline for applications)\b'
+        r'.*?(\d{1,2}\s+(?:January|February|March|April|May|June|July|August|'
+        r'September|October|November|December)\s+\d{4})',
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not match:
+        return ''
+
+    try:
+        return datetime.strptime(match.group(1), '%d %B %Y').strftime('%Y-%m-%d')
+    except ValueError:
+        return ''
+
+def extract_contract_details(text):
+    """Extract a fixed-term contract sentence from a departmental job posting."""
+    match = re.search(
+        r'\bFixed[-–]term contract\b.*?(?=\s+(?:Grade|Salary|We are currently|'
+        r'The post-holder|This post)\b|[.!?]|$)',
+        text,
+        flags=re.IGNORECASE,
+    )
+    return match.group(0).strip() if match else ''
+
 def contains_filter_keywords(text):
     """Check if text contains any of the filter keywords."""
     text_lower = text.lower()
@@ -118,6 +149,7 @@ def normalize_job_entry(job, source):
     published = normalize_date_string(job.get('published', ''))
     expires = normalize_date_string(job.get('expires', ''))
     deadline = normalize_date_string(job.get('deadline', ''))
+    deadline = fill_missing_deadline(deadline, expires)
 
     active = job.get('active', None)
     if active is None:
@@ -202,6 +234,8 @@ def process_job_postings():
             # Parse dates
             pub_date = parse_date(pubdate_elem.text) if pubdate_elem is not None else None
             expiry_date = parse_expiry_date(dcterms_valid_elem.text) if dcterms_valid_elem is not None else None
+            expires = expiry_date.strftime('%Y-%m-%d') if expiry_date else ''
+            deadline = fill_missing_deadline(extract_deadline(full_content), expires)
             
             # Check if job is still active
             is_active = True
@@ -213,8 +247,10 @@ def process_job_postings():
                 'link': link,
                 'job_id': job_id,
                 'published': pub_date.strftime('%Y-%m-%d') if pub_date else '',
-                'expires': expiry_date.strftime('%Y-%m-%d') if expiry_date else '',
+                'deadline': deadline,
+                'expires': expires,
                 'active': is_active,
+                'contract': extract_contract_details(full_content),
                 #'content_excerpt': full_content[:300] + '...' if len(full_content) > 300 else full_content
             }
             
