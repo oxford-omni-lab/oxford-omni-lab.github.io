@@ -142,4 +142,4 @@ teaching:
   #   years: "20XX"
 ---
 
-Ana Namburete is Associate Professor of Health Data Science and Artificial Intelligence at the University of Oxford and Rokos Tutorial Fellow at Pembroke College. She leads the Oxford Machine Learning in NeuroImaging (OMNI) Lab, which develops AI tools to measure the developing brain from routine ultrasound. Her work includes the first normative atlas of fetal brain maturation, published in _Nature_ in 2023.
+Ana leads the OMNI Lab, where her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain, especially for settings where care is most needed. Outside the lab, she dances ballet and speaks Portuguese with her children.
