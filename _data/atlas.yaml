@@ -54,3 +54,14 @@ downloads:
   # official home of the files and the terms of use (links back to this page)
   official: https://intergrowth21.com/research/brain-atlas-project
   licence: CC BY-NC 4.0   # academic use only; no commercial use
+
+# Papers to cite, shown under "References" on the atlas page. Authors, title,
+# journal and year come from _data/citations.yaml; `details` adds the volume
+# and pages (or article number), as listed by the publisher.
+references:
+  - id: doi:10.1038/s41586-023-06630-3
+    short: Namburete et al., Nature 2023
+    details: "623, 106–114"
+  - id: doi:10.1038/s41467-026-69657-w
+    short: Wyburd et al., Nature Communications 2026
+    details: "17, 3073"

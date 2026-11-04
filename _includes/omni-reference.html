@@ -1,0 +1,17 @@
+{% comment %}
+  One formatted reference: Authors (first 6, lab members in bold), et al.
+  Title. Journal volume, pages (year). DOI link.
+  Usage: {% include omni-reference.html id="doi:10.1038/..." details="623, 106–114" anchor="ref-1" %}
+{% endcomment %}
+{% assign c = site.data.citations | where: "id", include.id | first %}
+{% if c %}
+  {% assign doi = c.id | remove_first: "doi:" %}
+  <li class="omni-ref"{% if include.anchor %} id="{{ include.anchor }}"{% endif %}>
+    {%- capture authors -%}{% include omni-authors.html authors=c.authors max=6 %}{%- endcapture -%}
+    {%- assign authors = authors | strip -%}
+    {{ authors }}{% assign last = authors | slice: -1 %}{% unless last == "." %}.{% endunless %}
+    {{ c.title }}.
+    <em>{{ c.publisher }}</em>{% if include.details %} {{ include.details }}{% endif %} ({{ c.date | date: "%Y" }}).
+    {% if c.id contains "doi:" %}<a href="https://doi.org/{{ doi }}">https://doi.org/{{ doi }}</a>{% elsif c.link %}<a href="{{ c.link }}">{{ c.link }}</a>{% endif %}
+  </li>
+{% endif %}

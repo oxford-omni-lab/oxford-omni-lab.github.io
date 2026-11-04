@@ -37,7 +37,7 @@ title: "From scan to outcome: brain growth and neurodevelopment"
   <div class="omni-aside-card">
     <span class="omni-label">Collaborators</span>
     <div class="omni-collab"><b>Michelle Fernandes</b></div>
-    <div class="omni-collab"><b>INTERGROWTH-21st and INTERBIO-21st consortia</b><span>Oxford Maternal and Perinatal Health Institute</span></div>
+    <div class="omni-collab"><b>INTERGROWTH-21<sup>st</sup> and INTERBIO-21<sup>st</sup> consortia</b><span>Oxford Maternal and Perinatal Health Institute</span></div>
     <div class="omni-collab"><b>Clinical partners</b><span>John Radcliffe Hospital, Oxford</span></div>
   </div>
   <div class="omni-aside-card">

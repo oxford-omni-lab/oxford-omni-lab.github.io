@@ -26,6 +26,20 @@
       return r.text().then(parseCSV);
     });
 
+  // write text into an SVG <text>, raising ordinal endings ("3rd", "97th")
+  const setSuperscripts = (el, text) => {
+    el.textContent = "";
+    text.split(/(\d+)(st|nd|rd|th)\b/).forEach((part, i) => {
+      const span = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+      span.textContent = part;
+      if (i % 3 === 2) {
+        span.setAttribute("baseline-shift", "super");
+        span.setAttribute("font-size", "70%");
+      }
+      if (part) el.appendChild(span);
+    });
+  };
+
   // ---------------------------------------------------------------- viewer
   const setupViewer = async () => {
     const root = $("#viewer");
@@ -381,7 +395,7 @@
         guide.setAttribute("x2", sx(d.x));
         guide.setAttribute("visibility", "visible");
         const range = d.p3 !== null ? ` (3rd\u201397th: ${fmt(d.p3)}\u2013${fmt(d.p97)})` : "";
-        tip.textContent = `${weekLabel(d.x)} wk \u00b7 median ${fmt(d.p50)} ${u}${range}`;
+        setSuperscripts(tip, `${weekLabel(d.x)} wk \u00b7 median ${fmt(d.p50)} ${u}${range}`);
         tip.setAttribute("x", Math.min(sx(d.x) + 8, W - 360));
         tip.setAttribute("y", T + 14);
         tip.setAttribute("visibility", "visible");

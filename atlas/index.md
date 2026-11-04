@@ -11,7 +11,7 @@ title: Fetal brain atlas
 <div class="omni-intro">
   <span class="omni-kicker"><a href="{{ "demos" | relative_url }}">Demos and tools</a> / Fetal brain atlas</span>
   <h1>Fetal brain atlas</h1>
-  <p>A normative atlas of fetal brain maturation from 3D ultrasound, built from the INTERGROWTH-21st study, with labelled brain structures and growth curves. Explore it below. The files are available from the <a href="{{ atlas.downloads.official }}">INTERGROWTH-21st website</a>.</p>
+  <p>A normative atlas of fetal brain maturation from 3D ultrasound, built from the INTERGROWTH-21<sup>st</sup> study, with labelled brain structures and growth curves. Explore it below. The files are available from the <a href="{{ atlas.downloads.official }}">INTERGROWTH-21<sup>st</sup> website</a>.</p>
   <div class="omni-actions">
     <a class="button" href="#viewer">Explore the atlas</a>
     <a class="button" href="#growth" data-style="bare">Growth curves</a>
@@ -91,7 +91,7 @@ title: Fetal brain atlas
   data-units="{{ atlas.growth_units }}">
   <div class="omni-left">
     <h2>Growth curves</h2>
-    <p>Normative growth of 28 brain measures from {{ atlas.growth_weeks }} weeks' gestation (structure and lobe volumes, cortical surface area, depth and thickness, and Sylvian fissure depth), from 4,205 3D ultrasound scans in the INTERGROWTH-21st study (Wyburd et al., 2026). The band shows the 3rd to 97th centile and the line the median.</p>
+    <p>Normative growth of 28 brain measures from {{ atlas.growth_weeks }} weeks' gestation (structure and lobe volumes, cortical surface area, depth and thickness, and Sylvian fissure depth), from 4,205 3D ultrasound scans in the INTERGROWTH-21<sup>st</sup> study (Wyburd et al., 2026). The band shows the 3<sup>rd</sup> to 97<sup>th</sup> centile and the line the median.</p>
   </div>
   <div class="omni-growth-controls">
     <label for="omni-structure">Structure</label>
@@ -101,8 +101,8 @@ title: Fetal brain atlas
   <figure class="omni-growth-chart">
     <svg id="omni-growth-svg" role="img" aria-label="Growth curve"></svg>
     <figcaption class="omni-growth-key">
-      <span><i class="k-outer"></i>3rd to 97th centile</span>
-      <span><i class="k-median"></i>50th centile</span>
+      <span><i class="k-outer"></i>3<sup>rd</sup> to 97<sup>th</sup> centile</span>
+      <span><i class="k-median"></i>50<sup>th</sup> centile</span>
       <span><i class="k-point"></i>Your measurement</span>
     </figcaption>
   </figure>
@@ -117,7 +117,7 @@ title: Fetal brain atlas
   </form>
 
   <div class="omni-growth-note" role="note">
-    <strong>Before comparing your own measurements.</strong> These growth models were learned from a coordinated multi-site study (INTERGROWTH-21st), in which every scan was acquired with the same protocol and the same ultrasound machine (Philips HD9). Scans from other machines, probes or acquisition protocols, or structures measured with other segmentation methods, may differ systematically from these curves, so interpret any comparison with caution.
+    <strong>Before comparing your own measurements.</strong> These growth models were learned from a coordinated multi-site study (INTERGROWTH-21<sup>st</sup>), in which every scan was acquired with the same protocol and the same ultrasound machine (Philips HD9). Scans from other machines, probes or acquisition protocols, or structures measured with other segmentation methods, may differ systematically from these curves, so interpret any comparison with caution.
   </div>
   <p class="omni-muted omni-left">Measures are for one hemisphere (the side further from the probe), except total brain and cavum septum pellucidum. Curves are from the published equations (Supplementary Table 8). For academic research use only; not a clinical tool and not for commercial use.</p>
 </div>
@@ -127,38 +127,87 @@ title: Fetal brain atlas
 <div id="download" class="omni-left">
   <h2>Download and cite</h2>
 
-  <div class="omni-demo-grid">
+  {% assign wk = "{week}" %}
+  {% assign structures = atlas.label_sets | where: "file", "structures_GA{week}.nii.gz" | first %}
+  {% assign lobes = atlas.label_sets | where: "file", "lobes_GA{week}.nii.gz" | first %}
+  {% assign ref1 = atlas.references[0] %}
+  {% assign ref2 = atlas.references[1] %}
+
+  <div class="omni-demo-grid omni-atlas-downloads">
     <div class="omni-demo"><div class="omni-demo-body">
       <span class="omni-label">Atlas</span>
       <h3>Brain images by gestational week</h3>
-      <p>One 3D volume per week ({{ atlas.weeks | first }} to {{ atlas.weeks | last }} weeks), in NIfTI format.</p>
-      <p class="omni-muted">Cite: Namburete et al., <em>Nature</em> 2023.</p>
+      <p>One 3D volume per week ({{ atlas.weeks | first }} to {{ atlas.weeks | last }} weeks), in NIfTI format (.nii.gz).</p>
+      <div class="omni-dl-row">
+        <span class="omni-dl-label">Download a week</span>
+        <div class="omni-dl-chips">
+          {% for w in atlas.weeks %}<a class="omni-chip" href="{{ atlas.data_dir | append: "/" | append: atlas.brain | replace: wk, w | relative_url }}" download>{{ w }} wk</a>{% endfor %}
+        </div>
+      </div>
+      <p class="omni-cite">Cite: <a href="#ref-1">{{ ref1.short | replace: "Nature", "<em>Nature</em>" }}</a></p>
+      <div class="omni-links">
+        <a href="https://doi.org/{{ ref1.id | remove_first: "doi:" }}">Read the paper ↗</a>
+        <a href="{{ atlas.downloads.official }}">Official files and terms ↗</a>
+      </div>
     </div></div>
+
     <div class="omni-demo"><div class="omni-demo-body">
       <span class="omni-label">Labels and growth curves</span>
       <h3>Brain structures and centiles</h3>
-      <p>Label maps aligned to the atlas (10 structures and 5 cortical lobes), a table of label names and colours, and growth centiles by week (CSV).</p>
-      <p class="omni-muted">Cite: Wyburd et al., <em>Nature Communications</em> 2026.</p>
+      <p>Label maps aligned to the atlas (10 structures and 5 cortical lobes), tables of label names and colours, and growth centiles by week.</p>
+      {% if structures %}
+      <div class="omni-dl-row">
+        <span class="omni-dl-label">Brain structures</span>
+        <div class="omni-dl-chips">
+          {% for w in atlas.weeks %}{% if w >= structures.weeks[0] and w <= structures.weeks[1] %}<a class="omni-chip" href="{{ atlas.data_dir | append: "/" | append: structures.file | replace: wk, w | relative_url }}" download>{{ w }} wk</a>{% endif %}{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% if lobes %}
+      <div class="omni-dl-row">
+        <span class="omni-dl-label">Lobes</span>
+        <div class="omni-dl-chips">
+          {% for w in atlas.weeks %}{% if w >= lobes.weeks[0] and w <= lobes.weeks[1] %}<a class="omni-chip" href="{{ atlas.data_dir | append: "/" | append: lobes.file | replace: wk, w | relative_url }}" download>{{ w }} wk</a>{% endif %}{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      <div class="omni-dl-row">
+        <span class="omni-dl-label">Tables (CSV)</span>
+        <div class="omni-dl-chips">
+          {% for ls in atlas.label_sets %}<a class="omni-chip" href="{{ atlas.data_dir | append: "/" | append: ls.table | relative_url }}" download>{{ ls.name }} labels</a>{% endfor %}<a class="omni-chip" href="{{ growth_csv | relative_url }}" download>Growth centiles</a>
+        </div>
+      </div>
+      <p class="omni-cite">Cite: <a href="#ref-2">{{ ref2.short | replace: "Nature Communications", "<em>Nature Communications</em>" }}</a></p>
+      <div class="omni-links">
+        <a href="https://doi.org/{{ ref2.id | remove_first: "doi:" }}">Read the paper ↗</a>
+      </div>
     </div></div>
+
     <div class="omni-demo"><div class="omni-demo-body">
       <span class="omni-label">Your own scans</span>
       <h3>Label and measure new scans</h3>
       <p>The OMNI ultrasound toolkit runs the same pipeline used in the paper: align a 3D scan to the atlas, label the brain structures, compute volumes and compare them with the growth curves.</p>
-      <p><a class="omni-link" href="https://oxford-omni-lab-org.github.io/OMNI_ultrasound/NormativeGrowthTrajec/index.html">Documentation and code ↗</a></p>
+      <div class="omni-links">
+        <a href="https://oxford-omni-lab-org.github.io/OMNI_ultrasound/NormativeGrowthTrajec/index.html">Documentation and code ↗</a>
+      </div>
     </div></div>
   </div>
 
-  <p>The official copies of the atlas and labels, with the full terms of use, are on the INTERGROWTH-21st website.</p>
+  <p>The official copies of the atlas and labels, with the full terms of use, are on the INTERGROWTH-21<sup>st</sup> website.</p>
   <div class="omni-actions">
-    {% include button.html link=atlas.downloads.official text="Download from INTERGROWTH-21st ↗" newtab=true %}
+    {% include button.html link=atlas.downloads.official text="Download from INTERGROWTH-21<sup>st</sup> ↗" newtab=true %}
     {% include button.html link=growth_csv text="Growth curve table (CSV)" style="bare" %}
   </div>
 
   <p><strong>Free for academic use. Commercial use is not permitted.</strong> Please cite the papers below{% if atlas.downloads.licence %} (licence: {{ atlas.downloads.licence }}){% endif %}.</p>
 
-  <h3>References</h3>
-  {% include citation.html lookup="doi:10.1038/s41586-023-06630-3" style="rich" %}
-  <p>Wyburd MK, Kennedy SH, Fernandes M, et al., Namburete AIL. Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age. <em>Nature Communications</em> 17, 3073 (2026). <a href="https://doi.org/10.1038/s41467-026-69657-w">doi:10.1038/s41467-026-69657-w</a></p>
+  <h3 class="omni-refs-title">References</h3>
+  <ol class="omni-refs">
+    {% for r in atlas.references %}
+      {% capture anchor %}ref-{{ forloop.index }}{% endcapture %}
+      {% include omni-reference.html id=r.id details=r.details anchor=anchor %}
+    {% endfor %}
+  </ol>
 </div>
 
 <script src="{{ "atlas/assets/niivue-0.69.0.min.js" | relative_url }}"></script>

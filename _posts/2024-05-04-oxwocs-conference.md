@@ -6,4 +6,4 @@ tags:
   - event
 ---
 
-Maddy Wyburd hosts the 10th annual Oxbridge Women in Computer Science Conference.
+Maddy Wyburd hosts the 10<sup>th</sup> annual Oxbridge Women in Computer Science Conference.
