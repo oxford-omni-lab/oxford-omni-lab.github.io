@@ -142,4 +142,4 @@ teaching:
   #   years: "20XX"
 ---
 
-Ana leads the OMNI Lab, where her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain, especially for settings where care is most needed. Outside the lab, she dances ballet and speaks Portuguese with her children.
+Ana came to Oxford as a Commonwealth Scholar and now leads the OMNI Lab, where her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain. Away from the lab, she dances ballet and On2 salsa and always has a book on the go. She also collects languages the way some people collect houseplants: enthusiastically, and with mixed success at keeping them all alive.
