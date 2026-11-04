@@ -69,6 +69,7 @@ include:
 
 # force jekyll to exclude certain files/folders
 exclude:
+  - atlas/assets/make_teaser.py
   - README.md
   - LICENSE.md
   - CITATION.cff

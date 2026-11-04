@@ -25,10 +25,10 @@ nav:
     <div>
       <span class="omni-kicker">Interactive atlas</span>
       <h3>Fetal brain atlas</h3>
-      <p>A digital atlas of normative fetal brain maturation from the INTERGROWTH-21st study, linked to healthy neurodevelopment at 2 years. Explore it in your browser with the online viewer. Freely available for academic, clinical and commercial use, provided the <em>Nature</em> paper is cited (see the atlas page for full terms).</p>
+      <p>A digital atlas of normative fetal brain maturation from the INTERGROWTH-21st study, linked to healthy neurodevelopment at 2 years. Explore it in your browser, with labelled brain structures and growth curves. Free for academic use (not for commercial use), provided the papers are cited; see the atlas page for full terms.</p>
       <p class="omni-meta">Themes: Structure · From scan to outcome</p>
       <div class="omni-actions">
-        {% include button.html link="https://intergrowth21.com/intergrowth_nifti_viewer/" text="Open the atlas viewer ↗" newtab=true %}
+        {% include button.html link="atlas" text="Explore the atlas →" %}
         {% include button.html link="https://intergrowth21.com/research/brain-atlas-project" text="About the atlas ↗" newtab=true style="bare" %}
         {% include button.html link="https://doi.org/10.1038/s41586-023-06630-3" text="Nature paper ↗" newtab=true style="bare" %}
       </div>

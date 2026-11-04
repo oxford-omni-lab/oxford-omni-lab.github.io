@@ -1,0 +1,56 @@
+# Settings for the fetal brain atlas page (/atlas).
+#
+# Images: atlas/data/v1/ holds the 22-week sample (atlas, structure labels and
+# lobe parcellation). Add the other weeks with the same file names, then list
+# them under `weeks`.
+#
+# Label names: structures.csv and lobes.csv still have placeholder names
+# ("Structure 1", "Lobe 1"); replace them with the real names. Colours (r, g, b)
+# can be changed freely. Any label not in a table is shown uncoloured.
+#
+# Growth curves: atlas/data/v1/growth_centiles.csv is generated from all the
+# equations in Wyburd et al. 2026, Supplementary Table 8 (SD = exp of the
+# reported log-scale equation), 18 to 27 weeks in quarter-week steps, with
+# group, units, mean, sd and the 3rd, 50th and 97th centiles
+# (mean +/- 1.881 sd). The page's centile calculator uses mean and sd.
+
+
+example_images: false
+example_growth: false
+
+data_dir: atlas/data/v1
+brain: brain_GA{week}.nii.gz         # {week} is replaced by the gestational week
+
+# label maps the visitor can switch between (first one is shown by default)
+label_sets:
+  - name: Brain structures
+    file: structures_GA{week}.nii.gz
+    table: structures.csv            # columns: index, name, r, g, b
+    weeks: [18, 26]                  # first and last week with these labels
+  - name: Lobes
+    file: lobes_GA{week}.nii.gz
+    table: lobes.csv
+    weeks: [22, 22]                  # only the 22-week parcellation so far
+
+weeks: [14, 16, 18, 20, 22, 24, 26, 28, 30]
+start_week: 22
+
+# The atlas files' header axes are turned 90 degrees about the vertical axis,
+# so the viewer rotates them for display (degrees clockwise in the axial view;
+# 0 to switch off). The files themselves are left unchanged.
+rotate_axial: 90
+
+# Where the crosshair starts, in mm (x, y, z) as shown in the viewer's readout
+# when you click: click the point you want, then copy the three numbers here.
+# Default: axial level through the thalami, cavum septum and frontal horns.
+start_position: [-48, 52, 59]
+
+growth_dir: atlas/data/v1
+growth_weeks: 18 to 27
+growth_table: growth_centiles.csv    # columns: structure, ga_weeks, p3, p10, p50, p90, p97
+growth_units: cm³
+
+downloads:
+  # official home of the files and the terms of use (links back to this page)
+  official: https://intergrowth21.com/research/brain-atlas-project
+  licence: CC BY-NC 4.0   # academic use only; no commercial use

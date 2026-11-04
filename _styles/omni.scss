@@ -87,6 +87,11 @@ main > section.background[data-dark="true"] {
   color: var(--text);
 }
 
+// "wide" sections (atlas viewer) keep the same side margins as other sections
+main > section.background[data-size="wide"] {
+  padding: 64px max(24px, calc((100% - #{$omni-wrap}) / 2));
+}
+
 main > section.background[data-size="tight"] {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -2121,4 +2126,428 @@ details.omni-troubleshoot {
 
 .omni-soft-card .job-listings {
   margin-top: 8px;
+}
+
+// ---------------------------------------------------------------- fetal brain atlas page
+
+.omni-atlas-banner {
+  max-width: 1160px;
+  margin: 0 auto 16px;
+  padding: 10px 16px;
+  border-left: 4px solid #c98a00;
+  border-radius: 8px;
+  background: #fff6e0;
+  color: #4a3a00;
+  text-align: left;
+}
+
+.omni-atlas {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: stretch;  // the panel takes the viewer's height (see below)
+  gap: 20px;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: left;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.omni-atlas-stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #141012;
+  aspect-ratio: 4 / 3;
+
+  canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.omni-atlas.is-loading .omni-atlas-stage:after {
+  content: "Loading…";
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  color: #c9bac0;
+  font-size: 0.85rem;
+}
+
+.omni-atlas-readout {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #000000aa;
+  color: #f3ecee;
+  font-family: var(--heading);
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+.omni-atlas-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 20px;
+  // the viewer sets the row height; the panel fills it and scrolls if needed
+  height: 0;
+  min-height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  border: 1px solid var(--omni-line);
+  border-radius: 16px;
+  background: var(--background);
+
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--primary);
+  }
+}
+
+.omni-atlas-week {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  label {
+    color: var(--gray);
+    font-size: 0.8rem;
+    font-weight: var(--bold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  output {
+    font-family: var(--heading);
+    font-size: 1.8rem;
+    font-weight: var(--semi-bold);
+    line-height: 1.2;
+  }
+}
+
+.omni-atlas-ticks {
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+.omni-atlas-play {
+  align-self: flex-start;
+  margin-top: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: none;
+  color: var(--primary);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    background: var(--primary);
+    color: var(--background);
+  }
+}
+
+.omni-atlas-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.omni-seg {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border: 1px solid var(--omni-line);
+  border-radius: 10px;
+
+  button {
+    flex: 1 1 auto;
+    padding: 7px 8px;
+    border: none;
+    border-right: 1px solid var(--omni-line);
+    background: none;
+    color: var(--dark-gray);
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  button:last-child {
+    border-right: none;
+  }
+
+  button[aria-pressed="true"] {
+    background: var(--primary);
+    color: var(--background);
+  }
+}
+
+.omni-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: var(--semi-bold);
+
+  input {
+    accent-color: var(--primary);
+  }
+}
+
+.omni-atlas-legend {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.88rem;
+  line-height: 1.35;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  li.is-active {
+    background: var(--background-alt);
+    font-weight: var(--bold);
+  }
+
+  i {
+    width: 12px;
+    height: 12px;
+    flex: none;
+    border-radius: 3px;
+  }
+}
+
+.omni-atlas-files {
+  font-size: 0.92rem;
+}
+
+.omni-atlas-help {
+  max-width: 1160px;
+  margin: 10px auto 0;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.omni-growth {
+  text-align: left;
+}
+
+.omni-growth-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+  margin: 10px 0 16px;
+
+  select {
+    padding: 7px 10px;
+    border: 1px solid var(--omni-line);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+  }
+}
+
+.omni-growth-chart {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--omni-line);
+  border-radius: 16px;
+  background: var(--background);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .grid { stroke: var(--omni-line); stroke-width: 1; }
+  .tick { fill: var(--gray); font-size: 12px; }
+  .axis { fill: var(--dark-gray); font-size: 13px; }
+  .band-outer { fill: var(--primary); opacity: 0.12; }
+  .band-inner { fill: var(--primary); opacity: 0.22; }
+  .median { fill: none; stroke: var(--primary); stroke-width: 2.5; }
+  .guide { stroke: var(--gray); stroke-dasharray: 3 3; }
+  .tip { fill: var(--text); font-size: 13px; font-weight: 600; }
+}
+
+.omni-growth-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 8px;
+  color: var(--dark-gray);
+  font-size: 0.85rem;
+
+  i {
+    display: inline-block;
+    width: 18px;
+    height: 10px;
+    margin-right: 6px;
+    border-radius: 2px;
+    vertical-align: middle;
+  }
+
+  .k-outer { background: rgba(175, 36, 94, 0.15); }
+  .k-inner { background: rgba(175, 36, 94, 0.32); }
+  .k-median { height: 3px; background: var(--primary); }
+}
+
+.omni-atlas.is-single-week {
+  #omni-week,
+  .omni-atlas-ticks,
+  .omni-atlas-play {
+    display: none;
+  }
+}
+
+#omni-labelset {
+  padding: 6px 8px;
+  border: 1px solid var(--omni-line);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--text);
+  font: inherit;
+}
+
+.omni-atlas-note {
+  margin: 0;
+  font-size: 0.85rem;
+
+  &:empty {
+    display: none;
+  }
+}
+
+.omni-growth-chart .point { fill: var(--text); stroke: var(--background); stroke-width: 2; }
+.omni-growth-key .k-point { width: 10px; height: 10px; border-radius: 50%; background: var(--text); }
+
+.omni-calc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+  padding: 16px 20px;
+  border: 1px solid var(--omni-line);
+  border-radius: 16px;
+  background: var(--background);
+  text-align: left;
+}
+
+.omni-calc-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 12px 24px;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+  }
+
+  input {
+    width: 10em;
+    padding: 7px 10px;
+    border: 1px solid var(--omni-line);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text);
+    font: inherit;
+  }
+}
+
+#omni-calc-out {
+  text-align: left;
+  font-family: var(--heading);
+  font-weight: var(--semi-bold);
+}
+
+@media (max-width: 900px) {
+  .omni-atlas-panel {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+}
+
+.omni-atlas-legend li {
+  margin: 0;
+  padding: 1px 6px;
+}
+
+.omni-atlas-group {
+  gap: 6px;
+}
+
+.omni-atlas-below {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 20px;
+  max-width: 1160px;
+  margin: 10px auto 0;
+  font-size: 0.85rem;
+  text-align: left;
+
+  p {
+    margin: 0;
+  }
+}
+
+.omni-atlas-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.omni-atlas-teaser {
+  margin: 28px 0 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background: #000;
+  }
+
+  figcaption {
+    margin-top: 8px;
+    color: var(--gray);
+    font-size: 0.85rem;
+    text-align: left;
+  }
+}
+
+.omni-growth-note {
+  margin: 16px 0 8px;
+  padding: 14px 18px;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: var(--background-alt);
+  font-size: 0.95rem;
+  text-align: left;
 }

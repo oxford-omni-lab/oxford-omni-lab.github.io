@@ -50,7 +50,7 @@ title: "From scan to outcome: brain growth and neurodevelopment"
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Code, data and demos</span>
-    <a href="https://intergrowth21.com/intergrowth_nifti_viewer/">Fetal brain atlas viewer →</a>
+    <a href="{{ "atlas" | relative_url }}">Fetal brain atlas viewer and growth curves →</a>
   </div>
   {% include omni-other-themes.html current="scan-to-outcome" %}
 </aside>

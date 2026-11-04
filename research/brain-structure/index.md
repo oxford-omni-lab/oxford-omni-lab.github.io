@@ -47,7 +47,7 @@ title: "Structure: brain atlases and segmentation"
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Code, data and demos</span>
-    <a href="https://intergrowth21.com/intergrowth_nifti_viewer/">Fetal brain atlas viewer →</a>
+    <a href="{{ "atlas" | relative_url }}">Fetal brain atlas viewer and growth curves →</a>
     <a href="https://github.com/oxford-omni-lab">OMNI Ultrasound Toolkit on GitHub →</a>
   </div>
   {% include omni-other-themes.html current="brain-structure" %}
