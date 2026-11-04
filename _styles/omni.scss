@@ -2629,3 +2629,228 @@ ol.omni-refs {
     background: var(--omni-soft);
   }
 }
+
+// ---------------------------------------------------------------- personal profile
+
+main > section.background:has(.omni-profile) {
+  background: #f6f1f0;
+}
+
+[data-dark="true"] main > section.background:has(.omni-profile) {
+  background: var(--background);
+}
+
+.omni-profile {
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.omni-profile-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin: -20px 0 20px;
+}
+
+.omni-profile-back {
+  flex: 0 1 280px;
+  color: var(--dark-gray);
+  text-decoration: none;
+}
+
+.omni-profile-grid {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.omni-profile-card {
+  padding: 22px 26px;
+  border-radius: 16px;
+  background: var(--background);
+  box-shadow: 0 1px 3px var(--overlay);
+
+  h2 {
+    margin: 0 0 12px;
+    padding: 0;
+    border: none;
+    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: var(--bold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.omni-profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.omni-profile-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  hr {
+    width: 100%;
+    margin: 2px 0;
+    border: none;
+    border-top: 2px dotted var(--omni-line);
+  }
+}
+
+.omni-profile-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: var(--semi-bold);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+.omni-profile-photo {
+  width: 156px;
+  height: 156px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.omni-profile-rank {
+  color: var(--gray);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.omni-profile-row {
+  display: flex;
+  gap: 12px;
+  color: var(--dark-gray);
+  text-decoration: none;
+  line-height: 1.45;
+
+  strong {
+    color: var(--text);
+  }
+}
+
+.omni-profile-icon {
+  display: flex;
+  flex: none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--background-alt);
+  color: var(--primary);
+  font-size: 0.85rem;
+}
+
+.omni-profile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .button {
+    margin: 0;
+    padding: 2px 0;
+    justify-content: flex-start;
+  }
+}
+
+.omni-profile-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: 6px 0 6px 17px;
+  }
+
+  li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 5px;
+    height: 5px;
+    background: var(--primary);
+  }
+}
+
+.omni-profile-sub {
+  display: block;
+  color: var(--dark-gray);
+}
+
+.omni-profile-diamond {
+  color: var(--gray);
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+.omni-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.omni-chip {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--background-alt);
+  color: var(--primary);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+a.omni-chip:hover {
+  background: var(--primary);
+  color: var(--background);
+}
+
+
+// profile: research-field tags all the same size, linked or not
+.omni-profile .omni-chips .omni-chip {
+  padding: 4px 12px;
+  border: 1px solid transparent;
+  background: var(--omni-chip);
+  color: var(--omni-chip-text);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.omni-profile .omni-chips a.omni-chip:hover {
+  border-color: var(--omni-accent);
+}
+
+// profile sidebar: link buttons left-aligned on one line each
+.omni-profile-links .button {
+  justify-content: flex-start;
+  margin: 0;
+  padding: 2px 0;
+  white-space: nowrap;
+}
