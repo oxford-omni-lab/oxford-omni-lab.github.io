@@ -18,6 +18,11 @@ permissions:
 jobs:
   build-site:
     runs-on: ubuntu-latest
+    # The live site and PR previews both write to gh-pages. Serialize these
+    # jobs so one push cannot race another deployment.
+    concurrency:
+      group: ${{ github.repository }}-pages-deploy
+      cancel-in-progress: false
 
     steps:
       - name: Debug dump
@@ -49,7 +54,7 @@ jobs:
           JEKYLL_ENV=production bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path || '' }}"
 
       - name: Commit live site to Pages branch
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        uses: JamesIves/github-pages-deploy-action@v4.9.0
         with:
           folder: _site
           clean-exclude: ${{ env.PREVIEWS_FOLDER }}

@@ -22,6 +22,10 @@ permissions:
 jobs:
   build-preview:
     runs-on: ubuntu-latest
+    # Share the lock with the live-site workflow because both update gh-pages.
+    concurrency:
+      group: ${{ github.repository }}-pages-deploy
+      cancel-in-progress: false
 
     steps:
       - name: Debug dump
