@@ -142,4 +142,4 @@ teaching:
   #   years: "20XX"
 ---
 
-Ana trained as a biomedical engineer in Canada and came to Oxford as a Commonwealth Scholar for a DPhil in Engineering Science, before moving across to Computer Science, where she now leads the OMNI Lab. Her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain. Away from the lab, she dances ballet and On2 salsa and always has a book on the go.
+Ana trained as a biomedical engineer in Canada and came to Oxford as a Commonwealth Scholar for a DPhil in Engineering Science, before moving across to Computer Science, where she now leads the OMNI Lab. Her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain. Away from the lab, she dances ballet and On2 salsa, and enjoys reading.
