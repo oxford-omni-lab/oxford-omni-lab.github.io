@@ -129,17 +129,19 @@ funding:
   #   years: "20XX to 20XX"
 
 teaching:
-  - title: Tutorial teaching in Computer Science
+  - title: Deep Learning in Healthcare
+    place: Department of Computer Science
+    # years: "20XX to present"
+    detail: Course creator and lecturer
+  - title: Undergraduate tutorials in Computer Science
     place: Pembroke College, Oxford
     years: 2021 to present
+    detail: Linear Algebra · Design and Analysis of Algorithms · Algorithms and Data Structures · Functional Programming
   - title: Examiner, MSc in Advanced Computer Science
     place: Department of Computer Science
     # years: "20XX"
   - title: DPhil supervision
     place: EPSRC Centres for Doctoral Training in Healthcare Data Science (HDS) and Autonomous Intelligent Machines and Systems (AIMS)
-  # - title: [Course or lecture series]
-  #   place: [Department or programme]
-  #   years: "20XX"
 ---
 
 Ana trained as a biomedical engineer in Canada and came to Oxford as a Commonwealth Scholar for a DPhil in Engineering Science, before moving across to Computer Science, where she now leads the OMNI Lab. Her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain. Away from the lab, she dances ballet and On2 salsa, and enjoys reading.

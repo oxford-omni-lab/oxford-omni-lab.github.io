@@ -1,6 +1,7 @@
 {% comment %}
   A card list for profile pages (appointments, degrees, prizes, teaching, funding).
-  Each item: title, place (optional), years (optional), link (optional).
+  Each item: title, place (optional), years (optional), link (optional),
+  detail (optional, a further line underneath, e.g. a list of courses).
 {% endcomment %}
 <ul class="omni-profile-list">
   {% for item in include.items %}
@@ -12,6 +13,7 @@
           {{ item.place }}{% if item.place and item.years %} <span class="omni-profile-diamond" aria-hidden="true">◆</span> {% endif %}{{ item.years }}
         </span>
       {% endif %}
+      {% if item.detail %}<span class="omni-profile-sub">{{ item.detail }}</span>{% endif %}
     </li>
   {% endfor %}
 </ul>
