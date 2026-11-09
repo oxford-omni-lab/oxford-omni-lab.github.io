@@ -2728,11 +2728,12 @@ main > section.background:has(.omni-profile) {
   }
 }
 
+/* same shape as the other members' photos (portrait.scss, "member" style) */
 .omni-profile-photo {
   width: 156px;
-  height: 156px;
+  aspect-ratio: 4 / 5;
   margin-bottom: 8px;
-  border-radius: 50%;
+  border-radius: 14px;
   object-fit: cover;
 }
 

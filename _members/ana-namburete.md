@@ -72,14 +72,6 @@ other-appointments:
   #   place: Pembroke College, Oxford
   #   years: "20XX"
 
-degrees:
-  - title: Doctor of Philosophy (DPhil), Engineering Science
-    place: University of Oxford
-    years: "2016"
-  - title: BASc (Hons), Biomedical Engineering
-    place: Simon Fraser University, Canada
-    years: "2011"
-
 prizes:
   - title: ERC Starting Grant (_WOMB2COT_)
     place: European Research Council
