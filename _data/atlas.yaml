@@ -1,12 +1,16 @@
 # Settings for the fetal brain atlas page (/atlas).
 #
-# Images: atlas/data/v1/ holds the 22-week sample (atlas, structure labels and
-# lobe parcellation). Add the other weeks with the same file names, then list
-# them under `weeks`.
+# Images: atlas/data/v1/ holds the weekly atlas (14 to 30 weeks), brain
+# structure labels and lobe parcellations (18 to 26 weeks), as uint8 NIfTI on
+# the atlas grid. Sources, in the lab's FBA_with_labels folder:
+#   brain_GA{w}       scans/{w}wks_Atlas(separateHems)_mean_warped.nii.gz
+#   structures_GA{w}  manual_labels/AllStructures/{w}wks_AllLabels.mha
+#   lobes_GA{w}       manual_labels/AllStructures/Cortical Parcellation/
+#                     Propagated_Parcellations/Parcellation_lobes_{w}wks.mha
+# To add a week, save its files with the same names and list it under `weeks`.
 #
-# Label names: structures.csv and lobes.csv still have placeholder names
-# ("Structure 1", "Lobe 1"); replace them with the real names. Colours (r, g, b)
-# can be changed freely. Any label not in a table is shown uncoloured.
+# Label names and colours (r, g, b) are in structures.csv and lobes.csv and can
+# be changed freely. Any label not in a table is shown uncoloured.
 #
 # Growth curves: atlas/data/v1/growth_centiles.csv is generated from all the
 # equations in Wyburd et al. 2026, Supplementary Table 8 (SD = exp of the
@@ -30,9 +34,9 @@ label_sets:
   - name: Lobes
     file: lobes_GA{week}.nii.gz
     table: lobes.csv
-    weeks: [22, 22]                  # only the 22-week parcellation so far
+    weeks: [18, 26]
 
-weeks: [14, 16, 18, 20, 22, 24, 26, 28, 30]
+weeks: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
 start_week: 22
 
 # The atlas files' header axes are turned 90 degrees about the vertical axis,

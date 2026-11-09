@@ -20,8 +20,8 @@ title: Fetal brain atlas
 </div>
 
 <figure class="omni-atlas-teaser">
-  <img src="{{ "atlas/assets/atlas_teaser.jpg" | relative_url }}" alt="Axial slices of the atlas every two weeks from 14 to 30 weeks' gestation, drawn at the same scale, with brain structures in colour from 18 to 26 weeks" loading="lazy">
-  <figcaption>The atlas every two weeks from 14 to 30 weeks, all at the same scale, with labelled brain structures from 18 to 26 weeks.</figcaption>
+  <img src="{{ "atlas/assets/atlas_teaser.jpg" | relative_url }}" alt="Axial slices of the atlas at every second week from 14 to 30 weeks' gestation, drawn at the same scale, with brain structures in colour from 18 to 26 weeks" loading="lazy">
+  <figcaption>The atlas has one image per week from 14 to 30 weeks. Shown here is every second week, all at the same scale, with labelled brain structures from 18 to 26 weeks.</figcaption>
 </figure>
 
 {% include section.html size="wide" %}
