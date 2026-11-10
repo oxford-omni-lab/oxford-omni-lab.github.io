@@ -71,7 +71,7 @@ nav:
             <span class="omni-kicker">{{ venue }} · {{ c.date | date: "%Y" }}</span>
             <a class="omni-highlight-title" {% if c.link %}href="{{ c.link | relative_url | uri_escape }}"{% endif %}>{{ c.title }}</a>
             <p class="omni-pub-meta">{% include omni-authors.html authors=c.authors max=5 %}</p>
-            {% if c.description %}<p>{{ c.description }}</p>{% endif %}
+            {% if c.description %}<p>{{ c.description | regex_replace: "\b(\d+)(st|nd|rd|th)\b", "\1<sup>\2</sup>" }}</p>{% endif %}
           </div>
         {% endfor %}
       </div>

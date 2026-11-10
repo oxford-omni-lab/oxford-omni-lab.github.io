@@ -1,0 +1,71 @@
+# Settings for the fetal brain atlas page (/atlas).
+#
+# Images: atlas/data/v1/ holds the weekly atlas (14 to 30 weeks), brain
+# structure labels and lobe parcellations (18 to 26 weeks), as uint8 NIfTI on
+# the atlas grid. Sources, in the lab's FBA_with_labels folder:
+#   brain_GA{w}       scans/{w}wks_Atlas(separateHems)_mean_warped.nii.gz
+#   structures_GA{w}  manual_labels/AllStructures/{w}wks_AllLabels.mha
+#   lobes_GA{w}       manual_labels/AllStructures/Cortical Parcellation/
+#                     Propagated_Parcellations/Parcellation_lobes_{w}wks.mha
+# To add a week, save its files with the same names and list it under `weeks`.
+#
+# Label names and colours (r, g, b) are in structures.csv and lobes.csv and can
+# be changed freely. Any label not in a table is shown uncoloured.
+#
+# Growth curves: atlas/data/v1/growth_centiles.csv is generated from all the
+# equations in Wyburd et al. 2026, Supplementary Table 8 (SD = exp of the
+# reported log-scale equation), 18 to 27 weeks in quarter-week steps, with
+# group, units, mean, sd and the 3rd, 50th and 97th centiles
+# (mean +/- 1.881 sd). The page's centile calculator uses mean and sd.
+
+
+example_images: false
+example_growth: false
+
+data_dir: atlas/data/v1
+brain: brain_GA{week}.nii.gz         # {week} is replaced by the gestational week
+
+# label maps the visitor can switch between (first one is shown by default)
+label_sets:
+  - name: Brain structures
+    file: structures_GA{week}.nii.gz
+    table: structures.csv            # columns: index, name, r, g, b
+    weeks: [18, 26]                  # first and last week with these labels
+  - name: Lobes
+    file: lobes_GA{week}.nii.gz
+    table: lobes.csv
+    weeks: [18, 26]
+
+weeks: [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+start_week: 22
+
+# The atlas files' header axes are turned 90 degrees about the vertical axis,
+# so the viewer rotates them for display (degrees clockwise in the axial view;
+# 0 to switch off). The files themselves are left unchanged.
+rotate_axial: 90
+
+# Where the crosshair starts, in mm (x, y, z) as shown in the viewer's readout
+# when you click: click the point you want, then copy the three numbers here.
+# Default: axial level through the thalami, cavum septum and frontal horns.
+start_position: [-48, 52, 59]
+
+growth_dir: atlas/data/v1
+growth_weeks: 18 to 27
+growth_table: growth_centiles.csv    # columns: structure, ga_weeks, p3, p10, p50, p90, p97
+growth_units: cm³
+
+downloads:
+  # official home of the files and the terms of use (links back to this page)
+  official: https://intergrowth21.com/research/brain-atlas-project
+  licence: CC BY-NC 4.0   # academic use only; no commercial use
+
+# Papers to cite, shown under "References" on the atlas page. Authors, title,
+# journal and year come from _data/citations.yaml; `details` adds the volume
+# and pages (or article number), as listed by the publisher.
+references:
+  - id: doi:10.1038/s41586-023-06630-3
+    short: Namburete et al., Nature 2023
+    details: "623, 106–114"
+  - id: doi:10.1038/s41467-026-69657-w
+    short: Wyburd et al., Nature Communications 2026
+    details: "17, 3073"

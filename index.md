@@ -38,10 +38,10 @@
   <div>
     <span class="omni-kicker">Featured paper · Nature · 2023</span>
     <h2>{{ featured.title | default: "Normative spatiotemporal fetal brain maturation with satisfactory development at 2 years" }}</h2>
-    <p>Using 3D ultrasound scans from the international INTERGROWTH-21st study, we built a normative atlas of how the fetal brain matures week by week, in pregnancies where the children went on to develop well at 2 years. The atlas gives clinicians and researchers a reference for what typical brain development looks like during pregnancy.</p>
+    <p>Using 3D ultrasound scans from the international INTERGROWTH-21<sup>st</sup> study, we built a normative atlas of how the fetal brain matures week by week, in pregnancies where the children went on to develop well at 2 years. The atlas gives clinicians and researchers a reference for what typical brain development looks like during pregnancy.</p>
     <div class="omni-actions">
       {% include button.html link="https://doi.org/10.1038/s41586-023-06630-3" text="Read the paper" style="dark" %}
-      {% include button.html link="https://intergrowth21.com/intergrowth_nifti_viewer/" text="Explore the atlas" style="bare" %}
+      {% include button.html link="atlas" text="Explore the atlas" style="bare" %}
     </div>
   </div>
   <div class="omni-feature-figure">

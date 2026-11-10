@@ -16,7 +16,7 @@ title: "Structure: brain atlases and segmentation"
 
 <h2>Our approach</h2>
 <ol class="omni-steps">
-  <li><strong>Build the atlas</strong>A normative atlas of fetal brain maturation from large international cohorts (INTERGROWTH-21st).</li>
+  <li><strong>Build the atlas</strong>A normative atlas of fetal brain maturation from large international cohorts (INTERGROWTH-21<sup>st</sup>).</li>
   <li><strong>Register</strong>Align each new scan to the atlas at the right gestational age.</li>
   <li><strong>Label</strong>Segment brain structures, with the atlas guiding the labels where shadows block the view.</li>
   <li><strong>Model shape</strong>Describe how each structure’s shape and size change across gestation.</li>
@@ -35,7 +35,7 @@ title: "Structure: brain atlases and segmentation"
   <div class="omni-aside-card">
     <span class="omni-label">Collaborators</span>
     <div class="omni-collab"><b>Bartłomiej W. Papież</b></div>
-    <div class="omni-collab"><b>INTERGROWTH-21st Consortium</b><span>Oxford Maternal and Perinatal Health Institute</span></div>
+    <div class="omni-collab"><b>INTERGROWTH-21<sup>st</sup> Consortium</b><span>Oxford Maternal and Perinatal Health Institute</span></div>
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Methods and expertise</span>
@@ -47,7 +47,7 @@ title: "Structure: brain atlases and segmentation"
   </div>
   <div class="omni-aside-card">
     <span class="omni-label">Code, data and demos</span>
-    <a href="https://intergrowth21.com/intergrowth_nifti_viewer/">Fetal brain atlas viewer →</a>
+    <a href="{{ "atlas" | relative_url }}">Fetal brain atlas viewer and growth curves →</a>
     <a href="https://github.com/oxford-omni-lab">OMNI Ultrasound Toolkit on GitHub →</a>
   </div>
   {% include omni-other-themes.html current="brain-structure" %}

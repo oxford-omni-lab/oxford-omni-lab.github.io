@@ -1,0 +1,151 @@
+---
+layout: default
+---
+
+{% comment %}
+  Personal profile layout, modelled on university "expert profile" pages:
+  a sidebar card (photo, name, ORCID, positions, address, links) and a
+  single page of cards, one per section.
+
+  Used only by member files that set `layout: profile`; every other member
+  page keeps the template's normal `member` layout.
+
+  All content comes from the member file's front matter (see
+  _members/ana-namburete.md for the field names). The page body is the Bio.
+  A card with no entries is left out.
+{% endcomment %}
+
+{% assign first_name = page.name | split: " " | first %}
+
+{% include section.html size="wide" %}
+
+<div class="omni-profile">
+
+<div class="omni-profile-topbar">
+  <a href="{{ "people" | relative_url }}" class="omni-profile-back">← All people</a>
+</div>
+
+<div class="omni-profile-grid">
+
+  <aside class="omni-profile-card omni-profile-side">
+    <div class="omni-profile-id">
+      {% if page.image %}
+        <img class="omni-profile-photo" src="{{ page.image | relative_url | uri_escape }}" alt="Portrait of {{ page.name | xml_escape }}">
+      {% endif %}
+      {% if page.title-short %}<span class="omni-profile-rank">{{ page.title-short }}</span>{% endif %}
+      <h1>{{ page.name }}</h1>
+    </div>
+
+    {% if page.links.orcid %}
+      <hr>
+      <a class="omni-profile-row" href="https://orcid.org/{{ page.links.orcid }}">
+        <span class="omni-profile-icon"><i class="fa-brands fa-orcid"></i></span>
+        <span>{{ page.links.orcid }}</span>
+      </a>
+    {% endif %}
+
+    {% if page.positions %}
+      <hr>
+      {% for p in page.positions %}
+        <div class="omni-profile-row">
+          <span class="omni-profile-icon"><i class="fa-solid fa-id-badge"></i></span>
+          <span><strong>{{ p.title }}</strong><br>{% if p.link %}<a href="{{ p.link | relative_url }}">{{ p.place }}</a>{% else %}{{ p.place }}{% endif %}</span>
+        </div>
+      {% endfor %}
+    {% endif %}
+
+    <hr>
+    {% if page.address %}
+      <div class="omni-profile-row">
+        <span class="omni-profile-icon"><i class="fa-solid fa-location-dot"></i></span>
+        <span>{{ page.address }}</span>
+      </div>
+    {% endif %}
+    <div class="omni-profile-row">
+      <span class="omni-profile-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      <span class="omni-profile-links">
+        {% for link in page.links %}
+          {% assign key = link[0] %}
+          {% assign value = link[1] %}
+          {% unless key == "email" or key == "orcid" %}
+            {% include button.html type=key link=value style="bare" %}
+          {% endunless %}
+        {% endfor %}
+      </span>
+    </div>
+    {% if page.contact-note %}<p class="omni-muted">{{ page.contact-note }}</p>{% endif %}
+  </aside>
+
+  <div class="omni-profile-main">
+
+    <div class="omni-profile-card">
+      <h2>Bio</h2>
+      {{ content }}
+    </div>
+
+    {% if page.oxford-appointments %}
+      <div class="omni-profile-card"><h2>University of Oxford appointments</h2>{% include omni-profile-list.html items=page.oxford-appointments %}</div>
+    {% endif %}
+
+    {% if page.other-appointments %}
+      <div class="omni-profile-card"><h2>Other appointments</h2>{% include omni-profile-list.html items=page.other-appointments %}</div>
+    {% endif %}
+
+    {% if page.degrees %}
+      <div class="omni-profile-card"><h2>Degrees</h2>{% include omni-profile-list.html items=page.degrees %}</div>
+    {% endif %}
+
+    {% if page.prizes %}
+      <div class="omni-profile-card"><h2>Prizes and distinctions</h2>{% include omni-profile-list.html items=page.prizes %}</div>
+    {% endif %}
+
+    {% if page.fields %}
+      <div class="omni-profile-card">
+        <h2>Fields of research</h2>
+        <div class="omni-chips">
+          {% for f in page.fields %}
+            {% if f.link %}<a class="omni-chip" href="{{ f.link | relative_url }}">{{ f.text }}</a>{% else %}<span class="omni-chip">{{ f.text }}</span>{% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.teaching %}
+      <div class="omni-profile-card"><h2>Teaching</h2>{% include omni-profile-list.html items=page.teaching %}</div>
+    {% endif %}
+
+    {% if page.funding %}
+      <div class="omni-profile-card"><h2>Funding</h2>{% include omni-profile-list.html items=page.funding %}</div>
+    {% endif %}
+
+    <div class="omni-profile-card">
+      <h2>Recent publications</h2>
+      {% assign aliases = page.aliases | default: page.name %}
+      {% assign shown = 0 %}
+      {% assign all = site.data.citations | sort: "date" | reverse %}
+      <ol class="omni-paper-list">
+      {% for citation in all %}
+        {% assign mine = false %}
+        {% for author in citation.authors %}
+          {% if aliases contains author %}{% assign mine = true %}{% break %}{% endif %}
+        {% endfor %}
+        {% if mine %}
+          {% assign venue = site.data.venues[citation.publisher] | default: citation.publisher %}
+          <li>
+            <a class="omni-paper-title" href="{{ "publications" | relative_url }}#{{ citation.id | url_encode }}">{{ citation.title }}</a>
+            <span class="omni-paper-meta">{% include omni-authors.html authors=citation.authors max=8 %} · <em>{{ venue }}</em> · {{ citation.date | date: "%Y" }}</span>
+          </li>
+          {% assign shown = shown | plus: 1 %}
+          {% if shown >= 6 %}{% break %}{% endif %}
+        {% endif %}
+      {% endfor %}
+      </ol>
+      {% capture search -%}
+        publications/?search={% for alias in aliases %}"{{ alias }}" {% endfor %}
+      {%- endcapture %}
+      <p><a class="omni-more" href="{{ search | relative_url | uri_escape }}">All of {{ first_name }}’s publications →</a></p>
+    </div>
+
+  </div>
+</div>
+</div>
