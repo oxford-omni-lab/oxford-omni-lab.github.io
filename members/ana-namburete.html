@@ -409,38 +409,75 @@
   
   
   
-  <section class="background" data-size="page">
-    <div class="float">
-  
-<div class="portrait-wrapper">
-  <a class="portrait" data-style="member" aria-label="Ana Namburete">
-    
+  <section class="background" data-size="wide">
+    <!--
+  <background></background>
+  <dark></dark>
+  <size>wide</size>
+  <tone></tone>
+-->
 
-    <img src="/images/members/Ana2.jpg" class="portrait-image" alt="member portrait" loading="lazy" onerror="this.src = '/images/misc/fallback.svg';
-this.onerror = null;">
 
-    
-      <span class="portrait-name">
-        Ana Namburete
-      </span>
-    
+<div class="omni-profile">
 
-    
-
-    
-      <span class="portrait-description">
-        Principal Investigator · Associate Professor
-      </span>
-    
-
-    
-    
-    
-  </a>
+<div class="omni-profile-topbar">
+  <a href="/people" class="omni-profile-back">← All people</a>
 </div>
 
-<div>
-     
+<div class="omni-profile-grid">
+
+  <aside class="omni-profile-card omni-profile-side">
+    <div class="omni-profile-id">
+      
+        <img class="omni-profile-photo" src="/images/members/Ana2.jpg" alt="Portrait of Ana Namburete">
+      
+      <span class="omni-profile-rank">Associate Professor</span>
+      <h1>Ana Namburete</h1>
+    </div>
+
+    
+      <hr>
+      <a class="omni-profile-row" href="https://orcid.org/0000-0002-9119-436X">
+        <span class="omni-profile-icon"><i class="fa-brands fa-orcid"></i></span>
+        <span>0000-0002-9119-436X</span>
+      </a>
+    
+
+    
+      <hr>
+      
+        <div class="omni-profile-row">
+          <span class="omni-profile-icon"><i class="fa-solid fa-id-badge"></i></span>
+          <span><strong>Associate Professor of Health Data Science and AI</strong><br>Department of Computer Science</span>
+        </div>
+      
+        <div class="omni-profile-row">
+          <span class="omni-profile-icon"><i class="fa-solid fa-id-badge"></i></span>
+          <span><strong>Rokos Tutorial Fellow</strong><br>Pembroke College</span>
+        </div>
+      
+        <div class="omni-profile-row">
+          <span class="omni-profile-icon"><i class="fa-solid fa-id-badge"></i></span>
+          <span><strong>Principal Investigator</strong><br><a href="/people">OMNI Lab</a></span>
+        </div>
+      
+    
+
+    <hr>
+    
+      <div class="omni-profile-row">
+        <span class="omni-profile-icon"><i class="fa-solid fa-location-dot"></i></span>
+        <span>Department of Computer Science, University of Oxford, 15 Parks Road, Oxford OX1 3PH</span>
+      </div>
+    
+    <div class="omni-profile-row">
+      <span class="omni-profile-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      <span class="omni-profile-links">
+        
+          
+          
+          
+            
 
 
 
@@ -455,24 +492,17 @@ this.onerror = null;">
   </div>
   
 
-<br>
-     
 
-
-
-  
-  <div class="button-wrapper">
-    <a class="button" href="https://orcid.org/0000-0002-9119-436X" data-style="bare" aria-label="ORCID">
-      <i class="icon fa-brands fa-orcid"></i>
-      
-        <span>ORCID</span>
-      
-    </a>
-  </div>
-  
-
-<br>
-     
+          
+        
+          
+          
+          
+        
+          
+          
+          
+            
 
 
 
@@ -487,61 +517,591 @@ this.onerror = null;">
   </div>
   
 
-<br>
+
+          
+        
+      </span>
+    </div>
+    <p class="omni-muted">For enquiries, please use the contact details on the departmental profile.</p>
+  </aside>
+
+  <div class="omni-profile-main">
+
+    <div class="omni-profile-card">
+      <h2>Bio</h2>
+      <p>Ana trained as a biomedical engineer in Canada and came to Oxford as a Commonwealth Scholar for a DPhil in Engineering Science, before moving across to Computer Science, where she now leads the OMNI Lab. Her team builds AI tools that turn routine pregnancy ultrasound into measurements of the developing brain. Away from the lab, she dances ballet and On2 salsa, and enjoys reading.</p>
+
+    </div>
+
+    
+      <div class="omni-profile-card">
+<h2>University of Oxford appointments</h2>
+<ul class="omni-profile-list">
   
-</div>
-
-
-</div>
- <!-- To show a Pembroke College profile button, add under `links:` above:
-     pembroke: https://www.pmb.ox.ac.uk/...   (the exact URL of Ana's college profile)
-     The 'pembroke' button type is defined in _data/types.yaml. -->
-
-<h2 id="about">About</h2>
-
-<p>Ana Namburete is Associate Professor of Health Data Science and Artificial Intelligence at the University of Oxford, and Rokos Tutorial Fellow at Pembroke College. She founded and leads the Oxford Machine Learning in NeuroImaging (OMNI) Lab, which develops AI tools for quantitative assessment of the developing brain from ultrasound.</p>
-
-<p>The lab’s work centres on extracting biomarkers of fetal neurodevelopmental maturation that lie beyond the reach of conventional clinical assessment but are measurably predictive of long-term outcomes. Ultrasound is central to the lab’s approach because it is safe, portable, and deployable in the low-resource settings where maternal and fetal care is most needed. A landmark paper in <em>Nature</em> (2023) established the first normative spatiotemporal atlas of fetal brain maturation, linking regional developmental trajectories to neurodevelopmental outcomes at two years of age. Subsequent work published in <em>The Lancet Obstetrics, Gynaecology &amp; Women’s Health</em> applied these normative trajectories to characterise the consequences of impaired fetal brain growth, opening new avenues for early clinical intervention. The lab’s open-source OMNI Ultrasound Toolkit, which automates fetal brain segmentation and volumetric analysis from 3D ultrasound, is in active use at research centres worldwide.</p>
-
-<p>The lab’s research is supported by an ERC Starting Grant (<em>WOMB2COT</em>, 2026–2031), the Bill and Melinda Gates Foundation, EPSRC, and the Academy of Medical Sciences, representing more than £7.5M in total funding. Ana completed her DPhil in Engineering Science at Oxford under Professor Alison Noble OBE FRS and held a Royal Academy of Engineering Research Fellowship from 2016 to 2022. She is committed to public engagement: in 2023 she was a Featured Scientist in the <a href="https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures">BBC Royal Institution Christmas Lectures</a>, one of the UK’s most celebrated science communication programmes.</p>
-
-<h2 id="selected-distinctions">Selected distinctions</h2>
-
-<p><strong>2026</strong>   European Research Council (ERC) Starting Grant (<em>WOMB2COT</em>)</p>
-
-<p><strong>2023</strong>   Featured Scientist, <a href="https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures">BBC Royal Institution Christmas Lectures</a></p>
-
-<p><strong>2021</strong>   Academy of Medical Sciences Springboard Award</p>
-
-<p><strong>2018</strong>   Best Paper Award, MICCAI PIPPI Workshop</p>
-
-<p><strong>2017</strong>   Best Paper Award, MICCAI FIFI Workshop</p>
-
-<p><strong>2016</strong>   Royal Academy of Engineering Research Fellowship</p>
-
-<p><strong>2015</strong>   Bill and Melinda Gates Foundation Grand Challenge Explorations Grant</p>
-
-<p><strong>2011</strong>   Commonwealth Scholarship for Doctoral Studies</p>
-
-<p><strong>2011</strong>   APEGBC Achievement Award in Biomedical Engineering</p>
+    
+    <li>
+      <strong>Associate Professor of Health Data Science and Artificial Intelligence</strong>
+      
+        <span class="omni-profile-sub">
+          Department of Computer Science, University of Oxford <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2023
+        </span>
+      
+      
+    </li>
   
+    
+    <li>
+      <strong>Rokos Tutorial Fellow in Computer Science</strong>
+      
+        <span class="omni-profile-sub">
+          Pembroke College, Oxford <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2021
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Organising Tutor in Computer Science</strong>
+      
+        <span class="omni-profile-sub">
+          Pembroke College, Oxford
+        </span>
+      
+      
+    </li>
+  
+</ul>
+</div>
+    
 
-<p class="center">
-  <a href="/publications/?search=%22A.%20Namburete%22%20%22Ana%20I.L%20Namburete%22%20%22Ana%20Namburete%22%20%22Ana%20I.%20L.%20Namburete%22%20%22Ana%20IL%20Namburete%22%20%22Ana%20I.L.%20Namburete%22%20">
-    Search for Ana Namburete's papers on the
-    Publications page
-  </a>
-</p>
+    
+      <div class="omni-profile-card">
+<h2>Other appointments</h2>
+<ul class="omni-profile-list">
+  
+    
+    <li>
+      <strong>Board member</strong>
+      
+        <span class="omni-profile-sub">
+          Hertie Institute for AI in Brain Health, University of Tübingen
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Board member</strong>
+      
+        <span class="omni-profile-sub">
+          Africa Oxford Initiative (AfOx)
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Honorary appointment</strong>
+      
+        <span class="omni-profile-sub">
+          Oxford University Hospitals NHS Foundation Trust (OUH)
+        </span>
+      
+      
+    </li>
+  
+</ul>
+</div>
+    
 
+    
 
+    
+      <div class="omni-profile-card">
+<h2>Prizes and distinctions</h2>
+<ul class="omni-profile-list">
+  
+    
+    <li>
+      <strong>ERC Starting Grant (<em>WOMB2COT</em>)</strong>
+      
+        <span class="omni-profile-sub">
+          European Research Council <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2026
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong><a href="https://www.rigb.org/christmas-lectures/watch-2023-christmas-lectures">Featured Scientist, BBC Royal Institution Christmas Lectures</a></strong>
+      
+        <span class="omni-profile-sub">
+          2023
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Springboard Award</strong>
+      
+        <span class="omni-profile-sub">
+          Academy of Medical Sciences <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2021
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Best Paper Award, MICCAI PIPPI Workshop</strong>
+      
+        <span class="omni-profile-sub">
+          2018
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Best Paper Award, MICCAI FIFI Workshop</strong>
+      
+        <span class="omni-profile-sub">
+          2017
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Research Fellowship</strong>
+      
+        <span class="omni-profile-sub">
+          Royal Academy of Engineering <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2016
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Grand Challenges Explorations Grant</strong>
+      
+        <span class="omni-profile-sub">
+          Bill and Melinda Gates Foundation <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2015
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>Commonwealth Scholarship for Doctoral Studies</strong>
+      
+        <span class="omni-profile-sub">
+          2011
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>APEGBC Achievement Award in Biomedical Engineering</strong>
+      
+        <span class="omni-profile-sub">
+          2011
+        </span>
+      
+      
+    </li>
+  
+</ul>
+</div>
+    
 
-<!--
-<p class="center">
-  <a href="/blog/?search=Ana%20Namburete">
-    See Ana Namburete's posts on the Blog page
-  </a>
-</p>
--->
+    
+      <div class="omni-profile-card">
+        <h2>Fields of research</h2>
+        <div class="omni-chips">
+          
+            <a class="omni-chip" href="/research/computational-ultrasound">Computational ultrasound</a>
+          
+            <a class="omni-chip" href="/research/brain-structure">Fetal brain atlases</a>
+          
+            <span class="omni-chip">Medical image analysis</span>
+          
+            <span class="omni-chip">Machine learning</span>
+          
+            <a class="omni-chip" href="/research/robust">Robust and federated learning</a>
+          
+            <a class="omni-chip" href="/research/scan-to-outcome">Neurodevelopment</a>
+          
+        </div>
+      </div>
+    
+
+    
+      <div class="omni-profile-card">
+<h2>Teaching</h2>
+<ul class="omni-profile-list">
+  
+    
+    <li>
+      <strong>Deep Learning in Healthcare</strong>
+      
+        <span class="omni-profile-sub">
+          Department of Computer Science
+        </span>
+      
+      <span class="omni-profile-sub">Course creator and lecturer</span>
+    </li>
+  
+    
+    <li>
+      <strong>Undergraduate tutorials in Computer Science</strong>
+      
+        <span class="omni-profile-sub">
+          Pembroke College, Oxford <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2021 to present
+        </span>
+      
+      <span class="omni-profile-sub">Linear Algebra · Design and Analysis of Algorithms · Algorithms and Data Structures · Functional Programming</span>
+    </li>
+  
+    
+    <li>
+      <strong>Examiner, MSc in Advanced Computer Science</strong>
+      
+        <span class="omni-profile-sub">
+          Department of Computer Science
+        </span>
+      
+      
+    </li>
+  
+    
+    <li>
+      <strong>DPhil supervision</strong>
+      
+        <span class="omni-profile-sub">
+          EPSRC Centres for Doctoral Training in Healthcare Data Science (HDS) and Autonomous Intelligent Machines and Systems (AIMS)
+        </span>
+      
+      
+    </li>
+  
+</ul>
+</div>
+    
+
+    
+      <div class="omni-profile-card">
+<h2>Funding</h2>
+<ul class="omni-profile-list">
+  
+    
+    <li>
+      <strong>ERC Starting Grant: <em>WOMB2COT</em></strong>
+      
+        <span class="omni-profile-sub">
+          European Research Council <span class="omni-profile-diamond" aria-hidden="true">◆</span> 2026 to 2031
+        </span>
+      
+      
+    </li>
+  
+</ul>
+</div>
+    
+
+    <div class="omni-profile-card">
+      <h2>Recent publications</h2>
+      
+      
+      
+      <ol class="omni-paper-list">
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a class="omni-paper-title" href="/publications#doi%3A10.48550%2FarXiv.2609.29373">Shadow Reduction in Ultrasound Imaging Using Differentiable Simulation and Radiance Field Decomposition</a>
+            <span class="omni-paper-meta"><b>Bacher V</b>, <b>Yeung PH</b>, Kainz B, <b>Wyburd MK</b>, <b>Dinsdale NK</b>, Gray M, <b>Namburete AIL</b> · <em>arXiv</em> · 2026</span>
+          </li>
+          
+          
+        
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a class="omni-paper-title" href="/publications#doi%3A10.1016%2Fj.media.2026.104043">Beyond benchmarks of IUGC: Rethinking requirements of deep learning method for intrapartum ultrasound biometry from fetal ultrasound videos</a>
+            <span class="omni-paper-meta">Bai J, Zhou Z, Tang Y, Gan J, Liang Z, Fan J, Mcguire LB, Clarke JL, et al. · <em>Medical Image Analysis</em> · 2026</span>
+          </li>
+          
+          
+        
+      
+        
+        
+          
+        
+          
+        
+          
+          <li>
+            <a class="omni-paper-title" href="/publications#https%3A%2F%2Fproceedings.iclr.cc%2Fpaper_files%2Fpaper%2F2026%2Fhash%2F9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html">UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes</a>
+            <span class="omni-paper-meta"><b>Eid M</b>, <b>Namburete A</b>, Henriques JF · <em>ICLR</em> · 2026</span>
+          </li>
+          
+          
+        
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a class="omni-paper-title" href="/publications#doi%3A10.1016%2FS3050-5038%2825%2900163-3">Impaired fetal brain growth and neurodevelopmental deficits at 2 years: deep phenotyping of maternal–fetal pathophysiology</a>
+            <span class="omni-paper-meta">Villar J, Carvalho M, Gunier R, McGready R, Valdespino Y, Lagerborg KA, Barros FC, Conde-Agudelo A, et al. · <em>The Lancet Obstetrics, Gynaecology, &amp; Women's Health</em> · 2026</span>
+          </li>
+          
+          
+        
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a class="omni-paper-title" href="/publications#doi%3A10.1002%2Fpd.70103">Clinical Grading of Artificial Intelligence‐Based 3D Fetal Brain Segmentations: A Cross‐Vendor Evaluation of Deep Learning in Fetal Neuroimaging</a>
+            <span class="omni-paper-meta">Aliasi M, <b>Hesse LS</b>, <b>Wyburd MK</b>, Snoep MC, Smit RM, <b>Namburete AIL</b>, Haak MC · <em>Prenatal Diagnosis</em> · 2026</span>
+          </li>
+          
+          
+        
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a class="omni-paper-title" href="/publications#doi%3A10.1038%2Fs41467-026-69657-w">Normative growth trajectories of fetal brain regions validated by satisfactory maturation of neurodevelopmental domains at 2 years of age</a>
+            <span class="omni-paper-meta"><b>Wyburd MK</b>, Kennedy SH, Fernandes M, <b>Dinsdale NK</b>, <b>Hesse LS</b>, Gunier RB, Ismail LC, Ohuma EO, et al. · <em>Nature Communications</em> · 2026</span>
+          </li>
+          
+          
+      </ol>
+      
+      <p><a class="omni-more" href="/publications/?search=%22A.%20Namburete%22%20%22A.%20I.%20L.%20Namburete%22%20%22Ana%20I.L%20Namburete%22%20%22Ana%20Namburete%22%20%22Ana%20I.%20L.%20Namburete%22%20%22Ana%20IL%20Namburete%22%20%22Ana%20I.L.%20Namburete%22%20">All of Ana’s publications →</a></p>
+    </div>
+
+  </div>
+</div>
+</div>
   </section>
 
 
