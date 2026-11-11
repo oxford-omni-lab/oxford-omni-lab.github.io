@@ -78,13 +78,10 @@
   plugin: sources.py
   file: sources.yaml
 - id: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
-  title: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
-  authors:
-  - Mark Eid
-  - Ana Namburete
-  - Joao F. Henriques
-  publisher: International Conference on Learning Representations
-  date: '2026-04-20'
+  title: ''
+  authors: []
+  publisher: ''
+  date: ''
   link: https://proceedings.iclr.cc/paper_files/paper/2026/hash/9739fdfbecb84b2cab3ba06f3ee5498b-Abstract-Conference.html
   note: 'UltraGauss: Ultrafast Gaussian Reconstruction of 3D Ultrasound Volumes'
   image: images/publications/2505-ultragauss-pre.png
